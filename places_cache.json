@@ -8504,7 +8504,8 @@
     "validated": true,
     "has_website": false,
     "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
-    "icon_bg_color": "#7B9EB0"
+    "icon_bg_color": "#7B9EB0",
+    "phone": "058-7007818"
   },
   "טשרניחובסקי מספרה|תל אביב": {
     "phone": "",
@@ -8742,11 +8743,11 @@
     "source": "firecrawl_scrapling"
   },
   "חן האינסטלטור|נתניה": {
-    "phone": "",
+    "phone": "052-3513714",
     "all_phones": [],
     "website": "",
     "has_website": false,
-    "validated": false,
+    "validated": true,
     "category": "אינסטלטור",
     "source": "firecrawl_scrapling"
   },
@@ -9013,9 +9014,9 @@
   "שולחן דוד סטייק|נתניה": {
     "phone": "",
     "all_phones": [],
-    "website": "",
-    "has_website": false,
-    "validated": false,
+    "website": "שולחן דוד",
+    "has_website": true,
+    "validated": true,
     "category": "מסעדה",
     "source": "firecrawl_scrapling"
   },
@@ -9040,9 +9041,9 @@
   "שלי ליטאי מכון יופי|כפר סבא": {
     "phone": "",
     "all_phones": [],
-    "website": "",
-    "has_website": false,
-    "validated": false,
+    "website": "shellylitai.com",
+    "has_website": true,
+    "validated": true,
     "category": "מכון יופי",
     "source": "firecrawl_scrapling"
   },
@@ -9216,9 +9217,9 @@
   "kVisi מכבסה|תל אביב": {
     "phone": "",
     "all_phones": [],
-    "website": "https://www.kvisi.com/",
-    "has_website": false,
-    "validated": false,
+    "website": "kvisi.com",
+    "has_website": true,
+    "validated": true,
     "category": "מכבסה",
     "source": "firecrawl_scrapling"
   },
@@ -9314,11 +9315,11 @@
     "source": "firecrawl_scrapling"
   },
   "הכי נוח לך כשאת יפה|חולון": {
-    "phone": "",
+    "phone": "054-9325658",
     "all_phones": [],
     "website": "",
     "has_website": false,
-    "validated": false,
+    "validated": true,
     "category": "מספרה",
     "source": "firecrawl_scrapling"
   },
@@ -9334,11 +9335,11 @@
     "source": "firecrawl_scrapling"
   },
   "פיקאסו מספרה|בת ים": {
-    "phone": "",
+    "phone": "052-6022019",
     "all_phones": [],
     "website": "",
     "has_website": false,
-    "validated": false,
+    "validated": true,
     "category": "מספרה",
     "source": "firecrawl_scrapling"
   },
@@ -9633,9 +9634,9 @@
   "חיש חי|חולון": {
     "phone": "",
     "all_phones": [],
-    "website": "",
-    "has_website": false,
-    "validated": false,
+    "website": "hishhay.co.il",
+    "has_website": true,
+    "validated": true,
     "category": "חנות חיות",
     "source": "firecrawl_scrapling"
   },
@@ -9643,14 +9644,18 @@
     "name": "יעקבי שיפוצים",
     "city": "באר שבע",
     "category": "שיפוצים",
-    "source": "easy.co.il"
+    "source": "easy.co.il",
+    "phone": "050-6530077",
+    "validated": true
   },
   "איציק שיפוצים|באר שבע": {
     "name": "איציק שיפוצים",
     "city": "באר שבע",
     "category": "שיפוצים",
     "email": "kobani262@gmail.com",
-    "source": "easy.co.il"
+    "source": "easy.co.il",
+    "phone": "050-2484842",
+    "validated": true
   },
   "מ.ב שיפוצים ואינסטלציה|באר שבע": {
     "name": "מ.ב שיפוצים ואינסטלציה",
@@ -9671,7 +9676,9 @@
     "name": "שיפוצי הדרום",
     "city": "באר שבע",
     "category": "שיפוצים",
-    "source": "easy.co.il"
+    "source": "easy.co.il",
+    "phone": "052-3907419",
+    "validated": true
   },
   "גלובל אלומיניום ושיפוצים|באר שבע": {
     "name": "גלובל אלומיניום ושיפוצים",
@@ -9684,7 +9691,11 @@
     "name": "דניאל אחזקות",
     "city": "באר שבע",
     "category": "שיפוצים",
-    "source": "easy.co.il"
+    "source": "easy.co.il",
+    "phone": "058-4220688",
+    "has_website": true,
+    "website": "dan-projects.com",
+    "validated": true
   },
   "ס.ל בניה ושיפוצים|באר שבע": {
     "name": "ס.ל בניה ושיפוצים",
@@ -9696,7 +9707,9 @@
     "name": "א.י שיפוצים",
     "city": "באר שבע",
     "category": "שיפוצים",
-    "source": "easy.co.il"
+    "source": "easy.co.il",
+    "phone": "054-9285247",
+    "validated": true
   },
   "מובילים בישראל|ארצי": {
     "name": "מובילים בישראל",
@@ -9709,7 +9722,11 @@
     "name": "אחים לוי הובלות",
     "city": "חיפה",
     "category": "הובלות",
-    "source": "firecrawl"
+    "source": "firecrawl",
+    "phone": "052-5209107",
+    "has_website": true,
+    "website": "ahimlevi.co.il",
+    "validated": true
   },
   "לוגיסטקס הובלות|ארצי": {
     "name": "לוגיסטקס הובלות",
@@ -9765,7 +9782,11 @@
     "name": "ארטפיקסל צילום אירועים",
     "city": "אשדוד",
     "category": "צילום",
-    "source": "firecrawl"
+    "source": "firecrawl",
+    "phone": "053-2700772",
+    "has_website": true,
+    "website": "artpixxel.co.il",
+    "validated": true
   },
   "סטודיו אגוז|ארצי": {
     "name": "סטודיו אגוז",
@@ -9777,7 +9798,11 @@
     "name": "חן ברקוביץ צילום",
     "city": "ארצי",
     "category": "צילום",
-    "source": "firecrawl"
+    "source": "firecrawl",
+    "phone": "052-6311458",
+    "has_website": true,
+    "website": "henib.co.il",
+    "validated": true
   },
   "שלושה צלמים|ארצי": {
     "name": "שלושה צלמים",
