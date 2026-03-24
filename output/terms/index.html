@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תנאי שימוש | alon dev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Heebo', sans-serif;
+            background: #f5f6fa;
+            color: #2d3436;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0a1628 0%, #1a2744 100%);
+            color: #fff;
+            padding: 48px 24px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 8px;
+        }
+
+        header h1 span {
+            color: #64b5f6;
+        }
+
+        header p {
+            font-size: 1rem;
+            opacity: 0.7;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 32px 20px 64px;
+        }
+
+        .section {
+            background: #fff;
+            border-radius: 12px;
+            padding: 28px 28px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+
+        .section h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0a1628;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e8ecf1;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section h2 .icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .icon-blue { background: #e3f2fd; }
+        .icon-green { background: #e8f5e9; }
+        .icon-red { background: #fce4ec; }
+        .icon-purple { background: #f3e5f5; }
+        .icon-orange { background: #fff3e0; }
+        .icon-teal { background: #e0f2f1; }
+
+        .section p,
+        .section li {
+            color: #4a5568;
+            font-weight: 400;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section ul li {
+            padding: 6px 0;
+            padding-right: 20px;
+            position: relative;
+        }
+
+        .section ul li::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 14px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #64b5f6;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-top: 12px;
+        }
+
+        .contact-info a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: #e8f5e9;
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin-top: 12px;
+            font-weight: 500;
+            color: #2e7d32;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            background: #0a1628;
+            color: #fff;
+            text-align: center;
+            padding: 32px 20px;
+        }
+
+        footer p {
+            opacity: 0.6;
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+        }
+
+        footer .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 16px;
+        }
+
+        footer a {
+            color: #64b5f6;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .wa-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #25d366;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 24px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .wa-btn:hover {
+            background: #1da851;
+            text-decoration: none;
+        }
+
+        .wa-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 36px 16px;
+            }
+
+            header h1 {
+                font-size: 1.6rem;
+            }
+
+            .container {
+                padding: 20px 12px 48px;
+            }
+
+            .section {
+                padding: 20px 18px;
+            }
+
+            .section h2 {
+                font-size: 1.1rem;
+            }
+
+            body {
+                font-size: 15px;
+            }
+
+            footer .footer-links {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>תנאי שימוש | <span>alon dev</span></h1>
+    <p>מסמך משפטי — תנאי שימוש, מדיניות פרטיות והסרת תוכן</p>
+</header>
+
+<div class="container">
+
+    <!-- מי אנחנו -->
+    <div class="section">
+        <h2><span class="icon icon-blue">👤</span>מי אנחנו</h2>
+        <p><strong>alon dev</strong> — שירותי בניית אתרים ונוכחות דיגיטלית לעסקים קטנים.</p>
+        <p>עוסק מורשה.</p>
+        <div class="contact-info">
+            <span>טלפון: <a href="tel:0559173249">055-917-3249</a></span>
+            <span>אימייל: <a href="mailto:alon12@gmail.com">alon12@gmail.com</a></span>
+        </div>
+    </div>
+
+    <!-- אתרי דוגמא -->
+    <div class="section">
+        <h2><span class="icon icon-green">🌐</span>אתרי דוגמא (Preview Sites)</h2>
+        <ul>
+            <li>אתרי הדוגמא נבנים כהצעה עסקית בלבד</li>
+            <li>אינם מייצגים את העסק באופן רשמי</li>
+            <li>אינם מתחזים לעסק ואינם מהווים את האתר הרשמי שלו</li>
+            <li>המידע המוצג (תמונות, ביקורות, שעות) נאסף ממקורות ציבוריים (Google Maps, Google Places)</li>
+            <li>ניתן לבקש הסרה של אתר דוגמא בכל עת ללא עלות</li>
+        </ul>
+    </div>
+
+    <!-- הסרת תוכן -->
+    <div class="section">
+        <h2><span class="icon icon-red">🗑️</span>הסרת תוכן</h2>
+        <ul>
+            <li>כל בעל עסק רשאי לבקש הסרה מיידית של אתר הדוגמא שנבנה עבורו</li>
+            <li>בקשת הסרה תטופל תוך 24 שעות</li>
+        </ul>
+        <div class="contact-info" style="margin-top: 14px;">
+            <span>וואטסאפ: <a href="https://wa.me/9720559173249">055-917-3249</a></span>
+            <span>אימייל: <a href="mailto:alon12@gmail.com">alon12@gmail.com</a></span>
+        </div>
+        <div class="highlight-box">
+            הסרה של אתר דוגמא היא מיידית, ללא עלות וללא שאלות.
+        </div>
+    </div>
+
+    <!-- שימוש במידע ציבורי -->
+    <div class="section">
+        <h2><span class="icon icon-purple">📋</span>שימוש במידע ציבורי</h2>
+        <p>כל המידע באתרי הדוגמא נאסף ממקורות ציבוריים בלבד:</p>
+        <ul>
+            <li><strong>תמונות</strong> — באדיבות Google Places API (מידע ציבורי)</li>
+            <li><strong>ביקורות</strong> — ביקורות ציבוריות מ-Google Maps</li>
+            <li><strong>שעות פעילות</strong> — מידע ציבורי מ-Google Maps</li>
+        </ul>
+        <p style="margin-top: 12px; font-weight: 500; color: #2d3436;">אין שימוש במידע פרטי או חסוי.</p>
+    </div>
+
+    <!-- תקשורת שיווקית -->
+    <div class="section">
+        <h2><span class="icon icon-orange">📞</span>תקשורת שיווקית</h2>
+        <ul>
+            <li>פנייה טלפונית ראשונית נעשית בהתאם לחוק התקשורת (בזק ושידורים), התשמ"ב-1982</li>
+            <li>ניתן לבקש הפסקת פנייה בכל עת</li>
+            <li>לא נשלחים הודעות SMS ללא הסכמה</li>
+            <li>פרטי הקשר אינם מועברים לצד שלישי</li>
+        </ul>
+    </div>
+
+    <!-- מדיניות פרטיות -->
+    <div class="section">
+        <h2><span class="icon icon-teal">🔒</span>מדיניות פרטיות</h2>
+        <ul>
+            <li><strong>מידע שנאסף:</strong> שם העסק, טלפון, כתובת — ממקורות ציבוריים בלבד</li>
+            <li><strong>השימוש:</strong> בניית הצעה עסקית מותאמת</li>
+            <li><strong>אחסון:</strong> מאובטח, לא מועבר לצדדים שלישיים</li>
+            <li><strong>מחיקה:</strong> לפי בקשה, תוך 24 שעות</li>
+        </ul>
+    </div>
+
+</div>
+
+<footer>
+    <p>עדכון אחרון: מרץ 2026</p>
+    <div class="footer-links">
+        <a class="wa-btn" href="https://wa.me/9720559173249">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            שלחו הודעה
+        </a>
+        <a href="https://alon-dev.vercel.app">alon-dev.vercel.app</a>
+    </div>
+</footer>
+
+</body>
+</html>
