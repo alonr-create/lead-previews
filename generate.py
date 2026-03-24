@@ -35,9 +35,50 @@ CACHE_PATH = os.path.join(BASE_DIR, 'places_cache.json')
 GOOGLE_PLACES_API_KEY = os.environ.get('GOOGLE_PLACES_API_KEY', 'AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ')
 
 CATEGORY_MAP = {
-    'מסעדה': 'restaurant',
-    'מכון יופי': 'beauty',
+    # Food
+    'מסעדה': 'restaurant', 'קונדיטוריה': 'restaurant', 'מאפייה': 'restaurant',
+    # Beauty
+    'מכון יופי': 'beauty', 'מספרה': 'beauty', 'סטודיו': 'beauty',
+    # All others → universal
+    'מוסך': 'universal', 'שיפוצים': 'universal', 'רופא שיניים': 'universal',
+    'רואה חשבון': 'universal', 'עורך דין': 'universal', 'צלם': 'universal',
+    'חנות חיות': 'universal', 'גן אירועים': 'universal', 'הובלות': 'universal',
+    'מכבסות': 'universal', 'מכבסה': 'universal', 'חנות פרחים': 'universal',
+    'בית דפוס': 'universal', 'צילום': 'universal', 'מכון כושר': 'universal',
+    'וטרינר': 'universal', 'חנות בגדים': 'universal', 'אינסטלטור': 'universal',
+    'רהיטים': 'universal', 'עיצוב גרפי': 'universal',
 }
+
+CATEGORY_CONFIG = {
+    'מסעדה': {'badge': 'חוויה קולינרית', 'cta': 'הזמינו מקום', 'subtitle': 'טעמים שמספרים סיפור', 'about_title': 'הסיפור שלנו', 'about_desc': 'מקום שבו הטעם פוגש את הלב', 'services_label': 'התפריט שלנו'},
+    'קונדיטוריה': {'badge': 'מאפים ועוגות', 'cta': 'הזמינו עכשיו', 'subtitle': 'מתוק בכל ביס', 'about_title': 'הסיפור שלנו', 'about_desc': 'מאפייה שמכינה באהבה', 'services_label': 'המוצרים שלנו'},
+    'מאפייה': {'badge': 'מאפים טריים', 'cta': 'הזמינו עכשיו', 'subtitle': 'טריים מהתנור', 'about_title': 'הסיפור שלנו', 'about_desc': 'לחם ומאפים טריים כל יום', 'services_label': 'המוצרים שלנו'},
+    'מכון יופי': {'badge': 'טיפוח ויופי', 'cta': 'קבעו תור', 'subtitle': 'יופי שמרגישים', 'about_title': 'הסיפור שלנו', 'about_desc': 'מכון יופי מקצועי', 'services_label': 'הטיפולים שלנו'},
+    'מספרה': {'badge': 'עיצוב שיער', 'cta': 'קבעו תור', 'subtitle': 'סטייל שמדבר', 'about_title': 'הסיפור שלנו', 'about_desc': 'מספרה מקצועית עם ניסיון', 'services_label': 'השירותים שלנו'},
+    'סטודיו': {'badge': 'סטודיו מקצועי', 'cta': 'צרו קשר', 'subtitle': 'מקצועיות ואיכות', 'about_title': 'מי אנחנו', 'about_desc': 'סטודיו מקצועי עם ניסיון', 'services_label': 'השירותים שלנו'},
+    'שיפוצים': {'badge': 'שיפוצים ובנייה', 'cta': 'בקשו הצעת מחיר', 'subtitle': 'הבית שלך, החזון שלנו', 'about_title': 'מי אנחנו', 'about_desc': 'צוות שיפוצים מקצועי ואמין', 'services_label': 'השירותים שלנו'},
+    'אינסטלטור': {'badge': 'אינסטלציה', 'cta': 'התקשרו עכשיו', 'subtitle': 'פתרון מהיר ומקצועי', 'about_title': 'מי אנחנו', 'about_desc': 'אינסטלטור מוסמך ומנוסה', 'services_label': 'השירותים שלנו'},
+    'מוסך': {'badge': 'רכב ותחזוקה', 'cta': 'קבעו תור', 'subtitle': 'הרכב שלך בידיים טובות', 'about_title': 'מי אנחנו', 'about_desc': 'מוסך מורשה עם ציוד מתקדם', 'services_label': 'השירותים שלנו'},
+    'רופא שיניים': {'badge': 'רפואת שיניים', 'cta': 'קבעו תור', 'subtitle': 'חיוך בריא ויפה', 'about_title': 'המרפאה שלנו', 'about_desc': 'מרפאת שיניים מתקדמת', 'services_label': 'הטיפולים שלנו'},
+    'רואה חשבון': {'badge': 'ייעוץ פיננסי', 'cta': 'קבעו פגישה', 'subtitle': 'המספרים שלך בידיים טובות', 'about_title': 'המשרד שלנו', 'about_desc': 'משרד רואי חשבון מקצועי', 'services_label': 'השירותים שלנו'},
+    'עורך דין': {'badge': 'ייעוץ משפטי', 'cta': 'קבעו פגישת ייעוץ', 'subtitle': 'ליווי משפטי מקצועי', 'about_title': 'המשרד שלנו', 'about_desc': 'משרד עורכי דין מנוסה', 'services_label': 'תחומי התמחות'},
+    'צלם': {'badge': 'צילום מקצועי', 'cta': 'בקשו הצעת מחיר', 'subtitle': 'רגעים שנשארים לנצח', 'about_title': 'מי אנחנו', 'about_desc': 'צלם מקצועי', 'services_label': 'סוגי צילום'},
+    'צילום': {'badge': 'צילום מקצועי', 'cta': 'בקשו הצעת מחיר', 'subtitle': 'רגעים שנשארים לנצח', 'about_title': 'מי אנחנו', 'about_desc': 'סטודיו צילום מקצועי', 'services_label': 'סוגי צילום'},
+    'חנות חיות': {'badge': 'חיות מחמד', 'cta': 'בואו לבקר', 'subtitle': 'הכל לחיית המחמד שלך', 'about_title': 'החנות שלנו', 'about_desc': 'חנות חיות עם מגוון רחב', 'services_label': 'המוצרים שלנו'},
+    'גן אירועים': {'badge': 'אירועים ושמחות', 'cta': 'בקשו הצעת מחיר', 'subtitle': 'האירוע המושלם שלך', 'about_title': 'המקום שלנו', 'about_desc': 'גן אירועים מרהיב', 'services_label': 'סוגי אירועים'},
+    'הובלות': {'badge': 'הובלות ושינוע', 'cta': 'בקשו הצעת מחיר', 'subtitle': 'הובלה בטוחה ומקצועית', 'about_title': 'מי אנחנו', 'about_desc': 'חברת הובלות מקצועית', 'services_label': 'השירותים שלנו'},
+    'מכבסות': {'badge': 'כביסה וניקוי', 'cta': 'צרו קשר', 'subtitle': 'נקי כמו חדש', 'about_title': 'מי אנחנו', 'about_desc': 'מכבסה מקצועית', 'services_label': 'השירותים שלנו'},
+    'מכבסה': {'badge': 'כביסה וניקוי', 'cta': 'צרו קשר', 'subtitle': 'נקי כמו חדש', 'about_title': 'מי אנחנו', 'about_desc': 'מכבסה מקצועית', 'services_label': 'השירותים שלנו'},
+    'חנות פרחים': {'badge': 'פרחים ועיצוב', 'cta': 'הזמינו עכשיו', 'subtitle': 'יופי שפורח', 'about_title': 'החנות שלנו', 'about_desc': 'חנות פרחים עם מגוון עשיר', 'services_label': 'המוצרים שלנו'},
+    'בית דפוס': {'badge': 'דפוס והדפסה', 'cta': 'בקשו הצעת מחיר', 'subtitle': 'הדפסה באיכות גבוהה', 'about_title': 'מי אנחנו', 'about_desc': 'בית דפוס מקצועי', 'services_label': 'השירותים שלנו'},
+    'מכון כושר': {'badge': 'כושר ובריאות', 'cta': 'הצטרפו עכשיו', 'subtitle': 'הגוף שלך, המטרה שלנו', 'about_title': 'מי אנחנו', 'about_desc': 'מכון כושר מודרני', 'services_label': 'השירותים שלנו'},
+    'וטרינר': {'badge': 'רפואה וטרינרית', 'cta': 'קבעו תור', 'subtitle': 'בריאות חיית המחמד שלך', 'about_title': 'המרפאה שלנו', 'about_desc': 'מרפאה וטרינרית מקצועית', 'services_label': 'הטיפולים שלנו'},
+    'חנות בגדים': {'badge': 'אופנה וסטייל', 'cta': 'בואו לבקר', 'subtitle': 'סטייל שמדבר', 'about_title': 'החנות שלנו', 'about_desc': 'חנות אופנה', 'services_label': 'הקולקציות שלנו'},
+    'רהיטים': {'badge': 'ריהוט ועיצוב', 'cta': 'בואו לבקר', 'subtitle': 'הבית שלך, הסגנון שלך', 'about_title': 'החנות שלנו', 'about_desc': 'חנות רהיטים', 'services_label': 'המוצרים שלנו'},
+    'עיצוב גרפי': {'badge': 'עיצוב גרפי', 'cta': 'צרו קשר', 'subtitle': 'עיצוב שמדבר', 'about_title': 'מי אנחנו', 'about_desc': 'סטודיו עיצוב גרפי', 'services_label': 'השירותים שלנו'},
+}
+
+DEFAULT_CATEGORY_CONFIG = {'badge': 'שירותים מקצועיים', 'cta': 'צרו קשר', 'subtitle': 'מקצועיות ואיכות', 'about_title': 'מי אנחנו', 'about_desc': 'עסק מקצועי ואמין', 'services_label': 'השירותים שלנו'}
 
 # Rate limiting delay between API calls (seconds)
 API_DELAY = 0.5
@@ -279,6 +320,7 @@ def build_logo_html(name, theme='beauty', enrichment=None):
     colors = {
         'beauty': {'bg': 'linear-gradient(135deg,#C4727E,#B8924A)', 'border': 'rgba(196,114,126,0.15)'},
         'restaurant': {'bg': 'linear-gradient(135deg,#B85C38,#C4964A)', 'border': 'rgba(184,92,56,0.15)'},
+        'universal': {'bg': 'linear-gradient(135deg,#2563EB,#D97706)', 'border': 'rgba(37,99,235,0.15)'},
     }
     c = colors.get(theme, colors['beauty'])
 
@@ -369,11 +411,136 @@ UNSPLASH_FALLBACKS = {
         'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800',
         'https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800',
     ],
+    'קונדיטוריה': [
+        'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800',
+        'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800',
+        'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800',
+    ],
+    'מאפייה': [
+        'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800',
+        'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800',
+        'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800',
+    ],
     'מכון יופי': [
         'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800',
         'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800',
         'https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=800',
         'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800',
+    ],
+    'מספרה': [
+        'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800',
+        'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800',
+        'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=800',
+    ],
+    'סטודיו': [
+        'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800',
+        'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800',
+        'https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=800',
+    ],
+    'שיפוצים': [
+        'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800',
+        'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800',
+        'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800',
+    ],
+    'אינסטלטור': [
+        'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800',
+        'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800',
+        'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800',
+    ],
+    'מוסך': [
+        'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=800',
+        'https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=800',
+        'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800',
+    ],
+    'רופא שיניים': [
+        'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800',
+        'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800',
+        'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800',
+    ],
+    'רואה חשבון': [
+        'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800',
+        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
+        'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800',
+    ],
+    'עורך דין': [
+        'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800',
+        'https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=800',
+        'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800',
+    ],
+    'צלם': [
+        'https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=800',
+        'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800',
+        'https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=800',
+    ],
+    'צילום': [
+        'https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=800',
+        'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800',
+        'https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=800',
+    ],
+    'חנות חיות': [
+        'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800',
+        'https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=800',
+        'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800',
+    ],
+    'גן אירועים': [
+        'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800',
+        'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800',
+        'https://images.unsplash.com/photo-1478146059778-26028b07395a?w=800',
+    ],
+    'הובלות': [
+        'https://images.unsplash.com/photo-1600518464441-9154a4dea21b?w=800',
+        'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?w=800',
+        'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800',
+    ],
+    'מכבסות': [
+        'https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=800',
+        'https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=800',
+        'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=800',
+    ],
+    'מכבסה': [
+        'https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=800',
+        'https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=800',
+        'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=800',
+    ],
+    'חנות פרחים': [
+        'https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=800',
+        'https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=800',
+        'https://images.unsplash.com/photo-1455659817273-f96807779a8a?w=800',
+    ],
+    'בית דפוס': [
+        'https://images.unsplash.com/photo-1504711434969-e33886168d5c?w=800',
+        'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800',
+        'https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800',
+    ],
+    'מכון כושר': [
+        'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800',
+        'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800',
+        'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=800',
+    ],
+    'וטרינר': [
+        'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800',
+        'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800',
+        'https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=800',
+    ],
+    'חנות בגדים': [
+        'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800',
+        'https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800',
+        'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=800',
+    ],
+    'רהיטים': [
+        'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800',
+        'https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800',
+        'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=800',
+    ],
+    'עיצוב גרפי': [
+        'https://images.unsplash.com/photo-1558655146-d09347e92766?w=800',
+        'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800',
+        'https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800',
+    ],
+    'DEFAULT': [
+        'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800',
+        'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800',
+        'https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800',
     ],
 }
 
@@ -448,9 +615,18 @@ def generate_page(template_html, banner_html, lead, enrichment=None):
     reviews_count = enrichment.get('reviews_count', '')
     html = html.replace('{{REVIEWS_COUNT}}', str(reviews_count) if reviews_count else '')
 
+    # Category-specific text placeholders (for universal template)
+    config = CATEGORY_CONFIG.get(category, DEFAULT_CATEGORY_CONFIG)
+    html = html.replace('{{BADGE_TEXT}}', config['badge'])
+    html = html.replace('{{CTA_TEXT}}', config['cta'])
+    html = html.replace('{{HERO_SUBTITLE}}', config['subtitle'])
+    html = html.replace('{{ABOUT_TITLE}}', config['about_title'])
+    html = html.replace('{{ABOUT_DESC}}', config['about_desc'])
+    html = html.replace('{{SERVICES_LABEL}}', config['services_label'])
+
     # Photos: use Google Places if available, otherwise Unsplash fallbacks
     photo_urls = enrichment.get('photo_urls', [])
-    fallbacks = UNSPLASH_FALLBACKS.get(category, UNSPLASH_FALLBACKS.get('מסעדה', []))
+    fallbacks = UNSPLASH_FALLBACKS.get(category, UNSPLASH_FALLBACKS.get('DEFAULT', []))
     for i in range(1, 7):
         placeholder = f'{{{{PHOTO_{i}}}}}'
         if i <= len(photo_urls):
@@ -550,6 +726,19 @@ def generate_index(leads_by_category):
           <td><a href="{slug}/index.html" target="_blank">צפה</a></td>
         </tr>'''
 
+    # Build dynamic stats for all categories
+    stats_html = f'''
+    <div class="stat">
+      <div class="stat-num">{total}</div>
+      <div class="stat-label">סה"כ</div>
+    </div>'''
+    for cat_name, cat_leads in sorted(leads_by_category.items(), key=lambda x: -len(x[1])):
+        stats_html += f'''
+    <div class="stat">
+      <div class="stat-num">{len(cat_leads)}</div>
+      <div class="stat-label">{cat_name}</div>
+    </div>'''
+
     return f'''<!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
@@ -604,23 +793,23 @@ def generate_index(leads_by_category):
       text-align: center;
       margin-bottom: 24px;
       display: flex;
-      gap: 24px;
+      gap: 16px;
       justify-content: center;
       flex-wrap: wrap;
     }}
     .stat {{
       background: #1a1a2e;
-      padding: 16px 28px;
+      padding: 12px 20px;
       border-radius: 12px;
       border: 1px solid #222;
     }}
     .stat-num {{
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       font-weight: 700;
       color: #fff;
     }}
     .stat-label {{
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: #888;
     }}
   </style>
@@ -628,19 +817,7 @@ def generate_index(leads_by_category):
 <body>
   <h1>Lead Previews</h1>
   <p class="subtitle">תצוגות מקדימות לעסקים ללא אתר</p>
-  <div class="stats">
-    <div class="stat">
-      <div class="stat-num">{total}</div>
-      <div class="stat-label">סה"כ</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">{len(leads_by_category.get('מסעדה', []))}</div>
-      <div class="stat-label">מסעדות</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">{len(leads_by_category.get('מכון יופי', []))}</div>
-      <div class="stat-label">מכוני יופי</div>
-    </div>
+  <div class="stats">{stats_html}
   </div>
   <table>
     <thead>
@@ -681,9 +858,12 @@ def main():
 
     for lead in no_website:
         cat = lead.get('category', '').strip()
-        if cat not in CATEGORY_MAP:
+        if not cat:
             skipped.append((lead['name'], cat))
             continue
+        if cat not in CATEGORY_MAP:
+            # Default unknown categories to universal template
+            CATEGORY_MAP[cat] = 'universal'
         leads_by_category.setdefault(cat, []).append(lead)
 
     # Create output dir
