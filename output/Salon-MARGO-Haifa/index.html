@@ -35,7 +35,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
 
 /* --- Hero --- */
 .hero{position:relative;height:100vh;min-height:620px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;padding-bottom:80px}
-.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1400&q=80') center/cover no-repeat;will-change:transform}
+.hero-bg{position:absolute;inset:0;background:url('https://places.googleapis.com/v1/places/ChIJLZ3pmUy6HRURRYFmIK5jP6I/photos/AU_ZVEFmyQBx6tvH5yaVLzn6D8hCIbOpso_MzLGbPAa4B_6VE0uZUOu4rqJ647Y86dijBfh7Bc7oJmbOm9FsxQ4a6W0vZszoLSPeJt-KrJvsDQMiANZq3hRM1eW46B8g9q354N3QwfYwYg2fJlkIklgvcOfEzbIkGGITjyGWz9EDAH5O2tbfU39j4NHRFRUi6bzXLbVv0KjCKqHW-U6sEWnDk7IKQSIbOWTLpYW-toMWYHY8IgVbGe1EcnjacudvHqVRiEgjWXxuID7UpyYzT9R9ZgUjEJvBr_JBJMOksNHB1W2NuA/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ') center/cover no-repeat;will-change:transform}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(253,245,243,0.1) 0%,rgba(253,245,243,0.4) 30%,rgba(253,245,243,0.92) 85%,var(--bg) 100%)}
 .hero-content{position:relative;z-index:2;text-align:center;padding:0 24px;max-width:680px;animation:fadeInUp 1s cubic-bezier(0.16,1,0.3,1) 0.2s both}
 .hero-badge{display:inline-block;padding:6px 22px;background:rgba(196,114,126,0.06);border:1px solid rgba(196,114,126,0.12);border-radius:100px;font-size:13px;color:var(--rose);letter-spacing:1.5px;margin-bottom:20px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
@@ -237,10 +237,10 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
 </style>
 <div class="lp-banner" id="lpBanner">
   <span class="lp-banner-text">
-    זו הצעה לאתר שלכם -- נבנה במיוחד בשבילכם. מעוניינים? דברו איתנו: 055-917-3249
+    זה האתר שבנינו בשבילכם 🎉 הקמה 990 ₪ + 149 ₪/חודש — כולל דומיין, אחסון ותחזוקה
   </span>
-  <a class="lp-banner-cta" href="https://wa.me/972559173249?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%94%D7%A6%D7%A2%D7%94%20%D7%9C%D7%90%D7%AA%D7%A8%20-%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93" target="_blank">
-    כן, מעוניין!
+  <a class="lp-banner-cta" href="https://wa.me/972559173249?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%91%D7%A0%D7%99%D7%AA%D7%9D%20%D7%9C%D7%99%20-%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A2%D7%9C%D7%95%D7%AA%20%D7%9C%D7%90%D7%95%D7%95%D7%99%D7%A8!" target="_blank">
+    רוצה לעלות לאוויר!
   </a>
   <button class="lp-banner-close" onclick="document.getElementById('lpBanner').classList.add('lp-hidden');document.body.style.paddingTop='0'" aria-label="סגור">&times;</button>
 </div>
@@ -274,9 +274,9 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
       <div class="star"></div>
       <div class="star"></div>
     </div>
-    <div class="rating-score"></div>
-    <div class="rating-text"> ביקורות בגוגל</div>
-    <div class="rating-address">יונה 5, חיפה</div>
+    <div class="rating-score">4.8</div>
+    <div class="rating-text">41 ביקורות בגוגל</div>
+    <div class="rating-address">יונה 5, חיפה, ישראל</div>
   </div>
 </section>
 
@@ -289,7 +289,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
     </div>
     <div class="services-grid">
       <div class="service-card reveal reveal-delay-1">
-        <img class="service-card-img" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80" alt="תספורת ועיצוב" loading="lazy">
+        <img class="service-card-img" src="https://places.googleapis.com/v1/places/ChIJLZ3pmUy6HRURRYFmIK5jP6I/photos/AU_ZVEHHpu4VlUf7RPJW-UHjSyTLvwzaXEsqJwFPY6wyf3--ZAil7smP9D6GNpsi9Tveh0RLPMxQABJ-I5k1fHv5eYeiFiyXrIXJhbOkObusrdjH_nZ5MLmDZmk-7Uogkp3e34atUKt9TzW3RqGn7uTnPhPINQmbstDnnrxI4_6yH5B0YvKYOEibV9u-32dm04a_0RqQJg9UHLLxQ5ECh1HsF_KF7X905RKqOYO1b3DwvxxA5rA2viwYHZedrASVGc44xrn9-cvzTm5RYCBvMYU3mSBANjP2NWDqLTppLhxEzz2MoQ/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="תספורת ועיצוב" loading="lazy">
         <div class="service-card-body">
           <div class="service-card-name">תספורת ועיצוב</div>
           <div class="service-card-desc">עיצוב מקצועי שמתאים בדיוק לסגנון שלך</div>
@@ -297,7 +297,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         </div>
       </div>
       <div class="service-card reveal reveal-delay-2">
-        <img class="service-card-img" src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80" alt="צביעה והבהרה" loading="lazy">
+        <img class="service-card-img" src="https://places.googleapis.com/v1/places/ChIJLZ3pmUy6HRURRYFmIK5jP6I/photos/AU_ZVEFxbniqRS_4laa8XhtqpqrajdA-T7M8QWpj1B-sUAX72rtEG6fyM39aY1hDlR5YikodwCeam52_PEIuewASRwreJpHrs-ZomwrAET1BUaSZKEUiP2km2mT2JN3JPiZi5BtLHVUx_G-GwmpSy-T8OrwMS_swjJHnnup_-HlyJ69Z5C-D1pQ_2twXdtgMgIETdo2LkNk54mvbA9SHwZXkB_qwflgiAK_NTpdjIlmhmOaNzk1wmf_djDt42rx06Sz0djpYSHuy_Efb98Y_FxQamp-jFfoDYqdKOO3t_NZS61t6_Q/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="צביעה והבהרה" loading="lazy">
         <div class="service-card-body">
           <div class="service-card-name">צביעה והבהרה</div>
           <div class="service-card-desc">צבעים מובילים לתוצאה טבעית ומושלמת</div>
@@ -305,7 +305,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         </div>
       </div>
       <div class="service-card reveal reveal-delay-3">
-        <img class="service-card-img" src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80" alt="מניקור ופדיקור" loading="lazy">
+        <img class="service-card-img" src="https://places.googleapis.com/v1/places/ChIJLZ3pmUy6HRURRYFmIK5jP6I/photos/AU_ZVEFCfFwzRaPURr_FdmwGnBOtnEcV7TiFMwNoYt62lsXCBTZ0i9qHfOCFp2SdJEu69ON66eX0dvYa0bcc4BPB5S9fo42ttn_ZIR--zlvWOFiXvSl96hSYoogyoN0SJT_Io_ojf72dFqxvRjh3k6rK0mx3_AO8kKgnGFeJ9y7SmZ5J2lgIfWlIa-vZQT_atXtstqctQF_AbcJohoOPXa9QBEk4lMNRJZdKFhIfpM6aG6FQAe6fDL6TWLznaTdY0R_asavYFSCLweRRrmrsgjSLYHR65dpbWcVHRn5MrNrTEBradw/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="מניקור ופדיקור" loading="lazy">
         <div class="service-card-body">
           <div class="service-card-name">מניקור ופדיקור</div>
           <div class="service-card-desc">ציפורניים מושלמות עם חומרים איכותיים</div>
@@ -313,7 +313,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         </div>
       </div>
       <div class="service-card reveal reveal-delay-4">
-        <img class="service-card-img" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80" alt="טיפולי פנים" loading="lazy">
+        <img class="service-card-img" src="https://places.googleapis.com/v1/places/ChIJLZ3pmUy6HRURRYFmIK5jP6I/photos/AU_ZVEFA79ATUZSqubSVXzL4wUEUnNRScKwzjennYOmMzzfJ2ozaFgUyUtcVDONC_PgtWHFnQzruI8_uwh3sBZ0kdrV1mpfsPSPBP14f0JQy8B_QA-RweBuVJQgCvKRwFdMsXbKnaQxH1ubL57fmkISdOFC9v-1k-0uUrHNLECzvY-Fct6KWNt8E1Pd3xYBfWh9dmWHwPgM1WFDUIyeakZg4YmZWTCaPSgDMuJX1xKd6SO_F41-UqwDbq4EWnld95CY8aydpKiHQa9MzbTrWZ-_WoFcztsaC0npKRMVTnzDitrC9Ng/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="טיפולי פנים" loading="lazy">
         <div class="service-card-body">
           <div class="service-card-name">טיפולי פנים</div>
           <div class="service-card-desc">חידוש וטיפוח העור בטכנולוגיה מתקדמת</div>
@@ -332,12 +332,12 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
       <h2 class="section-title">מ<span class="underline">Salon MARGO Haifa</span> באהבה</h2>
     </div>
     <div class="gallery-grid">
-      <div class="gallery-item reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-3"><img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1457972729786-0411a3b2b626?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-3"><img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=500&q=80" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-1"><img src="https://places.googleapis.com/v1/places/ChIJLZ3pmUy6HRURRYFmIK5jP6I/photos/AU_ZVEFmyQBx6tvH5yaVLzn6D8hCIbOpso_MzLGbPAa4B_6VE0uZUOu4rqJ647Y86dijBfh7Bc7oJmbOm9FsxQ4a6W0vZszoLSPeJt-KrJvsDQMiANZq3hRM1eW46B8g9q354N3QwfYwYg2fJlkIklgvcOfEzbIkGGITjyGWz9EDAH5O2tbfU39j4NHRFRUi6bzXLbVv0KjCKqHW-U6sEWnDk7IKQSIbOWTLpYW-toMWYHY8IgVbGe1EcnjacudvHqVRiEgjWXxuID7UpyYzT9R9ZgUjEJvBr_JBJMOksNHB1W2NuA/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-2"><img src="https://places.googleapis.com/v1/places/ChIJLZ3pmUy6HRURRYFmIK5jP6I/photos/AU_ZVEHHpu4VlUf7RPJW-UHjSyTLvwzaXEsqJwFPY6wyf3--ZAil7smP9D6GNpsi9Tveh0RLPMxQABJ-I5k1fHv5eYeiFiyXrIXJhbOkObusrdjH_nZ5MLmDZmk-7Uogkp3e34atUKt9TzW3RqGn7uTnPhPINQmbstDnnrxI4_6yH5B0YvKYOEibV9u-32dm04a_0RqQJg9UHLLxQ5ECh1HsF_KF7X905RKqOYO1b3DwvxxA5rA2viwYHZedrASVGc44xrn9-cvzTm5RYCBvMYU3mSBANjP2NWDqLTppLhxEzz2MoQ/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-3"><img src="https://places.googleapis.com/v1/places/ChIJLZ3pmUy6HRURRYFmIK5jP6I/photos/AU_ZVEFxbniqRS_4laa8XhtqpqrajdA-T7M8QWpj1B-sUAX72rtEG6fyM39aY1hDlR5YikodwCeam52_PEIuewASRwreJpHrs-ZomwrAET1BUaSZKEUiP2km2mT2JN3JPiZi5BtLHVUx_G-GwmpSy-T8OrwMS_swjJHnnup_-HlyJ69Z5C-D1pQ_2twXdtgMgIETdo2LkNk54mvbA9SHwZXkB_qwflgiAK_NTpdjIlmhmOaNzk1wmf_djDt42rx06Sz0djpYSHuy_Efb98Y_FxQamp-jFfoDYqdKOO3t_NZS61t6_Q/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-1"><img src="https://places.googleapis.com/v1/places/ChIJLZ3pmUy6HRURRYFmIK5jP6I/photos/AU_ZVEFCfFwzRaPURr_FdmwGnBOtnEcV7TiFMwNoYt62lsXCBTZ0i9qHfOCFp2SdJEu69ON66eX0dvYa0bcc4BPB5S9fo42ttn_ZIR--zlvWOFiXvSl96hSYoogyoN0SJT_Io_ojf72dFqxvRjh3k6rK0mx3_AO8kKgnGFeJ9y7SmZ5J2lgIfWlIa-vZQT_atXtstqctQF_AbcJohoOPXa9QBEk4lMNRJZdKFhIfpM6aG6FQAe6fDL6TWLznaTdY0R_asavYFSCLweRRrmrsgjSLYHR65dpbWcVHRn5MrNrTEBradw/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-2"><img src="https://places.googleapis.com/v1/places/ChIJLZ3pmUy6HRURRYFmIK5jP6I/photos/AU_ZVEFmyQBx6tvH5yaVLzn6D8hCIbOpso_MzLGbPAa4B_6VE0uZUOu4rqJ647Y86dijBfh7Bc7oJmbOm9FsxQ4a6W0vZszoLSPeJt-KrJvsDQMiANZq3hRM1eW46B8g9q354N3QwfYwYg2fJlkIklgvcOfEzbIkGGITjyGWz9EDAH5O2tbfU39j4NHRFRUi6bzXLbVv0KjCKqHW-U6sEWnDk7IKQSIbOWTLpYW-toMWYHY8IgVbGe1EcnjacudvHqVRiEgjWXxuID7UpyYzT9R9ZgUjEJvBr_JBJMOksNHB1W2NuA/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-3"><img src="https://places.googleapis.com/v1/places/ChIJLZ3pmUy6HRURRYFmIK5jP6I/photos/AU_ZVEHHpu4VlUf7RPJW-UHjSyTLvwzaXEsqJwFPY6wyf3--ZAil7smP9D6GNpsi9Tveh0RLPMxQABJ-I5k1fHv5eYeiFiyXrIXJhbOkObusrdjH_nZ5MLmDZmk-7Uogkp3e34atUKt9TzW3RqGn7uTnPhPINQmbstDnnrxI4_6yH5B0YvKYOEibV9u-32dm04a_0RqQJg9UHLLxQ5ECh1HsF_KF7X905RKqOYO1b3DwvxxA5rA2viwYHZedrASVGc44xrn9-cvzTm5RYCBvMYU3mSBANjP2NWDqLTppLhxEzz2MoQ/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -400,10 +400,54 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
     </div>
     <div class="contact-card reveal reveal-delay-1">
       <div class="contact-name">Salon MARGO Haifa</div>
-      <div class="contact-city">יונה 5, חיפה, חיפה</div>
+      <div class="contact-city">יונה 5, חיפה, ישראל, חיפה</div>
       <div class="contact-buttons">
         <a href="https://wa.me/972775241841" class="contact-btn btn-whatsapp">WhatsApp</a>
         <a href="tel:775241841" class="contact-btn btn-phone">077-524-1841</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Real Google Reviews -->
+<section style="padding:60px 24px;background:#FAFAF8">
+  <div style="max-width:1100px;margin:0 auto">
+    <h2 style="text-align:center;font-size:1.8rem;font-weight:700;color:#1a1a1a;margin-bottom:8px">מה הלקוחות אומרים</h2>
+    <p style="text-align:center;color:#888;margin-bottom:40px;font-size:15px">ביקורות אמיתיות מגוגל</p>
+    <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center">
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">ו</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">ויקטוריה זוניס</div>
+            <div style="font-size:12px;color:#999">2 years ago</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"יחס נעים וחם של הבנות בסלון,אווירה נעימה וחמימה שיוצרת תחושת רצון שבא לך לחזור שוב לשם,הסלון ממוקם במקום מרכזי ליד משביר החדש לצרכן וקל למצוא אותו.אני את האמת הייתי רק בטיפול שוגרינג - הורדת שיער עם ש..."</p>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">T</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">Tanya Ko</div>
+            <div style="font-size:12px;color:#999">לפני 3 שנים</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"עשיתי עיסוי עם אנה. ממש אהבתי את זה! אני ממליץ על זה לכולם! גישה מקצועית ויחד עם זאת מאוד אישית ונוחה."</p>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">R</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">Renata Koltoniuk (Renatush_IL)</div>
+            <div style="font-size:12px;color:#999">לפני 5 שנים</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"המניקוריסטית אוקסנה היא אשת מקצוע מעולה. היא קפדנית והניסיון שלה ניכר. אני ממליץ עליה בחום!"</p>
       </div>
     </div>
   </div>
@@ -420,10 +464,10 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         style="border:0;display:block"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
-        src="https://maps.google.com/maps?q=Salon%20MARGO%20Haifa%20%D7%97%D7%99%D7%A4%D7%94+ישראל&output=embed&hl=he">
+        src="https://maps.google.com/maps?q=Salon%20MARGO%20Haifa%20%D7%97%D7%99%D7%A4%D7%94+ישראל&output=embed&hl=he&z=16">
       </iframe>
       <div style="padding:20px;background:#fff;text-align:center">
-        <p style="color:#3D3D3D;font-size:1rem;margin-bottom:12px">יונה 5, חיפה</p>
+        <p style="color:#3D3D3D;font-size:1rem;margin-bottom:12px">יונה 5, חיפה, ישראל</p>
         <a href="https://www.google.com/maps/search/?api=1&query=Salon%20MARGO%20Haifa%20%D7%97%D7%99%D7%A4%D7%94" target="_blank" style="color:#4285f4;text-decoration:none;font-weight:600;font-size:14px">פתח בגוגל מפות</a>
       </div>
     </div>
@@ -483,5 +527,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
   });
 })();
 </script>
+<script>(function(){var p="775241841",n=encodeURIComponent("Salon MARGO Haifa");var img=new Image();img.src="https://output-seven-black.vercel.app/api/track?phone="+p+"&name="+n+"&t="+Date.now();})()</script>
+
 </body>
 </html>

@@ -1,0 +1,12 @@
+{
+  "outputDirectory": "output",
+  "rewrites": [
+    { "source": "/api/track", "destination": "/api/track" }
+  ],
+  "functions": {
+    "api/track.js": {
+      "memory": 128,
+      "maxDuration": 10
+    }
+  }
+}

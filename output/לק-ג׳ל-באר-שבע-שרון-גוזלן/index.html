@@ -35,7 +35,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
 
 /* --- Hero --- */
 .hero{position:relative;height:100vh;min-height:620px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;padding-bottom:80px}
-.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1400&q=80') center/cover no-repeat;will-change:transform}
+.hero-bg{position:absolute;inset:0;background:url('https://places.googleapis.com/v1/places/ChIJn8EglhpnAhUR3Sr2wlvMYB0/photos/AU_ZVEGsGghOS0tkr0XehK7pqoYdvBGZSdi3JJQpdFAiPbAktxc9CtreEsWLhtoZ755ld_vq0hmcb_h_E0jG68KyeRGAUWgPKwciQln2SoyJq-EJlipnrbY3ofbwu-fbty5AS8jzzTC8wSX9ivHwPDKcBIv86GTdCCTUE_Kq9rYyKrRIrX3461O-0wUQn5Lc_oLQny6pQz4o9xatuZOV94Oh7R8jVAzx6E3iHainbeKSRlQTgpGIeh0wdMudJKKy97U-ItauyrdTkus3JuKbFSRcrrFRLmWv0uD6GTUCCIBQi56tSg/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ') center/cover no-repeat;will-change:transform}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(253,245,243,0.1) 0%,rgba(253,245,243,0.4) 30%,rgba(253,245,243,0.92) 85%,var(--bg) 100%)}
 .hero-content{position:relative;z-index:2;text-align:center;padding:0 24px;max-width:680px;animation:fadeInUp 1s cubic-bezier(0.16,1,0.3,1) 0.2s both}
 .hero-badge{display:inline-block;padding:6px 22px;background:rgba(196,114,126,0.06);border:1px solid rgba(196,114,126,0.12);border-radius:100px;font-size:13px;color:var(--rose);letter-spacing:1.5px;margin-bottom:20px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
@@ -237,10 +237,10 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
 </style>
 <div class="lp-banner" id="lpBanner">
   <span class="lp-banner-text">
-    זו הצעה לאתר שלכם -- נבנה במיוחד בשבילכם. מעוניינים? דברו איתנו: 055-917-3249
+    זה האתר שבנינו בשבילכם 🎉 הקמה 990 ₪ + 149 ₪/חודש — כולל דומיין, אחסון ותחזוקה
   </span>
-  <a class="lp-banner-cta" href="https://wa.me/972559173249?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%94%D7%A6%D7%A2%D7%94%20%D7%9C%D7%90%D7%AA%D7%A8%20-%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93" target="_blank">
-    כן, מעוניין!
+  <a class="lp-banner-cta" href="https://wa.me/972559173249?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%91%D7%A0%D7%99%D7%AA%D7%9D%20%D7%9C%D7%99%20-%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A2%D7%9C%D7%95%D7%AA%20%D7%9C%D7%90%D7%95%D7%95%D7%99%D7%A8!" target="_blank">
+    רוצה לעלות לאוויר!
   </a>
   <button class="lp-banner-close" onclick="document.getElementById('lpBanner').classList.add('lp-hidden');document.body.style.paddingTop='0'" aria-label="סגור">&times;</button>
 </div>
@@ -274,9 +274,9 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
       <div class="star"></div>
       <div class="star"></div>
     </div>
-    <div class="rating-score"></div>
-    <div class="rating-text"> ביקורות בגוגל</div>
-    <div class="rating-address">החלוץ 101, באר שבע</div>
+    <div class="rating-score">4.8</div>
+    <div class="rating-text">24 ביקורות בגוגל</div>
+    <div class="rating-address">מבצע נחשון 68, באר שבע, ישראל</div>
   </div>
 </section>
 
@@ -289,7 +289,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
     </div>
     <div class="services-grid">
       <div class="service-card reveal reveal-delay-1">
-        <img class="service-card-img" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80" alt="תספורת ועיצוב" loading="lazy">
+        <img class="service-card-img" src="https://places.googleapis.com/v1/places/ChIJn8EglhpnAhUR3Sr2wlvMYB0/photos/AU_ZVEFpUi2C6Z1dJ6iXgSSCCUUYGyqKuMOo6ZSV4Do5o6yK687WP8FID7A9AvXRqvomU3J_nq5-4FSgNlconE0-34Ie4A7KM6MyEsBWxlStiaUUOQL5i1Lmf9391fSc9VA7k0ahJWq52Gxt8AbUiJHWJKWwO02_hEXMCeup3t7C5-3BxftZBxKTjHHZhr4Z9lniHB9ObTP4_Dpa9__r2OkLMzqHBsXMPaY7VRPpfubeBdUdSQsSAwyoPinun21zbobu3wgCzrj-QE_nwMiXOmtfrTSGCDQ2_e2UyebwpGaK_5LyNg/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="תספורת ועיצוב" loading="lazy">
         <div class="service-card-body">
           <div class="service-card-name">תספורת ועיצוב</div>
           <div class="service-card-desc">עיצוב מקצועי שמתאים בדיוק לסגנון שלך</div>
@@ -297,7 +297,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         </div>
       </div>
       <div class="service-card reveal reveal-delay-2">
-        <img class="service-card-img" src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80" alt="צביעה והבהרה" loading="lazy">
+        <img class="service-card-img" src="https://places.googleapis.com/v1/places/ChIJn8EglhpnAhUR3Sr2wlvMYB0/photos/AU_ZVEGy-0CPtfGOzz5sN57f-H7L498NETRT5Yq0meFxXoY_bEMU72C7jP987dMS9PJUg_mmxMI49DA2o71PI_HX5a6MV3FWo_v6-gTx66xG2QzxP6CLo9SI2UbXxBhz31swr7_6EXUuEv7y4I_Sz-SR1JQ-CHhz4sg-vCD2_4dPrK_h_AoJwn8ErAy6_KKjUJvterbhOmP2cTPCE7ixGj6wCMNYBlseoAUzeiR7y3QGiYYU_OjsHAUNJuDWnwrqL7g0IVqdtyOBZt60dYE3rFRz4Hzs7OZ31ea44AvEOBkhxdWKC21N8SsuGCDj_SJ5WEXdWkpkykKkhB0BBSmfBEQCiXoTufrj--CYd_HsPL-0qfrXNIQnXCCPPUfUYLmrXLGqQcLvTXjtK2UTGVydZHdb1xrCurjmtsNxD2iaWJbkA5w/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="צביעה והבהרה" loading="lazy">
         <div class="service-card-body">
           <div class="service-card-name">צביעה והבהרה</div>
           <div class="service-card-desc">צבעים מובילים לתוצאה טבעית ומושלמת</div>
@@ -305,7 +305,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         </div>
       </div>
       <div class="service-card reveal reveal-delay-3">
-        <img class="service-card-img" src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80" alt="מניקור ופדיקור" loading="lazy">
+        <img class="service-card-img" src="https://places.googleapis.com/v1/places/ChIJn8EglhpnAhUR3Sr2wlvMYB0/photos/AU_ZVEHSZEYKbiKOpJDb5SIHS2NBh1FikesNhIescPU3AGM-e3hNtysB0z3q9bdCVFM1R0EkzEvUuLLV4Bo2-ckv-YbjuZzkw83JyKw1b46vVmONhT24jD1x9N_9mahbF4SgKN0iVF36ss2xUr7m-jPyvI63wDGwWIPMI-iovbe9e-3n9PnvhKrugOLWxYgrwHXjTAVoKrGRJQuqiTFLuBE56vx1aNZkT8W__JqqBeNYm2onyM1XCfhU6A0JtwAeA1xlVf-naiQw7Fdp4eCp2phgO_3dqXfHctNPjF-jSDFg70tuLg/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="מניקור ופדיקור" loading="lazy">
         <div class="service-card-body">
           <div class="service-card-name">מניקור ופדיקור</div>
           <div class="service-card-desc">ציפורניים מושלמות עם חומרים איכותיים</div>
@@ -313,7 +313,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         </div>
       </div>
       <div class="service-card reveal reveal-delay-4">
-        <img class="service-card-img" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80" alt="טיפולי פנים" loading="lazy">
+        <img class="service-card-img" src="https://places.googleapis.com/v1/places/ChIJn8EglhpnAhUR3Sr2wlvMYB0/photos/AU_ZVEGcLk6gNrjcvFtwUfqij4r3aI3ZUtCtsZ2ly3PiztQdtIhSbXJktUHkaj7ztz3cMtoF8sdaVBFv6JZ2_s5tx8QdbdORU-L7tHiyGcpfr8sGIRBjoYyA6tBFIz3_vqtgg65oBF8mJ1TB3nipA-2fhvkqXb6uLK7oM6hV3dlQWc7T7jhwsJjLer1WxsnPXHlWlHX1PwFJitcToXnPSSFU0JRYz30FZEpA1ubk8ltoUXjyBb0TBneCqVvYa6sSlyUNxpGES0RuWZyIdWM7yHORfGByT16s_AB-eyBnkW796_LFVQ/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="טיפולי פנים" loading="lazy">
         <div class="service-card-body">
           <div class="service-card-name">טיפולי פנים</div>
           <div class="service-card-desc">חידוש וטיפוח העור בטכנולוגיה מתקדמת</div>
@@ -332,12 +332,12 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
       <h2 class="section-title">מ<span class="underline">לק ג׳ל באר שבע - שרון גוזלן</span> באהבה</h2>
     </div>
     <div class="gallery-grid">
-      <div class="gallery-item reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-3"><img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1457972729786-0411a3b2b626?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-3"><img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=500&q=80" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-1"><img src="https://places.googleapis.com/v1/places/ChIJn8EglhpnAhUR3Sr2wlvMYB0/photos/AU_ZVEGsGghOS0tkr0XehK7pqoYdvBGZSdi3JJQpdFAiPbAktxc9CtreEsWLhtoZ755ld_vq0hmcb_h_E0jG68KyeRGAUWgPKwciQln2SoyJq-EJlipnrbY3ofbwu-fbty5AS8jzzTC8wSX9ivHwPDKcBIv86GTdCCTUE_Kq9rYyKrRIrX3461O-0wUQn5Lc_oLQny6pQz4o9xatuZOV94Oh7R8jVAzx6E3iHainbeKSRlQTgpGIeh0wdMudJKKy97U-ItauyrdTkus3JuKbFSRcrrFRLmWv0uD6GTUCCIBQi56tSg/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-2"><img src="https://places.googleapis.com/v1/places/ChIJn8EglhpnAhUR3Sr2wlvMYB0/photos/AU_ZVEFpUi2C6Z1dJ6iXgSSCCUUYGyqKuMOo6ZSV4Do5o6yK687WP8FID7A9AvXRqvomU3J_nq5-4FSgNlconE0-34Ie4A7KM6MyEsBWxlStiaUUOQL5i1Lmf9391fSc9VA7k0ahJWq52Gxt8AbUiJHWJKWwO02_hEXMCeup3t7C5-3BxftZBxKTjHHZhr4Z9lniHB9ObTP4_Dpa9__r2OkLMzqHBsXMPaY7VRPpfubeBdUdSQsSAwyoPinun21zbobu3wgCzrj-QE_nwMiXOmtfrTSGCDQ2_e2UyebwpGaK_5LyNg/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-3"><img src="https://places.googleapis.com/v1/places/ChIJn8EglhpnAhUR3Sr2wlvMYB0/photos/AU_ZVEGy-0CPtfGOzz5sN57f-H7L498NETRT5Yq0meFxXoY_bEMU72C7jP987dMS9PJUg_mmxMI49DA2o71PI_HX5a6MV3FWo_v6-gTx66xG2QzxP6CLo9SI2UbXxBhz31swr7_6EXUuEv7y4I_Sz-SR1JQ-CHhz4sg-vCD2_4dPrK_h_AoJwn8ErAy6_KKjUJvterbhOmP2cTPCE7ixGj6wCMNYBlseoAUzeiR7y3QGiYYU_OjsHAUNJuDWnwrqL7g0IVqdtyOBZt60dYE3rFRz4Hzs7OZ31ea44AvEOBkhxdWKC21N8SsuGCDj_SJ5WEXdWkpkykKkhB0BBSmfBEQCiXoTufrj--CYd_HsPL-0qfrXNIQnXCCPPUfUYLmrXLGqQcLvTXjtK2UTGVydZHdb1xrCurjmtsNxD2iaWJbkA5w/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-1"><img src="https://places.googleapis.com/v1/places/ChIJn8EglhpnAhUR3Sr2wlvMYB0/photos/AU_ZVEHSZEYKbiKOpJDb5SIHS2NBh1FikesNhIescPU3AGM-e3hNtysB0z3q9bdCVFM1R0EkzEvUuLLV4Bo2-ckv-YbjuZzkw83JyKw1b46vVmONhT24jD1x9N_9mahbF4SgKN0iVF36ss2xUr7m-jPyvI63wDGwWIPMI-iovbe9e-3n9PnvhKrugOLWxYgrwHXjTAVoKrGRJQuqiTFLuBE56vx1aNZkT8W__JqqBeNYm2onyM1XCfhU6A0JtwAeA1xlVf-naiQw7Fdp4eCp2phgO_3dqXfHctNPjF-jSDFg70tuLg/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-2"><img src="https://places.googleapis.com/v1/places/ChIJn8EglhpnAhUR3Sr2wlvMYB0/photos/AU_ZVEGsGghOS0tkr0XehK7pqoYdvBGZSdi3JJQpdFAiPbAktxc9CtreEsWLhtoZ755ld_vq0hmcb_h_E0jG68KyeRGAUWgPKwciQln2SoyJq-EJlipnrbY3ofbwu-fbty5AS8jzzTC8wSX9ivHwPDKcBIv86GTdCCTUE_Kq9rYyKrRIrX3461O-0wUQn5Lc_oLQny6pQz4o9xatuZOV94Oh7R8jVAzx6E3iHainbeKSRlQTgpGIeh0wdMudJKKy97U-ItauyrdTkus3JuKbFSRcrrFRLmWv0uD6GTUCCIBQi56tSg/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-3"><img src="https://places.googleapis.com/v1/places/ChIJn8EglhpnAhUR3Sr2wlvMYB0/photos/AU_ZVEFpUi2C6Z1dJ6iXgSSCCUUYGyqKuMOo6ZSV4Do5o6yK687WP8FID7A9AvXRqvomU3J_nq5-4FSgNlconE0-34Ie4A7KM6MyEsBWxlStiaUUOQL5i1Lmf9391fSc9VA7k0ahJWq52Gxt8AbUiJHWJKWwO02_hEXMCeup3t7C5-3BxftZBxKTjHHZhr4Z9lniHB9ObTP4_Dpa9__r2OkLMzqHBsXMPaY7VRPpfubeBdUdSQsSAwyoPinun21zbobu3wgCzrj-QE_nwMiXOmtfrTSGCDQ2_e2UyebwpGaK_5LyNg/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -400,10 +400,56 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
     </div>
     <div class="contact-card reveal reveal-delay-1">
       <div class="contact-name">לק ג׳ל באר שבע - שרון גוזלן</div>
-      <div class="contact-city">החלוץ 101, באר שבע, באר שבע</div>
+      <div class="contact-city">מבצע נחשון 68, באר שבע, ישראל, באר שבע</div>
       <div class="contact-buttons">
         <a href="https://wa.me/97286232344" class="contact-btn btn-whatsapp">WhatsApp</a>
         <a href="tel:86232344" class="contact-btn btn-phone">08-623-2344</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Real Google Reviews -->
+<section style="padding:60px 24px;background:#FAFAF8">
+  <div style="max-width:1100px;margin:0 auto">
+    <h2 style="text-align:center;font-size:1.8rem;font-weight:700;color:#1a1a1a;margin-bottom:8px">מה הלקוחות אומרים</h2>
+    <p style="text-align:center;color:#888;margin-bottom:40px;font-size:15px">ביקורות אמיתיות מגוגל</p>
+    <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center">
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">T</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">Talia Martin</div>
+            <div style="font-size:12px;color:#999">לפני 5 שנים</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"יצא להיות אצל הרבה בנות שעושות ג׳ל אבל שרון ללא ספק אחת הטובות שיצא לי להיות אצלן.
+סופר מקצועית, ממש נחמדה, והכי חשוב - תוצר מושלם! ממליצה בחום !!!!"</p>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">S</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">Sarit Butra</div>
+            <div style="font-size:12px;color:#999">לפני 5 שנים</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"שרון מדהימה עבודה מקצועית ונקייה מחזיק להרבה זמן שירות נהדר ותמיד כיף לבוא !!! תותחית אין מילים כדאי מאוד להגיע!!"</p>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">N</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">Noa Sarussy</div>
+            <div style="font-size:12px;color:#999">לפני 5 שנים</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"פשוט הכי טובה בעולם!
+אם אתן מחפשות לק ג׳ל שמחזיק בממוצע *חודש* ובמחיר הוגן - זאת הכתובת!"</p>
       </div>
     </div>
   </div>
@@ -420,10 +466,10 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         style="border:0;display:block"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
-        src="https://maps.google.com/maps?q=%D7%9C%D7%A7%20%D7%92%D7%B3%D7%9C%20%D7%91%D7%90%D7%A8%20%D7%A9%D7%91%D7%A2%20-%20%D7%A9%D7%A8%D7%95%D7%9F%20%D7%92%D7%95%D7%96%D7%9C%D7%9F%20%D7%91%D7%90%D7%A8%20%D7%A9%D7%91%D7%A2+ישראל&output=embed&hl=he">
+        src="https://maps.google.com/maps?q=%D7%9C%D7%A7%20%D7%92%D7%B3%D7%9C%20%D7%91%D7%90%D7%A8%20%D7%A9%D7%91%D7%A2%20-%20%D7%A9%D7%A8%D7%95%D7%9F%20%D7%92%D7%95%D7%96%D7%9C%D7%9F%20%D7%91%D7%90%D7%A8%20%D7%A9%D7%91%D7%A2+ישראל&output=embed&hl=he&z=16">
       </iframe>
       <div style="padding:20px;background:#fff;text-align:center">
-        <p style="color:#3D3D3D;font-size:1rem;margin-bottom:12px">החלוץ 101, באר שבע</p>
+        <p style="color:#3D3D3D;font-size:1rem;margin-bottom:12px">מבצע נחשון 68, באר שבע, ישראל</p>
         <a href="https://www.google.com/maps/search/?api=1&query=%D7%9C%D7%A7%20%D7%92%D7%B3%D7%9C%20%D7%91%D7%90%D7%A8%20%D7%A9%D7%91%D7%A2%20-%20%D7%A9%D7%A8%D7%95%D7%9F%20%D7%92%D7%95%D7%96%D7%9C%D7%9F%20%D7%91%D7%90%D7%A8%20%D7%A9%D7%91%D7%A2" target="_blank" style="color:#4285f4;text-decoration:none;font-weight:600;font-size:14px">פתח בגוגל מפות</a>
       </div>
     </div>
@@ -483,5 +529,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
   });
 })();
 </script>
+<script>(function(){var p="86232344",n=encodeURIComponent("לק ג׳ל באר שבע - שרון גוזלן");var img=new Image();img.src="https://output-seven-black.vercel.app/api/track?phone="+p+"&name="+n+"&t="+Date.now();})()</script>
+
 </body>
 </html>

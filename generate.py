@@ -32,7 +32,7 @@ OUTPUT_DIR = os.path.join(BASE_DIR, 'output')
 CSV_PATH = '/Users/oakhome/קלוד עבודות/leads_alon_dev.csv'
 CACHE_PATH = os.path.join(BASE_DIR, 'places_cache.json')
 
-GOOGLE_PLACES_API_KEY = os.environ.get('GOOGLE_PLACES_API_KEY', 'AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8')
+GOOGLE_PLACES_API_KEY = os.environ.get('GOOGLE_PLACES_API_KEY', 'AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ')
 
 CATEGORY_MAP = {
     'מסעדה': 'restaurant',
@@ -117,10 +117,10 @@ def places_get_details(resource_name):
     """Fetch Place Details using Google Places API (v1).
     resource_name is e.g. 'places/ChIJ...'.
     Returns dict with photos, rating, userRatingCount, regularOpeningHours, formattedAddress."""
-    url = f"https://places.googleapis.com/v1/{resource_name}"
+    url = f"https://places.googleapis.com/v1/{resource_name}?languageCode=he"
     headers = {
         'X-Goog-Api-Key': GOOGLE_PLACES_API_KEY,
-        'X-Goog-FieldMask': 'photos,rating,userRatingCount,regularOpeningHours,formattedAddress',
+        'X-Goog-FieldMask': 'photos,rating,userRatingCount,regularOpeningHours,formattedAddress,reviews,websiteUri',
     }
     try:
         data = http_get_json(url, headers=headers)
@@ -179,16 +179,27 @@ def enrich_lead(lead, cache):
     enrichment['rating'] = details.get('rating', '')
     enrichment['reviews_count'] = details.get('userRatingCount', '')
 
-    # Photos (up to 4) — new API uses "name" field per photo
+    # Photos (up to 6) — new API uses "name" field per photo
     photos = details.get('photos', [])
-    photo_names = [p['name'] for p in photos[:4]]
+    photo_names = [p['name'] for p in photos[:6]]
     enrichment['photo_refs'] = photo_names
-    enrichment['photo_urls'] = [build_photo_url(name) for name in photo_names]
+    enrichment['photo_urls'] = [build_photo_url(pn) for pn in photo_names]
 
     # Opening hours (new API: regularOpeningHours)
     hours = details.get('regularOpeningHours', {})
     enrichment['hours_weekday_text'] = hours.get('weekdayDescriptions', [])
     enrichment['hours_periods'] = hours.get('periods', [])
+
+    # Reviews (up to 3 best ones)
+    reviews = details.get('reviews', [])
+    enrichment['reviews'] = []
+    for rev in reviews[:3]:
+        enrichment['reviews'].append({
+            'text': rev.get('text', {}).get('text', ''),
+            'rating': rev.get('rating', 5),
+            'author': rev.get('authorAttribution', {}).get('displayName', ''),
+            'time': rev.get('relativePublishTimeDescription', ''),
+        })
 
     # Save to cache
     cache[cache_key] = enrichment
@@ -256,7 +267,7 @@ def build_map_section(name, city, address):
         style="border:0;display:block"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
-        src="https://maps.google.com/maps?q={query}+ישראל&output=embed&hl=he">
+        src="https://maps.google.com/maps?q={query}+ישראל&output=embed&hl=he&z=16">
       </iframe>
       <div style="padding:20px;background:#fff;text-align:center">
         <p style="color:#3D3D3D;font-size:1rem;margin-bottom:12px">{address if address else f'{name}, {city}'}</p>
@@ -285,6 +296,43 @@ UNSPLASH_FALLBACKS = {
         'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800',
     ],
 }
+
+
+def build_reviews_section(reviews):
+    """Build an HTML section with real Google reviews."""
+    cards = ''
+    for rev in reviews:
+        stars = ''.join(['<span style="color:#F5A623">&#9733;</span>' for _ in range(rev.get('rating', 5))])
+        stars += ''.join(['<span style="color:#ddd">&#9733;</span>' for _ in range(5 - rev.get('rating', 5))])
+        text = rev.get('text', '')[:200]
+        if len(rev.get('text', '')) > 200:
+            text += '...'
+        author = rev.get('author', 'לקוח')
+        initials = author[0] if author else '?'
+        time_ago = rev.get('time', '')
+        cards += f'''
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">{initials}</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">{author}</div>
+            <div style="font-size:12px;color:#999">{time_ago}</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px">{stars}</div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"{text}"</p>
+      </div>'''
+
+    return f'''
+<!-- Real Google Reviews -->
+<section style="padding:60px 24px;background:#FAFAF8">
+  <div style="max-width:1100px;margin:0 auto">
+    <h2 style="text-align:center;font-size:1.8rem;font-weight:700;color:#1a1a1a;margin-bottom:8px">מה הלקוחות אומרים</h2>
+    <p style="text-align:center;color:#888;margin-bottom:40px;font-size:15px">ביקורות אמיתיות מגוגל</p>
+    <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center">{cards}
+    </div>
+  </div>
+</section>'''
 
 
 def generate_page(template_html, banner_html, lead, enrichment=None):
@@ -318,7 +366,7 @@ def generate_page(template_html, banner_html, lead, enrichment=None):
     # Photos: use Google Places if available, otherwise Unsplash fallbacks
     photo_urls = enrichment.get('photo_urls', [])
     fallbacks = UNSPLASH_FALLBACKS.get(category, UNSPLASH_FALLBACKS.get('מסעדה', []))
-    for i in range(1, 5):
+    for i in range(1, 7):
         placeholder = f'{{{{PHOTO_{i}}}}}'
         if i <= len(photo_urls):
             html = html.replace(placeholder, photo_urls[i - 1])
@@ -334,8 +382,50 @@ def generate_page(template_html, banner_html, lead, enrichment=None):
     }
     html = html.replace('{{HOURS_JSON}}', json.dumps(hours_data, ensure_ascii=False))
 
+    # Reviews — build real reviews HTML section
+    reviews = enrichment.get('reviews', [])
+    if reviews:
+        reviews_html = build_reviews_section(reviews)
+    else:
+        reviews_html = ''
+    html = html.replace('{{REVIEWS_SECTION}}', reviews_html)
+
     # Inject map before footer
     html = html.replace('<!-- Footer -->', f'{map_html}\n\n<!-- Footer -->')
+
+    # Tracking pixel — fires when someone opens the page
+    tracking_pixel = (
+        f'<script>'
+        f'(function(){{'
+        f'var p="{phone_clean}",n=encodeURIComponent("{lead["name"]}");'
+        f'var img=new Image();'
+        f'img.src="https://output-seven-black.vercel.app/api/track?phone="+p+"&name="+n+"&t="+Date.now();'
+        f'}})()'
+        f'</script>'
+    )
+
+    # Facebook Pixel for retargeting
+    fb_pixel_id = os.environ.get('FB_PIXEL_ID', '')
+    fb_pixel = ''
+    if fb_pixel_id:
+        fb_pixel = (
+            f"<!-- Facebook Pixel -->"
+            f"<script>"
+            f"!function(f,b,e,v,n,t,s){{if(f.fbq)return;n=f.fbq=function(){{n.callMethod?"
+            f"n.callMethod.apply(n,arguments):n.queue.push(arguments)}};if(!f._fbq)f._fbq=n;"
+            f"n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;"
+            f"t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}}"
+            f"(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');"
+            f"fbq('init','{fb_pixel_id}');"
+            f"fbq('track','PageView');"
+            f"fbq('track','ViewContent',{{content_name:'{lead['name']}',content_category:'{lead.get('category','')}'}});"
+            f"</script>"
+            f"<noscript><img height='1' width='1' style='display:none' "
+            f"src='https://www.facebook.com/tr?id={fb_pixel_id}&ev=PageView&noscript=1'/></noscript>"
+            f"<!-- End Facebook Pixel -->"
+        )
+
+    html = html.replace('</body>', f'{tracking_pixel}\n{fb_pixel}\n</body>')
 
     return html
 

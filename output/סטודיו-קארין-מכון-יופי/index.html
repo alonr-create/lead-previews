@@ -35,7 +35,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
 
 /* --- Hero --- */
 .hero{position:relative;height:100vh;min-height:620px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;padding-bottom:80px}
-.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1400&q=80') center/cover no-repeat;will-change:transform}
+.hero-bg{position:absolute;inset:0;background:url('https://places.googleapis.com/v1/places/ChIJZW6n7NcpAxURN4bss2SxWDI/photos/AU_ZVEEU5pvbx3zz3u-cIIXvc9xDy3EqTHPW7qRPrM4kozaQIZaimP-Zdrm9cMZaqgGO1FEKGZ5udUpvmxC3zPEH_w6eiyQlZYvieb47lsavoPH9NU6gx853ihARTHwUXniMDeO2lraTUa48lSRDfVVKhxmBzhAh5aO7iSe0CW52KhKRYXthGMRW6ZUiWKgp3OZCVqJfYZJrInt8HorsHSFL03ntamQIvQW8j8Q-GJyc6l2w9uOIPAIG-4BvN9eyAcb6Wsz1fBH5VfVSQCNV1w-KvM3ExFQJt5v3pfbjxhPJEgNboK74WO6QsuoWEDS7YU77UCe3PIZfjlIpl9EM0Zn0cL8Bl68eRnnKYKELDd9JuKC6zpAmwprle_SvPiy5Drtb5sw0zqk7DwVYL0QibB1PXJHc4c1pwlZwLRGnOT0YZFZT-MfT/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ') center/cover no-repeat;will-change:transform}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(253,245,243,0.1) 0%,rgba(253,245,243,0.4) 30%,rgba(253,245,243,0.92) 85%,var(--bg) 100%)}
 .hero-content{position:relative;z-index:2;text-align:center;padding:0 24px;max-width:680px;animation:fadeInUp 1s cubic-bezier(0.16,1,0.3,1) 0.2s both}
 .hero-badge{display:inline-block;padding:6px 22px;background:rgba(196,114,126,0.06);border:1px solid rgba(196,114,126,0.12);border-radius:100px;font-size:13px;color:var(--rose);letter-spacing:1.5px;margin-bottom:20px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
@@ -237,10 +237,10 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
 </style>
 <div class="lp-banner" id="lpBanner">
   <span class="lp-banner-text">
-    זו הצעה לאתר שלכם -- נבנה במיוחד בשבילכם. מעוניינים? דברו איתנו: 055-917-3249
+    זה האתר שבנינו בשבילכם 🎉 הקמה 990 ₪ + 149 ₪/חודש — כולל דומיין, אחסון ותחזוקה
   </span>
-  <a class="lp-banner-cta" href="https://wa.me/972559173249?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%94%D7%A6%D7%A2%D7%94%20%D7%9C%D7%90%D7%AA%D7%A8%20-%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93" target="_blank">
-    כן, מעוניין!
+  <a class="lp-banner-cta" href="https://wa.me/972559173249?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%91%D7%A0%D7%99%D7%AA%D7%9D%20%D7%9C%D7%99%20-%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A2%D7%9C%D7%95%D7%AA%20%D7%9C%D7%90%D7%95%D7%95%D7%99%D7%A8!" target="_blank">
+    רוצה לעלות לאוויר!
   </a>
   <button class="lp-banner-close" onclick="document.getElementById('lpBanner').classList.add('lp-hidden');document.body.style.paddingTop='0'" aria-label="סגור">&times;</button>
 </div>
@@ -274,9 +274,9 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
       <div class="star"></div>
       <div class="star"></div>
     </div>
-    <div class="rating-score"></div>
-    <div class="rating-text"> ביקורות בגוגל</div>
-    <div class="rating-address">יפו 68, ירושלים</div>
+    <div class="rating-score">4.6</div>
+    <div class="rating-text">34 ביקורות בגוגל</div>
+    <div class="rating-address">יפו 68, ירושלים, ישראל</div>
   </div>
 </section>
 
@@ -289,7 +289,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
     </div>
     <div class="services-grid">
       <div class="service-card reveal reveal-delay-1">
-        <img class="service-card-img" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80" alt="תספורת ועיצוב" loading="lazy">
+        <img class="service-card-img" src="https://places.googleapis.com/v1/places/ChIJZW6n7NcpAxURN4bss2SxWDI/photos/AU_ZVEG6JWEFhLRxeJSzgepeETKgbSnKkapa9HgTkxM9H2In-pot83NG2D4x2GxJ6ng8k83LsnlqwbFisdrhCe9z7OPXVJZeLMgEjvsl054dolQIXb2PnD0TU2DzfrMUn-SVrvD4Z_rGMqzB-l9N3QU4sBMp6PCewt6L9Z13BV9ygpiqmbc3VSZuUuy8Z5RsvwoyYwfCGU5ZM88jgOrUWoxWTnq2REojS4wzcAVrTe82HXKF1O_mmuV1yJxAsv2n4ltoYsAD7s3F5OnBdkvhMIZWr19LwBnTk30M6OF97EVY_-XBgK5JFMimvQKz5Puf6fhM26v448UKNiL0KNRkLmv3CciItVtriCDCIYIC0CevifeBOK9OHjZXiaIiIrh4BknbM3linlzpDUamAbPJXTLN3yxLoyfCEiMMmPIhugYM7kIXjgSc/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="תספורת ועיצוב" loading="lazy">
         <div class="service-card-body">
           <div class="service-card-name">תספורת ועיצוב</div>
           <div class="service-card-desc">עיצוב מקצועי שמתאים בדיוק לסגנון שלך</div>
@@ -297,7 +297,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         </div>
       </div>
       <div class="service-card reveal reveal-delay-2">
-        <img class="service-card-img" src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80" alt="צביעה והבהרה" loading="lazy">
+        <img class="service-card-img" src="https://places.googleapis.com/v1/places/ChIJZW6n7NcpAxURN4bss2SxWDI/photos/AU_ZVEHhed-wm5RgYf6V219qYxfyWFMGhQPQSAAWOJB-DQ2zEaQ2xqy08Tqkvs7VMkLFx_P2wpiQSHsndC2RjV2CKjRYCePqaRJlU95UvrjUDiv7sgfwcewd0AxMS9fvwSVYPCSBhUBdX0HNv2mClR4b5xCmFlPvV7PRh-66uD47dHl8z0rXYse3S7evEU-feYZKyzKXPpz1RcFFJ6wh0pwVdVX3vKg1YnVlsGHNhwD7Orw3YC2aQqo0jai3stHRpB9IO49JK3CMAQCjNvxY9WGgUFNq7QbVX5dXB_1FGX-ubIWsPOwb4TU2syQkPHpmwedIgWfyExKwMDNr7mJPZuQCuSF3dMHhM6X7MnbOfCcrQtsiZt88LlfxRr-L70vjS1RWL40F00sbFNXMmfclHFY7GI7ws6ADKj4lFl9M9qyPSOs/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="צביעה והבהרה" loading="lazy">
         <div class="service-card-body">
           <div class="service-card-name">צביעה והבהרה</div>
           <div class="service-card-desc">צבעים מובילים לתוצאה טבעית ומושלמת</div>
@@ -305,7 +305,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         </div>
       </div>
       <div class="service-card reveal reveal-delay-3">
-        <img class="service-card-img" src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80" alt="מניקור ופדיקור" loading="lazy">
+        <img class="service-card-img" src="https://places.googleapis.com/v1/places/ChIJZW6n7NcpAxURN4bss2SxWDI/photos/AU_ZVEFwIvJpBS778Soe00rC5sIDO3EfCjDbPT44y4-nkW8L_T-9E3flnFJc2rEFkHlEbwLxisCEsfuk3gKWvCgMaHhcPItx75ax74Ijh_EjhzThi7dNZwgympOnOQuGEQG2khZjNi41jHgMxrgYSBoCC17UhHTOBG-l_FXPLMhl6Crg1sDPrSZQXdNLK3WXKPFTIpzj90Bpg9JSS4KiwpzEbZ-ezTyLE1buBm-fAMw2bDXZIBRdF8Wsb9Yioog0rJ2wgQmsmRM5yfMHbQPB2JtMI35ouno96lJCHjhK4VqMEfxlDzIhL1AmG_LmjoMMOpJZFmVn5kT5RfWvKbEhgEDi0SnRqa1L9xkgCIoxPp-3tNaKfP4tavtNLhXkngpAnJ1Ne2TV8rxejq1k7vVfldbDEkAPJsM-Etj0sYpypL48WtZAig/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="מניקור ופדיקור" loading="lazy">
         <div class="service-card-body">
           <div class="service-card-name">מניקור ופדיקור</div>
           <div class="service-card-desc">ציפורניים מושלמות עם חומרים איכותיים</div>
@@ -313,7 +313,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         </div>
       </div>
       <div class="service-card reveal reveal-delay-4">
-        <img class="service-card-img" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80" alt="טיפולי פנים" loading="lazy">
+        <img class="service-card-img" src="https://places.googleapis.com/v1/places/ChIJZW6n7NcpAxURN4bss2SxWDI/photos/AU_ZVEF_cPdB07FGOhEPs04xoTADz8_Ogv1TCUIo5xuWZ_761OV4uvErlfIgfP3mJ0AXmejCczX7iinpSxwKQdT4_5zkDQGDaDeDUHc7cx22Cos0CTaeZhMvch624W0370dyi7NluijSNx7VzOJmtPo3pgR2xQeIJvhXgYjEjnzu7rcSBhmDMljefO9aUMzk9fjCLckRqqwC9PCiVnjxmVY_a98hAUkz-JeOjJUPcxsEKjQi1F6Wf0R0zlgsB8Mdc_5bkg0Yt2Cy3p8kkXGHPS7tun-hIB2DBoxnSJwR-v2aczD_CBf0vJwBcsKHk5iYe9yMOGZ1guAKxO2DHN1PMZuyPu-KyJWW2rgaq0lFsYpWBNiSco4yYfNAlmZfdc2yFt1M3dGtm_nvup3v_tl1drJtsFQwRmSnoGiXWNwpXWaif1pGaA/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="טיפולי פנים" loading="lazy">
         <div class="service-card-body">
           <div class="service-card-name">טיפולי פנים</div>
           <div class="service-card-desc">חידוש וטיפוח העור בטכנולוגיה מתקדמת</div>
@@ -332,12 +332,12 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
       <h2 class="section-title">מ<span class="underline">סטודיו קארין מכון יופי</span> באהבה</h2>
     </div>
     <div class="gallery-grid">
-      <div class="gallery-item reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-3"><img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1457972729786-0411a3b2b626?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-3"><img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=500&q=80" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-1"><img src="https://places.googleapis.com/v1/places/ChIJZW6n7NcpAxURN4bss2SxWDI/photos/AU_ZVEEU5pvbx3zz3u-cIIXvc9xDy3EqTHPW7qRPrM4kozaQIZaimP-Zdrm9cMZaqgGO1FEKGZ5udUpvmxC3zPEH_w6eiyQlZYvieb47lsavoPH9NU6gx853ihARTHwUXniMDeO2lraTUa48lSRDfVVKhxmBzhAh5aO7iSe0CW52KhKRYXthGMRW6ZUiWKgp3OZCVqJfYZJrInt8HorsHSFL03ntamQIvQW8j8Q-GJyc6l2w9uOIPAIG-4BvN9eyAcb6Wsz1fBH5VfVSQCNV1w-KvM3ExFQJt5v3pfbjxhPJEgNboK74WO6QsuoWEDS7YU77UCe3PIZfjlIpl9EM0Zn0cL8Bl68eRnnKYKELDd9JuKC6zpAmwprle_SvPiy5Drtb5sw0zqk7DwVYL0QibB1PXJHc4c1pwlZwLRGnOT0YZFZT-MfT/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-2"><img src="https://places.googleapis.com/v1/places/ChIJZW6n7NcpAxURN4bss2SxWDI/photos/AU_ZVEG6JWEFhLRxeJSzgepeETKgbSnKkapa9HgTkxM9H2In-pot83NG2D4x2GxJ6ng8k83LsnlqwbFisdrhCe9z7OPXVJZeLMgEjvsl054dolQIXb2PnD0TU2DzfrMUn-SVrvD4Z_rGMqzB-l9N3QU4sBMp6PCewt6L9Z13BV9ygpiqmbc3VSZuUuy8Z5RsvwoyYwfCGU5ZM88jgOrUWoxWTnq2REojS4wzcAVrTe82HXKF1O_mmuV1yJxAsv2n4ltoYsAD7s3F5OnBdkvhMIZWr19LwBnTk30M6OF97EVY_-XBgK5JFMimvQKz5Puf6fhM26v448UKNiL0KNRkLmv3CciItVtriCDCIYIC0CevifeBOK9OHjZXiaIiIrh4BknbM3linlzpDUamAbPJXTLN3yxLoyfCEiMMmPIhugYM7kIXjgSc/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-3"><img src="https://places.googleapis.com/v1/places/ChIJZW6n7NcpAxURN4bss2SxWDI/photos/AU_ZVEHhed-wm5RgYf6V219qYxfyWFMGhQPQSAAWOJB-DQ2zEaQ2xqy08Tqkvs7VMkLFx_P2wpiQSHsndC2RjV2CKjRYCePqaRJlU95UvrjUDiv7sgfwcewd0AxMS9fvwSVYPCSBhUBdX0HNv2mClR4b5xCmFlPvV7PRh-66uD47dHl8z0rXYse3S7evEU-feYZKyzKXPpz1RcFFJ6wh0pwVdVX3vKg1YnVlsGHNhwD7Orw3YC2aQqo0jai3stHRpB9IO49JK3CMAQCjNvxY9WGgUFNq7QbVX5dXB_1FGX-ubIWsPOwb4TU2syQkPHpmwedIgWfyExKwMDNr7mJPZuQCuSF3dMHhM6X7MnbOfCcrQtsiZt88LlfxRr-L70vjS1RWL40F00sbFNXMmfclHFY7GI7ws6ADKj4lFl9M9qyPSOs/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-1"><img src="https://places.googleapis.com/v1/places/ChIJZW6n7NcpAxURN4bss2SxWDI/photos/AU_ZVEFwIvJpBS778Soe00rC5sIDO3EfCjDbPT44y4-nkW8L_T-9E3flnFJc2rEFkHlEbwLxisCEsfuk3gKWvCgMaHhcPItx75ax74Ijh_EjhzThi7dNZwgympOnOQuGEQG2khZjNi41jHgMxrgYSBoCC17UhHTOBG-l_FXPLMhl6Crg1sDPrSZQXdNLK3WXKPFTIpzj90Bpg9JSS4KiwpzEbZ-ezTyLE1buBm-fAMw2bDXZIBRdF8Wsb9Yioog0rJ2wgQmsmRM5yfMHbQPB2JtMI35ouno96lJCHjhK4VqMEfxlDzIhL1AmG_LmjoMMOpJZFmVn5kT5RfWvKbEhgEDi0SnRqa1L9xkgCIoxPp-3tNaKfP4tavtNLhXkngpAnJ1Ne2TV8rxejq1k7vVfldbDEkAPJsM-Etj0sYpypL48WtZAig/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-2"><img src="https://places.googleapis.com/v1/places/ChIJZW6n7NcpAxURN4bss2SxWDI/photos/AU_ZVEEU5pvbx3zz3u-cIIXvc9xDy3EqTHPW7qRPrM4kozaQIZaimP-Zdrm9cMZaqgGO1FEKGZ5udUpvmxC3zPEH_w6eiyQlZYvieb47lsavoPH9NU6gx853ihARTHwUXniMDeO2lraTUa48lSRDfVVKhxmBzhAh5aO7iSe0CW52KhKRYXthGMRW6ZUiWKgp3OZCVqJfYZJrInt8HorsHSFL03ntamQIvQW8j8Q-GJyc6l2w9uOIPAIG-4BvN9eyAcb6Wsz1fBH5VfVSQCNV1w-KvM3ExFQJt5v3pfbjxhPJEgNboK74WO6QsuoWEDS7YU77UCe3PIZfjlIpl9EM0Zn0cL8Bl68eRnnKYKELDd9JuKC6zpAmwprle_SvPiy5Drtb5sw0zqk7DwVYL0QibB1PXJHc4c1pwlZwLRGnOT0YZFZT-MfT/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-3"><img src="https://places.googleapis.com/v1/places/ChIJZW6n7NcpAxURN4bss2SxWDI/photos/AU_ZVEG6JWEFhLRxeJSzgepeETKgbSnKkapa9HgTkxM9H2In-pot83NG2D4x2GxJ6ng8k83LsnlqwbFisdrhCe9z7OPXVJZeLMgEjvsl054dolQIXb2PnD0TU2DzfrMUn-SVrvD4Z_rGMqzB-l9N3QU4sBMp6PCewt6L9Z13BV9ygpiqmbc3VSZuUuy8Z5RsvwoyYwfCGU5ZM88jgOrUWoxWTnq2REojS4wzcAVrTe82HXKF1O_mmuV1yJxAsv2n4ltoYsAD7s3F5OnBdkvhMIZWr19LwBnTk30M6OF97EVY_-XBgK5JFMimvQKz5Puf6fhM26v448UKNiL0KNRkLmv3CciItVtriCDCIYIC0CevifeBOK9OHjZXiaIiIrh4BknbM3linlzpDUamAbPJXTLN3yxLoyfCEiMMmPIhugYM7kIXjgSc/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -400,10 +400,55 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
     </div>
     <div class="contact-card reveal reveal-delay-1">
       <div class="contact-name">סטודיו קארין מכון יופי</div>
-      <div class="contact-city">יפו 68, ירושלים, ירושלים</div>
+      <div class="contact-city">יפו 68, ירושלים, ישראל, ירושלים</div>
       <div class="contact-buttons">
         <a href="https://wa.me/972587972363" class="contact-btn btn-whatsapp">WhatsApp</a>
         <a href="tel:587972363" class="contact-btn btn-phone">058-797-2363</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Real Google Reviews -->
+<section style="padding:60px 24px;background:#FAFAF8">
+  <div style="max-width:1100px;margin:0 auto">
+    <h2 style="text-align:center;font-size:1.8rem;font-weight:700;color:#1a1a1a;margin-bottom:8px">מה הלקוחות אומרים</h2>
+    <p style="text-align:center;color:#888;margin-bottom:40px;font-size:15px">ביקורות אמיתיות מגוגל</p>
+    <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center">
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">ש</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">שרה לויט</div>
+            <div style="font-size:12px;color:#999">לפני שנה</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#ddd">&#9733;</span><span style="color:#ddd">&#9733;</span><span style="color:#ddd">&#9733;</span><span style="color:#ddd">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"עשיתי לק גל וזה היה מזעזע לא נקי הכל היה מלוכלך לא סידרה לי את העור מסביב פשוט לא רוצה לחזור לשם
+וזה לא פעם ראשונה שלי שם הייתה עובדת טובה שם שהיא עזבה את המקום"</p>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">b</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">bar assolin</div>
+            <div style="font-size:12px;color:#999">לפני 8 חודשים</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"החוויה מאוד נעימה. תודה רבה לך קארין !"</p>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">s</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">s l</div>
+            <div style="font-size:12px;color:#999">2 years ago</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"מרינה ה-מדהימה נותנת שירות.מכל הלב והנשמה. מקום שקט ורגוע פשוט כייף לצאת משם מושלמת!!!!"</p>
       </div>
     </div>
   </div>
@@ -420,10 +465,10 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         style="border:0;display:block"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
-        src="https://maps.google.com/maps?q=%D7%A1%D7%98%D7%95%D7%93%D7%99%D7%95%20%D7%A7%D7%90%D7%A8%D7%99%D7%9F%20%D7%9E%D7%9B%D7%95%D7%9F%20%D7%99%D7%95%D7%A4%D7%99%20%D7%99%D7%A8%D7%95%D7%A9%D7%9C%D7%99%D7%9D+ישראל&output=embed&hl=he">
+        src="https://maps.google.com/maps?q=%D7%A1%D7%98%D7%95%D7%93%D7%99%D7%95%20%D7%A7%D7%90%D7%A8%D7%99%D7%9F%20%D7%9E%D7%9B%D7%95%D7%9F%20%D7%99%D7%95%D7%A4%D7%99%20%D7%99%D7%A8%D7%95%D7%A9%D7%9C%D7%99%D7%9D+ישראל&output=embed&hl=he&z=16">
       </iframe>
       <div style="padding:20px;background:#fff;text-align:center">
-        <p style="color:#3D3D3D;font-size:1rem;margin-bottom:12px">יפו 68, ירושלים</p>
+        <p style="color:#3D3D3D;font-size:1rem;margin-bottom:12px">יפו 68, ירושלים, ישראל</p>
         <a href="https://www.google.com/maps/search/?api=1&query=%D7%A1%D7%98%D7%95%D7%93%D7%99%D7%95%20%D7%A7%D7%90%D7%A8%D7%99%D7%9F%20%D7%9E%D7%9B%D7%95%D7%9F%20%D7%99%D7%95%D7%A4%D7%99%20%D7%99%D7%A8%D7%95%D7%A9%D7%9C%D7%99%D7%9D" target="_blank" style="color:#4285f4;text-decoration:none;font-weight:600;font-size:14px">פתח בגוגל מפות</a>
       </div>
     </div>
@@ -483,5 +528,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
   });
 })();
 </script>
+<script>(function(){var p="587972363",n=encodeURIComponent("סטודיו קארין מכון יופי");var img=new Image();img.src="https://output-seven-black.vercel.app/api/track?phone="+p+"&name="+n+"&t="+Date.now();})()</script>
+
 </body>
 </html>

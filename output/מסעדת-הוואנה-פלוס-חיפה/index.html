@@ -35,7 +35,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
 
 /* --- Hero --- */
 .hero{position:relative;height:100vh;min-height:620px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;padding-bottom:80px}
-.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1400&q=80') center/cover no-repeat;will-change:transform}
+.hero-bg{position:absolute;inset:0;background:url('https://places.googleapis.com/v1/places/ChIJvwzpacq7HRURjjOr68TRKyE/photos/AU_ZVEFpfstAtUdk5JNeBskJ2ffuHfobDEWVmey1etYoXmI9-shYiQKjcCG9tuUFoyaWmqd0Z1wRWKaWPR-2CnKjfDwZkyzWMNIIbRkf6wTGnvD83BPijU-KVpbhCC6WNiT-m9WFvUKQznSxWLWZth4QcT88clZpvj7zSR3jrFfgWT_ifoE6ThGVHtczs5qZlE_BhphTsHMRnk3umvMnwmF9iAWebOw7cCj08w7Pf8NYwSDN-g20O9m1ppmkTzk-KqDYyrcnL-NNJ8uEmhtcsOR2c5xeUj01gu_hsa9iLVqCIC4/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ') center/cover no-repeat;will-change:transform}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(250,250,248,0.1) 0%,rgba(250,250,248,0.35) 30%,rgba(250,250,248,0.92) 85%,var(--bg) 100%)}
 .hero-content{position:relative;z-index:2;text-align:center;padding:0 24px;max-width:700px;animation:fadeInUp 1s cubic-bezier(0.16,1,0.3,1) 0.2s both}
 .hero-badge{display:inline-block;padding:6px 22px;background:rgba(184,92,56,0.08);border:1px solid rgba(184,92,56,0.15);border-radius:100px;font-size:13px;color:var(--sienna);letter-spacing:1.5px;margin-bottom:20px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
@@ -243,10 +243,10 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
 </style>
 <div class="lp-banner" id="lpBanner">
   <span class="lp-banner-text">
-    זו הצעה לאתר שלכם -- נבנה במיוחד בשבילכם. מעוניינים? דברו איתנו: 055-917-3249
+    זה האתר שבנינו בשבילכם 🎉 הקמה 990 ₪ + 149 ₪/חודש — כולל דומיין, אחסון ותחזוקה
   </span>
-  <a class="lp-banner-cta" href="https://wa.me/972559173249?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%94%D7%A6%D7%A2%D7%94%20%D7%9C%D7%90%D7%AA%D7%A8%20-%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93" target="_blank">
-    כן, מעוניין!
+  <a class="lp-banner-cta" href="https://wa.me/972559173249?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%91%D7%A0%D7%99%D7%AA%D7%9D%20%D7%9C%D7%99%20-%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A2%D7%9C%D7%95%D7%AA%20%D7%9C%D7%90%D7%95%D7%95%D7%99%D7%A8!" target="_blank">
+    רוצה לעלות לאוויר!
   </a>
   <button class="lp-banner-close" onclick="document.getElementById('lpBanner').classList.add('lp-hidden');document.body.style.paddingTop='0'" aria-label="סגור">&times;</button>
 </div>
@@ -280,9 +280,9 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
       <div class="star"></div>
       <div class="star"></div>
     </div>
-    <div class="rating-score"></div>
-    <div class="rating-text"> ביקורות בגוגל</div>
-    <div class="rating-address">שדרות בן גוריון 12, חיפה, 3502206</div>
+    <div class="rating-score">4.3</div>
+    <div class="rating-text">1680 ביקורות בגוגל</div>
+    <div class="rating-address">שדרות בן גוריון 12, חיפה, 3502206, ישראל</div>
   </div>
 </section>
 
@@ -291,7 +291,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
   <div class="section-inner">
     <div class="about-grid">
       <div class="about-img-wrap reveal">
-        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="מנה מהמסעדה" loading="lazy">
+        <img src="https://places.googleapis.com/v1/places/ChIJvwzpacq7HRURjjOr68TRKyE/photos/AU_ZVEHmTFnBYOzHQ7TIfUzlBOJnV2Kz2JU6t0JfUtXm4aaGU-kPgq3xEDkgjLGS6KcaPZ-vB-gqjUqiNcaVMnl1dsz-oSo1xwMSK5_gguDxCqDcvy-4wrfMb6l6VClxkWZiQwfaA_x5JCDyUDqjzyxPLR44lPDevcFWlJ8WHomI41NCeVewuqc0iuNQOoNJEP70_1Ajihk3MryBAZb2_F4JoyGx_333Xj_yWmZeJ1L0WTqnNlNEHjz7SYkZyin2_lUmJOH3CmPduRQ1nrt24ROK7adjL5qwCPXB-4cBVVlUehI/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="מנה מהמסעדה" loading="lazy">
         <div class="about-accent"></div>
       </div>
       <div class="reveal reveal-delay-1">
@@ -313,7 +313,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
     </div>
     <div class="menu-grid">
       <div class="menu-card reveal reveal-delay-1">
-        <img class="menu-card-img" src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="סטייק אנטריקוט" loading="lazy">
+        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJvwzpacq7HRURjjOr68TRKyE/photos/AU_ZVEFFamMwzluGv4VEs7fzbshOasc-_ZqwyE2q5jTjB60CEya4dCnK6YeZ2awfJD9n0-Rcq5QeDDKL3iY9DE2nZj7na3rv9_vK8fQ6d1xOWYu8pZLR2b7QMo3_9RBQrowSnLQYqEfl5NGxeDAWm8aHpzhDxyM2PLqMwe02gaILXf8EZZNjVNdiWpQAvpACrAQxKB9rc-RfpOdfeeNorhYvtPPX7WQyJ5n81OEWDx5SmURbSDflvucmojBo4RhwdtAi54-28UGWSN_lGGasMVma5NBstodv-ODX1NChG3MYv0Y/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="סטייק אנטריקוט" loading="lazy">
         <div class="menu-card-body">
           <div class="menu-card-name">סטייק אנטריקוט</div>
           <div class="menu-card-desc">צלוי על גחלים לשלמות, מוגש עם ירקות עונה</div>
@@ -321,7 +321,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         </div>
       </div>
       <div class="menu-card reveal reveal-delay-2">
-        <img class="menu-card-img" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80" alt="סלט השף" loading="lazy">
+        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJvwzpacq7HRURjjOr68TRKyE/photos/AU_ZVEH7AZYCKAf5FzvbjSIt8-SxNp2tC6sJjS7pK3pXoDFcYs3DSim_XNPdsSSil2iGGRGiSgzT6aMRJnHZi2PNRCAGUfHUjbZPtP9wnCAh4aaSWSS5LxwD9nJj7-e_kISUZXZSuBzNie1F9R8-Gr2mslsjOsuBlrPWDu4Iiax85W7xNz9IPuyjjRkV9ws15yRBQf7anC2k7tmD_Uq0p8wnMySOFaoOkP8OAchiEPLhIWMJWyCGxrJ2cxFKZjdaeLr7aLOb_5-tnwtmLJu7pdZJlCmUzqYnlwFt4FeQTF5cQWc/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="סלט השף" loading="lazy">
         <div class="menu-card-body">
           <div class="menu-card-name">סלט השף</div>
           <div class="menu-card-desc">ירוקים טריים, גבינת עיזים, אגוזים וויניגרט הדרים</div>
@@ -329,7 +329,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         </div>
       </div>
       <div class="menu-card reveal reveal-delay-3">
-        <img class="menu-card-img" src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600&q=80" alt="פסטה טרייה" loading="lazy">
+        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJvwzpacq7HRURjjOr68TRKyE/photos/AU_ZVEE7EbfwcLZVn7FJwFII0EhHrP9XdKrN-4FqGuPhbNYWTkLf8taVoMsH-ak1mEZYsrxTM2s-RLoslq3iQXWOGsaOWWXn7HjZLDDHf_FpH98Ht_hhsmKEFOEH5k-bdq_t_nF-O0bj7NULo-dvriVmXLEnJxw5ubPPgZH-R0-VQuXgu4fzdGFyOV-6lcjGouN1Lo6fqcv9XrU9WDlR_D-_VY5CyihzVrKE01sXrmE_E1IzM7KEF2ujaKkQtkxnF3_4NJO8zp1LF9fLty1twkVqxRZ_TLfzIvpchT8phWca-NQ/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="פסטה טרייה" loading="lazy">
         <div class="menu-card-body">
           <div class="menu-card-name">פסטה טרייה</div>
           <div class="menu-card-desc">פסטה ביתית ברוטב שמנת כמהין ופטריות בר</div>
@@ -337,7 +337,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         </div>
       </div>
       <div class="menu-card reveal reveal-delay-4">
-        <img class="menu-card-img" src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&q=80" alt="קינוח השף" loading="lazy">
+        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJvwzpacq7HRURjjOr68TRKyE/photos/AU_ZVEG0eULcrtisTRFsPb4KqkSRU3WKLCraeZb1ZbMc_jKmcwoxGLROrKh5KM4rE5A4vPQZJL8MYZwjGKQYhcMnXO5cB8i73WdFo9aTLteCBATuaniYCXLpdSz-5yj4oWQv_JklkoPAH3q2tW4CH1IDk6NbGZUQGx2tc_vusEOp6Qf4eT_4Q_0AIezw6BTbZs1wOWfTP2D9vXyJGrb2VRf3cIv_0wR5attSTyJasEzNCq4Eh7RV9Y_0ZTWNryY98_aa54ztRErLmhaD3WHwEKrJlc6PDF-vy7h3z_HS1thIo2eBcEKfFYMBRBpUe_848EXBsjvsbYrTNa4XU7eXfgQLVbnW49uhFTChPbgK1TVJdjkdO-IYvTlxZVcDC-hyfzd7H_xECwd8Pgp73EqfyNXppZ_rIsZ4SBBcGV9HqDNbqPvPRQ/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="קינוח השף" loading="lazy">
         <div class="menu-card-body">
           <div class="menu-card-name">קינוח השף</div>
           <div class="menu-card-desc">מוס שוקולד בלגי על בסיס פירות יער טריים</div>
@@ -356,12 +356,12 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
       <h2 class="section-title">רגעים מ<span class="underline">מסעדת הוואנה פלוס חיפה</span></h2>
     </div>
     <div class="gallery-grid">
-      <div class="gallery-item reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-3"><img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-3"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&q=80" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-1"><img src="https://places.googleapis.com/v1/places/ChIJvwzpacq7HRURjjOr68TRKyE/photos/AU_ZVEFpfstAtUdk5JNeBskJ2ffuHfobDEWVmey1etYoXmI9-shYiQKjcCG9tuUFoyaWmqd0Z1wRWKaWPR-2CnKjfDwZkyzWMNIIbRkf6wTGnvD83BPijU-KVpbhCC6WNiT-m9WFvUKQznSxWLWZth4QcT88clZpvj7zSR3jrFfgWT_ifoE6ThGVHtczs5qZlE_BhphTsHMRnk3umvMnwmF9iAWebOw7cCj08w7Pf8NYwSDN-g20O9m1ppmkTzk-KqDYyrcnL-NNJ8uEmhtcsOR2c5xeUj01gu_hsa9iLVqCIC4/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-2"><img src="https://places.googleapis.com/v1/places/ChIJvwzpacq7HRURjjOr68TRKyE/photos/AU_ZVEHmTFnBYOzHQ7TIfUzlBOJnV2Kz2JU6t0JfUtXm4aaGU-kPgq3xEDkgjLGS6KcaPZ-vB-gqjUqiNcaVMnl1dsz-oSo1xwMSK5_gguDxCqDcvy-4wrfMb6l6VClxkWZiQwfaA_x5JCDyUDqjzyxPLR44lPDevcFWlJ8WHomI41NCeVewuqc0iuNQOoNJEP70_1Ajihk3MryBAZb2_F4JoyGx_333Xj_yWmZeJ1L0WTqnNlNEHjz7SYkZyin2_lUmJOH3CmPduRQ1nrt24ROK7adjL5qwCPXB-4cBVVlUehI/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-3"><img src="https://places.googleapis.com/v1/places/ChIJvwzpacq7HRURjjOr68TRKyE/photos/AU_ZVEFFamMwzluGv4VEs7fzbshOasc-_ZqwyE2q5jTjB60CEya4dCnK6YeZ2awfJD9n0-Rcq5QeDDKL3iY9DE2nZj7na3rv9_vK8fQ6d1xOWYu8pZLR2b7QMo3_9RBQrowSnLQYqEfl5NGxeDAWm8aHpzhDxyM2PLqMwe02gaILXf8EZZNjVNdiWpQAvpACrAQxKB9rc-RfpOdfeeNorhYvtPPX7WQyJ5n81OEWDx5SmURbSDflvucmojBo4RhwdtAi54-28UGWSN_lGGasMVma5NBstodv-ODX1NChG3MYv0Y/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-1"><img src="https://places.googleapis.com/v1/places/ChIJvwzpacq7HRURjjOr68TRKyE/photos/AU_ZVEH7AZYCKAf5FzvbjSIt8-SxNp2tC6sJjS7pK3pXoDFcYs3DSim_XNPdsSSil2iGGRGiSgzT6aMRJnHZi2PNRCAGUfHUjbZPtP9wnCAh4aaSWSS5LxwD9nJj7-e_kISUZXZSuBzNie1F9R8-Gr2mslsjOsuBlrPWDu4Iiax85W7xNz9IPuyjjRkV9ws15yRBQf7anC2k7tmD_Uq0p8wnMySOFaoOkP8OAchiEPLhIWMJWyCGxrJ2cxFKZjdaeLr7aLOb_5-tnwtmLJu7pdZJlCmUzqYnlwFt4FeQTF5cQWc/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-2"><img src="https://places.googleapis.com/v1/places/ChIJvwzpacq7HRURjjOr68TRKyE/photos/AU_ZVEFpfstAtUdk5JNeBskJ2ffuHfobDEWVmey1etYoXmI9-shYiQKjcCG9tuUFoyaWmqd0Z1wRWKaWPR-2CnKjfDwZkyzWMNIIbRkf6wTGnvD83BPijU-KVpbhCC6WNiT-m9WFvUKQznSxWLWZth4QcT88clZpvj7zSR3jrFfgWT_ifoE6ThGVHtczs5qZlE_BhphTsHMRnk3umvMnwmF9iAWebOw7cCj08w7Pf8NYwSDN-g20O9m1ppmkTzk-KqDYyrcnL-NNJ8uEmhtcsOR2c5xeUj01gu_hsa9iLVqCIC4/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-3"><img src="https://places.googleapis.com/v1/places/ChIJvwzpacq7HRURjjOr68TRKyE/photos/AU_ZVEHmTFnBYOzHQ7TIfUzlBOJnV2Kz2JU6t0JfUtXm4aaGU-kPgq3xEDkgjLGS6KcaPZ-vB-gqjUqiNcaVMnl1dsz-oSo1xwMSK5_gguDxCqDcvy-4wrfMb6l6VClxkWZiQwfaA_x5JCDyUDqjzyxPLR44lPDevcFWlJ8WHomI41NCeVewuqc0iuNQOoNJEP70_1Ajihk3MryBAZb2_F4JoyGx_333Xj_yWmZeJ1L0WTqnNlNEHjz7SYkZyin2_lUmJOH3CmPduRQ1nrt24ROK7adjL5qwCPXB-4cBVVlUehI/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -378,7 +378,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
       <div class="hours-row"><span class="hours-day">שישי</span><span class="hours-time">12:00 - 15:00</span></div>
       <div class="hours-row"><span class="hours-day">מוצאי שבת</span><span class="hours-time">20:00 - 23:30</span></div>
     </div>
-    <p class="hours-address reveal reveal-delay-2">שדרות בן גוריון 12, חיפה, 3502206, חיפה</p>
+    <p class="hours-address reveal reveal-delay-2">שדרות בן גוריון 12, חיפה, 3502206, ישראל, חיפה</p>
   </div>
 </section>
 
@@ -398,10 +398,58 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
     </div>
     <div class="contact-card reveal reveal-delay-1">
       <div class="contact-name">מסעדת הוואנה פלוס חיפה</div>
-      <div class="contact-city">שדרות בן גוריון 12, חיפה, 3502206, חיפה</div>
+      <div class="contact-city">שדרות בן גוריון 12, חיפה, 3502206, ישראל, חיפה</div>
       <div class="contact-buttons">
         <a href="https://wa.me/97248511919" class="contact-btn btn-whatsapp">WhatsApp</a>
         <a href="tel:48511919" class="contact-btn btn-phone">04-851-1919</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Real Google Reviews -->
+<section style="padding:60px 24px;background:#FAFAF8">
+  <div style="max-width:1100px;margin:0 auto">
+    <h2 style="text-align:center;font-size:1.8rem;font-weight:700;color:#1a1a1a;margin-bottom:8px">מה הלקוחות אומרים</h2>
+    <p style="text-align:center;color:#888;margin-bottom:40px;font-size:15px">ביקורות אמיתיות מגוגל</p>
+    <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center">
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">G</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">Geraxx Gera</div>
+            <div style="font-size:12px;color:#999">לפני חודש</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#ddd">&#9733;</span><span style="color:#ddd">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"המקום עצמו מסודר ונקי, אבל החוויה נפגעה מכמה דברים משמעותיים. יש הרבה מאוד עשן מנרגילות — קשה לשבת ככה. היה כדאי להפריד בין אזור למעשנים ולא-מעשנים.
+
+היינו תשעה אנשים. עברו בערך שעה ועשרים דקות עד שאח..."</p>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">T</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">Tali Cosacow Cosacow</div>
+            <div style="font-size:12px;color:#999">2 months ago</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"הגענו בערב יום חמישי המסעדה הייתה ריקה לא היה זמן המתנה, ישר קיבלו אותנו ונתנו לנו שולחן. אווירה של חג והיה ניכר שהמלצרים רצו לתת שירות מצויין וכך היה
+אוכל נהדר, רמה גבוהה
+אחזור בטוח"</p>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">N</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">Noa 4235962</div>
+            <div style="font-size:12px;color:#999">לפני 3 חודשים</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#ddd">&#9733;</span><span style="color:#ddd">&#9733;</span><span style="color:#ddd">&#9733;</span><span style="color:#ddd">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"אני וחברים שלי חיפשנו מסעדה לאכול בה ולאחר מכן אחד מהחברים שלי שאל אם יש מקום ל4 אמרו לנו שאין כרגע אז חיכינו בחוץ , לאחר כמה דקות רציתי ללכת לשאול אם נשאר מקום,  וכשבאתי לפתוח את הדלת אז אחד המלצרים ..."</p>
       </div>
     </div>
   </div>
@@ -418,10 +466,10 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         style="border:0;display:block"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
-        src="https://maps.google.com/maps?q=%D7%9E%D7%A1%D7%A2%D7%93%D7%AA%20%D7%94%D7%95%D7%95%D7%90%D7%A0%D7%94%20%D7%A4%D7%9C%D7%95%D7%A1%20%D7%97%D7%99%D7%A4%D7%94%20%D7%97%D7%99%D7%A4%D7%94+ישראל&output=embed&hl=he">
+        src="https://maps.google.com/maps?q=%D7%9E%D7%A1%D7%A2%D7%93%D7%AA%20%D7%94%D7%95%D7%95%D7%90%D7%A0%D7%94%20%D7%A4%D7%9C%D7%95%D7%A1%20%D7%97%D7%99%D7%A4%D7%94%20%D7%97%D7%99%D7%A4%D7%94+ישראל&output=embed&hl=he&z=16">
       </iframe>
       <div style="padding:20px;background:#fff;text-align:center">
-        <p style="color:#3D3D3D;font-size:1rem;margin-bottom:12px">שדרות בן גוריון 12, חיפה, 3502206</p>
+        <p style="color:#3D3D3D;font-size:1rem;margin-bottom:12px">שדרות בן גוריון 12, חיפה, 3502206, ישראל</p>
         <a href="https://www.google.com/maps/search/?api=1&query=%D7%9E%D7%A1%D7%A2%D7%93%D7%AA%20%D7%94%D7%95%D7%95%D7%90%D7%A0%D7%94%20%D7%A4%D7%9C%D7%95%D7%A1%20%D7%97%D7%99%D7%A4%D7%94%20%D7%97%D7%99%D7%A4%D7%94" target="_blank" style="color:#4285f4;text-decoration:none;font-weight:600;font-size:14px">פתח בגוגל מפות</a>
       </div>
     </div>
@@ -481,5 +529,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
   });
 })();
 </script>
+<script>(function(){var p="48511919",n=encodeURIComponent("מסעדת הוואנה פלוס חיפה");var img=new Image();img.src="https://output-seven-black.vercel.app/api/track?phone="+p+"&name="+n+"&t="+Date.now();})()</script>
+
 </body>
 </html>

@@ -35,7 +35,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
 
 /* --- Hero --- */
 .hero{position:relative;height:100vh;min-height:620px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;padding-bottom:80px}
-.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1400&q=80') center/cover no-repeat;will-change:transform}
+.hero-bg{position:absolute;inset:0;background:url('https://places.googleapis.com/v1/places/ChIJafEDTuBLHRURiNBnLrj6NBA/photos/AU_ZVEG4h3-g--5lih5QOego6kvTGhxyuhBZWPL92mKvl-P0HR7ITUo3mYW4wja0xaFSXcC9h4wHCNg88BK7l0EuhQH4KZrPVdP75Ei5nE48l8gnnKPKtQydurdd71FyjXpF81OpYRGriKtfdPhL7CvPYA730NGXOFwoOYNpxh7Evu-7Lx33-4AISsGx5nQFwfUa9M3xi6IdKkMmFwpl1a4XO7MDg6ktofn0lW0pDqafeKOEGWbfZGI_5RX2gVpEgvRCGPK8EG3e3Xlxph4mosPqPGqc2Yrcvz7XbwCvqxP73OicUVLucu-WqKDXGfEKY2Pul8Ieo7XVwiDTSKixFExc-732iStLtfac2VKUppONSU1cqlgukg0zbTjIh3g2wcB9cuS3VjTnGDvxPhy5_FqS-aYgUDj8r7lS0LEHfURO0WoHqS6b/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ') center/cover no-repeat;will-change:transform}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(250,250,248,0.1) 0%,rgba(250,250,248,0.35) 30%,rgba(250,250,248,0.92) 85%,var(--bg) 100%)}
 .hero-content{position:relative;z-index:2;text-align:center;padding:0 24px;max-width:700px;animation:fadeInUp 1s cubic-bezier(0.16,1,0.3,1) 0.2s both}
 .hero-badge{display:inline-block;padding:6px 22px;background:rgba(184,92,56,0.08);border:1px solid rgba(184,92,56,0.15);border-radius:100px;font-size:13px;color:var(--sienna);letter-spacing:1.5px;margin-bottom:20px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
@@ -243,10 +243,10 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
 </style>
 <div class="lp-banner" id="lpBanner">
   <span class="lp-banner-text">
-    זו הצעה לאתר שלכם -- נבנה במיוחד בשבילכם. מעוניינים? דברו איתנו: 055-917-3249
+    זה האתר שבנינו בשבילכם 🎉 הקמה 990 ₪ + 149 ₪/חודש — כולל דומיין, אחסון ותחזוקה
   </span>
-  <a class="lp-banner-cta" href="https://wa.me/972559173249?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%94%D7%A6%D7%A2%D7%94%20%D7%9C%D7%90%D7%AA%D7%A8%20-%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93" target="_blank">
-    כן, מעוניין!
+  <a class="lp-banner-cta" href="https://wa.me/972559173249?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%91%D7%A0%D7%99%D7%AA%D7%9D%20%D7%9C%D7%99%20-%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A2%D7%9C%D7%95%D7%AA%20%D7%9C%D7%90%D7%95%D7%95%D7%99%D7%A8!" target="_blank">
+    רוצה לעלות לאוויר!
   </a>
   <button class="lp-banner-close" onclick="document.getElementById('lpBanner').classList.add('lp-hidden');document.body.style.paddingTop='0'" aria-label="סגור">&times;</button>
 </div>
@@ -280,9 +280,9 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
       <div class="star"></div>
       <div class="star"></div>
     </div>
-    <div class="rating-score"></div>
-    <div class="rating-text"> ביקורות בגוגל</div>
-    <div class="rating-address">גולני 27, רמת גן, 5222441</div>
+    <div class="rating-score">4.2</div>
+    <div class="rating-text">1335 ביקורות בגוגל</div>
+    <div class="rating-address">גולני 27, רמת גן, 5222441, ישראל</div>
   </div>
 </section>
 
@@ -291,7 +291,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
   <div class="section-inner">
     <div class="about-grid">
       <div class="about-img-wrap reveal">
-        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="מנה מהמסעדה" loading="lazy">
+        <img src="https://places.googleapis.com/v1/places/ChIJafEDTuBLHRURiNBnLrj6NBA/photos/AU_ZVEGOcwQL3WCNy_uaQtNxbPOB48UDTqIrSfDNJ7kn5ZlgLAaS2oYt08ZRR-dEgPWaYeKthzUbCZse_bgfpkVkbDfXvCuiYbys_9mYT77y-5PYUl1B0JCg9XMooFl75LIzcFbfvpxIbzw-rvTFtyPxnBi6s2_pK5yO1ZKAaxe54VEn0YyfnwEgsypMkImgZ4owjsP2W-Z4hgHxPCvCYvmV9Kg1EAb6lSDDB6nzOC_lc69BNhG_CeoSpB8KipRlVlwOTviwl3f6O1N20UyfhNwRrs56a9XfIrEY-p_OSm905Aac-mn1Wgku45TBY1peFGCIftQRZiRMawwO8zATgK33bohzaDzRepz_ivJ6F1HCkAAIBaoUebE1HOLmEZp5NglzcGRI-pr9IeTeluQFA7ICIuVsxgpMntscXnKIINJslovEKaRC/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="מנה מהמסעדה" loading="lazy">
         <div class="about-accent"></div>
       </div>
       <div class="reveal reveal-delay-1">
@@ -313,7 +313,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
     </div>
     <div class="menu-grid">
       <div class="menu-card reveal reveal-delay-1">
-        <img class="menu-card-img" src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="סטייק אנטריקוט" loading="lazy">
+        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJafEDTuBLHRURiNBnLrj6NBA/photos/AU_ZVEEFoUef3CxoclI_vbqMXTf3ba010kHVFXGv3Y7Az-w5E_MH8SkXtPDPCk93MNFCcCBUYtocvOEx29ntQyts3AcLe1NoBUzs7KaydveOIeCReCLTBXt3WBRbq1zb_l9sWgyZX1XXNk0cUZUt0lsFAJ55IWxEOmhz2dXVyByX0dmaGlJXCZFu_OTGRwurvh6AZg51bOBB5uicfkfdE35g_aeQvUMxF9wBJ-_rptxD69-WPPZv5JyeO5jtnyFAaOSkfJ7QlpPm4CsLftjQbuVi_WjipEFOYxoPYgMU0ZjjxJXVmIjOfcZzEoXQs9Ucq5Wv06ZwBDlFR9j2baOqh0lHsD2H0zJRHWvgItlm4zK16OU5jfhIrm6oXkhH87Y6X_yTAec0y69JnVYnxx4tV3Ej9uh_60VXYzeQgputM2AjAjo/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="סטייק אנטריקוט" loading="lazy">
         <div class="menu-card-body">
           <div class="menu-card-name">סטייק אנטריקוט</div>
           <div class="menu-card-desc">צלוי על גחלים לשלמות, מוגש עם ירקות עונה</div>
@@ -321,7 +321,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         </div>
       </div>
       <div class="menu-card reveal reveal-delay-2">
-        <img class="menu-card-img" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80" alt="סלט השף" loading="lazy">
+        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJafEDTuBLHRURiNBnLrj6NBA/photos/AU_ZVEFkFUJ_Wv-WH29-lBtgKUlNMwjsgRyGrk58I-c-_e-1SE3EFdET41hg2Co6J-aQTNLvIRHMzNDsLnfScE2frsxD-vhDwRwL6MgEjHGN0krX4F2UcCx6lLH8CW3aEDvuUfpAe88R499B0CfBWjSLV2qSNgYOWD9yQGpk9A_KdFwrc4ve3CRxGmacFgKPMWCeB-IjAIyFA8IbRCzk1WntMhqUhxrmED5jRznmmQfoySBQrlsPuQQr2rIAWBtxx1hfhWTXlfIQTY-snoKWYrBPLtn_jQRGapQM3TPrh1FESSFknaTem3zRadTaLDEol_LCkYURcoWwZRIx84ruZ7Zio8bGEwHPIV3r1lADjU3hg7Y8Mcz5oy55U8B-nNA9sWFiwNHnUtDKw1wHkP-iy4Ow8w_jeyZGxeRMHSx27PVBu9tfBA/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="סלט השף" loading="lazy">
         <div class="menu-card-body">
           <div class="menu-card-name">סלט השף</div>
           <div class="menu-card-desc">ירוקים טריים, גבינת עיזים, אגוזים וויניגרט הדרים</div>
@@ -329,7 +329,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         </div>
       </div>
       <div class="menu-card reveal reveal-delay-3">
-        <img class="menu-card-img" src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600&q=80" alt="פסטה טרייה" loading="lazy">
+        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJafEDTuBLHRURiNBnLrj6NBA/photos/AU_ZVEFGX00nu_7I9DAqNOBP5HHFfzVmTNPWdVX3avreAyUZ_M_iekrQj1RzO9c33Nnes3girovDEachmFHgJqfMkrvBKP09-fylvONps_YOscCxm6LFd36UgX2BuTkxwh1L-_X8udNPUOgG4ZyWxzrH7Z576qnmX6tr7nUfcVTDAhCYnRQdK9pQXKWMvOiwHdQneowOEVhOB2YFr2PwUx6GLWe5ZE37fLDp0s-6BqGZTWDi3wAsdFW7YMfoCC_k5Cys-14TC9NXHtBSc-Za7zqk-sYAkBThfiCtAVUHjh8onHtZi3Y643YQVMdh93Pi9RF5OwnRxQoN6H9-LVqUP8HzG5AKzjGs5HVVbfewnX3tMprb2LtmB-o_eilmiP-SGwdt3SbrdMLDIzhR4oIru6e8Fe2k1h1N0zKAQmDi4MVc-vI/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="פסטה טרייה" loading="lazy">
         <div class="menu-card-body">
           <div class="menu-card-name">פסטה טרייה</div>
           <div class="menu-card-desc">פסטה ביתית ברוטב שמנת כמהין ופטריות בר</div>
@@ -337,7 +337,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         </div>
       </div>
       <div class="menu-card reveal reveal-delay-4">
-        <img class="menu-card-img" src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&q=80" alt="קינוח השף" loading="lazy">
+        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJafEDTuBLHRURiNBnLrj6NBA/photos/AU_ZVEGq99Boeft_N6K6eC3ChrVSU9lhZ9t86bbMRjhiaO7pN7Me_hwNo654nO01p8TnXuzFRxsouG5dBkfsV6u9NgM9GP50npDg9EgtpsPKLEYmYZJZyZFzGucAvuOPRNQ_mJgsqZjbk--_gz8g6BWwkWyrtJ4UYvCMX28Nt6XfJtCXOHejC7QEErwSm4MPUJsbJ0bb7K_cLkEok5MZlW9-ycUPhNqvwMdgeKfJdtmqZ_hws0aekN-RHfK3lDQtjZa0fxfGrWQ_ZIta0eWPpFGVA5QgUHDyFea9qKrWoK8_oGJmc4vCN8udJ-1shaJmluY1xj83FKIEg-AlagEdkl_7ELBq92NpN31neZMgbW3eHULls7ygfrLfZVL59WdoFwXd80gVcRLiISZMV8E_ft58Kr9D5cM3eunKJhVSkF5sAxUa4GI/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="קינוח השף" loading="lazy">
         <div class="menu-card-body">
           <div class="menu-card-name">קינוח השף</div>
           <div class="menu-card-desc">מוס שוקולד בלגי על בסיס פירות יער טריים</div>
@@ -356,12 +356,12 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
       <h2 class="section-title">רגעים מ<span class="underline">G27</span></h2>
     </div>
     <div class="gallery-grid">
-      <div class="gallery-item reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-3"><img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-3"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&q=80" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-1"><img src="https://places.googleapis.com/v1/places/ChIJafEDTuBLHRURiNBnLrj6NBA/photos/AU_ZVEG4h3-g--5lih5QOego6kvTGhxyuhBZWPL92mKvl-P0HR7ITUo3mYW4wja0xaFSXcC9h4wHCNg88BK7l0EuhQH4KZrPVdP75Ei5nE48l8gnnKPKtQydurdd71FyjXpF81OpYRGriKtfdPhL7CvPYA730NGXOFwoOYNpxh7Evu-7Lx33-4AISsGx5nQFwfUa9M3xi6IdKkMmFwpl1a4XO7MDg6ktofn0lW0pDqafeKOEGWbfZGI_5RX2gVpEgvRCGPK8EG3e3Xlxph4mosPqPGqc2Yrcvz7XbwCvqxP73OicUVLucu-WqKDXGfEKY2Pul8Ieo7XVwiDTSKixFExc-732iStLtfac2VKUppONSU1cqlgukg0zbTjIh3g2wcB9cuS3VjTnGDvxPhy5_FqS-aYgUDj8r7lS0LEHfURO0WoHqS6b/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-2"><img src="https://places.googleapis.com/v1/places/ChIJafEDTuBLHRURiNBnLrj6NBA/photos/AU_ZVEGOcwQL3WCNy_uaQtNxbPOB48UDTqIrSfDNJ7kn5ZlgLAaS2oYt08ZRR-dEgPWaYeKthzUbCZse_bgfpkVkbDfXvCuiYbys_9mYT77y-5PYUl1B0JCg9XMooFl75LIzcFbfvpxIbzw-rvTFtyPxnBi6s2_pK5yO1ZKAaxe54VEn0YyfnwEgsypMkImgZ4owjsP2W-Z4hgHxPCvCYvmV9Kg1EAb6lSDDB6nzOC_lc69BNhG_CeoSpB8KipRlVlwOTviwl3f6O1N20UyfhNwRrs56a9XfIrEY-p_OSm905Aac-mn1Wgku45TBY1peFGCIftQRZiRMawwO8zATgK33bohzaDzRepz_ivJ6F1HCkAAIBaoUebE1HOLmEZp5NglzcGRI-pr9IeTeluQFA7ICIuVsxgpMntscXnKIINJslovEKaRC/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-3"><img src="https://places.googleapis.com/v1/places/ChIJafEDTuBLHRURiNBnLrj6NBA/photos/AU_ZVEEFoUef3CxoclI_vbqMXTf3ba010kHVFXGv3Y7Az-w5E_MH8SkXtPDPCk93MNFCcCBUYtocvOEx29ntQyts3AcLe1NoBUzs7KaydveOIeCReCLTBXt3WBRbq1zb_l9sWgyZX1XXNk0cUZUt0lsFAJ55IWxEOmhz2dXVyByX0dmaGlJXCZFu_OTGRwurvh6AZg51bOBB5uicfkfdE35g_aeQvUMxF9wBJ-_rptxD69-WPPZv5JyeO5jtnyFAaOSkfJ7QlpPm4CsLftjQbuVi_WjipEFOYxoPYgMU0ZjjxJXVmIjOfcZzEoXQs9Ucq5Wv06ZwBDlFR9j2baOqh0lHsD2H0zJRHWvgItlm4zK16OU5jfhIrm6oXkhH87Y6X_yTAec0y69JnVYnxx4tV3Ej9uh_60VXYzeQgputM2AjAjo/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-1"><img src="https://places.googleapis.com/v1/places/ChIJafEDTuBLHRURiNBnLrj6NBA/photos/AU_ZVEFkFUJ_Wv-WH29-lBtgKUlNMwjsgRyGrk58I-c-_e-1SE3EFdET41hg2Co6J-aQTNLvIRHMzNDsLnfScE2frsxD-vhDwRwL6MgEjHGN0krX4F2UcCx6lLH8CW3aEDvuUfpAe88R499B0CfBWjSLV2qSNgYOWD9yQGpk9A_KdFwrc4ve3CRxGmacFgKPMWCeB-IjAIyFA8IbRCzk1WntMhqUhxrmED5jRznmmQfoySBQrlsPuQQr2rIAWBtxx1hfhWTXlfIQTY-snoKWYrBPLtn_jQRGapQM3TPrh1FESSFknaTem3zRadTaLDEol_LCkYURcoWwZRIx84ruZ7Zio8bGEwHPIV3r1lADjU3hg7Y8Mcz5oy55U8B-nNA9sWFiwNHnUtDKw1wHkP-iy4Ow8w_jeyZGxeRMHSx27PVBu9tfBA/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-2"><img src="https://places.googleapis.com/v1/places/ChIJafEDTuBLHRURiNBnLrj6NBA/photos/AU_ZVEG4h3-g--5lih5QOego6kvTGhxyuhBZWPL92mKvl-P0HR7ITUo3mYW4wja0xaFSXcC9h4wHCNg88BK7l0EuhQH4KZrPVdP75Ei5nE48l8gnnKPKtQydurdd71FyjXpF81OpYRGriKtfdPhL7CvPYA730NGXOFwoOYNpxh7Evu-7Lx33-4AISsGx5nQFwfUa9M3xi6IdKkMmFwpl1a4XO7MDg6ktofn0lW0pDqafeKOEGWbfZGI_5RX2gVpEgvRCGPK8EG3e3Xlxph4mosPqPGqc2Yrcvz7XbwCvqxP73OicUVLucu-WqKDXGfEKY2Pul8Ieo7XVwiDTSKixFExc-732iStLtfac2VKUppONSU1cqlgukg0zbTjIh3g2wcB9cuS3VjTnGDvxPhy5_FqS-aYgUDj8r7lS0LEHfURO0WoHqS6b/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-3"><img src="https://places.googleapis.com/v1/places/ChIJafEDTuBLHRURiNBnLrj6NBA/photos/AU_ZVEGOcwQL3WCNy_uaQtNxbPOB48UDTqIrSfDNJ7kn5ZlgLAaS2oYt08ZRR-dEgPWaYeKthzUbCZse_bgfpkVkbDfXvCuiYbys_9mYT77y-5PYUl1B0JCg9XMooFl75LIzcFbfvpxIbzw-rvTFtyPxnBi6s2_pK5yO1ZKAaxe54VEn0YyfnwEgsypMkImgZ4owjsP2W-Z4hgHxPCvCYvmV9Kg1EAb6lSDDB6nzOC_lc69BNhG_CeoSpB8KipRlVlwOTviwl3f6O1N20UyfhNwRrs56a9XfIrEY-p_OSm905Aac-mn1Wgku45TBY1peFGCIftQRZiRMawwO8zATgK33bohzaDzRepz_ivJ6F1HCkAAIBaoUebE1HOLmEZp5NglzcGRI-pr9IeTeluQFA7ICIuVsxgpMntscXnKIINJslovEKaRC/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -378,7 +378,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
       <div class="hours-row"><span class="hours-day">שישי</span><span class="hours-time">12:00 - 15:00</span></div>
       <div class="hours-row"><span class="hours-day">מוצאי שבת</span><span class="hours-time">20:00 - 23:30</span></div>
     </div>
-    <p class="hours-address reveal reveal-delay-2">גולני 27, רמת גן, 5222441, רמת גן</p>
+    <p class="hours-address reveal reveal-delay-2">גולני 27, רמת גן, 5222441, ישראל, רמת גן</p>
   </div>
 </section>
 
@@ -398,10 +398,57 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
     </div>
     <div class="contact-card reveal reveal-delay-1">
       <div class="contact-name">G27</div>
-      <div class="contact-city">גולני 27, רמת גן, 5222441, רמת גן</div>
+      <div class="contact-city">גולני 27, רמת גן, 5222441, ישראל, רמת גן</div>
       <div class="contact-buttons">
         <a href="https://wa.me/97237391659" class="contact-btn btn-whatsapp">WhatsApp</a>
         <a href="tel:37391659" class="contact-btn btn-phone">03-739-1659</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Real Google Reviews -->
+<section style="padding:60px 24px;background:#FAFAF8">
+  <div style="max-width:1100px;margin:0 auto">
+    <h2 style="text-align:center;font-size:1.8rem;font-weight:700;color:#1a1a1a;margin-bottom:8px">מה הלקוחות אומרים</h2>
+    <p style="text-align:center;color:#888;margin-bottom:40px;font-size:15px">ביקורות אמיתיות מגוגל</p>
+    <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center">
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">A</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">Amir Shalev</div>
+            <div style="font-size:12px;color:#999">לפני 3 חודשים</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#ddd">&#9733;</span><span style="color:#ddd">&#9733;</span><span style="color:#ddd">&#9733;</span><span style="color:#ddd">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"טרם הגיע הזמנתינו לשולחן, פנתה גברת מאוד לא מכובדת ובטח שלא מכבדת ואמרה שעלינו לשלם עקב החלפת משמרת.
+לא הציגה חשבון לתשלום.פשוט דרשה תשלום בעפ.
+שלפתי שטר של 200 ש"ח, למרות חוסר הנוחות.
+העולב הוסיפה מל..."</p>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">A</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">Ariel S</div>
+            <div style="font-size:12px;color:#999">לפני 5 חודשים</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"בית קפה נהדר שמצליח לשלב בין אווירה נעימה ואסתטיקה מוקפדת לבין אוכל מצוין ושירות קשוב. ישיבה בחוץ מרגישה רגועה ונעימה, עם תאורה ומוזיקה שיוצרים תחושה נעימה. הארוחה שהזמנו הייתה טרייה, מגוונת ומוגשת יפ..."</p>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">D</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">Daniella B</div>
+            <div style="font-size:12px;color:#999">2 months ago</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#ddd">&#9733;</span><span style="color:#ddd">&#9733;</span><span style="color:#ddd">&#9733;</span><span style="color:#ddd">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"משלוח שהוזמן בוולט - עלי גפן שכנראה יצאו מתוך קופסאת שימורים, כשהתיאור שלהם באפליקציה הוא אחר לגמרי. מביך."</p>
       </div>
     </div>
   </div>
@@ -418,10 +465,10 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         style="border:0;display:block"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
-        src="https://maps.google.com/maps?q=G27%20%D7%A8%D7%9E%D7%AA%20%D7%92%D7%9F+ישראל&output=embed&hl=he">
+        src="https://maps.google.com/maps?q=G27%20%D7%A8%D7%9E%D7%AA%20%D7%92%D7%9F+ישראל&output=embed&hl=he&z=16">
       </iframe>
       <div style="padding:20px;background:#fff;text-align:center">
-        <p style="color:#3D3D3D;font-size:1rem;margin-bottom:12px">גולני 27, רמת גן, 5222441</p>
+        <p style="color:#3D3D3D;font-size:1rem;margin-bottom:12px">גולני 27, רמת גן, 5222441, ישראל</p>
         <a href="https://www.google.com/maps/search/?api=1&query=G27%20%D7%A8%D7%9E%D7%AA%20%D7%92%D7%9F" target="_blank" style="color:#4285f4;text-decoration:none;font-weight:600;font-size:14px">פתח בגוגל מפות</a>
       </div>
     </div>
@@ -481,5 +528,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
   });
 })();
 </script>
+<script>(function(){var p="37391659",n=encodeURIComponent("G27");var img=new Image();img.src="https://output-seven-black.vercel.app/api/track?phone="+p+"&name="+n+"&t="+Date.now();})()</script>
+
 </body>
 </html>

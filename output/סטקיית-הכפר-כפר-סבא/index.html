@@ -35,7 +35,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
 
 /* --- Hero --- */
 .hero{position:relative;height:100vh;min-height:620px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;padding-bottom:80px}
-.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1400&q=80') center/cover no-repeat;will-change:transform}
+.hero-bg{position:absolute;inset:0;background:url('https://places.googleapis.com/v1/places/ChIJgbYInkg4HRURzdHpAEose4U/photos/AU_ZVEH7PO-Oau_lx_f_K4ETq1V7RgVh4qsefM5AXdigtOFlShZr_i3sPMiX8_cE6j1KmG11_1VespRwfUIJDsW48i61QWXRsXUpwHGG2YxFpKgnNQm2sHw4EzoxKhODYCJjmczomcX9--B145eCTPbIMxuXFLvG6HO_gP1exekdXcgvEqcb6AXMAWR404S-zISsWLEN5StWC3ZieLqaGu0LoIrj_g4SUS2R4r8s97cMabb1r7LMOrDRNWErcqJPqw7Wx8Jg3GoaC707h8E22cWQBN1QRPhGbAFrpqWJHW7zRLbO9Vgwtr9JiRlHOWUshKddSuDC-E15FUDA4Yq4k8d6Bk_pfZ8mU1cwE_8n41-AeOimjJZ2HOeMeDjBbCNCfjRvFGxOPzghqXJkKN4A_FX_lBtz9ZjaBT0cGQQ-UadFXNljgQ/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ') center/cover no-repeat;will-change:transform}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(250,250,248,0.1) 0%,rgba(250,250,248,0.35) 30%,rgba(250,250,248,0.92) 85%,var(--bg) 100%)}
 .hero-content{position:relative;z-index:2;text-align:center;padding:0 24px;max-width:700px;animation:fadeInUp 1s cubic-bezier(0.16,1,0.3,1) 0.2s both}
 .hero-badge{display:inline-block;padding:6px 22px;background:rgba(184,92,56,0.08);border:1px solid rgba(184,92,56,0.15);border-radius:100px;font-size:13px;color:var(--sienna);letter-spacing:1.5px;margin-bottom:20px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
@@ -243,10 +243,10 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
 </style>
 <div class="lp-banner" id="lpBanner">
   <span class="lp-banner-text">
-    זו הצעה לאתר שלכם -- נבנה במיוחד בשבילכם. מעוניינים? דברו איתנו: 055-917-3249
+    זה האתר שבנינו בשבילכם 🎉 הקמה 990 ₪ + 149 ₪/חודש — כולל דומיין, אחסון ותחזוקה
   </span>
-  <a class="lp-banner-cta" href="https://wa.me/972559173249?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%94%D7%A6%D7%A2%D7%94%20%D7%9C%D7%90%D7%AA%D7%A8%20-%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93" target="_blank">
-    כן, מעוניין!
+  <a class="lp-banner-cta" href="https://wa.me/972559173249?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%91%D7%A0%D7%99%D7%AA%D7%9D%20%D7%9C%D7%99%20-%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A2%D7%9C%D7%95%D7%AA%20%D7%9C%D7%90%D7%95%D7%95%D7%99%D7%A8!" target="_blank">
+    רוצה לעלות לאוויר!
   </a>
   <button class="lp-banner-close" onclick="document.getElementById('lpBanner').classList.add('lp-hidden');document.body.style.paddingTop='0'" aria-label="סגור">&times;</button>
 </div>
@@ -280,9 +280,9 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
       <div class="star"></div>
       <div class="star"></div>
     </div>
-    <div class="rating-score"></div>
-    <div class="rating-text"> ביקורות בגוגל</div>
-    <div class="rating-address">משה שרת 24, כפר סבא</div>
+    <div class="rating-score">4.1</div>
+    <div class="rating-text">2229 ביקורות בגוגל</div>
+    <div class="rating-address">היסמין 2, כפר סבא, ישראל</div>
   </div>
 </section>
 
@@ -291,7 +291,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
   <div class="section-inner">
     <div class="about-grid">
       <div class="about-img-wrap reveal">
-        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="מנה מהמסעדה" loading="lazy">
+        <img src="https://places.googleapis.com/v1/places/ChIJgbYInkg4HRURzdHpAEose4U/photos/AU_ZVEFg44KDuDEV97AFTysWvRP9VqbXteUy0PcS9no0v5SWqkiCXzEBZguTk4pbZLfmjuqwnrWAcGFna4jwvJa7CDQOr2c4oJcznCYCiQdDkQotJw7Om-KH0eEH1mrOXYcy5UjymojOs8fz9KlO-o99Or3ly4xczfhLSugHt7oh5LIGIy-eqwDtrNGltss3rR4c_h8gjVBDWP9Sxk6u16W-RIjWSpWc6QD4ZKN-u36IslUwFtgtGBnPioxVH4rrI1iMIzvSA4wuxp1p3COw2GGF8LYLjxQytVAfcFCo-kdFOmn6CLkkS5eO11lkkY60Ry5KihCcOz1oH0f1GFMttcGgB_smykG6SbDomm-cPZEPjJguoVODy134q9LK3BknTlPkKMI4pDer-LSb3BLL0eDDH9naEamn4uTfvfas8VVKl230NjM3/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="מנה מהמסעדה" loading="lazy">
         <div class="about-accent"></div>
       </div>
       <div class="reveal reveal-delay-1">
@@ -313,7 +313,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
     </div>
     <div class="menu-grid">
       <div class="menu-card reveal reveal-delay-1">
-        <img class="menu-card-img" src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="סטייק אנטריקוט" loading="lazy">
+        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJgbYInkg4HRURzdHpAEose4U/photos/AU_ZVEHvvKqgLwPoFMuY4QWsGol0bEbCZyM87vgQHIVtY2-0UgNvsUDa6ge-nfNx73Lvzd0czezO8cO24_99h0br2ca8l7lHefxd--5fImi6baTh3kUljy6rAikz1V5nN2wl9elFGkQtNkL-mSi3_9bSF_xk6OJvmCAN8lIL57pSsXU-S1TD4pp0YTzdDTdpuxD9vKKFFfqBBn-rlgTeLec-cW8TJ0kvkwS3q4OKaX3J9ehSx-NC-OJ2Gh07YSyUdJpgAJEJY5TbUoXOAZjrJxi91ih10WN_QQ5nFEiaCCJN1TRTUYZCwvkvUPsBJzMXS3waeW9zbIgDzwAULiDm4q9I955fil4FU3PN3s0yU5QTPiV5yg8lh8HRaCI670vZgnrYgdXRiuXeuFd7-u94FB42spNVbSxs3ZJ8I8ASkRlA8mMM_g/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="סטייק אנטריקוט" loading="lazy">
         <div class="menu-card-body">
           <div class="menu-card-name">סטייק אנטריקוט</div>
           <div class="menu-card-desc">צלוי על גחלים לשלמות, מוגש עם ירקות עונה</div>
@@ -321,7 +321,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         </div>
       </div>
       <div class="menu-card reveal reveal-delay-2">
-        <img class="menu-card-img" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80" alt="סלט השף" loading="lazy">
+        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJgbYInkg4HRURzdHpAEose4U/photos/AU_ZVEEBFOgHARc5hHBSN00ufKaZzh-nntPcujY5-aDNwdJXiwZ52KgcAuL_Tv34RsMbZhH_rQzZIb42XNp2GwyWU8vnTwa1nD03Mv82NmWO7_2B--uULU8eUQDmQbJMPVN3ULM8SQtaMDWXpYcHfLvpYf6mM8u0PVaaUNMLijhH9cFqqllsNzoUiL4m7pOUQ8qiFor_O5MG-QI0vVOl6ez2QDSar65nmg9resqbpgHLXHB4PuqVdtmCSlM6rWwTyfjBU9dnLrtbAtXlSqU-beuqJ_SMhtF_dwtdIUVt40q0BhIo9T78rSQKa4IT0RtBANgxInOzTCbVQ_pmVMFa82tnatAQ3-5i3Lmpo1cEVihw0wCKShXN-DSKMUdHlIDgtFWT9Dw7WbuJ8UX9gz6BRbD6e26CBqZ3UW1nXKgYqEwx5IvHKw/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="סלט השף" loading="lazy">
         <div class="menu-card-body">
           <div class="menu-card-name">סלט השף</div>
           <div class="menu-card-desc">ירוקים טריים, גבינת עיזים, אגוזים וויניגרט הדרים</div>
@@ -329,7 +329,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         </div>
       </div>
       <div class="menu-card reveal reveal-delay-3">
-        <img class="menu-card-img" src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600&q=80" alt="פסטה טרייה" loading="lazy">
+        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJgbYInkg4HRURzdHpAEose4U/photos/AU_ZVEEP3LatE-zOkw831ndGusEAe7TddKrmB1SOYA-0TpGjmMx8ffXtzWxQVIux4GA8QQUQ6Xrb5zOs0dUZ3dPye_mljR_5E8WWEEzOwBdm1CrJ5RUdqcBHBP4ANlN6Q9MnkkObRZ1rxwYrTPeDyEAHQR7wxuTZY1aE2Qx7k4CL1iZchr7TcPOKQ8lnEid_3n-E1fqUovyzqD6dD0euyzYABgBJvKpA5WZ2U8Vsga_v6Y2NALfhG3hKuTLU2_yyRUx7fBBVN02TK5qBi1NUIRlYE8koe9yCOG5gRt8pni6u7hvFZtVhrghD2Zj84cyx1JxNGLquNRkvHCzHavzxtrqmS3_DK5w1ZpSaMb_wvBv-Wc8DclMdpnZE6jEFcdzZWcuMngb141peMu_KKU_EewdJ6Pgaj3EDKGnXoDwiPY8oeC0mDqU/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="פסטה טרייה" loading="lazy">
         <div class="menu-card-body">
           <div class="menu-card-name">פסטה טרייה</div>
           <div class="menu-card-desc">פסטה ביתית ברוטב שמנת כמהין ופטריות בר</div>
@@ -337,7 +337,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         </div>
       </div>
       <div class="menu-card reveal reveal-delay-4">
-        <img class="menu-card-img" src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&q=80" alt="קינוח השף" loading="lazy">
+        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJgbYInkg4HRURzdHpAEose4U/photos/AU_ZVEFQ-pbXUG2i-LoXzenRjQ5ydh4g98tSBrTnI0Rzs5--jiUSXQq4rCmiOVq5oX8-g8ECXMzIh0w558f5wnwL0XGwvS1Nq5n7wllG151Y7g4PHOTov26SZAgZH3iKKlsH1upu6ewcg101xDiSWArzpp10pKA8O1a_6RMeUA_61aiQRQ5ccs5qEsFn4QeQ0kbtip0IK4awJq6Gdc4UWLNdpt1Hf978WLnI5Sfs8r0kG8ua_73RQKg4yhji3wrRS1Ysiy_Mx1RLEqnw3o0K9rajOO4tzxYlOYpBku5hsAkasEUmkWJp_Ea5P6PO9sjBrbOHxRnQ2qWOU_Vd2yYjPSy440WmpVtNCU34QPg93HWBN2-GCzqyhFUsywQbUacWPmPOj8m9sNIV329Jp1UFj5UaqYW2mNF95GSSidGj0C1WBPp0sfKR/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="קינוח השף" loading="lazy">
         <div class="menu-card-body">
           <div class="menu-card-name">קינוח השף</div>
           <div class="menu-card-desc">מוס שוקולד בלגי על בסיס פירות יער טריים</div>
@@ -356,12 +356,12 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
       <h2 class="section-title">רגעים מ<span class="underline">סטקיית הכפר כפר סבא</span></h2>
     </div>
     <div class="gallery-grid">
-      <div class="gallery-item reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-3"><img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-3"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&q=80" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-1"><img src="https://places.googleapis.com/v1/places/ChIJgbYInkg4HRURzdHpAEose4U/photos/AU_ZVEH7PO-Oau_lx_f_K4ETq1V7RgVh4qsefM5AXdigtOFlShZr_i3sPMiX8_cE6j1KmG11_1VespRwfUIJDsW48i61QWXRsXUpwHGG2YxFpKgnNQm2sHw4EzoxKhODYCJjmczomcX9--B145eCTPbIMxuXFLvG6HO_gP1exekdXcgvEqcb6AXMAWR404S-zISsWLEN5StWC3ZieLqaGu0LoIrj_g4SUS2R4r8s97cMabb1r7LMOrDRNWErcqJPqw7Wx8Jg3GoaC707h8E22cWQBN1QRPhGbAFrpqWJHW7zRLbO9Vgwtr9JiRlHOWUshKddSuDC-E15FUDA4Yq4k8d6Bk_pfZ8mU1cwE_8n41-AeOimjJZ2HOeMeDjBbCNCfjRvFGxOPzghqXJkKN4A_FX_lBtz9ZjaBT0cGQQ-UadFXNljgQ/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-2"><img src="https://places.googleapis.com/v1/places/ChIJgbYInkg4HRURzdHpAEose4U/photos/AU_ZVEFg44KDuDEV97AFTysWvRP9VqbXteUy0PcS9no0v5SWqkiCXzEBZguTk4pbZLfmjuqwnrWAcGFna4jwvJa7CDQOr2c4oJcznCYCiQdDkQotJw7Om-KH0eEH1mrOXYcy5UjymojOs8fz9KlO-o99Or3ly4xczfhLSugHt7oh5LIGIy-eqwDtrNGltss3rR4c_h8gjVBDWP9Sxk6u16W-RIjWSpWc6QD4ZKN-u36IslUwFtgtGBnPioxVH4rrI1iMIzvSA4wuxp1p3COw2GGF8LYLjxQytVAfcFCo-kdFOmn6CLkkS5eO11lkkY60Ry5KihCcOz1oH0f1GFMttcGgB_smykG6SbDomm-cPZEPjJguoVODy134q9LK3BknTlPkKMI4pDer-LSb3BLL0eDDH9naEamn4uTfvfas8VVKl230NjM3/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-3"><img src="https://places.googleapis.com/v1/places/ChIJgbYInkg4HRURzdHpAEose4U/photos/AU_ZVEHvvKqgLwPoFMuY4QWsGol0bEbCZyM87vgQHIVtY2-0UgNvsUDa6ge-nfNx73Lvzd0czezO8cO24_99h0br2ca8l7lHefxd--5fImi6baTh3kUljy6rAikz1V5nN2wl9elFGkQtNkL-mSi3_9bSF_xk6OJvmCAN8lIL57pSsXU-S1TD4pp0YTzdDTdpuxD9vKKFFfqBBn-rlgTeLec-cW8TJ0kvkwS3q4OKaX3J9ehSx-NC-OJ2Gh07YSyUdJpgAJEJY5TbUoXOAZjrJxi91ih10WN_QQ5nFEiaCCJN1TRTUYZCwvkvUPsBJzMXS3waeW9zbIgDzwAULiDm4q9I955fil4FU3PN3s0yU5QTPiV5yg8lh8HRaCI670vZgnrYgdXRiuXeuFd7-u94FB42spNVbSxs3ZJ8I8ASkRlA8mMM_g/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-1"><img src="https://places.googleapis.com/v1/places/ChIJgbYInkg4HRURzdHpAEose4U/photos/AU_ZVEEBFOgHARc5hHBSN00ufKaZzh-nntPcujY5-aDNwdJXiwZ52KgcAuL_Tv34RsMbZhH_rQzZIb42XNp2GwyWU8vnTwa1nD03Mv82NmWO7_2B--uULU8eUQDmQbJMPVN3ULM8SQtaMDWXpYcHfLvpYf6mM8u0PVaaUNMLijhH9cFqqllsNzoUiL4m7pOUQ8qiFor_O5MG-QI0vVOl6ez2QDSar65nmg9resqbpgHLXHB4PuqVdtmCSlM6rWwTyfjBU9dnLrtbAtXlSqU-beuqJ_SMhtF_dwtdIUVt40q0BhIo9T78rSQKa4IT0RtBANgxInOzTCbVQ_pmVMFa82tnatAQ3-5i3Lmpo1cEVihw0wCKShXN-DSKMUdHlIDgtFWT9Dw7WbuJ8UX9gz6BRbD6e26CBqZ3UW1nXKgYqEwx5IvHKw/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-2"><img src="https://places.googleapis.com/v1/places/ChIJgbYInkg4HRURzdHpAEose4U/photos/AU_ZVEH7PO-Oau_lx_f_K4ETq1V7RgVh4qsefM5AXdigtOFlShZr_i3sPMiX8_cE6j1KmG11_1VespRwfUIJDsW48i61QWXRsXUpwHGG2YxFpKgnNQm2sHw4EzoxKhODYCJjmczomcX9--B145eCTPbIMxuXFLvG6HO_gP1exekdXcgvEqcb6AXMAWR404S-zISsWLEN5StWC3ZieLqaGu0LoIrj_g4SUS2R4r8s97cMabb1r7LMOrDRNWErcqJPqw7Wx8Jg3GoaC707h8E22cWQBN1QRPhGbAFrpqWJHW7zRLbO9Vgwtr9JiRlHOWUshKddSuDC-E15FUDA4Yq4k8d6Bk_pfZ8mU1cwE_8n41-AeOimjJZ2HOeMeDjBbCNCfjRvFGxOPzghqXJkKN4A_FX_lBtz9ZjaBT0cGQQ-UadFXNljgQ/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-3"><img src="https://places.googleapis.com/v1/places/ChIJgbYInkg4HRURzdHpAEose4U/photos/AU_ZVEFg44KDuDEV97AFTysWvRP9VqbXteUy0PcS9no0v5SWqkiCXzEBZguTk4pbZLfmjuqwnrWAcGFna4jwvJa7CDQOr2c4oJcznCYCiQdDkQotJw7Om-KH0eEH1mrOXYcy5UjymojOs8fz9KlO-o99Or3ly4xczfhLSugHt7oh5LIGIy-eqwDtrNGltss3rR4c_h8gjVBDWP9Sxk6u16W-RIjWSpWc6QD4ZKN-u36IslUwFtgtGBnPioxVH4rrI1iMIzvSA4wuxp1p3COw2GGF8LYLjxQytVAfcFCo-kdFOmn6CLkkS5eO11lkkY60Ry5KihCcOz1oH0f1GFMttcGgB_smykG6SbDomm-cPZEPjJguoVODy134q9LK3BknTlPkKMI4pDer-LSb3BLL0eDDH9naEamn4uTfvfas8VVKl230NjM3/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -378,7 +378,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
       <div class="hours-row"><span class="hours-day">שישי</span><span class="hours-time">12:00 - 15:00</span></div>
       <div class="hours-row"><span class="hours-day">מוצאי שבת</span><span class="hours-time">20:00 - 23:30</span></div>
     </div>
-    <p class="hours-address reveal reveal-delay-2">משה שרת 24, כפר סבא, כפר סבא</p>
+    <p class="hours-address reveal reveal-delay-2">היסמין 2, כפר סבא, ישראל, כפר סבא</p>
   </div>
 </section>
 
@@ -398,10 +398,56 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
     </div>
     <div class="contact-card reveal reveal-delay-1">
       <div class="contact-name">סטקיית הכפר כפר סבא</div>
-      <div class="contact-city">משה שרת 24, כפר סבא, כפר סבא</div>
+      <div class="contact-city">היסמין 2, כפר סבא, ישראל, כפר סבא</div>
       <div class="contact-buttons">
         <a href="https://wa.me/97297672907" class="contact-btn btn-whatsapp">WhatsApp</a>
         <a href="tel:97672907" class="contact-btn btn-phone">09-767-2907</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Real Google Reviews -->
+<section style="padding:60px 24px;background:#FAFAF8">
+  <div style="max-width:1100px;margin:0 auto">
+    <h2 style="text-align:center;font-size:1.8rem;font-weight:700;color:#1a1a1a;margin-bottom:8px">מה הלקוחות אומרים</h2>
+    <p style="text-align:center;color:#888;margin-bottom:40px;font-size:15px">ביקורות אמיתיות מגוגל</p>
+    <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center">
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">R</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">Ryan Amit</div>
+            <div style="font-size:12px;color:#999">לפני חודש</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"באתי אחרי המלצה של כפירוס קליטרוס, הוא דיבר בצורה לא נעימה על המקום והחלטתי לנסות בעצמי ולראות אם יש אמת בדבריו, אני חייב לציין שזה היה אחד הביקורים הקולינריים היותר נעימים שהיו לי לאחרונה. הצוות היה ..."</p>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">B</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">Barak Tutai</div>
+            <div style="font-size:12px;color:#999">לפני חודש</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"באתי אחרי שכפירוס קליטרוס לכלכך ואמר דברים רעים שלא אפרט כאן על המסעדה. אל תקשיבו לו! אחלה מסעדה! אוכל טוב שירות אדיב.
+
+מקווה שמסעדה תמצא איתו את הדין! זה לא יכול לעבור בשתיקה כל השקרים שלו!"</p>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">I</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">Iris Adereth</div>
+            <div style="font-size:12px;color:#999">לפני חודש</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#ddd">&#9733;</span><span style="color:#ddd">&#9733;</span><span style="color:#ddd">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"אוכל בינוני ומטה. הזמנו מספר שיפודים שהיו בינוניים בטעמים. החומוס סתמי. ממרח חצילים במיונז תעשייתי ולא טעים. פיתות לא בשרניות. צ'יפס עם שמן ישן שמורגש בטעמו. איכשהו המקום מלא בשבת. לא מובן אולי אין חל..."</p>
       </div>
     </div>
   </div>
@@ -418,10 +464,10 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         style="border:0;display:block"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
-        src="https://maps.google.com/maps?q=%D7%A1%D7%98%D7%A7%D7%99%D7%99%D7%AA%20%D7%94%D7%9B%D7%A4%D7%A8%20%D7%9B%D7%A4%D7%A8%20%D7%A1%D7%91%D7%90%20%D7%9B%D7%A4%D7%A8%20%D7%A1%D7%91%D7%90+ישראל&output=embed&hl=he">
+        src="https://maps.google.com/maps?q=%D7%A1%D7%98%D7%A7%D7%99%D7%99%D7%AA%20%D7%94%D7%9B%D7%A4%D7%A8%20%D7%9B%D7%A4%D7%A8%20%D7%A1%D7%91%D7%90%20%D7%9B%D7%A4%D7%A8%20%D7%A1%D7%91%D7%90+ישראל&output=embed&hl=he&z=16">
       </iframe>
       <div style="padding:20px;background:#fff;text-align:center">
-        <p style="color:#3D3D3D;font-size:1rem;margin-bottom:12px">משה שרת 24, כפר סבא</p>
+        <p style="color:#3D3D3D;font-size:1rem;margin-bottom:12px">היסמין 2, כפר סבא, ישראל</p>
         <a href="https://www.google.com/maps/search/?api=1&query=%D7%A1%D7%98%D7%A7%D7%99%D7%99%D7%AA%20%D7%94%D7%9B%D7%A4%D7%A8%20%D7%9B%D7%A4%D7%A8%20%D7%A1%D7%91%D7%90%20%D7%9B%D7%A4%D7%A8%20%D7%A1%D7%91%D7%90" target="_blank" style="color:#4285f4;text-decoration:none;font-weight:600;font-size:14px">פתח בגוגל מפות</a>
       </div>
     </div>
@@ -481,5 +527,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
   });
 })();
 </script>
+<script>(function(){var p="97672907",n=encodeURIComponent("סטקיית הכפר כפר סבא");var img=new Image();img.src="https://output-seven-black.vercel.app/api/track?phone="+p+"&name="+n+"&t="+Date.now();})()</script>
+
 </body>
 </html>

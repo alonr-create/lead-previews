@@ -35,7 +35,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
 
 /* --- Hero --- */
 .hero{position:relative;height:100vh;min-height:620px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;padding-bottom:80px}
-.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1400&q=80') center/cover no-repeat;will-change:transform}
+.hero-bg{position:absolute;inset:0;background:url('https://places.googleapis.com/v1/places/ChIJDSzXbB1nAhUR5EKz0eQjW_c/photos/AU_ZVEEVOVjRDubr_C_weEDkh0-qbL12z-m1lXtPdWVtQdtECe5fhSt5hQ4ScFVQ6RmJPCfW8I01YO4ungKjR0BaDYeheROnC37FW2xuPrWGM2BaIALAJ2Bmx3KlTYd8W3P37lDuXmLWeFwFi8Ngi7ZIpU7GmE-OBXNp2LoNg2hiNAt99-ehV_gSVzx0pB2OTOuUuEyuoVoL1w3htkvmFJvNKHZpUnPao8w5dmvB1OCAontGC7FsJJ6Wx1_mzP8t1aTOtRDbtjqBJ4IpFT_gf9G8ExBpE4XAw7afsTzikf0b9yfJ7A/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ') center/cover no-repeat;will-change:transform}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(253,245,243,0.1) 0%,rgba(253,245,243,0.4) 30%,rgba(253,245,243,0.92) 85%,var(--bg) 100%)}
 .hero-content{position:relative;z-index:2;text-align:center;padding:0 24px;max-width:680px;animation:fadeInUp 1s cubic-bezier(0.16,1,0.3,1) 0.2s both}
 .hero-badge{display:inline-block;padding:6px 22px;background:rgba(196,114,126,0.06);border:1px solid rgba(196,114,126,0.12);border-radius:100px;font-size:13px;color:var(--rose);letter-spacing:1.5px;margin-bottom:20px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
@@ -237,10 +237,10 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
 </style>
 <div class="lp-banner" id="lpBanner">
   <span class="lp-banner-text">
-    זו הצעה לאתר שלכם -- נבנה במיוחד בשבילכם. מעוניינים? דברו איתנו: 055-917-3249
+    זה האתר שבנינו בשבילכם 🎉 הקמה 990 ₪ + 149 ₪/חודש — כולל דומיין, אחסון ותחזוקה
   </span>
-  <a class="lp-banner-cta" href="https://wa.me/972559173249?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%94%D7%A6%D7%A2%D7%94%20%D7%9C%D7%90%D7%AA%D7%A8%20-%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93" target="_blank">
-    כן, מעוניין!
+  <a class="lp-banner-cta" href="https://wa.me/972559173249?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%91%D7%A0%D7%99%D7%AA%D7%9D%20%D7%9C%D7%99%20-%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A2%D7%9C%D7%95%D7%AA%20%D7%9C%D7%90%D7%95%D7%95%D7%99%D7%A8!" target="_blank">
+    רוצה לעלות לאוויר!
   </a>
   <button class="lp-banner-close" onclick="document.getElementById('lpBanner').classList.add('lp-hidden');document.body.style.paddingTop='0'" aria-label="סגור">&times;</button>
 </div>
@@ -274,9 +274,9 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
       <div class="star"></div>
       <div class="star"></div>
     </div>
-    <div class="rating-score"></div>
-    <div class="rating-text"> ביקורות בגוגל</div>
-    <div class="rating-address">הדעת 1, באר שבע</div>
+    <div class="rating-score">5</div>
+    <div class="rating-text">20 ביקורות בגוגל</div>
+    <div class="rating-address">הדעת 1, באר שבע, ישראל</div>
   </div>
 </section>
 
@@ -289,7 +289,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
     </div>
     <div class="services-grid">
       <div class="service-card reveal reveal-delay-1">
-        <img class="service-card-img" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80" alt="תספורת ועיצוב" loading="lazy">
+        <img class="service-card-img" src="https://places.googleapis.com/v1/places/ChIJDSzXbB1nAhUR5EKz0eQjW_c/photos/AU_ZVEHuvUyVe2_XfmwKr8fQhjlXQrXpcsOD_z7vupzmR1vBLbIFbSTf9Ei0sNvM0vnPdVmOjheJgBtZa_NVvpJkhVTX_7KnB0V9hf0vdX82tAtvF7lx5-yUXRG-ReC6kgVV3VeR0aeBV0GBNLsW5rsDHza4O8MDqiENkzvwhJHwSuQrptaH3Rz2wU7ZSzjw4pwcUmuE6CCHCdHvhPVcuklxSfIoYqW9UAZQ94oFYhdIFForuqDYA8legjqd7ZwWZwcFCyHJbkaH7JiBjD3UAzdZNN7XtAqb3VsqklSdwTluxPvxNg/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="תספורת ועיצוב" loading="lazy">
         <div class="service-card-body">
           <div class="service-card-name">תספורת ועיצוב</div>
           <div class="service-card-desc">עיצוב מקצועי שמתאים בדיוק לסגנון שלך</div>
@@ -297,7 +297,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         </div>
       </div>
       <div class="service-card reveal reveal-delay-2">
-        <img class="service-card-img" src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80" alt="צביעה והבהרה" loading="lazy">
+        <img class="service-card-img" src="https://places.googleapis.com/v1/places/ChIJDSzXbB1nAhUR5EKz0eQjW_c/photos/AU_ZVEFWkDqiRRLlTUw_LDeAE9MHIrFsP_nIyJIW3WGXgg_r21_GT8tn3mXRfdzdcRk26BFE8Zu33WJjgzerPg4wbYp3mIztPwi2E7NL7dgvZ-iY1FyweTPTmmKPDDZx6Z2PdMCNXaLN8COYlBKZS5cGm8dN1ggZ4XgbJlJ-GAWVQLM8zA7Pq5ACb9EILb65AceFOWv05lHPppeN6_vBn0F1Sgvmjgm7PdCfaAgCsO5M3rFUF6IyquM_vjHFYSwfiYZCKI-2OGRkb64NzvBvuCe759UC6bmWIG1Pm_MKYAcW1e2xtQ/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="צביעה והבהרה" loading="lazy">
         <div class="service-card-body">
           <div class="service-card-name">צביעה והבהרה</div>
           <div class="service-card-desc">צבעים מובילים לתוצאה טבעית ומושלמת</div>
@@ -305,7 +305,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         </div>
       </div>
       <div class="service-card reveal reveal-delay-3">
-        <img class="service-card-img" src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80" alt="מניקור ופדיקור" loading="lazy">
+        <img class="service-card-img" src="https://places.googleapis.com/v1/places/ChIJDSzXbB1nAhUR5EKz0eQjW_c/photos/AU_ZVEF48ivhcKgph9km_I6Gz6Qr0yH2kr2TZPbGGxLvKhzGuDnA7980Cr8r1axWljQa9ObtIYi8pDQD43KdMpk9ldCLxZRy-kHrIepUPzKVngjgY88VQn71r_N0d1Uo0xraRd9nP2dt_iuA1JJCb2sKubbujAFIROiVDTKnmpLbPXW0bQL8Qu6moIJLdiiV5kHFMvOSAo6ZbA1yfBHwKShoYxsq9oMNFcNztBfS-j_VbzN895cCrP4NxLt1Fr9vWjEwWbXb8CL0VjA2r80FMJOgf9uAjafS-UjDaLreMm6bg4Y49g/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="מניקור ופדיקור" loading="lazy">
         <div class="service-card-body">
           <div class="service-card-name">מניקור ופדיקור</div>
           <div class="service-card-desc">ציפורניים מושלמות עם חומרים איכותיים</div>
@@ -313,7 +313,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         </div>
       </div>
       <div class="service-card reveal reveal-delay-4">
-        <img class="service-card-img" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80" alt="טיפולי פנים" loading="lazy">
+        <img class="service-card-img" src="https://places.googleapis.com/v1/places/ChIJDSzXbB1nAhUR5EKz0eQjW_c/photos/AU_ZVEEz2fzMM5NxCUpvBaT_I7KdoYs5K3WWXwmALwwwsMKubj5DhnXIxvf9tdwdajghWaGljszztnSWyGY8JQBVtoce4vTj_QsjugvLB9y_V8MVw74V4uxE3VtjqOVKbgUX6KUDECH3gHi69lbbXzuE82L2-y-6FpC6zxnto4Nmxb1wWCR-D134a80hXiB_O6a-OcAmSrY0ER4eXT3c_2mTrisrr2Tev2gVALGHkNs6DDW8akNvYT40Jxogvk_eB-EEB1fSO-q061JEbOEkTXtEfBss0Tk5FY8YdM5FoEGn0AVOCQ/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="טיפולי פנים" loading="lazy">
         <div class="service-card-body">
           <div class="service-card-name">טיפולי פנים</div>
           <div class="service-card-desc">חידוש וטיפוח העור בטכנולוגיה מתקדמת</div>
@@ -332,12 +332,12 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
       <h2 class="section-title">מ<span class="underline">חן מויאל- עיצוב ושיקום גבות•איפור קבוע : מיקרובליידינג •שערה •פודרה • פיגמנט שפתיים •הסרה ברימובר • הרמת ריסים וגבות •קורסים</span> באהבה</h2>
     </div>
     <div class="gallery-grid">
-      <div class="gallery-item reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-3"><img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1457972729786-0411a3b2b626?w=500&q=80" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-3"><img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=500&q=80" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-1"><img src="https://places.googleapis.com/v1/places/ChIJDSzXbB1nAhUR5EKz0eQjW_c/photos/AU_ZVEEVOVjRDubr_C_weEDkh0-qbL12z-m1lXtPdWVtQdtECe5fhSt5hQ4ScFVQ6RmJPCfW8I01YO4ungKjR0BaDYeheROnC37FW2xuPrWGM2BaIALAJ2Bmx3KlTYd8W3P37lDuXmLWeFwFi8Ngi7ZIpU7GmE-OBXNp2LoNg2hiNAt99-ehV_gSVzx0pB2OTOuUuEyuoVoL1w3htkvmFJvNKHZpUnPao8w5dmvB1OCAontGC7FsJJ6Wx1_mzP8t1aTOtRDbtjqBJ4IpFT_gf9G8ExBpE4XAw7afsTzikf0b9yfJ7A/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-2"><img src="https://places.googleapis.com/v1/places/ChIJDSzXbB1nAhUR5EKz0eQjW_c/photos/AU_ZVEHuvUyVe2_XfmwKr8fQhjlXQrXpcsOD_z7vupzmR1vBLbIFbSTf9Ei0sNvM0vnPdVmOjheJgBtZa_NVvpJkhVTX_7KnB0V9hf0vdX82tAtvF7lx5-yUXRG-ReC6kgVV3VeR0aeBV0GBNLsW5rsDHza4O8MDqiENkzvwhJHwSuQrptaH3Rz2wU7ZSzjw4pwcUmuE6CCHCdHvhPVcuklxSfIoYqW9UAZQ94oFYhdIFForuqDYA8legjqd7ZwWZwcFCyHJbkaH7JiBjD3UAzdZNN7XtAqb3VsqklSdwTluxPvxNg/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-3"><img src="https://places.googleapis.com/v1/places/ChIJDSzXbB1nAhUR5EKz0eQjW_c/photos/AU_ZVEFWkDqiRRLlTUw_LDeAE9MHIrFsP_nIyJIW3WGXgg_r21_GT8tn3mXRfdzdcRk26BFE8Zu33WJjgzerPg4wbYp3mIztPwi2E7NL7dgvZ-iY1FyweTPTmmKPDDZx6Z2PdMCNXaLN8COYlBKZS5cGm8dN1ggZ4XgbJlJ-GAWVQLM8zA7Pq5ACb9EILb65AceFOWv05lHPppeN6_vBn0F1Sgvmjgm7PdCfaAgCsO5M3rFUF6IyquM_vjHFYSwfiYZCKI-2OGRkb64NzvBvuCe759UC6bmWIG1Pm_MKYAcW1e2xtQ/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-1"><img src="https://places.googleapis.com/v1/places/ChIJDSzXbB1nAhUR5EKz0eQjW_c/photos/AU_ZVEF48ivhcKgph9km_I6Gz6Qr0yH2kr2TZPbGGxLvKhzGuDnA7980Cr8r1axWljQa9ObtIYi8pDQD43KdMpk9ldCLxZRy-kHrIepUPzKVngjgY88VQn71r_N0d1Uo0xraRd9nP2dt_iuA1JJCb2sKubbujAFIROiVDTKnmpLbPXW0bQL8Qu6moIJLdiiV5kHFMvOSAo6ZbA1yfBHwKShoYxsq9oMNFcNztBfS-j_VbzN895cCrP4NxLt1Fr9vWjEwWbXb8CL0VjA2r80FMJOgf9uAjafS-UjDaLreMm6bg4Y49g/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-2"><img src="https://places.googleapis.com/v1/places/ChIJDSzXbB1nAhUR5EKz0eQjW_c/photos/AU_ZVEEVOVjRDubr_C_weEDkh0-qbL12z-m1lXtPdWVtQdtECe5fhSt5hQ4ScFVQ6RmJPCfW8I01YO4ungKjR0BaDYeheROnC37FW2xuPrWGM2BaIALAJ2Bmx3KlTYd8W3P37lDuXmLWeFwFi8Ngi7ZIpU7GmE-OBXNp2LoNg2hiNAt99-ehV_gSVzx0pB2OTOuUuEyuoVoL1w3htkvmFJvNKHZpUnPao8w5dmvB1OCAontGC7FsJJ6Wx1_mzP8t1aTOtRDbtjqBJ4IpFT_gf9G8ExBpE4XAw7afsTzikf0b9yfJ7A/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-3"><img src="https://places.googleapis.com/v1/places/ChIJDSzXbB1nAhUR5EKz0eQjW_c/photos/AU_ZVEHuvUyVe2_XfmwKr8fQhjlXQrXpcsOD_z7vupzmR1vBLbIFbSTf9Ei0sNvM0vnPdVmOjheJgBtZa_NVvpJkhVTX_7KnB0V9hf0vdX82tAtvF7lx5-yUXRG-ReC6kgVV3VeR0aeBV0GBNLsW5rsDHza4O8MDqiENkzvwhJHwSuQrptaH3Rz2wU7ZSzjw4pwcUmuE6CCHCdHvhPVcuklxSfIoYqW9UAZQ94oFYhdIFForuqDYA8legjqd7ZwWZwcFCyHJbkaH7JiBjD3UAzdZNN7XtAqb3VsqklSdwTluxPvxNg/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -400,10 +400,55 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
     </div>
     <div class="contact-card reveal reveal-delay-1">
       <div class="contact-name">חן מויאל- עיצוב ושיקום גבות•איפור קבוע : מיקרובליידינג •שערה •פודרה • פיגמנט שפתיים •הסרה ברימובר • הרמת ריסים וגבות •קורסים</div>
-      <div class="contact-city">הדעת 1, באר שבע, באר שבע</div>
+      <div class="contact-city">הדעת 1, באר שבע, ישראל, באר שבע</div>
       <div class="contact-buttons">
         <a href="https://wa.me/972502704848" class="contact-btn btn-whatsapp">WhatsApp</a>
         <a href="tel:502704848" class="contact-btn btn-phone">050-270-4848</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Real Google Reviews -->
+<section style="padding:60px 24px;background:#FAFAF8">
+  <div style="max-width:1100px;margin:0 auto">
+    <h2 style="text-align:center;font-size:1.8rem;font-weight:700;color:#1a1a1a;margin-bottom:8px">מה הלקוחות אומרים</h2>
+    <p style="text-align:center;color:#888;margin-bottom:40px;font-size:15px">ביקורות אמיתיות מגוגל</p>
+    <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center">
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">ש</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">שיראל חג'ג'</div>
+            <div style="font-size:12px;color:#999">לפני 5 חודשים</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"חן אלופה אמיתית שירותית ואנושית קיבלה אותי בדקה תשעים לפני החג שאף אחת לא הייתה פנויה
+ממליצה מאוד🤍🫶🏼"</p>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">א</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">אלמוג דבש</div>
+            <div style="font-size:12px;color:#999">לפני 4 חודשים</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"אין טובה כמוה שירות מהמם מקצועית והטיפול גם בהרמת ריסים וגם בהרמת גבות יצא מהמם לא ללכת אליה לרוץ"</p>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">N</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">Noa Levy</div>
+            <div style="font-size:12px;color:#999">לפני 5 חודשים</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"חן מדהימה ומקצועית!! עושה את הגבות מדהים ומושלם ברגישות ומסירות!"</p>
       </div>
     </div>
   </div>
@@ -420,10 +465,10 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
         style="border:0;display:block"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
-        src="https://maps.google.com/maps?q=%D7%97%D7%9F%20%D7%9E%D7%95%D7%99%D7%90%D7%9C-%20%D7%A2%D7%99%D7%A6%D7%95%D7%91%20%D7%95%D7%A9%D7%99%D7%A7%D7%95%D7%9D%20%D7%92%D7%91%D7%95%D7%AA%E2%80%A2%D7%90%D7%99%D7%A4%D7%95%D7%A8%20%D7%A7%D7%91%D7%95%D7%A2%20%3A%20%D7%9E%D7%99%D7%A7%D7%A8%D7%95%D7%91%D7%9C%D7%99%D7%99%D7%93%D7%99%D7%A0%D7%92%20%E2%80%A2%D7%A9%D7%A2%D7%A8%D7%94%20%E2%80%A2%D7%A4%D7%95%D7%93%D7%A8%D7%94%20%E2%80%A2%20%D7%A4%D7%99%D7%92%D7%9E%D7%A0%D7%98%20%D7%A9%D7%A4%D7%AA%D7%99%D7%99%D7%9D%20%E2%80%A2%D7%94%D7%A1%D7%A8%D7%94%20%D7%91%D7%A8%D7%99%D7%9E%D7%95%D7%91%D7%A8%20%E2%80%A2%20%D7%94%D7%A8%D7%9E%D7%AA%20%D7%A8%D7%99%D7%A1%D7%99%D7%9D%20%D7%95%D7%92%D7%91%D7%95%D7%AA%20%E2%80%A2%D7%A7%D7%95%D7%A8%D7%A1%D7%99%D7%9D%20%D7%91%D7%90%D7%A8%20%D7%A9%D7%91%D7%A2+ישראל&output=embed&hl=he">
+        src="https://maps.google.com/maps?q=%D7%97%D7%9F%20%D7%9E%D7%95%D7%99%D7%90%D7%9C-%20%D7%A2%D7%99%D7%A6%D7%95%D7%91%20%D7%95%D7%A9%D7%99%D7%A7%D7%95%D7%9D%20%D7%92%D7%91%D7%95%D7%AA%E2%80%A2%D7%90%D7%99%D7%A4%D7%95%D7%A8%20%D7%A7%D7%91%D7%95%D7%A2%20%3A%20%D7%9E%D7%99%D7%A7%D7%A8%D7%95%D7%91%D7%9C%D7%99%D7%99%D7%93%D7%99%D7%A0%D7%92%20%E2%80%A2%D7%A9%D7%A2%D7%A8%D7%94%20%E2%80%A2%D7%A4%D7%95%D7%93%D7%A8%D7%94%20%E2%80%A2%20%D7%A4%D7%99%D7%92%D7%9E%D7%A0%D7%98%20%D7%A9%D7%A4%D7%AA%D7%99%D7%99%D7%9D%20%E2%80%A2%D7%94%D7%A1%D7%A8%D7%94%20%D7%91%D7%A8%D7%99%D7%9E%D7%95%D7%91%D7%A8%20%E2%80%A2%20%D7%94%D7%A8%D7%9E%D7%AA%20%D7%A8%D7%99%D7%A1%D7%99%D7%9D%20%D7%95%D7%92%D7%91%D7%95%D7%AA%20%E2%80%A2%D7%A7%D7%95%D7%A8%D7%A1%D7%99%D7%9D%20%D7%91%D7%90%D7%A8%20%D7%A9%D7%91%D7%A2+ישראל&output=embed&hl=he&z=16">
       </iframe>
       <div style="padding:20px;background:#fff;text-align:center">
-        <p style="color:#3D3D3D;font-size:1rem;margin-bottom:12px">הדעת 1, באר שבע</p>
+        <p style="color:#3D3D3D;font-size:1rem;margin-bottom:12px">הדעת 1, באר שבע, ישראל</p>
         <a href="https://www.google.com/maps/search/?api=1&query=%D7%97%D7%9F%20%D7%9E%D7%95%D7%99%D7%90%D7%9C-%20%D7%A2%D7%99%D7%A6%D7%95%D7%91%20%D7%95%D7%A9%D7%99%D7%A7%D7%95%D7%9D%20%D7%92%D7%91%D7%95%D7%AA%E2%80%A2%D7%90%D7%99%D7%A4%D7%95%D7%A8%20%D7%A7%D7%91%D7%95%D7%A2%20%3A%20%D7%9E%D7%99%D7%A7%D7%A8%D7%95%D7%91%D7%9C%D7%99%D7%99%D7%93%D7%99%D7%A0%D7%92%20%E2%80%A2%D7%A9%D7%A2%D7%A8%D7%94%20%E2%80%A2%D7%A4%D7%95%D7%93%D7%A8%D7%94%20%E2%80%A2%20%D7%A4%D7%99%D7%92%D7%9E%D7%A0%D7%98%20%D7%A9%D7%A4%D7%AA%D7%99%D7%99%D7%9D%20%E2%80%A2%D7%94%D7%A1%D7%A8%D7%94%20%D7%91%D7%A8%D7%99%D7%9E%D7%95%D7%91%D7%A8%20%E2%80%A2%20%D7%94%D7%A8%D7%9E%D7%AA%20%D7%A8%D7%99%D7%A1%D7%99%D7%9D%20%D7%95%D7%92%D7%91%D7%95%D7%AA%20%E2%80%A2%D7%A7%D7%95%D7%A8%D7%A1%D7%99%D7%9D%20%D7%91%D7%90%D7%A8%20%D7%A9%D7%91%D7%A2" target="_blank" style="color:#4285f4;text-decoration:none;font-weight:600;font-size:14px">פתח בגוגל מפות</a>
       </div>
     </div>
@@ -483,5 +528,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
   });
 })();
 </script>
+<script>(function(){var p="502704848",n=encodeURIComponent("חן מויאל- עיצוב ושיקום גבות•איפור קבוע : מיקרובליידינג •שערה •פודרה • פיגמנט שפתיים •הסרה ברימובר • הרמת ריסים וגבות •קורסים");var img=new Image();img.src="https://output-seven-black.vercel.app/api/track?phone="+p+"&name="+n+"&t="+Date.now();})()</script>
+
 </body>
 </html>
