@@ -390,8 +390,22 @@ def generate_page(template_html, banner_html, lead, enrichment=None):
         reviews_html = ''
     html = html.replace('{{REVIEWS_SECTION}}', reviews_html)
 
+    # Legal disclaimer — protection against impersonation claims
+    disclaimer_html = (
+        '<div style="background:#f5f5f5;border-top:1px solid #ddd;padding:16px 20px;'
+        'text-align:center;font-family:Heebo,Arial,sans-serif;direction:rtl;'
+        'font-size:12px;color:#999;line-height:1.6;">'
+        'אתר לדוגמא בלבד — נבנה על ידי '
+        '<a href="https://alon-dev.vercel.app" style="color:#0f3460;">alon dev</a>'
+        ' כהצעה עסקית. אינו מייצג את העסק באופן רשמי.'
+        '<br>לבקשת הסרה: '
+        '<a href="https://wa.me/972559173249?text=בקשת%20הסרה" style="color:#25D366;">'
+        '055-917-3249</a>'
+        '</div>'
+    )
+
     # Inject map before footer
-    html = html.replace('<!-- Footer -->', f'{map_html}\n\n<!-- Footer -->')
+    html = html.replace('<!-- Footer -->', f'{map_html}\n\n{disclaimer_html}\n\n<!-- Footer -->')
 
     # Tracking pixel — fires when someone opens the page
     tracking_pixel = (
