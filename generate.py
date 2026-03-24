@@ -120,7 +120,7 @@ def places_get_details(resource_name):
     url = f"https://places.googleapis.com/v1/{resource_name}?languageCode=he"
     headers = {
         'X-Goog-Api-Key': GOOGLE_PLACES_API_KEY,
-        'X-Goog-FieldMask': 'photos,rating,userRatingCount,regularOpeningHours,formattedAddress,reviews,websiteUri',
+        'X-Goog-FieldMask': 'photos,rating,userRatingCount,regularOpeningHours,formattedAddress,reviews,websiteUri,iconMaskBaseUri,iconBackgroundColor,googleMapsUri',
     }
     try:
         data = http_get_json(url, headers=headers)
@@ -201,6 +201,17 @@ def enrich_lead(lead, cache):
             'time': rev.get('relativePublishTimeDescription', ''),
         })
 
+    # Icon / logo
+    icon_uri = details.get('iconMaskBaseUri', '')
+    if icon_uri:
+        enrichment['icon_url'] = icon_uri + '.png'
+    enrichment['icon_bg_color'] = details.get('iconBackgroundColor', '')
+
+    # Website URI (for favicon extraction)
+    website_uri = details.get('websiteUri', '')
+    if website_uri:
+        enrichment['website_uri'] = website_uri
+
     # Save to cache
     cache[cache_key] = enrichment
     return enrichment
@@ -211,10 +222,16 @@ def enrich_lead(lead, cache):
 # ---------------------------------------------------------------------------
 
 def slugify(text):
-    """Create a URL-safe slug from Hebrew or English text."""
+    """Create a URL-safe slug from Hebrew or English text.
+    Uses only the short business name (before | or •), max 40 chars."""
     text = text.strip()
+    # Take only the first part before | or • (the actual business name)
+    text = re.split(r'[|•]', text)[0].strip()
+    # Limit length to 40 chars (cut at word boundary)
+    if len(text) > 40:
+        text = text[:40].rsplit(' ', 1)[0]
     # Replace spaces and special chars with hyphens
-    text = re.sub(r'[\s/\\:;,!?@#$%^&*()+=\[\]{}|<>\'\"]+', '-', text)
+    text = re.sub(r'[\s/\\:;,!?@#$%^&*()+=\[\]{}|<>\'\"•·]+', '-', text)
     # Remove leading/trailing hyphens
     text = text.strip('-')
     # Collapse multiple hyphens
@@ -244,6 +261,69 @@ def load_banner():
     path = os.path.join(TEMPLATES_DIR, 'banner.html')
     with open(path, 'r', encoding='utf-8') as f:
         return f.read()
+
+
+def get_short_name(name):
+    """Extract the short business name (before | or •)."""
+    return re.split(r'[|•]', name)[0].strip()
+
+
+def build_logo_html(name, theme='beauty', enrichment=None):
+    """Build a logo element for the business.
+    Priority: 1) favicon from website, 2) Google icon, 3) CSS initials fallback."""
+    if enrichment is None:
+        enrichment = {}
+    short = get_short_name(name)
+
+    # Theme colors
+    colors = {
+        'beauty': {'bg': 'linear-gradient(135deg,#C4727E,#B8924A)', 'border': 'rgba(196,114,126,0.15)'},
+        'restaurant': {'bg': 'linear-gradient(135deg,#B85C38,#C4964A)', 'border': 'rgba(184,92,56,0.15)'},
+    }
+    c = colors.get(theme, colors['beauty'])
+
+    # Try to get a real logo
+    logo_img = ''
+    website = enrichment.get('website_uri', '')
+    icon_url = enrichment.get('icon_url', '')
+
+    if website:
+        # Extract domain for favicon via Google's favicon service
+        import re as _re
+        domain_match = _re.search(r'https?://(?:www\.)?([^/]+)', website)
+        if domain_match:
+            domain = domain_match.group(1)
+            favicon_url = f'https://www.google.com/s2/favicons?domain={domain}&sz=64'
+            logo_img = (
+                f'<img src="{favicon_url}" alt="" '
+                f'style="width:36px;height:36px;border-radius:50%;object-fit:contain;flex-shrink:0" '
+                f'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">'
+            )
+    elif icon_url:
+        bg_color = enrichment.get('icon_bg_color', '#888')
+        logo_img = (
+            f'<img src="{icon_url}" alt="" '
+            f'style="width:36px;height:36px;border-radius:50%;object-fit:contain;flex-shrink:0;'
+            f'background:{bg_color};padding:6px" '
+            f'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">'
+        )
+
+    # CSS initials fallback (always rendered, hidden if img loads)
+    words = short.split()
+    initials = ''.join(w[0] for w in words[:2]) if words else '?'
+    fallback_style = 'display:none' if logo_img else 'display:flex'
+    initials_div = (
+        f'<div style="width:36px;height:36px;border-radius:50%;background:{c["bg"]};'
+        f'{fallback_style};align-items:center;justify-content:center;color:#fff;font-weight:800;'
+        f'font-size:14px;font-family:\'Heebo\',sans-serif;letter-spacing:-0.5px;flex-shrink:0">{initials}</div>'
+    )
+
+    return f'''
+<!-- Business Logo -->
+<div class="biz-logo" style="position:fixed;top:70px;right:20px;z-index:98;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:8px 16px 8px 8px;border-radius:100px;box-shadow:0 2px 16px rgba(0,0,0,0.06);border:1px solid {c['border']}">
+  {logo_img}{initials_div}
+  <span style="font-size:14px;font-weight:700;color:#1a1a1a;font-family:\'Heebo\',sans-serif;white-space:nowrap;max-width:160px;overflow:hidden;text-overflow:ellipsis">{short}</span>
+</div>'''
 
 
 def build_map_embed(name, city):
@@ -344,15 +424,20 @@ def generate_page(template_html, banner_html, lead, enrichment=None):
     # Prefer Google address over CSV address
     address = enrichment.get('address') or lead.get('address', '')
     category = lead.get('category', '')
+    short_name = get_short_name(lead['name'])
 
     # Build map section
-    map_html = build_map_section(lead['name'], lead['city'], address)
+    map_html = build_map_section(short_name, lead['city'], address)
 
-    html = template_html.replace('{{BUSINESS_NAME}}', lead['name'])
+    # Build logo (with real favicon if available)
+    theme = CATEGORY_MAP.get(category, 'beauty')
+    logo_html = build_logo_html(lead['name'], theme, enrichment)
+
+    html = template_html.replace('{{BUSINESS_NAME}}', short_name)
     html = html.replace('{{CITY}}', lead['city'])
     html = html.replace('{{PHONE}}', lead['phone'])
     html = html.replace('{{PHONE_CLEAN}}', phone_clean)
-    html = html.replace('{{BANNER}}', banner_html)
+    html = html.replace('{{BANNER}}', banner_html + logo_html)
 
     # New enrichment variables
     html = html.replace('{{ADDRESS}}', address)
@@ -401,7 +486,7 @@ def generate_page(template_html, banner_html, lead, enrichment=None):
         'המידע נאסף ממקורות ציבוריים (Google Maps). '
         '<a href="https://output-seven-black.vercel.app/terms/" style="color:#0f3460;">תנאי שימוש</a>'
         '<br>לבקשת הסרה מיידית: '
-        '<a href="https://wa.me/972559173249?text=בקשת%20הסרה%20-%20' + lead['name'].replace(' ', '%20') + '" style="color:#25D366;">'
+        '<a href="https://wa.me/972559173249?text=בקשת%20הסרה%20-%20' + short_name.replace(' ', '%20') + '" style="color:#25D366;">'
         '055-917-3249</a>'
         '</div>'
     )
@@ -413,7 +498,7 @@ def generate_page(template_html, banner_html, lead, enrichment=None):
     tracking_pixel = (
         f'<script>'
         f'(function(){{'
-        f'var p="{phone_clean}",n=encodeURIComponent("{lead["name"]}");'
+        f'var p="{phone_clean}",n=encodeURIComponent("{short_name}");'
         f'var img=new Image();'
         f'img.src="https://output-seven-black.vercel.app/api/track?phone="+p+"&name="+n+"&t="+Date.now();'
         f'}})()'
@@ -434,7 +519,7 @@ def generate_page(template_html, banner_html, lead, enrichment=None):
             f"(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');"
             f"fbq('init','{fb_pixel_id}');"
             f"fbq('track','PageView');"
-            f"fbq('track','ViewContent',{{content_name:'{lead['name']}',content_category:'{lead.get('category','')}'}});"
+            f"fbq('track','ViewContent',{{content_name:'{short_name}',content_category:'{lead.get('category','')}'}});"
             f"</script>"
             f"<noscript><img height='1' width='1' style='display:none' "
             f"src='https://www.facebook.com/tr?id={fb_pixel_id}&ev=PageView&noscript=1'/></noscript>"
@@ -453,11 +538,12 @@ def generate_index(leads_by_category):
     for cat_heb, leads in sorted(leads_by_category.items()):
         for lead in leads:
             slug = slugify(lead['name'])
+            short = get_short_name(lead['name'])
             total += 1
             rows += f'''
         <tr>
           <td>{total}</td>
-          <td><a href="{slug}/index.html" target="_blank">{lead['name']}</a></td>
+          <td><a href="{slug}/index.html" target="_blank">{short}</a></td>
           <td>{lead['city']}</td>
           <td>{cat_heb}</td>
           <td>{lead['phone']}</td>

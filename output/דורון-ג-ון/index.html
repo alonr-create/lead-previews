@@ -35,7 +35,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
 
 /* --- Hero --- */
 .hero{position:relative;height:100vh;min-height:620px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;padding-bottom:80px}
-.hero-bg{position:absolute;inset:0;background:url('{{PHOTO_1}}') center/cover no-repeat;will-change:transform}
+.hero-bg{position:absolute;inset:0;background:url('https://places.googleapis.com/v1/places/ChIJQZsbNr21AhURWAa81_eGTb8/photos/AU_ZVEEgzh3HPy9RvZ7j4ENt0t--Wxmgcj5RXUqNFAdZxC2EF5vxa0GmeHo1alZSzPhg7CevW1PriB2tqIYoV0qjdw9dLPhgZC2wDtLSlfZ-6IhTE4Q4hLc4mLCQv2WOALmkAO2jzCO74b-GL0NpR0WPgulmRNJ_bGxJ87Y6CfyULR5vP-A94qr0JqZlPBzuT1p26iIbX0_nC8uQFINorqdjKI2BWfUdy2nzrzYDqYjQdbx7PikUPsZhBsJt4IlCuXP5Ziw0PNyCKr5gE6AKXyf9dh7Z8zi0OLCDjX2gsG3OZrLiBw/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ') center/cover no-repeat;will-change:transform}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(250,250,248,0.1) 0%,rgba(250,250,248,0.35) 30%,rgba(250,250,248,0.92) 85%,var(--bg) 100%)}
 .hero-content{position:relative;z-index:2;text-align:center;padding:0 24px;max-width:700px;animation:fadeInUp 1s cubic-bezier(0.16,1,0.3,1) 0.2s both}
 .hero-badge{display:inline-block;padding:6px 22px;background:rgba(184,92,56,0.08);border:1px solid rgba(184,92,56,0.15);border-radius:100px;font-size:13px;color:var(--sienna);letter-spacing:1.5px;margin-bottom:20px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
@@ -159,217 +159,6 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
 </style>
 </head>
 <body>
-{{BANNER}}
-
-<!-- Hero -->
-<section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-badge">חוויה קולינרית</div>
-    <h1><span>דורון ג'ון</span></h1>
-    <p class="hero-sub">טעמים שמספרים סיפור</p>
-    <p class="hero-city">חולון</p>
-    <a href="tel:585756543" class="hero-cta">הזמינו מקום</a>
-  </div>
-  <div class="scroll-hint">
-    <div class="scroll-line"></div>
-    <span>גלגלו למטה</span>
-  </div>
-</section>
-
-<!-- Rating -->
-<section class="rating-strip reveal">
-  <div class="rating-inner">
-    <div class="stars">
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-    </div>
-    <div class="rating-score">{{RATING}}</div>
-    <div class="rating-text">{{REVIEWS_COUNT}} ביקורות בגוגל</div>
-    <div class="rating-address">{{ADDRESS}}</div>
-  </div>
-</section>
-
-<!-- About -->
-<section class="section about" id="about">
-  <div class="section-inner">
-    <div class="about-grid">
-      <div class="about-img-wrap reveal">
-        <img src="{{PHOTO_2}}" alt="מנה מהמסעדה" loading="lazy">
-        <div class="about-accent"></div>
-      </div>
-      <div class="reveal reveal-delay-1">
-        <div class="section-label">הסיפור שלנו</div>
-        <h2 class="section-title">מקום שבו <span class="underline">הטעם פוגש את הלב</span></h2>
-        <p class="section-desc">בדורון ג'ון אנחנו מאמינים שאוכל טוב הוא יותר ממרכיבים על צלחת. זו חוויה שמחברת אנשים, מעוררת זיכרונות ויוצרת רגעים חדשים.</p>
-        <p class="about-text" style="font-size:16px;color:var(--text-light);line-height:1.9;margin-top:16px">כל מנה מוכנה באהבה מחומרי גלם טריים ואיכותיים, עם תשומת לב לכל פרט. אנחנו מזמינים אתכם לשבת, להירגע וליהנות.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Menu -->
-<section class="section menu" id="menu">
-  <div class="section-inner">
-    <div class="reveal" style="text-align:center">
-      <div class="section-label">התפריט</div>
-      <h2 class="section-title">המנות <span class="underline">המומלצות שלנו</span></h2>
-    </div>
-    <div class="menu-grid">
-      <div class="menu-card reveal reveal-delay-1">
-        <img class="menu-card-img" src="{{PHOTO_3}}" alt="סטייק אנטריקוט" loading="lazy">
-        <div class="menu-card-body">
-          <div class="menu-card-name">סטייק אנטריקוט</div>
-          <div class="menu-card-desc">צלוי על גחלים לשלמות, מוגש עם ירקות עונה</div>
-          <div class="menu-card-price">139 &#8362;</div>
-        </div>
-      </div>
-      <div class="menu-card reveal reveal-delay-2">
-        <img class="menu-card-img" src="{{PHOTO_4}}" alt="סלט השף" loading="lazy">
-        <div class="menu-card-body">
-          <div class="menu-card-name">סלט השף</div>
-          <div class="menu-card-desc">ירוקים טריים, גבינת עיזים, אגוזים וויניגרט הדרים</div>
-          <div class="menu-card-price">62 &#8362;</div>
-        </div>
-      </div>
-      <div class="menu-card reveal reveal-delay-3">
-        <img class="menu-card-img" src="{{PHOTO_5}}" alt="פסטה טרייה" loading="lazy">
-        <div class="menu-card-body">
-          <div class="menu-card-name">פסטה טרייה</div>
-          <div class="menu-card-desc">פסטה ביתית ברוטב שמנת כמהין ופטריות בר</div>
-          <div class="menu-card-price">78 &#8362;</div>
-        </div>
-      </div>
-      <div class="menu-card reveal reveal-delay-4">
-        <img class="menu-card-img" src="{{PHOTO_6}}" alt="קינוח השף" loading="lazy">
-        <div class="menu-card-body">
-          <div class="menu-card-name">קינוח השף</div>
-          <div class="menu-card-desc">מוס שוקולד בלגי על בסיס פירות יער טריים</div>
-          <div class="menu-card-price">52 &#8362;</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Gallery -->
-<section class="section gallery" id="gallery">
-  <div class="section-inner">
-    <div class="reveal" style="text-align:center">
-      <div class="section-label">גלריה</div>
-      <h2 class="section-title">רגעים מ<span class="underline">דורון ג'ון</span></h2>
-    </div>
-    <div class="gallery-grid">
-      <div class="gallery-item reveal reveal-delay-1"><img src="{{PHOTO_1}}" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-2"><img src="{{PHOTO_2}}" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-3"><img src="{{PHOTO_3}}" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-1"><img src="{{PHOTO_4}}" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-2"><img src="{{PHOTO_1}}" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-3"><img src="{{PHOTO_2}}" alt="גלריה" loading="lazy"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Hours -->
-<section class="section hours" id="hours">
-  <div class="section-inner">
-    <div class="reveal" style="text-align:center">
-      <div class="section-label">שעות פתיחה</div>
-      <h2 class="section-title">מתי <span class="underline">אפשר לבוא</span></h2>
-    </div>
-    <div class="hours-card reveal reveal-delay-1">
-      <div class="hours-row"><span class="hours-day">ראשון - חמישי</span><span class="hours-time">12:00 - 23:00</span></div>
-      <div class="hours-row"><span class="hours-day">שישי</span><span class="hours-time">12:00 - 15:00</span></div>
-      <div class="hours-row"><span class="hours-day">מוצאי שבת</span><span class="hours-time">20:00 - 23:30</span></div>
-    </div>
-    <p class="hours-address reveal reveal-delay-2">{{ADDRESS}}, חולון</p>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-  <h2 class="reveal">מוכנים לחוויה קולינרית?</h2>
-  <p class="reveal reveal-delay-1">הזמינו מקום ותנו לנו לפנק אתכם</p>
-  <a href="tel:585756543" class="cta-btn reveal reveal-delay-2">התקשרו עכשיו</a>
-</section>
-
-<!-- Contact -->
-<section class="section contact" id="contact">
-  <div class="section-inner">
-    <div class="reveal" style="text-align:center">
-      <div class="section-label">צרו קשר</div>
-      <h2 class="section-title">נשמח <span class="underline">לשמוע מכם</span></h2>
-    </div>
-    <div class="contact-card reveal reveal-delay-1">
-      <div class="contact-name">דורון ג'ון</div>
-      <div class="contact-city">{{ADDRESS}}, חולון</div>
-      <div class="contact-buttons">
-        <a href="https://wa.me/972585756543" class="contact-btn btn-whatsapp">WhatsApp</a>
-        <a href="tel:585756543" class="contact-btn btn-phone">058-5756543</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-{{REVIEWS_SECTION}}
-
-<!-- Footer -->
-<footer class="site-footer">
-  <p>דורון ג'ון | חולון</p>
-</footer>
-
-<!-- Floating Nav -->
-<nav class="float-nav" id="floatNav">
-  <a href="#home">ראשי</a>
-  <a href="#menu">תפריט</a>
-  <a href="#gallery">גלריה</a>
-  <a href="#hours">שעות</a>
-  <a href="#contact">קשר</a>
-</nav>
-
-<script>
-(function(){
-  // Scroll reveal with IntersectionObserver
-  var reveals = document.querySelectorAll('.reveal');
-  var observer = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}
-    });
-  },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
-  reveals.forEach(function(el){observer.observe(el)});
-
-  // Active nav highlight
-  var sections = document.querySelectorAll('section[id]');
-  var navLinks = document.querySelectorAll('.float-nav a');
-  var floatNav = document.getElementById('floatNav');
-
-  window.addEventListener('scroll',function(){
-    var scrollY = window.pageYOffset;
-    // Show/hide floating nav
-    if(scrollY > 350){floatNav.classList.add('show')}else{floatNav.classList.remove('show')}
-    // Highlight active section
-    var current = '';
-    sections.forEach(function(s){
-      if(scrollY >= s.offsetTop - 220) current = s.getAttribute('id');
-    });
-    navLinks.forEach(function(a){
-      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-    });
-  });
-
-  // Subtle parallax on hero background
-  var heroBg = document.querySelector('.hero-bg');
-  window.addEventListener('scroll',function(){
-    if(heroBg && window.pageYOffset < window.innerHeight){
-      heroBg.style.transform = 'translateY(' + (window.pageYOffset * 0.25) + 'px)';
-    }
-  });
-})();
-</script>
 <!-- Lead Preview Banner -->
 <style>
   .lp-banner {
@@ -462,6 +251,288 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
   <button class="lp-banner-close" onclick="document.getElementById('lpBanner').classList.add('lp-hidden');document.body.style.paddingTop='0'" aria-label="סגור">&times;</button>
 </div>
 <!-- End Banner -->
+
+<!-- Business Logo -->
+<div class="biz-logo" style="position:fixed;top:70px;right:20px;z-index:98;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:8px 16px 8px 8px;border-radius:100px;box-shadow:0 2px 16px rgba(0,0,0,0.06);border:1px solid rgba(184,92,56,0.15)">
+  <img src="https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet.png" alt="" style="width:36px;height:36px;border-radius:50%;object-fit:contain;flex-shrink:0;background:#FF9E67;padding:6px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#B85C38,#C4964A);display:none;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:14px;font-family:'Heebo',sans-serif;letter-spacing:-0.5px;flex-shrink:0">דג</div>
+  <span style="font-size:14px;font-weight:700;color:#1a1a1a;font-family:'Heebo',sans-serif;white-space:nowrap;max-width:160px;overflow:hidden;text-overflow:ellipsis">דורון ג'ון</span>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">חוויה קולינרית</div>
+    <h1><span>דורון ג'ון</span></h1>
+    <p class="hero-sub">טעמים שמספרים סיפור</p>
+    <p class="hero-city">חולון</p>
+    <a href="tel:585756543" class="hero-cta">הזמינו מקום</a>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    <span>גלגלו למטה</span>
+  </div>
+</section>
+
+<!-- Rating -->
+<section class="rating-strip reveal">
+  <div class="rating-inner">
+    <div class="stars">
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+    </div>
+    <div class="rating-score">4.9</div>
+    <div class="rating-text">86 ביקורות בגוגל</div>
+    <div class="rating-address">מקווה ישראל 34, חולון, ישראל</div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section about" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <img src="https://places.googleapis.com/v1/places/ChIJQZsbNr21AhURWAa81_eGTb8/photos/AU_ZVEEYQpAhcu3qLV18CSXlxQ7oUryQPwqy78IVGcPdqrCkApm4OHm17i46uBsgJSlF5yIvOPnIxt8GyctKO7veCeHuDhh1Nlw7nb6INBFu2BeOUICpWwwlcqymmFOjieMNRb9YoeKinlYZfGLq1G4avonXVQT8VBa6oYpHM5PyhWfyXGmkVFLZDCq0usjK2lLlAux2goQ8ZSpma3fnbqJqjk1z8jXk9IL1AqHHfRH9cQAookThfYyH1PBeuDK4udYre_BHA9TOwQxnyomX5Arly1JxTBS8yhen-3egrQAwH3uobw/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="מנה מהמסעדה" loading="lazy">
+        <div class="about-accent"></div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="section-label">הסיפור שלנו</div>
+        <h2 class="section-title">מקום שבו <span class="underline">הטעם פוגש את הלב</span></h2>
+        <p class="section-desc">בדורון ג'ון אנחנו מאמינים שאוכל טוב הוא יותר ממרכיבים על צלחת. זו חוויה שמחברת אנשים, מעוררת זיכרונות ויוצרת רגעים חדשים.</p>
+        <p class="about-text" style="font-size:16px;color:var(--text-light);line-height:1.9;margin-top:16px">כל מנה מוכנה באהבה מחומרי גלם טריים ואיכותיים, עם תשומת לב לכל פרט. אנחנו מזמינים אתכם לשבת, להירגע וליהנות.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Menu -->
+<section class="section menu" id="menu">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label">התפריט</div>
+      <h2 class="section-title">המנות <span class="underline">המומלצות שלנו</span></h2>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card reveal reveal-delay-1">
+        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJQZsbNr21AhURWAa81_eGTb8/photos/AU_ZVEE6Z0di50ZDZF4nziv4kfZPS8vbbI0hvSuo596kEfhWK9rg8G6_3nOkUvEeE19lnTV7j_YKrcwqeggtVIUh30r3soGRe_WcvaI3Y-GGBq25G9F4Qt0aXKPrSYdcQaKjD772Sny-vA_-c7Fis2-UZ4ijGxglDctvRnqADE0AsWtL7wej3MPHjuhSHjYjA8dwDcgP-oddCHEG5uRPkyA81gO3X0lb9FnajAvSuU0NsrmfNEh7MQD43I0dOD_yqLA5Mg1tQhY8IZL_5M5p5H2Go1wk_7UVV9FE8QMaZFCtx9XoBg/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="סטייק אנטריקוט" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-name">סטייק אנטריקוט</div>
+          <div class="menu-card-desc">צלוי על גחלים לשלמות, מוגש עם ירקות עונה</div>
+          <div class="menu-card-price">139 &#8362;</div>
+        </div>
+      </div>
+      <div class="menu-card reveal reveal-delay-2">
+        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJQZsbNr21AhURWAa81_eGTb8/photos/AU_ZVEEMK1m6hzwqA0PIKxCr5WvrC8tCrV_mH6WD3GRbX0SxhwlOO_S1zoYZGGLZEsdhiWLT8hj7674186snajW16jojqy-PnQibZ0f1ciQ-vW1SmlHavMD6vjMcV6jqIi_FRf5mcXTIiBPrG8WYRgEwJHqU4-6qUn0UKLs3QHI7_2D9-OGccOlwPaWvEx2A2xcJzibzFwrYljIpCbd_DBEy3yQ4vMAGg3Ia4-Wdqk3wkqvV3XLAjlVSvaz5UdrOPyEETIVADtrXV7cwJ3vhamrZPnu4EbH4XRKwS5XyO0RoZHlLYg/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="סלט השף" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-name">סלט השף</div>
+          <div class="menu-card-desc">ירוקים טריים, גבינת עיזים, אגוזים וויניגרט הדרים</div>
+          <div class="menu-card-price">62 &#8362;</div>
+        </div>
+      </div>
+      <div class="menu-card reveal reveal-delay-3">
+        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJQZsbNr21AhURWAa81_eGTb8/photos/AU_ZVEEcpntDCiv0o8mJCcVpATWWPYBqmz_O6sOhs16f-ToDlRXVPiSoh13Chim-ARnSNX3Xq612PpbdtfCPb8D46QUjOd8704Qmdd-0HmTFYVWl2_tyYtkv8Csg3M7XKHuFKVGmUR_HeJR5pGhHlzyAZ8eE8XZg7SlJ-VJOLSrSoHbBX-_CeLtrAGVBvOcmF0HSi_FbpxcW_0FYAXSdFwysxf3-CH-gDHq35sHmfqeihwkEKFJQeMoMshfJpk9EHxh85EpuIJ5_-V0FbtkKYiBsY02ob_RxWRrx7nU-9zi4QTG6bg/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="פסטה טרייה" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-name">פסטה טרייה</div>
+          <div class="menu-card-desc">פסטה ביתית ברוטב שמנת כמהין ופטריות בר</div>
+          <div class="menu-card-price">78 &#8362;</div>
+        </div>
+      </div>
+      <div class="menu-card reveal reveal-delay-4">
+        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJQZsbNr21AhURWAa81_eGTb8/photos/AU_ZVEFaOdR7gEst1tFUYp355J5fcMejleynNc_b3XO8TR5lqEd9Rjyyp2h9Xql0CTn4Gj7QNiiFhwkQ35eLr3nLpNQFTMl4dUEbDrJgayaw1UC1Z5Lbo6QjyFlC9C2Pd5721QfBUWqeH0hOtUxMmiB7Mc2MM-i0b8V07uzZs9JeVCJD1OFwHBDaGg85xTu33Y8lrOAgnZY2jTKPsmF0rnBIIN4pXWUWvJyAXxlpkz7phzjvyG5hnR2KeMh3PxpODk6ydWi9yaBBQLH0pUEz2kxSa0WEItcWr2pXZFzRppcQIh5x8g/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="קינוח השף" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-name">קינוח השף</div>
+          <div class="menu-card-desc">מוס שוקולד בלגי על בסיס פירות יער טריים</div>
+          <div class="menu-card-price">52 &#8362;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="section gallery" id="gallery">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label">גלריה</div>
+      <h2 class="section-title">רגעים מ<span class="underline">דורון ג'ון</span></h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal reveal-delay-1"><img src="https://places.googleapis.com/v1/places/ChIJQZsbNr21AhURWAa81_eGTb8/photos/AU_ZVEEgzh3HPy9RvZ7j4ENt0t--Wxmgcj5RXUqNFAdZxC2EF5vxa0GmeHo1alZSzPhg7CevW1PriB2tqIYoV0qjdw9dLPhgZC2wDtLSlfZ-6IhTE4Q4hLc4mLCQv2WOALmkAO2jzCO74b-GL0NpR0WPgulmRNJ_bGxJ87Y6CfyULR5vP-A94qr0JqZlPBzuT1p26iIbX0_nC8uQFINorqdjKI2BWfUdy2nzrzYDqYjQdbx7PikUPsZhBsJt4IlCuXP5Ziw0PNyCKr5gE6AKXyf9dh7Z8zi0OLCDjX2gsG3OZrLiBw/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-2"><img src="https://places.googleapis.com/v1/places/ChIJQZsbNr21AhURWAa81_eGTb8/photos/AU_ZVEEYQpAhcu3qLV18CSXlxQ7oUryQPwqy78IVGcPdqrCkApm4OHm17i46uBsgJSlF5yIvOPnIxt8GyctKO7veCeHuDhh1Nlw7nb6INBFu2BeOUICpWwwlcqymmFOjieMNRb9YoeKinlYZfGLq1G4avonXVQT8VBa6oYpHM5PyhWfyXGmkVFLZDCq0usjK2lLlAux2goQ8ZSpma3fnbqJqjk1z8jXk9IL1AqHHfRH9cQAookThfYyH1PBeuDK4udYre_BHA9TOwQxnyomX5Arly1JxTBS8yhen-3egrQAwH3uobw/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-3"><img src="https://places.googleapis.com/v1/places/ChIJQZsbNr21AhURWAa81_eGTb8/photos/AU_ZVEE6Z0di50ZDZF4nziv4kfZPS8vbbI0hvSuo596kEfhWK9rg8G6_3nOkUvEeE19lnTV7j_YKrcwqeggtVIUh30r3soGRe_WcvaI3Y-GGBq25G9F4Qt0aXKPrSYdcQaKjD772Sny-vA_-c7Fis2-UZ4ijGxglDctvRnqADE0AsWtL7wej3MPHjuhSHjYjA8dwDcgP-oddCHEG5uRPkyA81gO3X0lb9FnajAvSuU0NsrmfNEh7MQD43I0dOD_yqLA5Mg1tQhY8IZL_5M5p5H2Go1wk_7UVV9FE8QMaZFCtx9XoBg/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-1"><img src="https://places.googleapis.com/v1/places/ChIJQZsbNr21AhURWAa81_eGTb8/photos/AU_ZVEEMK1m6hzwqA0PIKxCr5WvrC8tCrV_mH6WD3GRbX0SxhwlOO_S1zoYZGGLZEsdhiWLT8hj7674186snajW16jojqy-PnQibZ0f1ciQ-vW1SmlHavMD6vjMcV6jqIi_FRf5mcXTIiBPrG8WYRgEwJHqU4-6qUn0UKLs3QHI7_2D9-OGccOlwPaWvEx2A2xcJzibzFwrYljIpCbd_DBEy3yQ4vMAGg3Ia4-Wdqk3wkqvV3XLAjlVSvaz5UdrOPyEETIVADtrXV7cwJ3vhamrZPnu4EbH4XRKwS5XyO0RoZHlLYg/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-2"><img src="https://places.googleapis.com/v1/places/ChIJQZsbNr21AhURWAa81_eGTb8/photos/AU_ZVEEgzh3HPy9RvZ7j4ENt0t--Wxmgcj5RXUqNFAdZxC2EF5vxa0GmeHo1alZSzPhg7CevW1PriB2tqIYoV0qjdw9dLPhgZC2wDtLSlfZ-6IhTE4Q4hLc4mLCQv2WOALmkAO2jzCO74b-GL0NpR0WPgulmRNJ_bGxJ87Y6CfyULR5vP-A94qr0JqZlPBzuT1p26iIbX0_nC8uQFINorqdjKI2BWfUdy2nzrzYDqYjQdbx7PikUPsZhBsJt4IlCuXP5Ziw0PNyCKr5gE6AKXyf9dh7Z8zi0OLCDjX2gsG3OZrLiBw/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-3"><img src="https://places.googleapis.com/v1/places/ChIJQZsbNr21AhURWAa81_eGTb8/photos/AU_ZVEEYQpAhcu3qLV18CSXlxQ7oUryQPwqy78IVGcPdqrCkApm4OHm17i46uBsgJSlF5yIvOPnIxt8GyctKO7veCeHuDhh1Nlw7nb6INBFu2BeOUICpWwwlcqymmFOjieMNRb9YoeKinlYZfGLq1G4avonXVQT8VBa6oYpHM5PyhWfyXGmkVFLZDCq0usjK2lLlAux2goQ8ZSpma3fnbqJqjk1z8jXk9IL1AqHHfRH9cQAookThfYyH1PBeuDK4udYre_BHA9TOwQxnyomX5Arly1JxTBS8yhen-3egrQAwH3uobw/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Hours -->
+<section class="section hours" id="hours">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label">שעות פתיחה</div>
+      <h2 class="section-title">מתי <span class="underline">אפשר לבוא</span></h2>
+    </div>
+    <div class="hours-card reveal reveal-delay-1">
+      <div class="hours-row"><span class="hours-day">ראשון - חמישי</span><span class="hours-time">12:00 - 23:00</span></div>
+      <div class="hours-row"><span class="hours-day">שישי</span><span class="hours-time">12:00 - 15:00</span></div>
+      <div class="hours-row"><span class="hours-day">מוצאי שבת</span><span class="hours-time">20:00 - 23:30</span></div>
+    </div>
+    <p class="hours-address reveal reveal-delay-2">מקווה ישראל 34, חולון, ישראל, חולון</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2 class="reveal">מוכנים לחוויה קולינרית?</h2>
+  <p class="reveal reveal-delay-1">הזמינו מקום ותנו לנו לפנק אתכם</p>
+  <a href="tel:585756543" class="cta-btn reveal reveal-delay-2">התקשרו עכשיו</a>
+</section>
+
+<!-- Contact -->
+<section class="section contact" id="contact">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label">צרו קשר</div>
+      <h2 class="section-title">נשמח <span class="underline">לשמוע מכם</span></h2>
+    </div>
+    <div class="contact-card reveal reveal-delay-1">
+      <div class="contact-name">דורון ג'ון</div>
+      <div class="contact-city">מקווה ישראל 34, חולון, ישראל, חולון</div>
+      <div class="contact-buttons">
+        <a href="https://wa.me/972585756543" class="contact-btn btn-whatsapp">WhatsApp</a>
+        <a href="tel:585756543" class="contact-btn btn-phone">058-575-6543</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Real Google Reviews -->
+<section style="padding:60px 24px;background:#FAFAF8">
+  <div style="max-width:1100px;margin:0 auto">
+    <h2 style="text-align:center;font-size:1.8rem;font-weight:700;color:#1a1a1a;margin-bottom:8px">מה הלקוחות אומרים</h2>
+    <p style="text-align:center;color:#888;margin-bottom:40px;font-size:15px">ביקורות אמיתיות מגוגל</p>
+    <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center">
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">מ</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">מאור חן</div>
+            <div style="font-size:12px;color:#999">לפני חודש</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#ddd">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"וואו איזה מקום אין מילים איכות שירות הכל על רמה"</p>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">מ</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">מיכאל גוניור</div>
+            <div style="font-size:12px;color:#999">לפני 4 שבועות</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"אהבתי ממש מקום מאוד טוב איכותי מדבר בכבוד איש עסקים"</p>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">H</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">Harold Iliya</div>
+            <div style="font-size:12px;color:#999">לפני 3 חודשים</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"מקום שכיף לבוא אליו, שירות אדיב, תמיד מחייך, ממליץ בחום"</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Map -->
+<section style="padding:0">
+  <div style="max-width:1100px;margin:0 auto;padding:0 24px 60px">
+    <div style="border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.06)">
+      <iframe
+        width="100%"
+        height="350"
+        style="border:0;display:block"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=%D7%93%D7%95%D7%A8%D7%95%D7%9F%20%D7%92%27%D7%95%D7%9F%20%D7%97%D7%95%D7%9C%D7%95%D7%9F+ישראל&output=embed&hl=he&z=16">
+      </iframe>
+      <div style="padding:20px;background:#fff;text-align:center">
+        <p style="color:#3D3D3D;font-size:1rem;margin-bottom:12px">מקווה ישראל 34, חולון, ישראל</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=%D7%93%D7%95%D7%A8%D7%95%D7%9F%20%D7%92%27%D7%95%D7%9F%20%D7%97%D7%95%D7%9C%D7%95%D7%9F" target="_blank" style="color:#4285f4;text-decoration:none;font-weight:600;font-size:14px">פתח בגוגל מפות</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="background:#f5f5f5;border-top:1px solid #ddd;padding:16px 20px;text-align:center;font-family:Heebo,Arial,sans-serif;direction:rtl;font-size:12px;color:#999;line-height:1.6;">אתר לדוגמא בלבד — נבנה על ידי <a href="https://alon-dev.vercel.app" style="color:#0f3460;">alon dev</a> כהצעה עסקית. אינו מייצג את העסק באופן רשמי. המידע נאסף ממקורות ציבוריים (Google Maps). <a href="https://output-seven-black.vercel.app/terms/" style="color:#0f3460;">תנאי שימוש</a><br>לבקשת הסרה מיידית: <a href="https://wa.me/972559173249?text=בקשת%20הסרה%20-%20דורון%20ג'ון" style="color:#25D366;">055-917-3249</a></div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <p>דורון ג'ון | חולון</p>
+</footer>
+
+<!-- Floating Nav -->
+<nav class="float-nav" id="floatNav">
+  <a href="#home">ראשי</a>
+  <a href="#menu">תפריט</a>
+  <a href="#gallery">גלריה</a>
+  <a href="#hours">שעות</a>
+  <a href="#contact">קשר</a>
+</nav>
+
+<script>
+(function(){
+  // Scroll reveal with IntersectionObserver
+  var reveals = document.querySelectorAll('.reveal');
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}
+    });
+  },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+  reveals.forEach(function(el){observer.observe(el)});
+
+  // Active nav highlight
+  var sections = document.querySelectorAll('section[id]');
+  var navLinks = document.querySelectorAll('.float-nav a');
+  var floatNav = document.getElementById('floatNav');
+
+  window.addEventListener('scroll',function(){
+    var scrollY = window.pageYOffset;
+    // Show/hide floating nav
+    if(scrollY > 350){floatNav.classList.add('show')}else{floatNav.classList.remove('show')}
+    // Highlight active section
+    var current = '';
+    sections.forEach(function(s){
+      if(scrollY >= s.offsetTop - 220) current = s.getAttribute('id');
+    });
+    navLinks.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+
+  // Subtle parallax on hero background
+  var heroBg = document.querySelector('.hero-bg');
+  window.addEventListener('scroll',function(){
+    if(heroBg && window.pageYOffset < window.innerHeight){
+      heroBg.style.transform = 'translateY(' + (window.pageYOffset * 0.25) + 'px)';
+    }
+  });
+})();
+</script>
+<script>(function(){var p="585756543",n=encodeURIComponent("דורון ג'ון");var img=new Image();img.src="https://output-seven-black.vercel.app/api/track?phone="+p+"&name="+n+"&t="+Date.now();})()</script>
 
 </body>
 </html>

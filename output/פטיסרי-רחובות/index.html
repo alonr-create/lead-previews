@@ -35,7 +35,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
 
 /* --- Hero --- */
 .hero{position:relative;height:100vh;min-height:620px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;padding-bottom:80px}
-.hero-bg{position:absolute;inset:0;background:url('{{PHOTO_1}}') center/cover no-repeat;will-change:transform}
+.hero-bg{position:absolute;inset:0;background:url('https://places.googleapis.com/v1/places/ChIJIXx5BgS3AhURaiWvsBqXpiI/photos/AU_ZVEH3kbYyAlwKFc-Cat8WUDEXVC55B-7nZ7G4hPh6tJ3g_T2hPHYPdfovdWT33u7mHC8J2UT9-g3wEi8SE9PmtgY_BHgjrzhub32Iy1k4Ff8FnE6UUKDKOUby1_hVyCRA5Weu3EnTyNSUWLVvmIxwaUk-RMn56iQkf4PdM1kuOykf44QxsBw36wbIU7jE4staa-ie5BhlU_afVFRsClGKw_6sLxRkedpNRsWv5hDTTb4qqD37JaddyJ28939rWlKMU-D9Suv1osynFz9yXAg_pCm6DEu8nomu_Pl4MiT7pSEp0E6BCdJEThyYxw0cIIOf7-tJ-TMO1acUZc6RUn9STPuN0bhm6zO8gcRMrx68v5iNbdD6oV7Ipwayw9Ewr2yGe-_9tcRylgmoBcf2fvRhQtzBHBJhjRGCLSX7eZGz3xoGQg/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ') center/cover no-repeat;will-change:transform}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(250,250,248,0.1) 0%,rgba(250,250,248,0.35) 30%,rgba(250,250,248,0.92) 85%,var(--bg) 100%)}
 .hero-content{position:relative;z-index:2;text-align:center;padding:0 24px;max-width:700px;animation:fadeInUp 1s cubic-bezier(0.16,1,0.3,1) 0.2s both}
 .hero-badge{display:inline-block;padding:6px 22px;background:rgba(184,92,56,0.08);border:1px solid rgba(184,92,56,0.15);border-radius:100px;font-size:13px;color:var(--sienna);letter-spacing:1.5px;margin-bottom:20px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
@@ -159,217 +159,6 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
 </style>
 </head>
 <body>
-{{BANNER}}
-
-<!-- Hero -->
-<section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-badge">חוויה קולינרית</div>
-    <h1><span>פטיסרי - רחובות</span></h1>
-    <p class="hero-sub">טעמים שמספרים סיפור</p>
-    <p class="hero-city">רחובות</p>
-    <a href="tel:89470839" class="hero-cta">הזמינו מקום</a>
-  </div>
-  <div class="scroll-hint">
-    <div class="scroll-line"></div>
-    <span>גלגלו למטה</span>
-  </div>
-</section>
-
-<!-- Rating -->
-<section class="rating-strip reveal">
-  <div class="rating-inner">
-    <div class="stars">
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-    </div>
-    <div class="rating-score">{{RATING}}</div>
-    <div class="rating-text">{{REVIEWS_COUNT}} ביקורות בגוגל</div>
-    <div class="rating-address">{{ADDRESS}}</div>
-  </div>
-</section>
-
-<!-- About -->
-<section class="section about" id="about">
-  <div class="section-inner">
-    <div class="about-grid">
-      <div class="about-img-wrap reveal">
-        <img src="{{PHOTO_2}}" alt="מנה מהמסעדה" loading="lazy">
-        <div class="about-accent"></div>
-      </div>
-      <div class="reveal reveal-delay-1">
-        <div class="section-label">הסיפור שלנו</div>
-        <h2 class="section-title">מקום שבו <span class="underline">הטעם פוגש את הלב</span></h2>
-        <p class="section-desc">בפטיסרי - רחובות אנחנו מאמינים שאוכל טוב הוא יותר ממרכיבים על צלחת. זו חוויה שמחברת אנשים, מעוררת זיכרונות ויוצרת רגעים חדשים.</p>
-        <p class="about-text" style="font-size:16px;color:var(--text-light);line-height:1.9;margin-top:16px">כל מנה מוכנה באהבה מחומרי גלם טריים ואיכותיים, עם תשומת לב לכל פרט. אנחנו מזמינים אתכם לשבת, להירגע וליהנות.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Menu -->
-<section class="section menu" id="menu">
-  <div class="section-inner">
-    <div class="reveal" style="text-align:center">
-      <div class="section-label">התפריט</div>
-      <h2 class="section-title">המנות <span class="underline">המומלצות שלנו</span></h2>
-    </div>
-    <div class="menu-grid">
-      <div class="menu-card reveal reveal-delay-1">
-        <img class="menu-card-img" src="{{PHOTO_3}}" alt="סטייק אנטריקוט" loading="lazy">
-        <div class="menu-card-body">
-          <div class="menu-card-name">סטייק אנטריקוט</div>
-          <div class="menu-card-desc">צלוי על גחלים לשלמות, מוגש עם ירקות עונה</div>
-          <div class="menu-card-price">139 &#8362;</div>
-        </div>
-      </div>
-      <div class="menu-card reveal reveal-delay-2">
-        <img class="menu-card-img" src="{{PHOTO_4}}" alt="סלט השף" loading="lazy">
-        <div class="menu-card-body">
-          <div class="menu-card-name">סלט השף</div>
-          <div class="menu-card-desc">ירוקים טריים, גבינת עיזים, אגוזים וויניגרט הדרים</div>
-          <div class="menu-card-price">62 &#8362;</div>
-        </div>
-      </div>
-      <div class="menu-card reveal reveal-delay-3">
-        <img class="menu-card-img" src="{{PHOTO_5}}" alt="פסטה טרייה" loading="lazy">
-        <div class="menu-card-body">
-          <div class="menu-card-name">פסטה טרייה</div>
-          <div class="menu-card-desc">פסטה ביתית ברוטב שמנת כמהין ופטריות בר</div>
-          <div class="menu-card-price">78 &#8362;</div>
-        </div>
-      </div>
-      <div class="menu-card reveal reveal-delay-4">
-        <img class="menu-card-img" src="{{PHOTO_6}}" alt="קינוח השף" loading="lazy">
-        <div class="menu-card-body">
-          <div class="menu-card-name">קינוח השף</div>
-          <div class="menu-card-desc">מוס שוקולד בלגי על בסיס פירות יער טריים</div>
-          <div class="menu-card-price">52 &#8362;</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Gallery -->
-<section class="section gallery" id="gallery">
-  <div class="section-inner">
-    <div class="reveal" style="text-align:center">
-      <div class="section-label">גלריה</div>
-      <h2 class="section-title">רגעים מ<span class="underline">פטיסרי - רחובות</span></h2>
-    </div>
-    <div class="gallery-grid">
-      <div class="gallery-item reveal reveal-delay-1"><img src="{{PHOTO_1}}" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-2"><img src="{{PHOTO_2}}" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-3"><img src="{{PHOTO_3}}" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-1"><img src="{{PHOTO_4}}" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-2"><img src="{{PHOTO_1}}" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-3"><img src="{{PHOTO_2}}" alt="גלריה" loading="lazy"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Hours -->
-<section class="section hours" id="hours">
-  <div class="section-inner">
-    <div class="reveal" style="text-align:center">
-      <div class="section-label">שעות פתיחה</div>
-      <h2 class="section-title">מתי <span class="underline">אפשר לבוא</span></h2>
-    </div>
-    <div class="hours-card reveal reveal-delay-1">
-      <div class="hours-row"><span class="hours-day">ראשון - חמישי</span><span class="hours-time">12:00 - 23:00</span></div>
-      <div class="hours-row"><span class="hours-day">שישי</span><span class="hours-time">12:00 - 15:00</span></div>
-      <div class="hours-row"><span class="hours-day">מוצאי שבת</span><span class="hours-time">20:00 - 23:30</span></div>
-    </div>
-    <p class="hours-address reveal reveal-delay-2">{{ADDRESS}}, רחובות</p>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-  <h2 class="reveal">מוכנים לחוויה קולינרית?</h2>
-  <p class="reveal reveal-delay-1">הזמינו מקום ותנו לנו לפנק אתכם</p>
-  <a href="tel:89470839" class="cta-btn reveal reveal-delay-2">התקשרו עכשיו</a>
-</section>
-
-<!-- Contact -->
-<section class="section contact" id="contact">
-  <div class="section-inner">
-    <div class="reveal" style="text-align:center">
-      <div class="section-label">צרו קשר</div>
-      <h2 class="section-title">נשמח <span class="underline">לשמוע מכם</span></h2>
-    </div>
-    <div class="contact-card reveal reveal-delay-1">
-      <div class="contact-name">פטיסרי - רחובות</div>
-      <div class="contact-city">{{ADDRESS}}, רחובות</div>
-      <div class="contact-buttons">
-        <a href="https://wa.me/97289470839" class="contact-btn btn-whatsapp">WhatsApp</a>
-        <a href="tel:89470839" class="contact-btn btn-phone">08-947-0839</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-{{REVIEWS_SECTION}}
-
-<!-- Footer -->
-<footer class="site-footer">
-  <p>פטיסרי - רחובות | רחובות</p>
-</footer>
-
-<!-- Floating Nav -->
-<nav class="float-nav" id="floatNav">
-  <a href="#home">ראשי</a>
-  <a href="#menu">תפריט</a>
-  <a href="#gallery">גלריה</a>
-  <a href="#hours">שעות</a>
-  <a href="#contact">קשר</a>
-</nav>
-
-<script>
-(function(){
-  // Scroll reveal with IntersectionObserver
-  var reveals = document.querySelectorAll('.reveal');
-  var observer = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}
-    });
-  },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
-  reveals.forEach(function(el){observer.observe(el)});
-
-  // Active nav highlight
-  var sections = document.querySelectorAll('section[id]');
-  var navLinks = document.querySelectorAll('.float-nav a');
-  var floatNav = document.getElementById('floatNav');
-
-  window.addEventListener('scroll',function(){
-    var scrollY = window.pageYOffset;
-    // Show/hide floating nav
-    if(scrollY > 350){floatNav.classList.add('show')}else{floatNav.classList.remove('show')}
-    // Highlight active section
-    var current = '';
-    sections.forEach(function(s){
-      if(scrollY >= s.offsetTop - 220) current = s.getAttribute('id');
-    });
-    navLinks.forEach(function(a){
-      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-    });
-  });
-
-  // Subtle parallax on hero background
-  var heroBg = document.querySelector('.hero-bg');
-  window.addEventListener('scroll',function(){
-    if(heroBg && window.pageYOffset < window.innerHeight){
-      heroBg.style.transform = 'translateY(' + (window.pageYOffset * 0.25) + 'px)';
-    }
-  });
-})();
-</script>
 <!-- Lead Preview Banner -->
 <style>
   .lp-banner {
@@ -462,6 +251,289 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
   <button class="lp-banner-close" onclick="document.getElementById('lpBanner').classList.add('lp-hidden');document.body.style.paddingTop='0'" aria-label="סגור">&times;</button>
 </div>
 <!-- End Banner -->
+
+<!-- Business Logo -->
+<div class="biz-logo" style="position:fixed;top:70px;right:20px;z-index:98;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:8px 16px 8px 8px;border-radius:100px;box-shadow:0 2px 16px rgba(0,0,0,0.06);border:1px solid rgba(184,92,56,0.15)">
+  <img src="https://www.google.com/s2/favicons?domain=israelbusinessguide.com&sz=64" alt="" style="width:36px;height:36px;border-radius:50%;object-fit:contain;flex-shrink:0" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#B85C38,#C4964A);display:none;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:14px;font-family:'Heebo',sans-serif;letter-spacing:-0.5px;flex-shrink:0">פ-</div>
+  <span style="font-size:14px;font-weight:700;color:#1a1a1a;font-family:'Heebo',sans-serif;white-space:nowrap;max-width:160px;overflow:hidden;text-overflow:ellipsis">פטיסרי - רחובות</span>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">חוויה קולינרית</div>
+    <h1><span>פטיסרי - רחובות</span></h1>
+    <p class="hero-sub">טעמים שמספרים סיפור</p>
+    <p class="hero-city">רחובות</p>
+    <a href="tel:86322226" class="hero-cta">הזמינו מקום</a>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    <span>גלגלו למטה</span>
+  </div>
+</section>
+
+<!-- Rating -->
+<section class="rating-strip reveal">
+  <div class="rating-inner">
+    <div class="stars">
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+    </div>
+    <div class="rating-score">4.7</div>
+    <div class="rating-text">2097 ביקורות בגוגל</div>
+    <div class="rating-address">אחד העם 4, רחובות, ישראל</div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section about" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <img src="https://places.googleapis.com/v1/places/ChIJIXx5BgS3AhURaiWvsBqXpiI/photos/AU_ZVEE05nPMlZE1ZAkhbr66OJv4jIZZRUVUSgNEfQu8VsWoAPpRZsgKcWefQZM2vBi__brV7GXIimAt1cHt8w0Q6-zO1x0x75Zf6-NliPoqBghu7Zm15hFRxSnNZjbNQMQlmoenDpTO90gPdVTh6muYv238Ad8lhXdfsVX85XS_WocavH3AeW95bSh0WtbqUw--QD16Ec1kyfCh0kY_RtU95aPfOAanwqnm7jCIQIvYOo0SHw5LjCUVo729Fk1t3hdmdeuicX1BSDXTDXpk9ioBfK-J9_4ZgxG3usQBqkfckpvDf2wjb1jCiAK2WkiYfImbvUh53gbhtaCiIyZ7PXRzMMmRPOfiqc_nzv5o18A_qYEFqml--593SeN-Rn9_8Kpp2dFRZA34pS7OU6SZxgCT7q3CPVuC3RYd4JMzdSS11vSHWM65/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="מנה מהמסעדה" loading="lazy">
+        <div class="about-accent"></div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="section-label">הסיפור שלנו</div>
+        <h2 class="section-title">מקום שבו <span class="underline">הטעם פוגש את הלב</span></h2>
+        <p class="section-desc">בפטיסרי - רחובות אנחנו מאמינים שאוכל טוב הוא יותר ממרכיבים על צלחת. זו חוויה שמחברת אנשים, מעוררת זיכרונות ויוצרת רגעים חדשים.</p>
+        <p class="about-text" style="font-size:16px;color:var(--text-light);line-height:1.9;margin-top:16px">כל מנה מוכנה באהבה מחומרי גלם טריים ואיכותיים, עם תשומת לב לכל פרט. אנחנו מזמינים אתכם לשבת, להירגע וליהנות.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Menu -->
+<section class="section menu" id="menu">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label">התפריט</div>
+      <h2 class="section-title">המנות <span class="underline">המומלצות שלנו</span></h2>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card reveal reveal-delay-1">
+        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJIXx5BgS3AhURaiWvsBqXpiI/photos/AU_ZVEEP-vGmsRUhwxyn4xRUXgDgAQfPEIWpQvGrO-mbVLzgI5fW4j84ovJA0tBYwXn0l6Y7bOGYCtx4XSnl8Ip-r4Whe2Ohc6zO5WX2tulxMHGSYkTl9kTe9pPzqbEr63VO3J16RXMGwQMgXzeN2A2IPyPuQbhzSAgv75nw9Z22IuDz86ke3Iv2HK8Q1PrN6KpS9wbpww6ne3xlelOqX3q1YPej5jBH1MNoU-3brbdbAWkGfIBqrHfO1c_M3oabblzvDOr_-tNcykPwL-kus9nhfKy8jrw_39sCWI0tcupMXPa2T2galk0cYpe8WGYyenYFyWbV1eqs-g423yJWUfTCGVkf6u1gXwQgcRu7G8CJDz6Z6qJQWl-bwO7CZO7UIWm88wQM_Jgf3cOm5_3z-liAGSP6Fcirym7WqWoJl06AIMqVw18/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="סטייק אנטריקוט" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-name">סטייק אנטריקוט</div>
+          <div class="menu-card-desc">צלוי על גחלים לשלמות, מוגש עם ירקות עונה</div>
+          <div class="menu-card-price">139 &#8362;</div>
+        </div>
+      </div>
+      <div class="menu-card reveal reveal-delay-2">
+        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJIXx5BgS3AhURaiWvsBqXpiI/photos/AU_ZVEGC7CmSIuwO5_c08VQWGEqBUDjtlvJtgvg06e2eYNnCHDV8y3TIYGzzIx2pXDz-sRkVRUXEtXC5ryUELzYLad6J0QWixvafFMEeASZzveZBZz48OXt7D8v71C8WZ5VVJjypqwMeC-0w-md5Xiyc5qoLuJh8XNXe9VIow3ZmQXXGL1GEdDjrsHUL0WEiFFV34YO8bZ-7p-dtSMtpG_ol81UOETWK_hoVJaKYM8zUzweWWBxTeCf1_-wGw3eODw6fSYHVcfWjZz3PZo-42pf_r00vdel0Jk6lRRpdoOaYOqNOzHHOpUIiHS7SjGESRlHcU_hiDkPnHHSwtzHu5gYpXWgLZJwqmcX1UV-CbloML116QcusgUM4n0VaSc124tPB_TJNoTHIVTW4jozaSxFFWKdKcAh-dxk34TN5lQmGlnwaI1QM/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="סלט השף" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-name">סלט השף</div>
+          <div class="menu-card-desc">ירוקים טריים, גבינת עיזים, אגוזים וויניגרט הדרים</div>
+          <div class="menu-card-price">62 &#8362;</div>
+        </div>
+      </div>
+      <div class="menu-card reveal reveal-delay-3">
+        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJIXx5BgS3AhURaiWvsBqXpiI/photos/AU_ZVEEvj-UrU_jgVJ59NZiobbwdve7rLZDPHNAaReG3pmibD1r4t58WZqCtfEq_vDP7cfv408wB4e_3LPx2dXwnngrvk8tiW9DbcI0zFxVWBCFP_Ldnt0V2gmeK40TpOLEiI2CkbX12m92kklE9rlJZW1jnDciEibN-Zj4_LjvnI7B34Z2OUUNisp-TfB_scqeK7uhqH5krxhdKIqyexAJNMBYa0K3zTRtrTYZWTjxqVP-CGz-1bZXYVyPZPsox5jqdr0EReoQ4Ojadfgw-ErrCEzVNUHniOjGjG6HnBIjd-0anlz8RerkN9-BK5pjFU0HqWTQDj8udk657E0uvTFdLc1Y2wJfeCnSfsQjHooEmyXpe3JgCAxa2Q1U8ShJLUb_RIyn804n_9_12Ugn-L_7g9V5HDAQvDvU0cnHsP5JCUcY/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="פסטה טרייה" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-name">פסטה טרייה</div>
+          <div class="menu-card-desc">פסטה ביתית ברוטב שמנת כמהין ופטריות בר</div>
+          <div class="menu-card-price">78 &#8362;</div>
+        </div>
+      </div>
+      <div class="menu-card reveal reveal-delay-4">
+        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJIXx5BgS3AhURaiWvsBqXpiI/photos/AU_ZVEEPUbhAI9fet7yFiBMo9s9EMrJGfm2CwOwvruILfZ3r0HwnbNrUXtRzIh-CTOxGrYGpm9j9ofGgqDTWBiktLn9jhs9L-gNEF4873RuYo0Q_bbP0OePu-jH-BcPFQJnnZGACHzpbJ6cHUwlLr7A0BwfpzNsaS1zGkivdnPwTrdr6GXoaokgip2HKl9D6ovjFMgczgVsEchvGfe8YQG9ifktSPS0yNIL7VMk1KhM05aSxiEhAODdumzhybBhu11Vjh3jh4zPQzYN-iHC5HW_RR_yGFGBJyWFvY08rvEfSrcRwQFXohMNwOdgGUd_kLueqA7E66hDOUi7L9yjhtD-9r8nfsfopu6gOoHHaKfGCApd8mq9sBmb-qDu79SJ2bozhnnabWS9tmXpXOQWWjx52JHmLnEJIlML9U0CjMIO_358-7sGy/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="קינוח השף" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-name">קינוח השף</div>
+          <div class="menu-card-desc">מוס שוקולד בלגי על בסיס פירות יער טריים</div>
+          <div class="menu-card-price">52 &#8362;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="section gallery" id="gallery">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label">גלריה</div>
+      <h2 class="section-title">רגעים מ<span class="underline">פטיסרי - רחובות</span></h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal reveal-delay-1"><img src="https://places.googleapis.com/v1/places/ChIJIXx5BgS3AhURaiWvsBqXpiI/photos/AU_ZVEH3kbYyAlwKFc-Cat8WUDEXVC55B-7nZ7G4hPh6tJ3g_T2hPHYPdfovdWT33u7mHC8J2UT9-g3wEi8SE9PmtgY_BHgjrzhub32Iy1k4Ff8FnE6UUKDKOUby1_hVyCRA5Weu3EnTyNSUWLVvmIxwaUk-RMn56iQkf4PdM1kuOykf44QxsBw36wbIU7jE4staa-ie5BhlU_afVFRsClGKw_6sLxRkedpNRsWv5hDTTb4qqD37JaddyJ28939rWlKMU-D9Suv1osynFz9yXAg_pCm6DEu8nomu_Pl4MiT7pSEp0E6BCdJEThyYxw0cIIOf7-tJ-TMO1acUZc6RUn9STPuN0bhm6zO8gcRMrx68v5iNbdD6oV7Ipwayw9Ewr2yGe-_9tcRylgmoBcf2fvRhQtzBHBJhjRGCLSX7eZGz3xoGQg/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-2"><img src="https://places.googleapis.com/v1/places/ChIJIXx5BgS3AhURaiWvsBqXpiI/photos/AU_ZVEE05nPMlZE1ZAkhbr66OJv4jIZZRUVUSgNEfQu8VsWoAPpRZsgKcWefQZM2vBi__brV7GXIimAt1cHt8w0Q6-zO1x0x75Zf6-NliPoqBghu7Zm15hFRxSnNZjbNQMQlmoenDpTO90gPdVTh6muYv238Ad8lhXdfsVX85XS_WocavH3AeW95bSh0WtbqUw--QD16Ec1kyfCh0kY_RtU95aPfOAanwqnm7jCIQIvYOo0SHw5LjCUVo729Fk1t3hdmdeuicX1BSDXTDXpk9ioBfK-J9_4ZgxG3usQBqkfckpvDf2wjb1jCiAK2WkiYfImbvUh53gbhtaCiIyZ7PXRzMMmRPOfiqc_nzv5o18A_qYEFqml--593SeN-Rn9_8Kpp2dFRZA34pS7OU6SZxgCT7q3CPVuC3RYd4JMzdSS11vSHWM65/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-3"><img src="https://places.googleapis.com/v1/places/ChIJIXx5BgS3AhURaiWvsBqXpiI/photos/AU_ZVEEP-vGmsRUhwxyn4xRUXgDgAQfPEIWpQvGrO-mbVLzgI5fW4j84ovJA0tBYwXn0l6Y7bOGYCtx4XSnl8Ip-r4Whe2Ohc6zO5WX2tulxMHGSYkTl9kTe9pPzqbEr63VO3J16RXMGwQMgXzeN2A2IPyPuQbhzSAgv75nw9Z22IuDz86ke3Iv2HK8Q1PrN6KpS9wbpww6ne3xlelOqX3q1YPej5jBH1MNoU-3brbdbAWkGfIBqrHfO1c_M3oabblzvDOr_-tNcykPwL-kus9nhfKy8jrw_39sCWI0tcupMXPa2T2galk0cYpe8WGYyenYFyWbV1eqs-g423yJWUfTCGVkf6u1gXwQgcRu7G8CJDz6Z6qJQWl-bwO7CZO7UIWm88wQM_Jgf3cOm5_3z-liAGSP6Fcirym7WqWoJl06AIMqVw18/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-1"><img src="https://places.googleapis.com/v1/places/ChIJIXx5BgS3AhURaiWvsBqXpiI/photos/AU_ZVEGC7CmSIuwO5_c08VQWGEqBUDjtlvJtgvg06e2eYNnCHDV8y3TIYGzzIx2pXDz-sRkVRUXEtXC5ryUELzYLad6J0QWixvafFMEeASZzveZBZz48OXt7D8v71C8WZ5VVJjypqwMeC-0w-md5Xiyc5qoLuJh8XNXe9VIow3ZmQXXGL1GEdDjrsHUL0WEiFFV34YO8bZ-7p-dtSMtpG_ol81UOETWK_hoVJaKYM8zUzweWWBxTeCf1_-wGw3eODw6fSYHVcfWjZz3PZo-42pf_r00vdel0Jk6lRRpdoOaYOqNOzHHOpUIiHS7SjGESRlHcU_hiDkPnHHSwtzHu5gYpXWgLZJwqmcX1UV-CbloML116QcusgUM4n0VaSc124tPB_TJNoTHIVTW4jozaSxFFWKdKcAh-dxk34TN5lQmGlnwaI1QM/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-2"><img src="https://places.googleapis.com/v1/places/ChIJIXx5BgS3AhURaiWvsBqXpiI/photos/AU_ZVEH3kbYyAlwKFc-Cat8WUDEXVC55B-7nZ7G4hPh6tJ3g_T2hPHYPdfovdWT33u7mHC8J2UT9-g3wEi8SE9PmtgY_BHgjrzhub32Iy1k4Ff8FnE6UUKDKOUby1_hVyCRA5Weu3EnTyNSUWLVvmIxwaUk-RMn56iQkf4PdM1kuOykf44QxsBw36wbIU7jE4staa-ie5BhlU_afVFRsClGKw_6sLxRkedpNRsWv5hDTTb4qqD37JaddyJ28939rWlKMU-D9Suv1osynFz9yXAg_pCm6DEu8nomu_Pl4MiT7pSEp0E6BCdJEThyYxw0cIIOf7-tJ-TMO1acUZc6RUn9STPuN0bhm6zO8gcRMrx68v5iNbdD6oV7Ipwayw9Ewr2yGe-_9tcRylgmoBcf2fvRhQtzBHBJhjRGCLSX7eZGz3xoGQg/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-3"><img src="https://places.googleapis.com/v1/places/ChIJIXx5BgS3AhURaiWvsBqXpiI/photos/AU_ZVEE05nPMlZE1ZAkhbr66OJv4jIZZRUVUSgNEfQu8VsWoAPpRZsgKcWefQZM2vBi__brV7GXIimAt1cHt8w0Q6-zO1x0x75Zf6-NliPoqBghu7Zm15hFRxSnNZjbNQMQlmoenDpTO90gPdVTh6muYv238Ad8lhXdfsVX85XS_WocavH3AeW95bSh0WtbqUw--QD16Ec1kyfCh0kY_RtU95aPfOAanwqnm7jCIQIvYOo0SHw5LjCUVo729Fk1t3hdmdeuicX1BSDXTDXpk9ioBfK-J9_4ZgxG3usQBqkfckpvDf2wjb1jCiAK2WkiYfImbvUh53gbhtaCiIyZ7PXRzMMmRPOfiqc_nzv5o18A_qYEFqml--593SeN-Rn9_8Kpp2dFRZA34pS7OU6SZxgCT7q3CPVuC3RYd4JMzdSS11vSHWM65/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Hours -->
+<section class="section hours" id="hours">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label">שעות פתיחה</div>
+      <h2 class="section-title">מתי <span class="underline">אפשר לבוא</span></h2>
+    </div>
+    <div class="hours-card reveal reveal-delay-1">
+      <div class="hours-row"><span class="hours-day">ראשון - חמישי</span><span class="hours-time">12:00 - 23:00</span></div>
+      <div class="hours-row"><span class="hours-day">שישי</span><span class="hours-time">12:00 - 15:00</span></div>
+      <div class="hours-row"><span class="hours-day">מוצאי שבת</span><span class="hours-time">20:00 - 23:30</span></div>
+    </div>
+    <p class="hours-address reveal reveal-delay-2">אחד העם 4, רחובות, ישראל, רחובות</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2 class="reveal">מוכנים לחוויה קולינרית?</h2>
+  <p class="reveal reveal-delay-1">הזמינו מקום ותנו לנו לפנק אתכם</p>
+  <a href="tel:86322226" class="cta-btn reveal reveal-delay-2">התקשרו עכשיו</a>
+</section>
+
+<!-- Contact -->
+<section class="section contact" id="contact">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label">צרו קשר</div>
+      <h2 class="section-title">נשמח <span class="underline">לשמוע מכם</span></h2>
+    </div>
+    <div class="contact-card reveal reveal-delay-1">
+      <div class="contact-name">פטיסרי - רחובות</div>
+      <div class="contact-city">אחד העם 4, רחובות, ישראל, רחובות</div>
+      <div class="contact-buttons">
+        <a href="https://wa.me/97286322226" class="contact-btn btn-whatsapp">WhatsApp</a>
+        <a href="tel:86322226" class="contact-btn btn-phone">08-632-2226</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Real Google Reviews -->
+<section style="padding:60px 24px;background:#FAFAF8">
+  <div style="max-width:1100px;margin:0 auto">
+    <h2 style="text-align:center;font-size:1.8rem;font-weight:700;color:#1a1a1a;margin-bottom:8px">מה הלקוחות אומרים</h2>
+    <p style="text-align:center;color:#888;margin-bottom:40px;font-size:15px">ביקורות אמיתיות מגוגל</p>
+    <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center">
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">ד</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">דנה שגיב</div>
+            <div style="font-size:12px;color:#999">לפני 3 חודשים</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"ביקרתי בפטיסרי בשבוע שעבר. זו הייתה הפעם הראשונה שלי במקום והתרשמתי לטובה! קודם כל השירות, הרי השירות קודם להכל. שירות מקסים, חם, סבלני ואוהב אפילו כשיש לקוחות חסרי סבלנות (ונתקלתי שם בכמה) העובדים נש..."</p>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">ר</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">רוני דיין</div>
+            <div style="font-size:12px;color:#999">לפני 3 חודשים</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"מקום מדהים! הקינוחים ממש מעולים ושירות מצוין. אך אני חייבת להגיד שהלקוחות לפעמים חסרי סבלנות וחצופים, אנשים מתעצבנים כשאומרים להם לסגור את המקפיא כשכתוב בבירור לא לפתוח את המקפיא ולבקש עזרה מאחד העובד..."</p>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">T</div>
+          <div>
+            <div style="font-weight:600;font-size:15px;color:#1a1a1a">Tel Gor</div>
+            <div style="font-size:12px;color:#999">לפני 3 חודשים</div>
+          </div>
+        </div>
+        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#ddd">&#9733;</span><span style="color:#ddd">&#9733;</span></div>
+        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"איכות המוצרים ירדה! המחירים עלו!
+זה נוגע למוצרי הקונדיטוריה. אני קונה באופן קבוע במקום הזה, והם התחילו להכין גרוע יותר: מעט מילוי, מעט פירות יער, ובמקביל העלו את המחיר. לשלם 20 דולר על זה — בלתי מתקבל..."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Map -->
+<section style="padding:0">
+  <div style="max-width:1100px;margin:0 auto;padding:0 24px 60px">
+    <div style="border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.06)">
+      <iframe
+        width="100%"
+        height="350"
+        style="border:0;display:block"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=%D7%A4%D7%98%D7%99%D7%A1%D7%A8%D7%99%20-%20%D7%A8%D7%97%D7%95%D7%91%D7%95%D7%AA%20%D7%A8%D7%97%D7%95%D7%91%D7%95%D7%AA+ישראל&output=embed&hl=he&z=16">
+      </iframe>
+      <div style="padding:20px;background:#fff;text-align:center">
+        <p style="color:#3D3D3D;font-size:1rem;margin-bottom:12px">אחד העם 4, רחובות, ישראל</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=%D7%A4%D7%98%D7%99%D7%A1%D7%A8%D7%99%20-%20%D7%A8%D7%97%D7%95%D7%91%D7%95%D7%AA%20%D7%A8%D7%97%D7%95%D7%91%D7%95%D7%AA" target="_blank" style="color:#4285f4;text-decoration:none;font-weight:600;font-size:14px">פתח בגוגל מפות</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="background:#f5f5f5;border-top:1px solid #ddd;padding:16px 20px;text-align:center;font-family:Heebo,Arial,sans-serif;direction:rtl;font-size:12px;color:#999;line-height:1.6;">אתר לדוגמא בלבד — נבנה על ידי <a href="https://alon-dev.vercel.app" style="color:#0f3460;">alon dev</a> כהצעה עסקית. אינו מייצג את העסק באופן רשמי. המידע נאסף ממקורות ציבוריים (Google Maps). <a href="https://output-seven-black.vercel.app/terms/" style="color:#0f3460;">תנאי שימוש</a><br>לבקשת הסרה מיידית: <a href="https://wa.me/972559173249?text=בקשת%20הסרה%20-%20פטיסרי%20-%20רחובות" style="color:#25D366;">055-917-3249</a></div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <p>פטיסרי - רחובות | רחובות</p>
+</footer>
+
+<!-- Floating Nav -->
+<nav class="float-nav" id="floatNav">
+  <a href="#home">ראשי</a>
+  <a href="#menu">תפריט</a>
+  <a href="#gallery">גלריה</a>
+  <a href="#hours">שעות</a>
+  <a href="#contact">קשר</a>
+</nav>
+
+<script>
+(function(){
+  // Scroll reveal with IntersectionObserver
+  var reveals = document.querySelectorAll('.reveal');
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}
+    });
+  },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+  reveals.forEach(function(el){observer.observe(el)});
+
+  // Active nav highlight
+  var sections = document.querySelectorAll('section[id]');
+  var navLinks = document.querySelectorAll('.float-nav a');
+  var floatNav = document.getElementById('floatNav');
+
+  window.addEventListener('scroll',function(){
+    var scrollY = window.pageYOffset;
+    // Show/hide floating nav
+    if(scrollY > 350){floatNav.classList.add('show')}else{floatNav.classList.remove('show')}
+    // Highlight active section
+    var current = '';
+    sections.forEach(function(s){
+      if(scrollY >= s.offsetTop - 220) current = s.getAttribute('id');
+    });
+    navLinks.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+
+  // Subtle parallax on hero background
+  var heroBg = document.querySelector('.hero-bg');
+  window.addEventListener('scroll',function(){
+    if(heroBg && window.pageYOffset < window.innerHeight){
+      heroBg.style.transform = 'translateY(' + (window.pageYOffset * 0.25) + 'px)';
+    }
+  });
+})();
+</script>
+<script>(function(){var p="86322226",n=encodeURIComponent("פטיסרי - רחובות");var img=new Image();img.src="https://output-seven-black.vercel.app/api/track?phone="+p+"&name="+n+"&t="+Date.now();})()</script>
 
 </body>
 </html>

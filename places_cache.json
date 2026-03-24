@@ -132,7 +132,9 @@
     "email": "",
     "facebook": "",
     "validated": true,
-    "has_website": true
+    "has_website": true,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "הקוסם|תל אביב": {
     "place_id": "places/ChIJi1CK34BLHRURVsjf6-OGlo4",
@@ -266,7 +268,9 @@
     "email": "",
     "facebook": "",
     "validated": true,
-    "has_website": false
+    "has_website": false,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "Israeli food telaviv|תל אביב": {
     "place_id": "places/ChIJo9MO4oZMHRURmxNehTzfaDI",
@@ -494,7 +498,9 @@
     "email": "",
     "facebook": "",
     "validated": true,
-    "has_website": true
+    "has_website": true,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "Versavee Restaurant Bar & Cafe|ירושלים": {
     "place_id": "places/ChIJS_zBNNbXAhURCw9LxoTI6co",
@@ -590,7 +596,10 @@
     "email": "",
     "facebook": "",
     "validated": true,
-    "has_website": true
+    "has_website": true,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67",
+    "website_uri": "https://www.tripadvisor.co.za/ShowUserReviews-g293983-d1649544-r470086418-Versavee-Jerusalem_Jerusalem_District.html"
   },
   "צ'אקרה|ירושלים": {
     "place_id": "places/ChIJJ8Y3l9UpAxURQz9UzRSfTfM",
@@ -722,7 +731,10 @@
     "email": "",
     "facebook": "",
     "validated": true,
-    "has_website": true
+    "has_website": true,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67",
+    "website_uri": "http://www.chakrarest.com/"
   },
   "Sarwa Street Kitchen|ירושלים": {
     "place_id": "places/ChIJR38Ts8MpAxURoFu4FFjav-E",
@@ -773,7 +785,9 @@
     "email": "",
     "facebook": "",
     "validated": true,
-    "has_website": false
+    "has_website": false,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "האקליפטוס|ירושלים": {
     "place_id": "places/ChIJdWxij80pAxURsB7W_iQoxu4",
@@ -893,7 +907,10 @@
     "email": "",
     "facebook": "",
     "validated": true,
-    "has_website": true
+    "has_website": true,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67",
+    "website_uri": "http://www.the-eucalyptus.com/"
   },
   "אוכלים בשוק|ירושלים": {
     "place_id": "places/ChIJqaqqqinWAhURA5kAIqHxD44",
@@ -1028,7 +1045,9 @@
     "email": "",
     "facebook": "obshok",
     "validated": true,
-    "has_website": true
+    "has_website": true,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "Nafoura Restaurant|ירושלים": {
     "place_id": "places/ChIJJ-WVbM4pAxUR-uACRQT2q18",
@@ -1160,7 +1179,9 @@
     "email": "",
     "facebook": "",
     "validated": true,
-    "has_website": true
+    "has_website": true,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "מסעדת הוואנה פלוס חיפה|חיפה": {
     "place_id": "places/ChIJvwzpacq7HRURjjOr68TRKyE",
@@ -1304,7 +1325,9 @@
     "email": "",
     "facebook": "",
     "validated": true,
-    "has_website": false
+    "has_website": false,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "זית זיתון|חיפה": {
     "place_id": "places/ChIJuaD2Fo67HRUR9R_TXbsy2vg",
@@ -1436,7 +1459,10 @@
     "email": "",
     "facebook": "",
     "validated": true,
-    "has_website": true
+    "has_website": true,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67",
+    "website_uri": "https://www.zetzaton.co.il/"
   },
   "שרינה|ראשון לציון": {
     "place_id": "places/ChIJDSgXvDi0AhURbJMsryjhBAM",
@@ -1566,7 +1592,9 @@
     "email": "",
     "facebook": "",
     "validated": true,
-    "has_website": true
+    "has_website": true,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "סוהו|ראשון לציון": {
     "place_id": "places/ChIJNTLFW1C0AhURCO-ei4sEVS0",
@@ -1710,7 +1738,10 @@
     "email": "",
     "facebook": "",
     "validated": true,
-    "has_website": true
+    "has_website": true,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67",
+    "website_uri": "https://soho-rest.co.il/"
   },
   "יונס אלדיוואן נתניה|נתניה": {
     "place_id": "places/ChIJsxKOiYtBHRURWw4e847pL9I",
@@ -1854,7 +1885,9 @@
     "email": "",
     "facebook": "",
     "validated": true,
-    "has_website": false
+    "has_website": false,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "26 נפוליטן הרצליה | 26 NEAPOLITAN STYLE|הרצליה": {
     "place_id": "places/ChIJafO8Rn9JHRURSVhFjYbLsC0",
@@ -1986,7 +2019,9 @@
     "email": "",
     "facebook": "",
     "validated": true,
-    "has_website": false
+    "has_website": false,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "VERANDA 57|רמת גן": {
     "place_id": "places/ChIJc11KlGJLHRUR5Zb0TC6d5Co",
@@ -2131,7 +2166,9 @@
     "facebook": "",
     "validated": true,
     "instagram": "veranda57_bar",
-    "has_website": false
+    "has_website": false,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "פלאפל אוחנה|רמת גן": {
     "place_id": "places/ChIJZ9TVarZLHRURsfAmHuUb1w4",
@@ -2259,7 +2296,9 @@
     "email": "",
     "facebook": "",
     "validated": true,
-    "has_website": false
+    "has_website": false,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "G27|רמת גן": {
     "place_id": "places/ChIJafEDTuBLHRURiNBnLrj6NBA",
@@ -2391,7 +2430,9 @@
     "email": "",
     "facebook": "",
     "validated": true,
-    "has_website": false
+    "has_website": false,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "לה פפריקה|רמת גן": {
     "place_id": "places/ChIJWYn7E05KHRURTfF73rAGXrw",
@@ -2523,7 +2564,9 @@
     "email": "",
     "facebook": "",
     "validated": true,
-    "has_website": false
+    "has_website": false,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "פטרוזיליס|רמת גן": {
     "place_id": "places/ChIJzxMxfSJLHRUR9ebOKa4PeUU",
@@ -2653,7 +2696,9 @@
     "email": "",
     "facebook": "",
     "validated": true,
-    "has_website": false
+    "has_website": false,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "מזנון סביח המקורי|רמת גן": {
     "place_id": "places/ChIJJY0XiU5KHRUR3dgEXNW6mRE",
@@ -2785,7 +2830,9 @@
     "email": "",
     "facebook": "",
     "validated": true,
-    "has_website": false
+    "has_website": false,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "Felfel Georgie|רמת גן": {
     "place_id": "places/ChIJV-IAwnhLHRURe1_duljT6L0",
@@ -2916,7 +2963,9 @@
     "website": "",
     "email": "",
     "facebook": "",
-    "validated": true
+    "validated": true,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "דורון ג'ון|חולון": {
     "place_id": "places/ChIJQZsbNr21AhURWAa81_eGTb8",
@@ -3049,7 +3098,9 @@
     "facebook": "דורון ג'ון עגלת קפה",
     "validated": true,
     "instagram": "doron__jun",
-    "has_website": false
+    "has_website": false,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "פיצה פפיניו - קניון חולון | בד״ץ|חולון": {
     "place_id": "places/ChIJ0VqzYPS1AhURlfy6Z6xEzww",
@@ -3192,7 +3243,10 @@
     "website": "",
     "email": "",
     "facebook": "",
-    "validated": true
+    "validated": true,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67",
+    "website_uri": "https://tinyurl.com/2hjshhrw"
   },
   "Bobo italian - בובו איטליאן|חולון": {
     "place_id": "places/ChIJ7T61bACzAhURs4Y8iOSfArg",
@@ -3335,7 +3389,9 @@
     "website": "",
     "email": "",
     "facebook": "",
-    "validated": true
+    "validated": true,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "צנטרו - הבוריק של צ'ונה|חולון": {
     "place_id": "places/ChIJL0eWSlqzAhURGucHSSTGdSQ",
@@ -3454,7 +3510,9 @@
     "website": "",
     "email": "",
     "facebook": "",
-    "validated": true
+    "validated": true,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "הפלאפל חולון|חולון": {
     "place_id": "places/ChIJm69fQpqzAhURIL5oc-bx4NY",
@@ -3573,7 +3631,9 @@
     "website": "",
     "email": "",
     "facebook": "",
-    "validated": true
+    "validated": true,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "כרמל 76 ביסטרו קפה|רחובות": {
     "place_id": "places/ChIJQ9uKnnW3AhURr1WBsfEixFs",
@@ -3713,7 +3773,9 @@
     ],
     "validated": true,
     "has_website": false,
-    "phone": "08-6322226"
+    "phone": "08-6322226",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "בעל הבית|רחובות": {
     "place_id": "places/ChIJB-h8SnW3AhURExp6gAUDOZ0",
@@ -3852,7 +3914,10 @@
       }
     ],
     "validated": true,
-    "has_website": true
+    "has_website": true,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet.png",
+    "icon_bg_color": "#FF9E67",
+    "website_uri": "https://www.facebook.com/BalAbait-%D7%91%D7%A2%D7%9C-%D7%94%D7%91%D7%99%D7%AA-2647686771927000/"
   },
   "פטיסרי - רחובות|רחובות": {
     "place_id": "places/ChIJIXx5BgS3AhURaiWvsBqXpiI",
@@ -3980,7 +4045,10 @@
     ],
     "validated": true,
     "has_website": false,
-    "phone": "08-947-0839"
+    "phone": "08-947-0839",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67",
+    "website_uri": "https://israelbusinessguide.com/catalog/rehovot/ptisserie--rehovot__--/"
   },
   "מסעדת מג'די|כפר סבא": {
     "place_id": "places/ChIJFeQZZLQ5HRURgRtJC-pydno",
@@ -4121,7 +4189,9 @@
     "validated": true,
     "has_website": false,
     "phone": "053-9417135",
-    "website": "rest.co.il subdomain only"
+    "website": "rest.co.il subdomain only",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "סטקיית הכפר כפר סבא|כפר סבא": {
     "place_id": "places/ChIJgbYInkg4HRURzdHpAEose4U",
@@ -4261,7 +4331,9 @@
     ],
     "validated": true,
     "has_website": false,
-    "phone": "09-748-3193"
+    "phone": "09-748-3193",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "La Toscana Raanana - לה טוסקנה רעננה|רעננה": {
     "place_id": "places/ChIJD37xvso5HRURgvEdLV4Q2AE",
@@ -4388,7 +4460,9 @@
       }
     ],
     "validated": true,
-    "has_website": true
+    "has_website": true,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "סלטה|רעננה": {
     "place_id": "places/ChIJ5TpFFhM4HRURb5TdFhrWFnc",
@@ -4516,7 +4590,10 @@
     ],
     "validated": true,
     "has_website": true,
-    "website": "saltaa.com"
+    "website": "saltaa.com",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67",
+    "website_uri": "https://www.saltaa.com/?utm_source=local&utm_medium=organic&utm_campaign=gmb"
   },
   "כיפה אדומה|רעננה": {
     "place_id": "places/ChIJE-_0TxM4HRURH0u6JqxNqiI",
@@ -4644,7 +4721,9 @@
     ],
     "validated": true,
     "has_website": false,
-    "phone": "09-7410508"
+    "phone": "09-7410508",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "מסעדת אנטריקוט אילת - Entrecote eilat resturant|אילת": {
     "place_id": "places/ChIJh3n7VgJuABUR_OUzNDW8sbk",
@@ -4772,7 +4851,9 @@
     ],
     "validated": true,
     "has_website": true,
-    "website": "antrikoti.co.il"
+    "website": "antrikoti.co.il",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet.png",
+    "icon_bg_color": "#FF9E67"
   },
   "מספרה טל ביוטי לוק|תל אביב": {
     "place_id": "places/ChIJV5guAR5NHRURily74Juhids",
@@ -4888,7 +4969,9 @@
     ],
     "validated": true,
     "has_website": false,
-    "phone": "03-960-2767"
+    "phone": "03-960-2767",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
   },
   "yullia King George - מומחים בהסרת שיער בלייזר | הזרקות | טיפול פנים | מניקור | פדיקור רפואי|תל אביב": {
     "place_id": "places/ChIJExIJn3hMHRURvLySbSxMEvA",
@@ -5017,7 +5100,10 @@
     "validated": true,
     "has_website": true,
     "website": "yullia.com",
-    "phone": "054-295-2923"
+    "phone": "054-295-2923",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0",
+    "website_uri": "https://yullia.com/branches/king-george-51/"
   },
   "Beauty Salon Kure Boutique|תל אביב": {
     "place_id": "places/ChIJR0iDS3lMHRURxI2C1x0xKXU",
@@ -5146,7 +5232,9 @@
     "validated": true,
     "has_website": true,
     "website": "kureboutique.com",
-    "phone": "03-5737473"
+    "phone": "03-5737473",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
   },
   "סלון יפו jaffa salon|תל אביב": {
     "place_id": "places/ChIJ5-soP7lMHRURv8Ow1Enm9aE",
@@ -5263,7 +5351,9 @@
     "validated": true,
     "has_website": false,
     "phone": "03-6053804",
-    "email": "salonjaffa@gmail.com"
+    "email": "salonjaffa@gmail.com",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
   },
   "Jerusalem Kératine Hair salon Mamilla|ירושלים": {
     "place_id": "places/ChIJsXBvhxwpAxUR2KurG1GE3xY",
@@ -5392,7 +5482,9 @@
     "validated": true,
     "has_website": false,
     "instagram": "jerusalemkeratin",
-    "phone": "052-316-1213"
+    "phone": "052-316-1213",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
   },
   "LaVita Cosmetics|ירושלים": {
     "place_id": "places/ChIJa78-M9YpAxURN_yf3DHGEew",
@@ -5520,7 +5612,9 @@
     ],
     "validated": true,
     "has_website": false,
-    "phone": "054-774-7717"
+    "phone": "054-774-7717",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
   },
   "סטודיו קארין מכון יופי|ירושלים": {
     "place_id": "places/ChIJZW6n7NcpAxURN4bss2SxWDI",
@@ -5642,7 +5736,9 @@
       "058-444-5477",
       "052-223-9912"
     ],
-    "facebook": "studiokarinjerusalem"
+    "facebook": "studiokarinjerusalem",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
   },
   "Cherry Spa|ירושלים": {
     "place_id": "places/ChIJp9NAKfApAxURlKZjs49y0qI",
@@ -5756,7 +5852,9 @@
     ],
     "validated": true,
     "has_website": false,
-    "phone": "02-628-8899"
+    "phone": "02-628-8899",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
   },
   "טטיאנה סלון יופי Nail Salon Tatyana|ירושלים": {
     "place_id": "places/ChIJ-9FsMNYpAxURPJ8PYzO46tA",
@@ -5872,7 +5970,9 @@
     ],
     "validated": true,
     "has_website": false,
-    "phone": "052-560-8562"
+    "phone": "052-560-8562",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
   },
   "Electrolysis by Chaya|ירושלים": {
     "place_id": "places/ChIJQyelgiTWAhURZyF6LRLNFcg",
@@ -6049,7 +6149,9 @@
     "validated": true,
     "has_website": false,
     "phone": "053-974-0653",
-    "facebook": "electrolysisbychaya"
+    "facebook": "electrolysisbychaya",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
   },
   "Pi Health And Beauty Wellness Clinic|ירושלים": {
     "place_id": "places/ChIJ23DbxCrWAhURQjrqNSKcsnk",
@@ -6176,7 +6278,9 @@
     "validated": true,
     "has_website": false,
     "phone": "072-212-8001",
-    "facebook": "pihealthbeautywellness"
+    "facebook": "pihealthbeautywellness",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet.png",
+    "icon_bg_color": "#4B96F3"
   },
   "Paroa' Hair Salon Haifa פרוע|חיפה": {
     "place_id": "places/ChIJiaWVWrq7HRURmkIKxDl6_0M",
@@ -6304,7 +6408,9 @@
     ],
     "validated": true,
     "has_website": false,
-    "phone": "058-6777553"
+    "phone": "058-6777553",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
   },
   "Salon MARGO Haifa|חיפה": {
     "place_id": "places/ChIJLZ3pmUy6HRURRYFmIK5jP6I",
@@ -6432,7 +6538,9 @@
     ],
     "validated": true,
     "has_website": false,
-    "phone": "052-772-4439"
+    "phone": "052-772-4439",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
   },
   "Elen Traysman by la petite Madlen|חיפה": {
     "place_id": "places/ChIJTx7HLaK7HRURLkvm8BNYIN8",
@@ -6560,7 +6668,9 @@
     ],
     "validated": true,
     "has_website": false,
-    "phone": "052-9526252"
+    "phone": "052-9526252",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
   },
   "דבורה פריווה סלון היופי שלך בחיפה|חיפה": {
     "place_id": "places/ChIJBdBsfQC7HRURsbYGesrTQLU",
@@ -6688,7 +6798,9 @@
     ],
     "validated": true,
     "has_website": false,
-    "phone": "054-8035466"
+    "phone": "054-8035466",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
   },
   "CULT | סטודיו ליופי והכשרה | מניקור • פדיקור • ריסים • גבות • הסרת שיער | חיפה|חיפה": {
     "place_id": "places/ChIJH-xKPny7HRURA0qrI4bMjIk",
@@ -6815,7 +6927,9 @@
       }
     ],
     "validated": true,
-    "has_website": false
+    "has_website": false,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
   },
   "הלנייז - Helenayz בוטיק יופי|חיפה": {
     "place_id": "places/ChIJJ4_J9GK7HRURGi8kGr7l53o",
@@ -6872,7 +6986,9 @@
     ],
     "validated": true,
     "has_website": true,
-    "website": "helenayz.co.il"
+    "website": "helenayz.co.il",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
   },
   "O.K. Beauty Studio|באר שבע": {
     "place_id": "places/ChIJiWfS4ilnAhURRSAmDcEnuHE",
@@ -6988,7 +7104,9 @@
     ],
     "validated": true,
     "has_website": false,
-    "phone": "054-380-3074"
+    "phone": "054-380-3074",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
   },
   "סלון נורית|באר שבע": {
     "place_id": "places/ChIJsz_doQxmAhUROzIhk2Li74E",
@@ -7095,7 +7213,9 @@
     "validated": true,
     "has_website": false,
     "phone": "052-288-5362",
-    "facebook": "salonnourit"
+    "facebook": "salonnourit",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
   },
   "סטודיו לאסתטיקה VG|באר שבע": {
     "place_id": "places/ChIJE3_H6KZnAhURKDJyvMX3-LI",
@@ -7223,7 +7343,9 @@
     ],
     "validated": true,
     "has_website": false,
-    "phone": "077-440-1576"
+    "phone": "077-440-1576",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
   },
   "OCD BARBERSHOP & ACADEMY | אוסידי מספרה ואקדמיה|באר שבע": {
     "place_id": "places/ChIJ1TofZFxnAhUR8LbC1lzab4A",
@@ -7352,7 +7474,9 @@
     "validated": true,
     "has_website": false,
     "phone": "053-722-8233",
-    "instagram": "ocd_barber_academy"
+    "instagram": "ocd_barber_academy",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
   },
   "מספרת שמפו|באר שבע": {
     "place_id": "places/ChIJV2-8zhZmAhURyBeVl42Dvxw",
@@ -7470,7 +7594,9 @@
     ],
     "validated": true,
     "has_website": false,
-    "phone": "08-623-2344"
+    "phone": "08-623-2344",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
   },
   "לק ג׳ל באר שבע - שרון גוזלן|באר שבע": {
     "place_id": "places/ChIJn8EglhpnAhUR3Sr2wlvMYB0",
@@ -7599,7 +7725,10 @@
     "validated": true,
     "has_website": true,
     "website": "sharongozlan.com",
-    "phone": "052-602-1719"
+    "phone": "052-602-1719",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0",
+    "website_uri": "http://sharongozlan.com/"
   },
   "אבישי הספר -עיצוב שיער|באר שבע": {
     "place_id": "places/ChIJH-4M7ehnAhURKsDo10hnUW8",
@@ -7727,7 +7856,10 @@
     ],
     "validated": true,
     "has_website": false,
-    "phone": "054-238-9944"
+    "phone": "054-238-9944",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0",
+    "website_uri": "https://www.facebook.com/UandI.co.il/"
   },
   "MagicNails|באר שבע": {
     "place_id": "places/ChIJe6KvwxZmAhURIKyoHB-Sf_Q",
@@ -7855,7 +7987,9 @@
     ],
     "validated": true,
     "has_website": false,
-    "phone": "052-8242540"
+    "phone": "052-8242540",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
   },
   "פדיקור רפואי קארין אוחיון|באר שבע": {
     "place_id": "places/ChIJRYVH18N9AhURBSoguo1hDXA",
@@ -7979,7 +8113,9 @@
     ],
     "validated": true,
     "has_website": false,
-    "phone": "050-555-4935"
+    "phone": "050-555-4935",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
   },
   "חן מויאל- עיצוב ושיקום גבות•איפור קבוע : מיקרובליידינג •שערה •פודרה • פיגמנט שפתיים •הסרה ברימובר • הרמת ריסים וגבות •קורסים|באר שבע": {
     "place_id": "places/ChIJDSzXbB1nAhUR5EKz0eQjW_c",
@@ -8107,7 +8243,9 @@
     ],
     "validated": true,
     "has_website": false,
-    "phone": "050-390-2226"
+    "phone": "050-390-2226",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
   },
   "Alin`s Cosmetics & Beauty קוסמטיקאית בראשון לציון - אלין|ראשון לציון": {
     "place_id": "places/ChIJHTLnZLqzAhURt9DUKHslW6s",
@@ -8235,7 +8373,9 @@
     ],
     "validated": true,
     "has_website": true,
-    "website": "alinscosmetics.com"
+    "website": "alinscosmetics.com",
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
   },
   "Rishon Studio|ראשון לציון": {
     "place_id": "places/ChIJ2V_oEaG1AhUR6_6RegphP2o",
@@ -8362,6 +8502,1306 @@
       }
     ],
     "validated": true,
-    "has_website": false
+    "has_website": false,
+    "icon_url": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet.png",
+    "icon_bg_color": "#7B9EB0"
+  },
+  "טשרניחובסקי מספרה|תל אביב": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://xn--5dbhfdfd8bm8cdk.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "מספרה",
+    "source": "firecrawl_scrapling"
+  },
+  "100ממת|תל אביב": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://www.100memet.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "מספרה",
+    "source": "firecrawl_scrapling"
+  },
+  "The Barber TLV|תל אביב": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://thebarber.live/",
+    "has_website": true,
+    "validated": false,
+    "category": "מספרה",
+    "source": "firecrawl_scrapling"
+  },
+  "Biologique Recherche|רמת גן": {
+    "phone": "0544397181",
+    "all_phones": [
+      "0544397181"
+    ],
+    "website": "https://www.biologiquerechercheisrael.com/",
+    "has_website": true,
+    "validated": true,
+    "category": "מכון יופי",
+    "source": "firecrawl_scrapling"
+  },
+  "SR Cosmetics טל אברהמי|רמת גן": {
+    "phone": "0523644213",
+    "all_phones": [
+      "0523644213"
+    ],
+    "website": "https://srcosmetics.co.il/",
+    "has_website": true,
+    "validated": true,
+    "category": "מכון יופי",
+    "source": "firecrawl_scrapling"
+  },
+  "יוליה ספא|רמת גן": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://yullia.com/",
+    "has_website": true,
+    "validated": false,
+    "category": "מכון יופי",
+    "source": "firecrawl_scrapling"
+  },
+  "The Dentist Dental Clinic|ירושלים": {
+    "phone": "0543157808",
+    "all_phones": [
+      "0543157808"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "רופא שיניים",
+    "source": "firecrawl_scrapling"
+  },
+  "ד\"ר שרטר מרפאת שיניים|ירושלים": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://www.sreterclinic.com/",
+    "has_website": true,
+    "validated": false,
+    "category": "רופא שיניים",
+    "source": "firecrawl_scrapling"
+  },
+  "ק&ג מרפאת שיניים|ירושלים": {
+    "phone": "026250870",
+    "all_phones": [
+      "026250870"
+    ],
+    "website": "https://www.kjjdentaloffice.co.il/",
+    "has_website": true,
+    "validated": true,
+    "category": "רופא שיניים",
+    "source": "firecrawl_scrapling"
+  },
+  "מרפאת דיסקין שיניים|ירושלים": {
+    "phone": "025612001",
+    "all_phones": [
+      "025612001"
+    ],
+    "website": "https://www.diskin-dental.co.il/",
+    "has_website": true,
+    "validated": true,
+    "category": "רופא שיניים",
+    "source": "firecrawl_scrapling"
+  },
+  "ד\"ר צור בועז שיניים|ירושלים": {
+    "phone": "0723219374",
+    "all_phones": [
+      "0723219374"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "רופא שיניים",
+    "source": "firecrawl_scrapling"
+  },
+  "כללית סמייל מעוז|ירושלים": {
+    "phone": "026256685",
+    "all_phones": [
+      "026256685"
+    ],
+    "website": "https://www.clalitsmile.co.il/",
+    "has_website": true,
+    "validated": true,
+    "category": "רופא שיניים",
+    "source": "firecrawl_scrapling"
+  },
+  "מרפאת אריה שיניים|ירושלים": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://arie-clinic.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "רופא שיניים",
+    "source": "firecrawl_scrapling"
+  },
+  "מימד מרכז שירות|באר שבע": {
+    "phone": "086276104",
+    "all_phones": [
+      "086276104"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "מוסך",
+    "source": "firecrawl_scrapling"
+  },
+  "עמיגל רנו|באר שבע": {
+    "phone": "086202100",
+    "all_phones": [
+      "086202100"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "מוסך",
+    "source": "firecrawl_scrapling"
+  },
+  "לובינסקי דרום|באר שבע": {
+    "phone": "086230391",
+    "all_phones": [
+      "086230391"
+    ],
+    "website": "https://www.lubinski.co.il/",
+    "has_website": true,
+    "validated": true,
+    "category": "מוסך",
+    "source": "firecrawl_scrapling"
+  },
+  "גבעון שרותי רכב|באר שבע": {
+    "phone": "086900950",
+    "all_phones": [
+      "086900950"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "מוסך",
+    "source": "firecrawl_scrapling"
+  },
+  "Lazuz Wellness|ראשון לציון": {
+    "phone": "0747019901",
+    "all_phones": [
+      "0747019901"
+    ],
+    "website": "https://www.lazuzwellness.co.il/",
+    "has_website": true,
+    "validated": true,
+    "category": "מכון כושר",
+    "source": "firecrawl_scrapling"
+  },
+  "HIGHDE FITNESS|ראשון לציון": {
+    "phone": "0546786637",
+    "all_phones": [
+      "0546786637"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "מכון כושר",
+    "source": "firecrawl_scrapling"
+  },
+  "הולמס פלייס|ראשון לציון": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://www.holmesplace.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "מכון כושר",
+    "source": "firecrawl_scrapling"
+  },
+  "אייקון פיטנס|ראשון לציון": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://www.iconfitness.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "מכון כושר",
+    "source": "firecrawl_scrapling"
+  },
+  "מתנאל אינסטלציה|הרצליה": {
+    "phone": "0522403772",
+    "all_phones": [
+      "0522403772"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "אינסטלטור",
+    "source": "firecrawl_scrapling"
+  },
+  "עמרם שירותי אינסטלציה|נתניה": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://amram4u.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "אינסטלטור",
+    "source": "firecrawl_scrapling"
+  },
+  "חן האינסטלטור|נתניה": {
+    "phone": "",
+    "all_phones": [],
+    "website": "",
+    "has_website": false,
+    "validated": false,
+    "category": "אינסטלטור",
+    "source": "firecrawl_scrapling"
+  },
+  "גוטליב דמתי רו\"ח|רמת גן": {
+    "phone": "0585752205",
+    "all_phones": [
+      "0585752205"
+    ],
+    "website": "https://gdcpa.co.il/",
+    "has_website": true,
+    "validated": true,
+    "category": "רואה חשבון",
+    "source": "firecrawl_scrapling"
+  },
+  "עזרא יהודה רו\"ח|רמת גן": {
+    "phone": "0773169059",
+    "all_phones": [
+      "0773169059"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "רואה חשבון",
+    "source": "firecrawl_scrapling"
+  },
+  "אחי קרן ושות רו\"ח|רמת גן": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://www.keren-cpa.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "רואה חשבון",
+    "source": "firecrawl_scrapling"
+  },
+  "ניצן לזרוב רו\"ח|תל אביב": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://lazarov.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "רואה חשבון",
+    "source": "firecrawl_scrapling"
+  },
+  "משה שמעוני רו\"ח|רמת גן": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://www.moshe-shimoni.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "רואה חשבון",
+    "source": "firecrawl_scrapling"
+  },
+  "שחר פרילינג עו\"ד ורו\"ח|רמת גן": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://fs-cpa.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "רואה חשבון",
+    "source": "firecrawl_scrapling"
+  },
+  "יעקב אלירז ושות רו\"ח|תל אביב": {
+    "phone": "0508187088",
+    "all_phones": [
+      "0508187088"
+    ],
+    "website": "https://yecpa.co.il/",
+    "has_website": true,
+    "validated": true,
+    "category": "רואה חשבון",
+    "source": "firecrawl_scrapling"
+  },
+  "שי דנה עו\"ד|חיפה": {
+    "phone": "0545250035",
+    "all_phones": [
+      "0545250035"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "עורך דין",
+    "source": "firecrawl_scrapling"
+  },
+  "רגב מזרחי ושות עו\"ד|ירושלים": {
+    "phone": "026554400",
+    "all_phones": [
+      "026554400"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "עורך דין",
+    "source": "firecrawl_scrapling"
+  },
+  "הוד סוקול ושות עו\"ד|חיפה": {
+    "phone": "048677307",
+    "all_phones": [
+      "048677307"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "עורך דין",
+    "source": "firecrawl_scrapling"
+  },
+  "קולצ'ינסקי עו\"ד|חיפה": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://lawyerhaifa.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "עורך דין",
+    "source": "firecrawl_scrapling"
+  },
+  "אלוני מור Zoom 99|תל אביב": {
+    "phone": "0522328944",
+    "all_phones": [
+      "0522328944"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "צלם",
+    "source": "firecrawl_scrapling"
+  },
+  "יניב כהן צלם|ישראל": {
+    "phone": "0545321910",
+    "all_phones": [
+      "0545321910"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "צלם",
+    "source": "firecrawl_scrapling"
+  },
+  "פטריק הצלם|ישראל": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://patrick-photographer.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "צלם",
+    "source": "firecrawl_scrapling"
+  },
+  "פוטושוט צילום|ישראל": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://photoshot.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "צלם",
+    "source": "firecrawl_scrapling"
+  },
+  "יוסף אילוז הפקות|אשדוד": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://www.yosefiluz.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "צלם",
+    "source": "firecrawl_scrapling"
+  },
+  "המרכז הרפואי לחיות|רמת גן": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://www.animal-hospital.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "וטרינר",
+    "source": "firecrawl_scrapling"
+  },
+  "מרכז וטרינרי קרית שרת|חולון": {
+    "phone": "035592234",
+    "all_phones": [
+      "035592234"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "וטרינר",
+    "source": "firecrawl_scrapling"
+  },
+  "וט אדום חירום|תל אביב": {
+    "phone": "0779579799",
+    "all_phones": [
+      "0779579799"
+    ],
+    "website": "https://vetadom.co.il/",
+    "has_website": true,
+    "validated": true,
+    "category": "וטרינר",
+    "source": "firecrawl_scrapling"
+  },
+  "ד\"ר אסף וטרינר נייד|תל אביב": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://www.petdoctor.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "וטרינר",
+    "source": "firecrawl_scrapling"
+  },
+  "אספרסו פאשן|פתח תקווה": {
+    "phone": "0505777472",
+    "all_phones": [
+      "0505777472"
+    ],
+    "website": "https://espressofashion.com/",
+    "has_website": true,
+    "validated": true,
+    "category": "חנות בגדים",
+    "source": "firecrawl_scrapling"
+  },
+  "אופנטון|ראשון לציון": {
+    "phone": "0768021057",
+    "all_phones": [
+      "0768021057"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "חנות בגדים",
+    "source": "firecrawl_scrapling"
+  },
+  "Fashion Club|ראשון לציון": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://fashionclub.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "חנות בגדים",
+    "source": "firecrawl_scrapling"
+  },
+  "רזילי אוצרות אופנה|ישראל": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://www.razili.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "חנות בגדים",
+    "source": "firecrawl_scrapling"
+  },
+  "סזאנקה Sazanca|אשדוד": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://www.sazanca.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "מסעדה",
+    "source": "firecrawl_scrapling"
+  },
+  "ראיחונה אוכל בוכרי|אשדוד": {
+    "phone": "0534004290",
+    "all_phones": [
+      "0534004290"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "מסעדה",
+    "source": "firecrawl_scrapling"
+  },
+  "שולחן דוד סטייק|נתניה": {
+    "phone": "",
+    "all_phones": [],
+    "website": "",
+    "has_website": false,
+    "validated": false,
+    "category": "מסעדה",
+    "source": "firecrawl_scrapling"
+  },
+  "360 מעלות מספרה ומכון יופי|כפר סבא": {
+    "phone": "",
+    "all_phones": [],
+    "website": "",
+    "has_website": false,
+    "validated": false,
+    "category": "מספרה",
+    "source": "firecrawl_scrapling"
+  },
+  "ליאור M עיצוב שיער|כפר סבא": {
+    "phone": "",
+    "all_phones": [],
+    "website": "",
+    "has_website": false,
+    "validated": false,
+    "category": "מספרה",
+    "source": "firecrawl_scrapling"
+  },
+  "שלי ליטאי מכון יופי|כפר סבא": {
+    "phone": "",
+    "all_phones": [],
+    "website": "",
+    "has_website": false,
+    "validated": false,
+    "category": "מכון יופי",
+    "source": "firecrawl_scrapling"
+  },
+  "אהובה קוסמטיקה|כפר סבא": {
+    "phone": "0547377021",
+    "all_phones": [
+      "0547377021"
+    ],
+    "website": "https://ahova.co.il/",
+    "has_website": true,
+    "validated": true,
+    "category": "מכון יופי",
+    "source": "firecrawl_scrapling"
+  },
+  "Mark&Victoria סלון|הוד השרון": {
+    "phone": "097791799",
+    "all_phones": [
+      "097791799"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "מספרה",
+    "source": "firecrawl_scrapling"
+  },
+  "SOMA פילאטיס|הרצליה": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://somapilates.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "סטודיו",
+    "source": "firecrawl_scrapling"
+  },
+  "Fithouse|תל אביב": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://www.fithouse.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "סטודיו",
+    "source": "firecrawl_scrapling"
+  },
+  "ליפט חדרי כושר|תל אביב": {
+    "phone": "0584822445",
+    "all_phones": [
+      "0584822445"
+    ],
+    "website": "https://liftprotrainers.com/",
+    "has_website": true,
+    "validated": true,
+    "category": "סטודיו",
+    "source": "firecrawl_scrapling"
+  },
+  "פראנה יוגה|תל אביב": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://pranayoga.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "סטודיו",
+    "source": "firecrawl_scrapling"
+  },
+  "סטודיו נעים|תל אביב": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://www.naim.org.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "סטודיו",
+    "source": "firecrawl_scrapling"
+  },
+  "Chen Fitness|ישראל": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://chenfitness.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "סטודיו",
+    "source": "firecrawl_scrapling"
+  },
+  "סטודיו סי|הרצליה": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://studioc.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "סטודיו",
+    "source": "firecrawl_scrapling"
+  },
+  "הרמוניה בגן|גדרה": {
+    "phone": "0723926890",
+    "all_phones": [
+      "0723926890"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "גן אירועים",
+    "source": "firecrawl_scrapling"
+  },
+  "קולוניה אירועים|רחובות": {
+    "phone": "0554539635",
+    "all_phones": [
+      "0554539635"
+    ],
+    "website": "https://www.colonia-events.co.il/",
+    "has_website": false,
+    "validated": true,
+    "category": "גן אירועים",
+    "source": "firecrawl_scrapling"
+  },
+  "Avenue L אירועים|מרכז": {
+    "phone": "0554539562",
+    "all_phones": [
+      "0554539562"
+    ],
+    "website": "https://avenue-l.co.il/",
+    "has_website": true,
+    "validated": true,
+    "category": "גן אירועים",
+    "source": "firecrawl_scrapling"
+  },
+  "אריא ארנת האירועים|מרכז": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://arya.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "גן אירועים",
+    "source": "firecrawl_scrapling"
+  },
+  "גרייס אירועים|מרכז": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://www.grace-events.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "גן אירועים",
+    "source": "firecrawl_scrapling"
+  },
+  "טופ קלין אונליין|תל אביב": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://topclean-il.com/",
+    "has_website": true,
+    "validated": false,
+    "category": "מכבסה",
+    "source": "firecrawl_scrapling"
+  },
+  "ספוטלס|חולון": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://spotless.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "מכבסה",
+    "source": "firecrawl_scrapling"
+  },
+  "אלגנט אקספרס|תל אביב": {
+    "phone": "1700707077",
+    "all_phones": [
+      "1700707077"
+    ],
+    "website": "https://elegant-express.co.il/",
+    "has_website": true,
+    "validated": true,
+    "category": "מכבסה",
+    "source": "firecrawl_scrapling"
+  },
+  "kVisi מכבסה|תל אביב": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://www.kvisi.com/",
+    "has_website": false,
+    "validated": false,
+    "category": "מכבסה",
+    "source": "firecrawl_scrapling"
+  },
+  "משק רוזלמן|כפר חיים": {
+    "phone": "0765311064",
+    "all_phones": [
+      "0765311064"
+    ],
+    "website": "https://meshek.rozelman.co.il/",
+    "has_website": true,
+    "validated": true,
+    "category": "חנות פרחים",
+    "source": "firecrawl_scrapling"
+  },
+  "איצטרובל פרחים|ישראל": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://teleflower.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "חנות פרחים",
+    "source": "firecrawl_scrapling"
+  },
+  "MIMI Vaza פרחים|ישראל": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://www.vaza.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "חנות פרחים",
+    "source": "firecrawl_scrapling"
+  },
+  "פרחי עירית|ישראל": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://www.irit-flowers.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "חנות פרחים",
+    "source": "firecrawl_scrapling"
+  },
+  "הרמוניה פרחים|ישראל": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://flowersale.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "חנות פרחים",
+    "source": "firecrawl_scrapling"
+  },
+  "מיקי גולן מספרה|ראשון לציון": {
+    "phone": "039584475",
+    "all_phones": [
+      "039584475"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "מספרה",
+    "source": "firecrawl_scrapling"
+  },
+  "עידו מעצבי שיער|ראשון לציון": {
+    "phone": "039503832",
+    "all_phones": [
+      "039503832"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "מספרה",
+    "source": "firecrawl_scrapling"
+  },
+  "כפיר עיצוב שיער|חולון": {
+    "phone": "0723217745",
+    "all_phones": [
+      "0723217745"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "מספרה",
+    "source": "firecrawl_scrapling"
+  },
+  "Eli Di אלי די|חולון": {
+    "phone": "035527999",
+    "all_phones": [
+      "035527999"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "מספרה",
+    "source": "firecrawl_scrapling"
+  },
+  "הכי נוח לך כשאת יפה|חולון": {
+    "phone": "",
+    "all_phones": [],
+    "website": "",
+    "has_website": false,
+    "validated": false,
+    "category": "מספרה",
+    "source": "firecrawl_scrapling"
+  },
+  "אורן רפאל עיצוב שיער|אור יהודה": {
+    "phone": "036346381",
+    "all_phones": [
+      "036346381"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "מספרה",
+    "source": "firecrawl_scrapling"
+  },
+  "פיקאסו מספרה|בת ים": {
+    "phone": "",
+    "all_phones": [],
+    "website": "",
+    "has_website": false,
+    "validated": false,
+    "category": "מספרה",
+    "source": "firecrawl_scrapling"
+  },
+  "עמנואל מעצב שיער|בת ים": {
+    "phone": "",
+    "all_phones": [],
+    "website": "",
+    "has_website": false,
+    "validated": false,
+    "category": "מספרה",
+    "source": "firecrawl_scrapling"
+  },
+  "סקין-קר מרכז לטיפולים|ישראל": {
+    "phone": "0747020432",
+    "all_phones": [
+      "0747020432"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "מכון יופי",
+    "source": "firecrawl_scrapling"
+  },
+  "יהלי קוסמטיקס|תל אביב": {
+    "phone": "",
+    "all_phones": [],
+    "website": "",
+    "has_website": false,
+    "validated": false,
+    "category": "מכון יופי",
+    "source": "firecrawl_scrapling"
+  },
+  "מכון יופי פרלה|קרית אתא": {
+    "phone": "0777785020",
+    "all_phones": [
+      "0777785020"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "מכון יופי",
+    "source": "firecrawl_scrapling"
+  },
+  "קוסמטיקאית באר שבע|באר שבע": {
+    "phone": "086288331",
+    "all_phones": [
+      "086288331"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "מכון יופי",
+    "source": "firecrawl_scrapling"
+  },
+  "אסתטיקה רמת גן|רמת גן": {
+    "phone": "0772060268",
+    "all_phones": [
+      "0772060268"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "מכון יופי",
+    "source": "firecrawl_scrapling"
+  },
+  "מרכז שירות ח.ח|תל אביב": {
+    "phone": "0777784760",
+    "all_phones": [
+      "0777784760"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "מוסך",
+    "source": "firecrawl_scrapling"
+  },
+  "מוסך ליטל פיג'ו|תל אביב": {
+    "phone": "0723227266",
+    "all_phones": [
+      "0723227266"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "מוסך",
+    "source": "firecrawl_scrapling"
+  },
+  "המוסך הנכון|חולון": {
+    "phone": "0502555524",
+    "all_phones": [
+      "0502555524"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "מוסך",
+    "source": "firecrawl_scrapling"
+  },
+  "מוסכי משה אלדן|תל אביב": {
+    "phone": "035626001",
+    "all_phones": [
+      "035626001"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "מוסך",
+    "source": "firecrawl_scrapling"
+  },
+  "מוסך שגיא|תל אביב": {
+    "phone": "",
+    "all_phones": [],
+    "website": "",
+    "has_website": false,
+    "validated": false,
+    "category": "מוסך",
+    "source": "firecrawl_scrapling"
+  },
+  "ExtraPrint דפוס|תל אביב": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://extraprint.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "בית דפוס",
+    "source": "firecrawl_scrapling"
+  },
+  "ספידגרף דפוס|תל אביב": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://www.speedgraph.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "בית דפוס",
+    "source": "firecrawl_scrapling"
+  },
+  "סדר צלם דפוס|תל אביב": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://sdar.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "בית דפוס",
+    "source": "firecrawl_scrapling"
+  },
+  "מרכז עיצוב גרפי|תל אביב": {
+    "phone": "0723316916",
+    "all_phones": [
+      "0723316916"
+    ],
+    "website": "https://www.gdesigner.co.il/",
+    "has_website": true,
+    "validated": true,
+    "category": "עיצוב גרפי",
+    "source": "firecrawl_scrapling"
+  },
+  "דפוס דנה הזמנות|תל אביב": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://www.dfus-dana.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "בית דפוס",
+    "source": "firecrawl_scrapling"
+  },
+  "קופי סנטר רמת אביב|תל אביב": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://www.copy-center-ta.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "בית דפוס",
+    "source": "firecrawl_scrapling"
+  },
+  "שיבולת השרון מאפייה|נתניה": {
+    "phone": "035545800",
+    "all_phones": [
+      "035545800"
+    ],
+    "website": "https://sharon-oats-bakery.com/",
+    "has_website": true,
+    "validated": true,
+    "category": "מאפייה",
+    "source": "firecrawl_scrapling"
+  },
+  "הקונדיטוריה של גל|חיפה": {
+    "phone": "",
+    "all_phones": [],
+    "website": "https://www.galsbakery.co.il/",
+    "has_website": true,
+    "validated": false,
+    "category": "קונדיטוריה",
+    "source": "firecrawl_scrapling"
+  },
+  "תופיניי קונדיטוריה|ירושלים": {
+    "phone": "026785252",
+    "all_phones": [
+      "026785252"
+    ],
+    "website": "https://tufiney.co.il/",
+    "has_website": true,
+    "validated": true,
+    "category": "קונדיטוריה",
+    "source": "firecrawl_scrapling"
+  },
+  "JORNO Bakery|הרצליה": {
+    "phone": "037308900",
+    "all_phones": [
+      "037308900"
+    ],
+    "website": "https://www.instagram.com/jornobakery/",
+    "has_website": false,
+    "validated": true,
+    "category": "מאפייה",
+    "source": "firecrawl_scrapling"
+  },
+  "קונדיטוריה נתי|נתניה": {
+    "phone": "",
+    "all_phones": [],
+    "website": "",
+    "has_website": false,
+    "validated": false,
+    "category": "קונדיטוריה",
+    "source": "firecrawl_scrapling"
+  },
+  "מאפיית ברמן|ירושלים": {
+    "phone": "026522241",
+    "all_phones": [
+      "026522241"
+    ],
+    "website": "https://berman.co.il/",
+    "has_website": true,
+    "validated": true,
+    "category": "מאפייה",
+    "source": "firecrawl_scrapling"
+  },
+  "זו ארץ חנות חיות|רמת גן": {
+    "phone": "036193193",
+    "all_phones": [
+      "036193193"
+    ],
+    "website": "https://www.zooeretz.co.il/",
+    "has_website": true,
+    "validated": true,
+    "category": "חנות חיות",
+    "source": "firecrawl_scrapling"
+  },
+  "זאביק חיות מחמד|חולון": {
+    "phone": "039016181",
+    "all_phones": [
+      "039016181"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "חנות חיות",
+    "source": "firecrawl_scrapling"
+  },
+  "פט מאסטר|חולון": {
+    "phone": "035585680",
+    "all_phones": [
+      "035585680"
+    ],
+    "website": "https://www.petmaster.co.il/",
+    "has_website": true,
+    "validated": true,
+    "category": "חנות חיות",
+    "source": "firecrawl_scrapling"
+  },
+  "החתול והכלב|רמת גן": {
+    "phone": "035616646",
+    "all_phones": [
+      "035616646"
+    ],
+    "website": "https://catandog.co.il/",
+    "has_website": true,
+    "validated": true,
+    "category": "חנות חיות",
+    "source": "firecrawl_scrapling"
+  },
+  "חוות רוטוויל|חולון": {
+    "phone": "036512047",
+    "all_phones": [
+      "036512047"
+    ],
+    "website": "",
+    "has_website": false,
+    "validated": true,
+    "category": "חנות חיות",
+    "source": "firecrawl_scrapling"
+  },
+  "חיש חי|חולון": {
+    "phone": "",
+    "all_phones": [],
+    "website": "",
+    "has_website": false,
+    "validated": false,
+    "category": "חנות חיות",
+    "source": "firecrawl_scrapling"
+  },
+  "יעקבי שיפוצים|באר שבע": {
+    "name": "יעקבי שיפוצים",
+    "city": "באר שבע",
+    "category": "שיפוצים",
+    "source": "easy.co.il"
+  },
+  "איציק שיפוצים|באר שבע": {
+    "name": "איציק שיפוצים",
+    "city": "באר שבע",
+    "category": "שיפוצים",
+    "email": "kobani262@gmail.com",
+    "source": "easy.co.il"
+  },
+  "מ.ב שיפוצים ואינסטלציה|באר שבע": {
+    "name": "מ.ב שיפוצים ואינסטלציה",
+    "city": "באר שבע",
+    "phone": "0525617969",
+    "category": "שיפוצים",
+    "source": "easy.co.il"
+  },
+  "דורפמן שיפוצים|באר שבע": {
+    "name": "דורפמן שיפוצים",
+    "city": "באר שבע",
+    "phone": "0546315184",
+    "email": "Main.dorfman@gmail.com",
+    "category": "שיפוצים",
+    "source": "easy.co.il"
+  },
+  "שיפוצי הדרום|באר שבע": {
+    "name": "שיפוצי הדרום",
+    "city": "באר שבע",
+    "category": "שיפוצים",
+    "source": "easy.co.il"
+  },
+  "גלובל אלומיניום ושיפוצים|באר שבע": {
+    "name": "גלובל אלומיניום ושיפוצים",
+    "city": "באר שבע",
+    "email": "onemicky.b@gmail.com",
+    "category": "שיפוצים",
+    "source": "easy.co.il"
+  },
+  "דניאל אחזקות|באר שבע": {
+    "name": "דניאל אחזקות",
+    "city": "באר שבע",
+    "category": "שיפוצים",
+    "source": "easy.co.il"
+  },
+  "ס.ל בניה ושיפוצים|באר שבע": {
+    "name": "ס.ל בניה ושיפוצים",
+    "city": "באר שבע",
+    "category": "שיפוצים",
+    "source": "easy.co.il"
+  },
+  "א.י שיפוצים|באר שבע": {
+    "name": "א.י שיפוצים",
+    "city": "באר שבע",
+    "category": "שיפוצים",
+    "source": "easy.co.il"
+  },
+  "מובילים בישראל|ארצי": {
+    "name": "מובילים בישראל",
+    "city": "ארצי",
+    "phone": "0528449344",
+    "category": "הובלות",
+    "source": "firecrawl"
+  },
+  "אחים לוי הובלות|חיפה": {
+    "name": "אחים לוי הובלות",
+    "city": "חיפה",
+    "category": "הובלות",
+    "source": "firecrawl"
+  },
+  "לוגיסטקס הובלות|ארצי": {
+    "name": "לוגיסטקס הובלות",
+    "city": "ארצי",
+    "category": "הובלות",
+    "source": "firecrawl"
+  },
+  "הובל הלילה|ארצי": {
+    "name": "הובל הלילה",
+    "city": "ארצי",
+    "category": "הובלות",
+    "source": "firecrawl"
+  },
+  "פליגל הובלות|ארצי": {
+    "name": "פליגל הובלות",
+    "city": "ארצי",
+    "category": "הובלות",
+    "source": "firecrawl"
+  },
+  "מכבסת סופר ווש|ירושלים": {
+    "name": "מכבסת סופר ווש",
+    "city": "ירושלים",
+    "phone": "0544338274",
+    "category": "מכבסות",
+    "source": "firecrawl"
+  },
+  "מכבסת מלחה|ירושלים": {
+    "name": "מכבסת מלחה",
+    "city": "ירושלים",
+    "category": "מכבסות",
+    "source": "firecrawl"
+  },
+  "מכבסת הר נוף|ירושלים": {
+    "name": "מכבסת הר נוף",
+    "city": "ירושלים",
+    "category": "מכבסות",
+    "source": "firecrawl"
+  },
+  "קלוגני שירותי כביסה|חיפה": {
+    "name": "קלוגני שירותי כביסה",
+    "city": "חיפה",
+    "phone": "1800323231",
+    "category": "מכבסות",
+    "source": "firecrawl"
+  },
+  "מכבסת המחדש|חיפה": {
+    "name": "מכבסת המחדש",
+    "city": "חיפה",
+    "category": "מכבסות",
+    "source": "firecrawl"
+  },
+  "ארטפיקסל צילום אירועים|אשדוד": {
+    "name": "ארטפיקסל צילום אירועים",
+    "city": "אשדוד",
+    "category": "צילום",
+    "source": "firecrawl"
+  },
+  "סטודיו אגוז|ארצי": {
+    "name": "סטודיו אגוז",
+    "city": "ארצי",
+    "category": "צילום",
+    "source": "firecrawl"
+  },
+  "חן ברקוביץ צילום|ארצי": {
+    "name": "חן ברקוביץ צילום",
+    "city": "ארצי",
+    "category": "צילום",
+    "source": "firecrawl"
+  },
+  "שלושה צלמים|ארצי": {
+    "name": "שלושה צלמים",
+    "city": "ארצי",
+    "category": "צילום",
+    "source": "firecrawl"
+  },
+  "צילום מגנט טלי|מודיעין": {
+    "name": "צילום מגנט טלי",
+    "city": "מודיעין",
+    "category": "צילום",
+    "source": "firecrawl"
+  },
+  "F.E Design רהיטים|ארצי": {
+    "name": "F.E Design רהיטים",
+    "city": "ארצי",
+    "phone": "0778845050",
+    "category": "רהיטים",
+    "source": "firecrawl"
+  },
+  "רהיטי|ארצי": {
+    "name": "רהיטי",
+    "city": "ארצי",
+    "category": "רהיטים",
+    "source": "firecrawl"
   }
 }
