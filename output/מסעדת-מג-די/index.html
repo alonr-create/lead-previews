@@ -35,7 +35,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
 
 /* --- Hero --- */
 .hero{position:relative;height:100vh;min-height:620px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;padding-bottom:80px}
-.hero-bg{position:absolute;inset:0;background:url('https://places.googleapis.com/v1/places/ChIJFeQZZLQ5HRURgRtJC-pydno/photos/AU_ZVEEN7rDWXnVZZnDEG5tEgUDVMVB7x-lHpj75gubPXjSfqi7XwT7FDlVxnyiLjCCSekSPxJ6hdGHm4mNl78V-XPSZZTR6i8FjclnO0jpQxHoewqBxwAQYDdFOaPHIcWeWBU93rN1AqPkQlHTNCTPQBHbj1ph6Ae-AeGt2Tw2Xu1KAEFQRoPr8VYM--F8bNgX6gezpo0x9ucP-GLfjyfrGin9W7wB6xQX3HGWa-ub8fayK0SypjLdbS8KqFQgoVIn9cMzTEr3sw8lXXl8kjzVcomr39W9M_hTF-jIWWo86UIkDEYy-oNLDP4fZJKg6uL8DQODoBNHmdaghbynVt-wb21EG_EOxce3jsYdYxp7VRV1Vr5EwrQ_WbeYxLJBEbpMN1WP9YnySFX4UxpEGFSC500nB0pNlFc-OOD5Ue1lnDjRYlA/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ') center/cover no-repeat;will-change:transform}
+.hero-bg{position:absolute;inset:0;background:url('{{PHOTO_1}}') center/cover no-repeat;will-change:transform}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(250,250,248,0.1) 0%,rgba(250,250,248,0.35) 30%,rgba(250,250,248,0.92) 85%,var(--bg) 100%)}
 .hero-content{position:relative;z-index:2;text-align:center;padding:0 24px;max-width:700px;animation:fadeInUp 1s cubic-bezier(0.16,1,0.3,1) 0.2s both}
 .hero-badge{display:inline-block;padding:6px 22px;background:rgba(184,92,56,0.08);border:1px solid rgba(184,92,56,0.15);border-radius:100px;font-size:13px;color:var(--sienna);letter-spacing:1.5px;margin-bottom:20px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
@@ -159,6 +159,217 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
 </style>
 </head>
 <body>
+{{BANNER}}
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">חוויה קולינרית</div>
+    <h1><span>מסעדת מג'די</span></h1>
+    <p class="hero-sub">טעמים שמספרים סיפור</p>
+    <p class="hero-city">כפר סבא</p>
+    <a href="tel:539417135" class="hero-cta">הזמינו מקום</a>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    <span>גלגלו למטה</span>
+  </div>
+</section>
+
+<!-- Rating -->
+<section class="rating-strip reveal">
+  <div class="rating-inner">
+    <div class="stars">
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+    </div>
+    <div class="rating-score">{{RATING}}</div>
+    <div class="rating-text">{{REVIEWS_COUNT}} ביקורות בגוגל</div>
+    <div class="rating-address">{{ADDRESS}}</div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section about" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <img src="{{PHOTO_2}}" alt="מנה מהמסעדה" loading="lazy">
+        <div class="about-accent"></div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="section-label">הסיפור שלנו</div>
+        <h2 class="section-title">מקום שבו <span class="underline">הטעם פוגש את הלב</span></h2>
+        <p class="section-desc">במסעדת מג'די אנחנו מאמינים שאוכל טוב הוא יותר ממרכיבים על צלחת. זו חוויה שמחברת אנשים, מעוררת זיכרונות ויוצרת רגעים חדשים.</p>
+        <p class="about-text" style="font-size:16px;color:var(--text-light);line-height:1.9;margin-top:16px">כל מנה מוכנה באהבה מחומרי גלם טריים ואיכותיים, עם תשומת לב לכל פרט. אנחנו מזמינים אתכם לשבת, להירגע וליהנות.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Menu -->
+<section class="section menu" id="menu">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label">התפריט</div>
+      <h2 class="section-title">המנות <span class="underline">המומלצות שלנו</span></h2>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card reveal reveal-delay-1">
+        <img class="menu-card-img" src="{{PHOTO_3}}" alt="סטייק אנטריקוט" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-name">סטייק אנטריקוט</div>
+          <div class="menu-card-desc">צלוי על גחלים לשלמות, מוגש עם ירקות עונה</div>
+          <div class="menu-card-price">139 &#8362;</div>
+        </div>
+      </div>
+      <div class="menu-card reveal reveal-delay-2">
+        <img class="menu-card-img" src="{{PHOTO_4}}" alt="סלט השף" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-name">סלט השף</div>
+          <div class="menu-card-desc">ירוקים טריים, גבינת עיזים, אגוזים וויניגרט הדרים</div>
+          <div class="menu-card-price">62 &#8362;</div>
+        </div>
+      </div>
+      <div class="menu-card reveal reveal-delay-3">
+        <img class="menu-card-img" src="{{PHOTO_5}}" alt="פסטה טרייה" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-name">פסטה טרייה</div>
+          <div class="menu-card-desc">פסטה ביתית ברוטב שמנת כמהין ופטריות בר</div>
+          <div class="menu-card-price">78 &#8362;</div>
+        </div>
+      </div>
+      <div class="menu-card reveal reveal-delay-4">
+        <img class="menu-card-img" src="{{PHOTO_6}}" alt="קינוח השף" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-name">קינוח השף</div>
+          <div class="menu-card-desc">מוס שוקולד בלגי על בסיס פירות יער טריים</div>
+          <div class="menu-card-price">52 &#8362;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="section gallery" id="gallery">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label">גלריה</div>
+      <h2 class="section-title">רגעים מ<span class="underline">מסעדת מג'די</span></h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal reveal-delay-1"><img src="{{PHOTO_1}}" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-2"><img src="{{PHOTO_2}}" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-3"><img src="{{PHOTO_3}}" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-1"><img src="{{PHOTO_4}}" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-2"><img src="{{PHOTO_1}}" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-3"><img src="{{PHOTO_2}}" alt="גלריה" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Hours -->
+<section class="section hours" id="hours">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label">שעות פתיחה</div>
+      <h2 class="section-title">מתי <span class="underline">אפשר לבוא</span></h2>
+    </div>
+    <div class="hours-card reveal reveal-delay-1">
+      <div class="hours-row"><span class="hours-day">ראשון - חמישי</span><span class="hours-time">12:00 - 23:00</span></div>
+      <div class="hours-row"><span class="hours-day">שישי</span><span class="hours-time">12:00 - 15:00</span></div>
+      <div class="hours-row"><span class="hours-day">מוצאי שבת</span><span class="hours-time">20:00 - 23:30</span></div>
+    </div>
+    <p class="hours-address reveal reveal-delay-2">{{ADDRESS}}, כפר סבא</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2 class="reveal">מוכנים לחוויה קולינרית?</h2>
+  <p class="reveal reveal-delay-1">הזמינו מקום ותנו לנו לפנק אתכם</p>
+  <a href="tel:539417135" class="cta-btn reveal reveal-delay-2">התקשרו עכשיו</a>
+</section>
+
+<!-- Contact -->
+<section class="section contact" id="contact">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label">צרו קשר</div>
+      <h2 class="section-title">נשמח <span class="underline">לשמוע מכם</span></h2>
+    </div>
+    <div class="contact-card reveal reveal-delay-1">
+      <div class="contact-name">מסעדת מג'די</div>
+      <div class="contact-city">{{ADDRESS}}, כפר סבא</div>
+      <div class="contact-buttons">
+        <a href="https://wa.me/972539417135" class="contact-btn btn-whatsapp">WhatsApp</a>
+        <a href="tel:539417135" class="contact-btn btn-phone">053-9417135</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{REVIEWS_SECTION}}
+
+<!-- Footer -->
+<footer class="site-footer">
+  <p>מסעדת מג'די | כפר סבא</p>
+</footer>
+
+<!-- Floating Nav -->
+<nav class="float-nav" id="floatNav">
+  <a href="#home">ראשי</a>
+  <a href="#menu">תפריט</a>
+  <a href="#gallery">גלריה</a>
+  <a href="#hours">שעות</a>
+  <a href="#contact">קשר</a>
+</nav>
+
+<script>
+(function(){
+  // Scroll reveal with IntersectionObserver
+  var reveals = document.querySelectorAll('.reveal');
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}
+    });
+  },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+  reveals.forEach(function(el){observer.observe(el)});
+
+  // Active nav highlight
+  var sections = document.querySelectorAll('section[id]');
+  var navLinks = document.querySelectorAll('.float-nav a');
+  var floatNav = document.getElementById('floatNav');
+
+  window.addEventListener('scroll',function(){
+    var scrollY = window.pageYOffset;
+    // Show/hide floating nav
+    if(scrollY > 350){floatNav.classList.add('show')}else{floatNav.classList.remove('show')}
+    // Highlight active section
+    var current = '';
+    sections.forEach(function(s){
+      if(scrollY >= s.offsetTop - 220) current = s.getAttribute('id');
+    });
+    navLinks.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+
+  // Subtle parallax on hero background
+  var heroBg = document.querySelector('.hero-bg');
+  window.addEventListener('scroll',function(){
+    if(heroBg && window.pageYOffset < window.innerHeight){
+      heroBg.style.transform = 'translateY(' + (window.pageYOffset * 0.25) + 'px)';
+    }
+  });
+})();
+</script>
 <!-- Lead Preview Banner -->
 <style>
   .lp-banner {
@@ -251,285 +462,6 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
   <button class="lp-banner-close" onclick="document.getElementById('lpBanner').classList.add('lp-hidden');document.body.style.paddingTop='0'" aria-label="סגור">&times;</button>
 </div>
 <!-- End Banner -->
-
-
-<!-- Hero -->
-<section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-badge">חוויה קולינרית</div>
-    <h1><span>מסעדת מג'די</span></h1>
-    <p class="hero-sub">טעמים שמספרים סיפור</p>
-    <p class="hero-city">כפר סבא</p>
-    <a href="tel:97672907" class="hero-cta">הזמינו מקום</a>
-  </div>
-  <div class="scroll-hint">
-    <div class="scroll-line"></div>
-    <span>גלגלו למטה</span>
-  </div>
-</section>
-
-<!-- Rating -->
-<section class="rating-strip reveal">
-  <div class="rating-inner">
-    <div class="stars">
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-    </div>
-    <div class="rating-score">3.9</div>
-    <div class="rating-text">655 ביקורות בגוגל</div>
-    <div class="rating-address">משה שרת 24, כפר סבא, ישראל</div>
-  </div>
-</section>
-
-<!-- About -->
-<section class="section about" id="about">
-  <div class="section-inner">
-    <div class="about-grid">
-      <div class="about-img-wrap reveal">
-        <img src="https://places.googleapis.com/v1/places/ChIJFeQZZLQ5HRURgRtJC-pydno/photos/AU_ZVEGBXv8-3veUUkhMBgRWeitctqg_zn3Mkbh-7bjsagAkVptjf0_hpwzHZuEaknP9jPR9cJ1P68JeTLLPzAhWuBETg_69dBQD73cCWEWW2yL9PRpN7uwxx19gwrEkiQ3jEga_TTRJojsJSuGcOtqq9UwNQAdiVG8dhCY6iRJ0hy8zEZXGOY-zJ6EiakXLyvvHkT6jjTF_d5K1iICegJmDvuA8-8C76aBC-RcYzhGhJrpZkGFm9OV7cVxJ0ZE4AYs8JUQ-v0JV2RG_uk9Of32g8u42CUYexykJTdAWdwWoMMfP6g/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="מנה מהמסעדה" loading="lazy">
-        <div class="about-accent"></div>
-      </div>
-      <div class="reveal reveal-delay-1">
-        <div class="section-label">הסיפור שלנו</div>
-        <h2 class="section-title">מקום שבו <span class="underline">הטעם פוגש את הלב</span></h2>
-        <p class="section-desc">במסעדת מג'די אנחנו מאמינים שאוכל טוב הוא יותר ממרכיבים על צלחת. זו חוויה שמחברת אנשים, מעוררת זיכרונות ויוצרת רגעים חדשים.</p>
-        <p class="about-text" style="font-size:16px;color:var(--text-light);line-height:1.9;margin-top:16px">כל מנה מוכנה באהבה מחומרי גלם טריים ואיכותיים, עם תשומת לב לכל פרט. אנחנו מזמינים אתכם לשבת, להירגע וליהנות.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Menu -->
-<section class="section menu" id="menu">
-  <div class="section-inner">
-    <div class="reveal" style="text-align:center">
-      <div class="section-label">התפריט</div>
-      <h2 class="section-title">המנות <span class="underline">המומלצות שלנו</span></h2>
-    </div>
-    <div class="menu-grid">
-      <div class="menu-card reveal reveal-delay-1">
-        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJFeQZZLQ5HRURgRtJC-pydno/photos/AU_ZVEEJS3Vxuyh24fRM0PvPuz_oJhad0M7_WXnCuEo6FjFwO7vjkPH-HdXZ53VqIV9B4x1wmMoKpdgI56WseIHDrQp7Vi-6cdzCfzbxU-4iucrU9R3u8GG6VH95slwwjF0awFazRnhKfoAmj4QQCGyG8RsZGdSGOFEZ-jgYp6YZum6DaUCLxw-8g6f_5KTSYFqvXcYUhuMjFtU0vFwpOSEvQyLLO4UjVXdjJdI_JucSJxWTBlXJ5xwP8WRC4N4gUM4BgJSQ5mSZgmrmV3iWx_yKfrR8FZWjiiN86eFdfyayT5dsIahal_UBnIc_DO3Bz_Xrb2XQczvbROYTMKuPr2r2QfWcv4UzetZva6qfEWPAn8kq0JX6C_xK1M4bubkUrAueOOixg1swb_2clpamTjareBmy4t1ZBSgu4pwzHEBw4TrwaA/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="סטייק אנטריקוט" loading="lazy">
-        <div class="menu-card-body">
-          <div class="menu-card-name">סטייק אנטריקוט</div>
-          <div class="menu-card-desc">צלוי על גחלים לשלמות, מוגש עם ירקות עונה</div>
-          <div class="menu-card-price">139 &#8362;</div>
-        </div>
-      </div>
-      <div class="menu-card reveal reveal-delay-2">
-        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJFeQZZLQ5HRURgRtJC-pydno/photos/AU_ZVEEQyLDfPh9-2SaR0xF58FdC5nxd7npzHcALM2Tn3EOWr1IwQpSNhJQqvp9Tjlap4YzpBKLpejn2Z2DLtOc6xa0ehYEnDMo5zVAKgbtFCbLQQN8uhvJLy2rTUn_LeI9-7jWBnVrg0GB3pjSfd2Y2M1fVlCzqdlzX0slqE2sMZiEo-GRr0eIBLwi1aHRPmhG4zrdHzhE5tt2B9_kLB__L5rxqgI7TwtHhCq2TX_nzCB0taTz6hwds5fTaywpKx_wQ5e4g_BfQmEcV_7GghWZ8ulMIRLti0M-Y3VnrARmVaH3hlg/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="סלט השף" loading="lazy">
-        <div class="menu-card-body">
-          <div class="menu-card-name">סלט השף</div>
-          <div class="menu-card-desc">ירוקים טריים, גבינת עיזים, אגוזים וויניגרט הדרים</div>
-          <div class="menu-card-price">62 &#8362;</div>
-        </div>
-      </div>
-      <div class="menu-card reveal reveal-delay-3">
-        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJFeQZZLQ5HRURgRtJC-pydno/photos/AU_ZVEElRx3K8bzk38EzJwqGZdF24LzK9kaZvdWJNPnXoos2EejP0zn7TOD95MRRFOFSLrrFSShFrnRBSCtft5UK8QEabuQawUrWEJnQeYp7ci0ozUqasJYP4tLGGEj7FuYW7nL1OGBJrw61Q-554aDFPv-8xc7KoEZJalrD1PaRHuokEjgytooWjY7okXrRJw6VxGL2Rzq5yZ0hwiQc3-85Wmv7gWGmfNF6e1vEkTarxbIV47CB-2-zBdN6QtBqPFmhfanJdq-_hFEiVnSy5GRYs_PWF7BmdOJw46Sd7TKYuGi2ImuZZxa1ua_9CqBWPD3kHvxPsNWMuJhTQACa1WbgKEQeovLwoinDrUoFb1jU7wQqpzyZY7WUMDHdcrSJ8304XrSHl74YEkBl4PBVbSPpp6s5ebF-ZQEz3e2P1RCZbTImTg/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="פסטה טרייה" loading="lazy">
-        <div class="menu-card-body">
-          <div class="menu-card-name">פסטה טרייה</div>
-          <div class="menu-card-desc">פסטה ביתית ברוטב שמנת כמהין ופטריות בר</div>
-          <div class="menu-card-price">78 &#8362;</div>
-        </div>
-      </div>
-      <div class="menu-card reveal reveal-delay-4">
-        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJFeQZZLQ5HRURgRtJC-pydno/photos/AU_ZVEGlI6pj2TbG2Zp6IlyA_zpHSDJvuNp2WtWRTE0AQm7BmgE22iwQZFUF0P0lEXb3XCBgvAgGUrSJhENITF3sK8B1aGikuq7ScTHjxjl8guKEs2aI86XUpB_pQUrWDFMgk4c4DYjfM6FXG73cx7FTtC219LjTprRvA9m3Bn5q33-9lFgkuKhXqUW6u7FdWbPreGFsot1qfNN6kpBz01R35qOvBsG2EWXcPBha_OzHKZkkYi_tFn3BHk8ciuxguRrzM6OFSNscSld79F_lmvx7Q-X83ll5FPtvEdm1a9GZOO1bX1OL8JGTCjSP7_7vRvdTbd82IWdeW2DlqcXJMyPlQU2DSZloUAUC6tMmXvyWYgaCaXeNjelKGhbavYMxkWNFeSbcxv7Pc8rf7Phb7VLV2bdb_eCginieYAEimCdna4Tcng/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="קינוח השף" loading="lazy">
-        <div class="menu-card-body">
-          <div class="menu-card-name">קינוח השף</div>
-          <div class="menu-card-desc">מוס שוקולד בלגי על בסיס פירות יער טריים</div>
-          <div class="menu-card-price">52 &#8362;</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Gallery -->
-<section class="section gallery" id="gallery">
-  <div class="section-inner">
-    <div class="reveal" style="text-align:center">
-      <div class="section-label">גלריה</div>
-      <h2 class="section-title">רגעים מ<span class="underline">מסעדת מג'די</span></h2>
-    </div>
-    <div class="gallery-grid">
-      <div class="gallery-item reveal reveal-delay-1"><img src="https://places.googleapis.com/v1/places/ChIJFeQZZLQ5HRURgRtJC-pydno/photos/AU_ZVEEN7rDWXnVZZnDEG5tEgUDVMVB7x-lHpj75gubPXjSfqi7XwT7FDlVxnyiLjCCSekSPxJ6hdGHm4mNl78V-XPSZZTR6i8FjclnO0jpQxHoewqBxwAQYDdFOaPHIcWeWBU93rN1AqPkQlHTNCTPQBHbj1ph6Ae-AeGt2Tw2Xu1KAEFQRoPr8VYM--F8bNgX6gezpo0x9ucP-GLfjyfrGin9W7wB6xQX3HGWa-ub8fayK0SypjLdbS8KqFQgoVIn9cMzTEr3sw8lXXl8kjzVcomr39W9M_hTF-jIWWo86UIkDEYy-oNLDP4fZJKg6uL8DQODoBNHmdaghbynVt-wb21EG_EOxce3jsYdYxp7VRV1Vr5EwrQ_WbeYxLJBEbpMN1WP9YnySFX4UxpEGFSC500nB0pNlFc-OOD5Ue1lnDjRYlA/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-2"><img src="https://places.googleapis.com/v1/places/ChIJFeQZZLQ5HRURgRtJC-pydno/photos/AU_ZVEGBXv8-3veUUkhMBgRWeitctqg_zn3Mkbh-7bjsagAkVptjf0_hpwzHZuEaknP9jPR9cJ1P68JeTLLPzAhWuBETg_69dBQD73cCWEWW2yL9PRpN7uwxx19gwrEkiQ3jEga_TTRJojsJSuGcOtqq9UwNQAdiVG8dhCY6iRJ0hy8zEZXGOY-zJ6EiakXLyvvHkT6jjTF_d5K1iICegJmDvuA8-8C76aBC-RcYzhGhJrpZkGFm9OV7cVxJ0ZE4AYs8JUQ-v0JV2RG_uk9Of32g8u42CUYexykJTdAWdwWoMMfP6g/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-3"><img src="https://places.googleapis.com/v1/places/ChIJFeQZZLQ5HRURgRtJC-pydno/photos/AU_ZVEEJS3Vxuyh24fRM0PvPuz_oJhad0M7_WXnCuEo6FjFwO7vjkPH-HdXZ53VqIV9B4x1wmMoKpdgI56WseIHDrQp7Vi-6cdzCfzbxU-4iucrU9R3u8GG6VH95slwwjF0awFazRnhKfoAmj4QQCGyG8RsZGdSGOFEZ-jgYp6YZum6DaUCLxw-8g6f_5KTSYFqvXcYUhuMjFtU0vFwpOSEvQyLLO4UjVXdjJdI_JucSJxWTBlXJ5xwP8WRC4N4gUM4BgJSQ5mSZgmrmV3iWx_yKfrR8FZWjiiN86eFdfyayT5dsIahal_UBnIc_DO3Bz_Xrb2XQczvbROYTMKuPr2r2QfWcv4UzetZva6qfEWPAn8kq0JX6C_xK1M4bubkUrAueOOixg1swb_2clpamTjareBmy4t1ZBSgu4pwzHEBw4TrwaA/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-1"><img src="https://places.googleapis.com/v1/places/ChIJFeQZZLQ5HRURgRtJC-pydno/photos/AU_ZVEEQyLDfPh9-2SaR0xF58FdC5nxd7npzHcALM2Tn3EOWr1IwQpSNhJQqvp9Tjlap4YzpBKLpejn2Z2DLtOc6xa0ehYEnDMo5zVAKgbtFCbLQQN8uhvJLy2rTUn_LeI9-7jWBnVrg0GB3pjSfd2Y2M1fVlCzqdlzX0slqE2sMZiEo-GRr0eIBLwi1aHRPmhG4zrdHzhE5tt2B9_kLB__L5rxqgI7TwtHhCq2TX_nzCB0taTz6hwds5fTaywpKx_wQ5e4g_BfQmEcV_7GghWZ8ulMIRLti0M-Y3VnrARmVaH3hlg/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-2"><img src="https://places.googleapis.com/v1/places/ChIJFeQZZLQ5HRURgRtJC-pydno/photos/AU_ZVEEN7rDWXnVZZnDEG5tEgUDVMVB7x-lHpj75gubPXjSfqi7XwT7FDlVxnyiLjCCSekSPxJ6hdGHm4mNl78V-XPSZZTR6i8FjclnO0jpQxHoewqBxwAQYDdFOaPHIcWeWBU93rN1AqPkQlHTNCTPQBHbj1ph6Ae-AeGt2Tw2Xu1KAEFQRoPr8VYM--F8bNgX6gezpo0x9ucP-GLfjyfrGin9W7wB6xQX3HGWa-ub8fayK0SypjLdbS8KqFQgoVIn9cMzTEr3sw8lXXl8kjzVcomr39W9M_hTF-jIWWo86UIkDEYy-oNLDP4fZJKg6uL8DQODoBNHmdaghbynVt-wb21EG_EOxce3jsYdYxp7VRV1Vr5EwrQ_WbeYxLJBEbpMN1WP9YnySFX4UxpEGFSC500nB0pNlFc-OOD5Ue1lnDjRYlA/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-3"><img src="https://places.googleapis.com/v1/places/ChIJFeQZZLQ5HRURgRtJC-pydno/photos/AU_ZVEGBXv8-3veUUkhMBgRWeitctqg_zn3Mkbh-7bjsagAkVptjf0_hpwzHZuEaknP9jPR9cJ1P68JeTLLPzAhWuBETg_69dBQD73cCWEWW2yL9PRpN7uwxx19gwrEkiQ3jEga_TTRJojsJSuGcOtqq9UwNQAdiVG8dhCY6iRJ0hy8zEZXGOY-zJ6EiakXLyvvHkT6jjTF_d5K1iICegJmDvuA8-8C76aBC-RcYzhGhJrpZkGFm9OV7cVxJ0ZE4AYs8JUQ-v0JV2RG_uk9Of32g8u42CUYexykJTdAWdwWoMMfP6g/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Hours -->
-<section class="section hours" id="hours">
-  <div class="section-inner">
-    <div class="reveal" style="text-align:center">
-      <div class="section-label">שעות פתיחה</div>
-      <h2 class="section-title">מתי <span class="underline">אפשר לבוא</span></h2>
-    </div>
-    <div class="hours-card reveal reveal-delay-1">
-      <div class="hours-row"><span class="hours-day">ראשון - חמישי</span><span class="hours-time">12:00 - 23:00</span></div>
-      <div class="hours-row"><span class="hours-day">שישי</span><span class="hours-time">12:00 - 15:00</span></div>
-      <div class="hours-row"><span class="hours-day">מוצאי שבת</span><span class="hours-time">20:00 - 23:30</span></div>
-    </div>
-    <p class="hours-address reveal reveal-delay-2">משה שרת 24, כפר סבא, ישראל, כפר סבא</p>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-  <h2 class="reveal">מוכנים לחוויה קולינרית?</h2>
-  <p class="reveal reveal-delay-1">הזמינו מקום ותנו לנו לפנק אתכם</p>
-  <a href="tel:97672907" class="cta-btn reveal reveal-delay-2">התקשרו עכשיו</a>
-</section>
-
-<!-- Contact -->
-<section class="section contact" id="contact">
-  <div class="section-inner">
-    <div class="reveal" style="text-align:center">
-      <div class="section-label">צרו קשר</div>
-      <h2 class="section-title">נשמח <span class="underline">לשמוע מכם</span></h2>
-    </div>
-    <div class="contact-card reveal reveal-delay-1">
-      <div class="contact-name">מסעדת מג'די</div>
-      <div class="contact-city">משה שרת 24, כפר סבא, ישראל, כפר סבא</div>
-      <div class="contact-buttons">
-        <a href="https://wa.me/97297672907" class="contact-btn btn-whatsapp">WhatsApp</a>
-        <a href="tel:97672907" class="contact-btn btn-phone">09-767-2907</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Real Google Reviews -->
-<section style="padding:60px 24px;background:#FAFAF8">
-  <div style="max-width:1100px;margin:0 auto">
-    <h2 style="text-align:center;font-size:1.8rem;font-weight:700;color:#1a1a1a;margin-bottom:8px">מה הלקוחות אומרים</h2>
-    <p style="text-align:center;color:#888;margin-bottom:40px;font-size:15px">ביקורות אמיתיות מגוגל</p>
-    <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center">
-      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
-          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">a</div>
-          <div>
-            <div style="font-weight:600;font-size:15px;color:#1a1a1a">alon</div>
-            <div style="font-size:12px;color:#999">לפני 3 חודשים</div>
-          </div>
-        </div>
-        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#ddd">&#9733;</span><span style="color:#ddd">&#9733;</span><span style="color:#ddd">&#9733;</span></div>
-        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"חזרנו לאכול אחרי תקופה ארוכה שלא אכלנו הופתענו לרעה מהמחירים ורמת השרות המסעדה היתה ריקה ולקח למלצר המון זמן עד שניגש אלינו.
-בסיום ביקשנו חשבון ולא הביאו ניגשנו לקופה לשלם.
-האוכל היה טעים אבל כמו שציי..."</p>
-      </div>
-      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
-          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">a</div>
-          <div>
-            <div style="font-weight:600;font-size:15px;color:#1a1a1a">ariel sarig</div>
-            <div style="font-size:12px;color:#999">לפני 5 חודשים</div>
-          </div>
-        </div>
-        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#ddd">&#9733;</span><span style="color:#ddd">&#9733;</span><span style="color:#ddd">&#9733;</span></div>
-        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"הזמנו דרך וולט שיפוד כבש וצלחת פרגית עם חומוס עם תוספות של ציפס וסלט ירוק, הפרגית והחומוס הרגישו הכי בסיסיים שיש, הפיתות הגיעו יבשות, הכבש היה בסדר אבל התמלא במגש שלולית של נוזל מימי שקצת מעיד על בשר ..."</p>
-      </div>
-      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
-          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">J</div>
-          <div>
-            <div style="font-weight:600;font-size:15px;color:#1a1a1a">Jamie Clark</div>
-            <div style="font-size:12px;color:#999">לפני 3 שנים</div>
-          </div>
-        </div>
-        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#ddd">&#9733;</span><span style="color:#ddd">&#9733;</span><span style="color:#ddd">&#9733;</span><span style="color:#ddd">&#9733;</span></div>
-        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"חוויה גרועה מאד.. הזמנו אוכל בכמעט 400 שקל למשפחה - ממולאים עם אורז לא מוכן וקרים, את השתיה בכלל שכחו - והשיא נייר חתוך בתוך הסלט ובתוך הממולאים, ממש הפתעה!! פשוט הזוי יש כאן ילדים שיכלו הלינק מהנייר...."</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Map -->
-<section style="padding:0">
-  <div style="max-width:1100px;margin:0 auto;padding:0 24px 60px">
-    <div style="border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.06)">
-      <iframe
-        width="100%"
-        height="350"
-        style="border:0;display:block"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        src="https://maps.google.com/maps?q=%D7%9E%D7%A1%D7%A2%D7%93%D7%AA%20%D7%9E%D7%92%27%D7%93%D7%99%20%D7%9B%D7%A4%D7%A8%20%D7%A1%D7%91%D7%90+ישראל&output=embed&hl=he&z=16">
-      </iframe>
-      <div style="padding:20px;background:#fff;text-align:center">
-        <p style="color:#3D3D3D;font-size:1rem;margin-bottom:12px">משה שרת 24, כפר סבא, ישראל</p>
-        <a href="https://www.google.com/maps/search/?api=1&query=%D7%9E%D7%A1%D7%A2%D7%93%D7%AA%20%D7%9E%D7%92%27%D7%93%D7%99%20%D7%9B%D7%A4%D7%A8%20%D7%A1%D7%91%D7%90" target="_blank" style="color:#4285f4;text-decoration:none;font-weight:600;font-size:14px">פתח בגוגל מפות</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div style="background:#f5f5f5;border-top:1px solid #ddd;padding:16px 20px;text-align:center;font-family:Heebo,Arial,sans-serif;direction:rtl;font-size:12px;color:#999;line-height:1.6;">אתר לדוגמא בלבד — נבנה על ידי <a href="https://alon-dev.vercel.app" style="color:#0f3460;">alon dev</a> כהצעה עסקית. אינו מייצג את העסק באופן רשמי. המידע נאסף ממקורות ציבוריים (Google Maps). <a href="https://output-seven-black.vercel.app/terms/" style="color:#0f3460;">תנאי שימוש</a><br>לבקשת הסרה מיידית: <a href="https://wa.me/972559173249?text=בקשת%20הסרה%20-%20מסעדת%20מג'די" style="color:#25D366;">055-917-3249</a></div>
-
-<!-- Footer -->
-<footer class="site-footer">
-  <p>מסעדת מג'די | כפר סבא</p>
-</footer>
-
-<!-- Floating Nav -->
-<nav class="float-nav" id="floatNav">
-  <a href="#home">ראשי</a>
-  <a href="#menu">תפריט</a>
-  <a href="#gallery">גלריה</a>
-  <a href="#hours">שעות</a>
-  <a href="#contact">קשר</a>
-</nav>
-
-<script>
-(function(){
-  // Scroll reveal with IntersectionObserver
-  var reveals = document.querySelectorAll('.reveal');
-  var observer = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}
-    });
-  },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
-  reveals.forEach(function(el){observer.observe(el)});
-
-  // Active nav highlight
-  var sections = document.querySelectorAll('section[id]');
-  var navLinks = document.querySelectorAll('.float-nav a');
-  var floatNav = document.getElementById('floatNav');
-
-  window.addEventListener('scroll',function(){
-    var scrollY = window.pageYOffset;
-    // Show/hide floating nav
-    if(scrollY > 350){floatNav.classList.add('show')}else{floatNav.classList.remove('show')}
-    // Highlight active section
-    var current = '';
-    sections.forEach(function(s){
-      if(scrollY >= s.offsetTop - 220) current = s.getAttribute('id');
-    });
-    navLinks.forEach(function(a){
-      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-    });
-  });
-
-  // Subtle parallax on hero background
-  var heroBg = document.querySelector('.hero-bg');
-  window.addEventListener('scroll',function(){
-    if(heroBg && window.pageYOffset < window.innerHeight){
-      heroBg.style.transform = 'translateY(' + (window.pageYOffset * 0.25) + 'px)';
-    }
-  });
-})();
-</script>
-<script>(function(){var p="97672907",n=encodeURIComponent("מסעדת מג'די");var img=new Image();img.src="https://output-seven-black.vercel.app/api/track?phone="+p+"&name="+n+"&t="+Date.now();})()</script>
 
 </body>
 </html>

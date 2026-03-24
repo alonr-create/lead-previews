@@ -122,7 +122,17 @@
         "author": "בר שלום",
         "time": "2 years ago"
       }
-    ]
+    ],
+    "phone": "054-4524666",
+    "all_phones": [
+      "054-4524666",
+      "050-720-0206"
+    ],
+    "website": "sfrishman.co.il",
+    "email": "",
+    "facebook": "",
+    "validated": true,
+    "has_website": true
   },
   "הקוסם|תל אביב": {
     "place_id": "places/ChIJi1CK34BLHRURVsjf6-OGlo4",
@@ -247,7 +257,16 @@
         "author": "eran goldstien",
         "time": "לפני חודש"
       }
-    ]
+    ],
+    "phone": "03-5252033",
+    "all_phones": [
+      "03-5252033"
+    ],
+    "website": "www.hashulchan.co.il/restaurant/הקוסם/",
+    "email": "",
+    "facebook": "",
+    "validated": true,
+    "has_website": false
   },
   "Israeli food telaviv|תל אביב": {
     "place_id": "places/ChIJo9MO4oZMHRURmxNehTzfaDI",
@@ -468,7 +487,14 @@
         "author": "Ac Jgf",
         "time": "לפני 3 חודשים"
       }
-    ]
+    ],
+    "phone": "054-5926702",
+    "all_phones": [],
+    "website": "shawarmamia.co.il",
+    "email": "",
+    "facebook": "",
+    "validated": true,
+    "has_website": true
   },
   "Versavee Restaurant Bar & Cafe|ירושלים": {
     "place_id": "places/ChIJS_zBNNbXAhURCw9LxoTI6co",
@@ -557,7 +583,14 @@
         "author": "יונה צייגר",
         "time": "לפני 7 שנים"
       }
-    ]
+    ],
+    "phone": "",
+    "all_phones": [],
+    "website": "versavee.co.il",
+    "email": "",
+    "facebook": "",
+    "validated": true,
+    "has_website": true
   },
   "צ'אקרה|ירושלים": {
     "place_id": "places/ChIJJ8Y3l9UpAxURQz9UzRSfTfM",
@@ -682,7 +715,14 @@
         "author": "יעלי איצקוביץ גלברד",
         "time": "2 months ago"
       }
-    ]
+    ],
+    "phone": "",
+    "all_phones": [],
+    "website": "chakra-rest.com",
+    "email": "",
+    "facebook": "",
+    "validated": true,
+    "has_website": true
   },
   "Sarwa Street Kitchen|ירושלים": {
     "place_id": "places/ChIJR38Ts8MpAxURoFu4FFjav-E",
@@ -726,7 +766,14 @@
         "author": "simona buchsenspaner",
         "time": "לפני 6 שנים"
       }
-    ]
+    ],
+    "phone": "02-627-4626",
+    "all_phones": [],
+    "website": "",
+    "email": "",
+    "facebook": "",
+    "validated": true,
+    "has_website": false
   },
   "האקליפטוס|ירושלים": {
     "place_id": "places/ChIJdWxij80pAxURsB7W_iQoxu4",
@@ -839,7 +886,14 @@
         "author": "Aviv Feitelman",
         "time": "לפני 4 חודשים"
       }
-    ]
+    ],
+    "phone": "",
+    "all_phones": [],
+    "website": "eucalyptus.rest",
+    "email": "",
+    "facebook": "",
+    "validated": true,
+    "has_website": true
   },
   "אוכלים בשוק|ירושלים": {
     "place_id": "places/ChIJqaqqqinWAhURA5kAIqHxD44",
@@ -964,7 +1018,17 @@
         "author": "Orit Chenkin",
         "time": "לפני שנה"
       }
-    ]
+    ],
+    "phone": "050-535-6386",
+    "all_phones": [
+      "050-535-6386",
+      "02-6222922"
+    ],
+    "website": "ochlimbashuk.co.il",
+    "email": "",
+    "facebook": "obshok",
+    "validated": true,
+    "has_website": true
   },
   "Nafoura Restaurant|ירושלים": {
     "place_id": "places/ChIJJ-WVbM4pAxUR-uACRQT2q18",
@@ -1089,7 +1153,14 @@
         "author": "Roy sadan",
         "time": "לפני 3 חודשים"
       }
-    ]
+    ],
+    "phone": "",
+    "all_phones": [],
+    "website": "nafoura.co.il",
+    "email": "",
+    "facebook": "",
+    "validated": true,
+    "has_website": true
   },
   "מסעדת הוואנה פלוס חיפה|חיפה": {
     "place_id": "places/ChIJvwzpacq7HRURjjOr68TRKyE",
@@ -1226,7 +1297,14 @@
         "author": "Noa 4235962",
         "time": "לפני 3 חודשים"
       }
-    ]
+    ],
+    "phone": "04-851-1919",
+    "all_phones": [],
+    "website": "",
+    "email": "",
+    "facebook": "",
+    "validated": true,
+    "has_website": false
   },
   "זית זיתון|חיפה": {
     "place_id": "places/ChIJuaD2Fo67HRUR9R_TXbsy2vg",
@@ -1351,7 +1429,14 @@
         "author": "Ofir Zommer",
         "time": "2 months ago"
       }
-    ]
+    ],
+    "phone": "",
+    "all_phones": [],
+    "website": "zaituzaytoun.co.il",
+    "email": "",
+    "facebook": "",
+    "validated": true,
+    "has_website": true
   },
   "שרינה|ראשון לציון": {
     "place_id": "places/ChIJDSgXvDi0AhURbJMsryjhBAM",
@@ -1474,7 +1559,14 @@
         "author": "Ram Katsir",
         "time": "לפני 7 חודשים"
       }
-    ]
+    ],
+    "phone": "",
+    "all_phones": [],
+    "website": "sharina.co.il",
+    "email": "",
+    "facebook": "",
+    "validated": true,
+    "has_website": true
   },
   "סוהו|ראשון לציון": {
     "place_id": "places/ChIJNTLFW1C0AhURCO-ei4sEVS0",
@@ -1611,7 +1703,14 @@
         "author": "Niv Yanir",
         "time": "לפני 4 שבועות"
       }
-    ]
+    ],
+    "phone": "",
+    "all_phones": [],
+    "website": "soho-rishon.co.il",
+    "email": "",
+    "facebook": "",
+    "validated": true,
+    "has_website": true
   },
   "יונס אלדיוואן נתניה|נתניה": {
     "place_id": "places/ChIJsxKOiYtBHRURWw4e847pL9I",
@@ -1748,7 +1847,14 @@
         "author": "ישי כהן",
         "time": "2 months ago"
       }
-    ]
+    ],
+    "phone": "054-428-9898",
+    "all_phones": [],
+    "website": "",
+    "email": "",
+    "facebook": "",
+    "validated": true,
+    "has_website": false
   },
   "26 נפוליטן הרצליה | 26 NEAPOLITAN STYLE|הרצליה": {
     "place_id": "places/ChIJafO8Rn9JHRURSVhFjYbLsC0",
@@ -1873,7 +1979,14 @@
         "author": "Nevo Vanunu",
         "time": "לפני 3 שבועות"
       }
-    ]
+    ],
+    "phone": "050-5474830",
+    "all_phones": [],
+    "website": "",
+    "email": "",
+    "facebook": "",
+    "validated": true,
+    "has_website": false
   },
   "VERANDA 57|רמת גן": {
     "place_id": "places/ChIJc11KlGJLHRUR5Zb0TC6d5Co",
@@ -2010,7 +2123,15 @@
         "author": "asaf levin",
         "time": "לפני 4 חודשים"
       }
-    ]
+    ],
+    "phone": "058-7908009",
+    "all_phones": [],
+    "website": "",
+    "email": "",
+    "facebook": "",
+    "validated": true,
+    "instagram": "veranda57_bar",
+    "has_website": false
   },
   "פלאפל אוחנה|רמת גן": {
     "place_id": "places/ChIJZ9TVarZLHRURsfAmHuUb1w4",
@@ -2131,7 +2252,14 @@
         "author": "Maria Weiss",
         "time": "2 weeks ago"
       }
-    ]
+    ],
+    "phone": "03-902-6727",
+    "all_phones": [],
+    "website": "",
+    "email": "",
+    "facebook": "",
+    "validated": true,
+    "has_website": false
   },
   "G27|רמת גן": {
     "place_id": "places/ChIJafEDTuBLHRURiNBnLrj6NBA",
@@ -2256,7 +2384,14 @@
         "author": "Daniella B",
         "time": "2 months ago"
       }
-    ]
+    ],
+    "phone": "03-739-1659",
+    "all_phones": [],
+    "website": "",
+    "email": "",
+    "facebook": "",
+    "validated": true,
+    "has_website": false
   },
   "לה פפריקה|רמת גן": {
     "place_id": "places/ChIJWYn7E05KHRURTfF73rAGXrw",
@@ -2381,7 +2516,14 @@
         "author": "Nir Shr",
         "time": "2 months ago"
       }
-    ]
+    ],
+    "phone": "03-612-4554",
+    "all_phones": [],
+    "website": "",
+    "email": "",
+    "facebook": "",
+    "validated": true,
+    "has_website": false
   },
   "פטרוזיליס|רמת גן": {
     "place_id": "places/ChIJzxMxfSJLHRUR9ebOKa4PeUU",
@@ -2504,7 +2646,14 @@
         "author": "Daniel Mayer",
         "time": "לפני 6 שנים"
       }
-    ]
+    ],
+    "phone": "03-631-8000",
+    "all_phones": [],
+    "website": "",
+    "email": "",
+    "facebook": "",
+    "validated": true,
+    "has_website": false
   },
   "מזנון סביח המקורי|רמת גן": {
     "place_id": "places/ChIJJY0XiU5KHRUR3dgEXNW6mRE",
@@ -2629,7 +2778,14 @@
         "author": "Avi Dodi",
         "time": "לפני 3 חודשים"
       }
-    ]
+    ],
+    "phone": "03-677-8065",
+    "all_phones": [],
+    "website": "",
+    "email": "",
+    "facebook": "",
+    "validated": true,
+    "has_website": false
   },
   "Felfel Georgie|רמת גן": {
     "place_id": "places/ChIJV-IAwnhLHRURe1_duljT6L0",
@@ -2754,7 +2910,13 @@
         "author": "Yigal Staroselsky",
         "time": "לפני חודש"
       }
-    ]
+    ],
+    "phone": "053-937-4169",
+    "all_phones": [],
+    "website": "",
+    "email": "",
+    "facebook": "",
+    "validated": true
   },
   "דורון ג'ון|חולון": {
     "place_id": "places/ChIJQZsbNr21AhURWAa81_eGTb8",
@@ -2879,7 +3041,15 @@
         "author": "Harold Iliya",
         "time": "לפני 3 חודשים"
       }
-    ]
+    ],
+    "phone": "058-5756543",
+    "all_phones": [],
+    "website": "",
+    "email": "",
+    "facebook": "דורון ג'ון עגלת קפה",
+    "validated": true,
+    "instagram": "doron__jun",
+    "has_website": false
   },
   "פיצה פפיניו - קניון חולון | בד״ץ|חולון": {
     "place_id": "places/ChIJ0VqzYPS1AhURlfy6Z6xEzww",
@@ -3016,7 +3186,13 @@
         "author": "איליי ישונסקי",
         "time": "לפני 3 חודשים"
       }
-    ]
+    ],
+    "phone": "03-547-8888",
+    "all_phones": [],
+    "website": "",
+    "email": "",
+    "facebook": "",
+    "validated": true
   },
   "Bobo italian - בובו איטליאן|חולון": {
     "place_id": "places/ChIJ7T61bACzAhURs4Y8iOSfArg",
@@ -3153,7 +3329,13 @@
         "author": "רווית רונן 360",
         "time": "2 months ago"
       }
-    ]
+    ],
+    "phone": "050-574-5344",
+    "all_phones": [],
+    "website": "",
+    "email": "",
+    "facebook": "",
+    "validated": true
   },
   "צנטרו - הבוריק של צ'ונה|חולון": {
     "place_id": "places/ChIJL0eWSlqzAhURGucHSSTGdSQ",
@@ -3266,7 +3448,13 @@
         "author": "בנימין כהן",
         "time": "לפני 4 חודשים"
       }
-    ]
+    ],
+    "phone": "053-500-0503",
+    "all_phones": [],
+    "website": "",
+    "email": "",
+    "facebook": "",
+    "validated": true
   },
   "הפלאפל חולון|חולון": {
     "place_id": "places/ChIJm69fQpqzAhURIL5oc-bx4NY",
@@ -3379,7 +3567,13 @@
         "author": "Asaf antebi",
         "time": "לפני 7 חודשים"
       }
-    ]
+    ],
+    "phone": "",
+    "all_phones": [],
+    "website": "",
+    "email": "",
+    "facebook": "",
+    "validated": true
   },
   "כרמל 76 ביסטרו קפה|רחובות": {
     "place_id": "places/ChIJQ9uKnnW3AhURr1WBsfEixFs",
@@ -3516,7 +3710,10 @@
         "author": "עורכת דין טלי הר שדה הר שדה",
         "time": "לפני 3 שבועות"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "08-6322226"
   },
   "בעל הבית|רחובות": {
     "place_id": "places/ChIJB-h8SnW3AhURExp6gAUDOZ0",
@@ -3653,7 +3850,9 @@
         "author": "haya paz bartal",
         "time": "2 weeks ago"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": true
   },
   "פטיסרי - רחובות|רחובות": {
     "place_id": "places/ChIJIXx5BgS3AhURaiWvsBqXpiI",
@@ -3778,7 +3977,10 @@
         "author": "Tel Gor",
         "time": "לפני 3 חודשים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "08-947-0839"
   },
   "מסעדת מג'די|כפר סבא": {
     "place_id": "places/ChIJFeQZZLQ5HRURgRtJC-pydno",
@@ -3915,7 +4117,11 @@
         "author": "Jamie Clark",
         "time": "לפני 3 שנים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "053-9417135",
+    "website": "rest.co.il subdomain only"
   },
   "סטקיית הכפר כפר סבא|כפר סבא": {
     "place_id": "places/ChIJgbYInkg4HRURzdHpAEose4U",
@@ -4052,7 +4258,10 @@
         "author": "Iris Adereth",
         "time": "לפני חודש"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "09-748-3193"
   },
   "La Toscana Raanana - לה טוסקנה רעננה|רעננה": {
     "place_id": "places/ChIJD37xvso5HRURgvEdLV4Q2AE",
@@ -4177,7 +4386,9 @@
         "author": "Yadin Levert",
         "time": "2 months ago"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": true
   },
   "סלטה|רעננה": {
     "place_id": "places/ChIJ5TpFFhM4HRURb5TdFhrWFnc",
@@ -4302,7 +4513,10 @@
         "author": "David Ben Ari",
         "time": "לפני 4 חודשים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": true,
+    "website": "saltaa.com"
   },
   "כיפה אדומה|רעננה": {
     "place_id": "places/ChIJE-_0TxM4HRURH0u6JqxNqiI",
@@ -4427,7 +4641,10 @@
         "author": "Efrat",
         "time": "לפני 3 חודשים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "09-7410508"
   },
   "מסעדת אנטריקוט אילת - Entrecote eilat resturant|אילת": {
     "place_id": "places/ChIJh3n7VgJuABUR_OUzNDW8sbk",
@@ -4552,7 +4769,10 @@
         "author": "Amichai Zuntz",
         "time": "לפני 5 חודשים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": true,
+    "website": "antrikoti.co.il"
   },
   "מספרה טל ביוטי לוק|תל אביב": {
     "place_id": "places/ChIJV5guAR5NHRURily74Juhids",
@@ -4665,7 +4885,10 @@
         "author": "Tiki Dorin",
         "time": "2 months ago"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "03-960-2767"
   },
   "yullia King George - מומחים בהסרת שיער בלייזר | הזרקות | טיפול פנים | מניקור | פדיקור רפואי|תל אביב": {
     "place_id": "places/ChIJExIJn3hMHRURvLySbSxMEvA",
@@ -4790,7 +5013,11 @@
         "author": "ליאור",
         "time": "לפני 5 חודשים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": true,
+    "website": "yullia.com",
+    "phone": "054-295-2923"
   },
   "Beauty Salon Kure Boutique|תל אביב": {
     "place_id": "places/ChIJR0iDS3lMHRURxI2C1x0xKXU",
@@ -4915,7 +5142,11 @@
         "author": "רוני רבו",
         "time": "לפני 7 שנים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": true,
+    "website": "kureboutique.com",
+    "phone": "03-5737473"
   },
   "סלון יפו jaffa salon|תל אביב": {
     "place_id": "places/ChIJ5-soP7lMHRURv8Ow1Enm9aE",
@@ -5028,7 +5259,11 @@
         "author": "ella novak",
         "time": "לפני 8 חודשים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "03-6053804",
+    "email": "salonjaffa@gmail.com"
   },
   "Jerusalem Kératine Hair salon Mamilla|ירושלים": {
     "place_id": "places/ChIJsXBvhxwpAxUR2KurG1GE3xY",
@@ -5153,7 +5388,11 @@
         "author": "Sarah Reboh",
         "time": "לפני 4 שנים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "instagram": "jerusalemkeratin",
+    "phone": "052-316-1213"
   },
   "LaVita Cosmetics|ירושלים": {
     "place_id": "places/ChIJa78-M9YpAxURN_yf3DHGEew",
@@ -5278,7 +5517,10 @@
         "author": "Roza Hahamov",
         "time": "לפני 5 שנים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "054-774-7717"
   },
   "סטודיו קארין מכון יופי|ירושלים": {
     "place_id": "places/ChIJZW6n7NcpAxURN4bss2SxWDI",
@@ -5391,7 +5633,16 @@
         "author": "s l",
         "time": "2 years ago"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "02-6223390",
+    "all_phones": [
+      "02-6223390",
+      "058-444-5477",
+      "052-223-9912"
+    ],
+    "facebook": "studiokarinjerusalem"
   },
   "Cherry Spa|ירושלים": {
     "place_id": "places/ChIJp9NAKfApAxURlKZjs49y0qI",
@@ -5502,7 +5753,10 @@
         "author": "Alina Modlin",
         "time": "לפני 3 שנים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "02-628-8899"
   },
   "טטיאנה סלון יופי Nail Salon Tatyana|ירושלים": {
     "place_id": "places/ChIJ-9FsMNYpAxURPJ8PYzO46tA",
@@ -5615,7 +5869,10 @@
         "author": "רחל קרויזר כהנוביץ",
         "time": "לפני 8 חודשים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "052-560-8562"
   },
   "Electrolysis by Chaya|ירושלים": {
     "place_id": "places/ChIJQyelgiTWAhURZyF6LRLNFcg",
@@ -5788,7 +6045,11 @@
         "author": "משה ברמן",
         "time": "לפני 6 שנים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "053-974-0653",
+    "facebook": "electrolysisbychaya"
   },
   "Pi Health And Beauty Wellness Clinic|ירושלים": {
     "place_id": "places/ChIJ23DbxCrWAhURQjrqNSKcsnk",
@@ -5911,7 +6172,11 @@
         "author": "batya Zaks",
         "time": "לפני 3 שנים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "072-212-8001",
+    "facebook": "pihealthbeautywellness"
   },
   "Paroa' Hair Salon Haifa פרוע|חיפה": {
     "place_id": "places/ChIJiaWVWrq7HRURmkIKxDl6_0M",
@@ -6036,7 +6301,10 @@
         "author": "האני עודה",
         "time": "לפני 3 שנים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "058-6777553"
   },
   "Salon MARGO Haifa|חיפה": {
     "place_id": "places/ChIJLZ3pmUy6HRURRYFmIK5jP6I",
@@ -6161,7 +6429,10 @@
         "author": "Renata Koltoniuk (Renatush_IL)",
         "time": "לפני 5 שנים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "052-772-4439"
   },
   "Elen Traysman by la petite Madlen|חיפה": {
     "place_id": "places/ChIJTx7HLaK7HRURLkvm8BNYIN8",
@@ -6286,7 +6557,10 @@
         "author": "Lea Fernandes",
         "time": "לפני 4 שנים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "052-9526252"
   },
   "דבורה פריווה סלון היופי שלך בחיפה|חיפה": {
     "place_id": "places/ChIJBdBsfQC7HRURsbYGesrTQLU",
@@ -6411,7 +6685,10 @@
         "author": "Ilanawhatsapp 1",
         "time": "2 months ago"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "054-8035466"
   },
   "CULT | סטודיו ליופי והכשרה | מניקור • פדיקור • ריסים • גבות • הסרת שיער | חיפה|חיפה": {
     "place_id": "places/ChIJH-xKPny7HRURA0qrI4bMjIk",
@@ -6536,7 +6813,9 @@
         "author": "Anton Yasukoitz",
         "time": "לפני חודש"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false
   },
   "הלנייז - Helenayz בוטיק יופי|חיפה": {
     "place_id": "places/ChIJJ4_J9GK7HRURGi8kGr7l53o",
@@ -6590,7 +6869,10 @@
         "author": "רינה אלמקייס",
         "time": "לפני שנה"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": true,
+    "website": "helenayz.co.il"
   },
   "O.K. Beauty Studio|באר שבע": {
     "place_id": "places/ChIJiWfS4ilnAhURRSAmDcEnuHE",
@@ -6703,7 +6985,10 @@
         "author": "Yana Yelizarova",
         "time": "לפני 3 שנים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "054-380-3074"
   },
   "סלון נורית|באר שבע": {
     "place_id": "places/ChIJsz_doQxmAhUROzIhk2Li74E",
@@ -6806,7 +7091,11 @@
         "author": "מתופפי המדבר",
         "time": "לפני 5 שנים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "052-288-5362",
+    "facebook": "salonnourit"
   },
   "סטודיו לאסתטיקה VG|באר שבע": {
     "place_id": "places/ChIJE3_H6KZnAhURKDJyvMX3-LI",
@@ -6931,7 +7220,10 @@
         "author": "Татьяна Берлин",
         "time": "לפני 4 שנים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "077-440-1576"
   },
   "OCD BARBERSHOP & ACADEMY | אוסידי מספרה ואקדמיה|באר שבע": {
     "place_id": "places/ChIJ1TofZFxnAhUR8LbC1lzab4A",
@@ -7056,7 +7348,11 @@
         "author": "Short Videos",
         "time": "לפני 3 חודשים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "053-722-8233",
+    "instagram": "ocd_barber_academy"
   },
   "מספרת שמפו|באר שבע": {
     "place_id": "places/ChIJV2-8zhZmAhURyBeVl42Dvxw",
@@ -7171,7 +7467,10 @@
         "author": "Eli Einfeld",
         "time": "לפני 3 חודשים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "08-623-2344"
   },
   "לק ג׳ל באר שבע - שרון גוזלן|באר שבע": {
     "place_id": "places/ChIJn8EglhpnAhUR3Sr2wlvMYB0",
@@ -7296,7 +7595,11 @@
         "author": "Noa Sarussy",
         "time": "לפני 5 שנים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": true,
+    "website": "sharongozlan.com",
+    "phone": "052-602-1719"
   },
   "אבישי הספר -עיצוב שיער|באר שבע": {
     "place_id": "places/ChIJH-4M7ehnAhURKsDo10hnUW8",
@@ -7421,7 +7724,10 @@
         "author": "אלה יזנברג",
         "time": "לפני 3 שנים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "054-238-9944"
   },
   "MagicNails|באר שבע": {
     "place_id": "places/ChIJe6KvwxZmAhURIKyoHB-Sf_Q",
@@ -7546,7 +7852,10 @@
         "author": "Edgardo Bilkis",
         "time": "לפני 6 שנים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "052-8242540"
   },
   "פדיקור רפואי קארין אוחיון|באר שבע": {
     "place_id": "places/ChIJRYVH18N9AhURBSoguo1hDXA",
@@ -7667,7 +7976,10 @@
         "author": "Tom",
         "time": "לפני 9 חודשים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "050-555-4935"
   },
   "חן מויאל- עיצוב ושיקום גבות•איפור קבוע : מיקרובליידינג •שערה •פודרה • פיגמנט שפתיים •הסרה ברימובר • הרמת ריסים וגבות •קורסים|באר שבע": {
     "place_id": "places/ChIJDSzXbB1nAhUR5EKz0eQjW_c",
@@ -7792,7 +8104,10 @@
         "author": "Noa Levy",
         "time": "לפני 5 חודשים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false,
+    "phone": "050-390-2226"
   },
   "Alin`s Cosmetics & Beauty קוסמטיקאית בראשון לציון - אלין|ראשון לציון": {
     "place_id": "places/ChIJHTLnZLqzAhURt9DUKHslW6s",
@@ -7917,7 +8232,10 @@
         "author": "חן מצליח יצקן",
         "time": "לפני 3 שנים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": true,
+    "website": "alinscosmetics.com"
   },
   "Rishon Studio|ראשון לציון": {
     "place_id": "places/ChIJ2V_oEaG1AhUR6_6RegphP2o",
@@ -8042,6 +8360,8 @@
         "author": "Yulia S",
         "time": "לפני 3 שנים"
       }
-    ]
+    ],
+    "validated": true,
+    "has_website": false
   }
 }

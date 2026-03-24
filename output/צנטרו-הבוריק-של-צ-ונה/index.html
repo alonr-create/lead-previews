@@ -35,7 +35,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
 
 /* --- Hero --- */
 .hero{position:relative;height:100vh;min-height:620px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;padding-bottom:80px}
-.hero-bg{position:absolute;inset:0;background:url('https://places.googleapis.com/v1/places/ChIJL0eWSlqzAhURGucHSSTGdSQ/photos/AU_ZVEGmM6u-j_k4nCqy2EAAU8bRpFRGDeaSW5kMQjQDXSnh7APivSgSmIOyUA0PNt0v4ZyLjR7c1jAhwZC6YB-H7oAXr9QxYNQrdDB18PP9NOtLkzrkzUamJ_4PMWJSatkfuxJHL8mYHDV3LohWaApCCNNReupYgBkC1UzjDumol3LXKSyIcBgAurQ7xsYKi732IaDMzIauJpBxxmAlV6HxHanEU3UIaeEg9oR9OBzouB-6ChHbQiafKFInC2FBvkhQpsyBVLyqiWdHjSds0zt2ftR76zLnNj33p91-TzCy4rw0gw/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ') center/cover no-repeat;will-change:transform}
+.hero-bg{position:absolute;inset:0;background:url('{{PHOTO_1}}') center/cover no-repeat;will-change:transform}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(250,250,248,0.1) 0%,rgba(250,250,248,0.35) 30%,rgba(250,250,248,0.92) 85%,var(--bg) 100%)}
 .hero-content{position:relative;z-index:2;text-align:center;padding:0 24px;max-width:700px;animation:fadeInUp 1s cubic-bezier(0.16,1,0.3,1) 0.2s both}
 .hero-badge{display:inline-block;padding:6px 22px;background:rgba(184,92,56,0.08);border:1px solid rgba(184,92,56,0.15);border-radius:100px;font-size:13px;color:var(--sienna);letter-spacing:1.5px;margin-bottom:20px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
@@ -159,6 +159,217 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
 </style>
 </head>
 <body>
+{{BANNER}}
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">חוויה קולינרית</div>
+    <h1><span>צנטרו - הבוריק של צ'ונה</span></h1>
+    <p class="hero-sub">טעמים שמספרים סיפור</p>
+    <p class="hero-city">חולון</p>
+    <a href="tel:535000503" class="hero-cta">הזמינו מקום</a>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    <span>גלגלו למטה</span>
+  </div>
+</section>
+
+<!-- Rating -->
+<section class="rating-strip reveal">
+  <div class="rating-inner">
+    <div class="stars">
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+    </div>
+    <div class="rating-score">{{RATING}}</div>
+    <div class="rating-text">{{REVIEWS_COUNT}} ביקורות בגוגל</div>
+    <div class="rating-address">{{ADDRESS}}</div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section about" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <img src="{{PHOTO_2}}" alt="מנה מהמסעדה" loading="lazy">
+        <div class="about-accent"></div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="section-label">הסיפור שלנו</div>
+        <h2 class="section-title">מקום שבו <span class="underline">הטעם פוגש את הלב</span></h2>
+        <p class="section-desc">בצנטרו - הבוריק של צ'ונה אנחנו מאמינים שאוכל טוב הוא יותר ממרכיבים על צלחת. זו חוויה שמחברת אנשים, מעוררת זיכרונות ויוצרת רגעים חדשים.</p>
+        <p class="about-text" style="font-size:16px;color:var(--text-light);line-height:1.9;margin-top:16px">כל מנה מוכנה באהבה מחומרי גלם טריים ואיכותיים, עם תשומת לב לכל פרט. אנחנו מזמינים אתכם לשבת, להירגע וליהנות.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Menu -->
+<section class="section menu" id="menu">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label">התפריט</div>
+      <h2 class="section-title">המנות <span class="underline">המומלצות שלנו</span></h2>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card reveal reveal-delay-1">
+        <img class="menu-card-img" src="{{PHOTO_3}}" alt="סטייק אנטריקוט" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-name">סטייק אנטריקוט</div>
+          <div class="menu-card-desc">צלוי על גחלים לשלמות, מוגש עם ירקות עונה</div>
+          <div class="menu-card-price">139 &#8362;</div>
+        </div>
+      </div>
+      <div class="menu-card reveal reveal-delay-2">
+        <img class="menu-card-img" src="{{PHOTO_4}}" alt="סלט השף" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-name">סלט השף</div>
+          <div class="menu-card-desc">ירוקים טריים, גבינת עיזים, אגוזים וויניגרט הדרים</div>
+          <div class="menu-card-price">62 &#8362;</div>
+        </div>
+      </div>
+      <div class="menu-card reveal reveal-delay-3">
+        <img class="menu-card-img" src="{{PHOTO_5}}" alt="פסטה טרייה" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-name">פסטה טרייה</div>
+          <div class="menu-card-desc">פסטה ביתית ברוטב שמנת כמהין ופטריות בר</div>
+          <div class="menu-card-price">78 &#8362;</div>
+        </div>
+      </div>
+      <div class="menu-card reveal reveal-delay-4">
+        <img class="menu-card-img" src="{{PHOTO_6}}" alt="קינוח השף" loading="lazy">
+        <div class="menu-card-body">
+          <div class="menu-card-name">קינוח השף</div>
+          <div class="menu-card-desc">מוס שוקולד בלגי על בסיס פירות יער טריים</div>
+          <div class="menu-card-price">52 &#8362;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="section gallery" id="gallery">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label">גלריה</div>
+      <h2 class="section-title">רגעים מ<span class="underline">צנטרו - הבוריק של צ'ונה</span></h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal reveal-delay-1"><img src="{{PHOTO_1}}" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-2"><img src="{{PHOTO_2}}" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-3"><img src="{{PHOTO_3}}" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-1"><img src="{{PHOTO_4}}" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-2"><img src="{{PHOTO_1}}" alt="גלריה" loading="lazy"></div>
+      <div class="gallery-item reveal reveal-delay-3"><img src="{{PHOTO_2}}" alt="גלריה" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Hours -->
+<section class="section hours" id="hours">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label">שעות פתיחה</div>
+      <h2 class="section-title">מתי <span class="underline">אפשר לבוא</span></h2>
+    </div>
+    <div class="hours-card reveal reveal-delay-1">
+      <div class="hours-row"><span class="hours-day">ראשון - חמישי</span><span class="hours-time">12:00 - 23:00</span></div>
+      <div class="hours-row"><span class="hours-day">שישי</span><span class="hours-time">12:00 - 15:00</span></div>
+      <div class="hours-row"><span class="hours-day">מוצאי שבת</span><span class="hours-time">20:00 - 23:30</span></div>
+    </div>
+    <p class="hours-address reveal reveal-delay-2">{{ADDRESS}}, חולון</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2 class="reveal">מוכנים לחוויה קולינרית?</h2>
+  <p class="reveal reveal-delay-1">הזמינו מקום ותנו לנו לפנק אתכם</p>
+  <a href="tel:535000503" class="cta-btn reveal reveal-delay-2">התקשרו עכשיו</a>
+</section>
+
+<!-- Contact -->
+<section class="section contact" id="contact">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label">צרו קשר</div>
+      <h2 class="section-title">נשמח <span class="underline">לשמוע מכם</span></h2>
+    </div>
+    <div class="contact-card reveal reveal-delay-1">
+      <div class="contact-name">צנטרו - הבוריק של צ'ונה</div>
+      <div class="contact-city">{{ADDRESS}}, חולון</div>
+      <div class="contact-buttons">
+        <a href="https://wa.me/972535000503" class="contact-btn btn-whatsapp">WhatsApp</a>
+        <a href="tel:535000503" class="contact-btn btn-phone">053-500-0503</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{REVIEWS_SECTION}}
+
+<!-- Footer -->
+<footer class="site-footer">
+  <p>צנטרו - הבוריק של צ'ונה | חולון</p>
+</footer>
+
+<!-- Floating Nav -->
+<nav class="float-nav" id="floatNav">
+  <a href="#home">ראשי</a>
+  <a href="#menu">תפריט</a>
+  <a href="#gallery">גלריה</a>
+  <a href="#hours">שעות</a>
+  <a href="#contact">קשר</a>
+</nav>
+
+<script>
+(function(){
+  // Scroll reveal with IntersectionObserver
+  var reveals = document.querySelectorAll('.reveal');
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}
+    });
+  },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+  reveals.forEach(function(el){observer.observe(el)});
+
+  // Active nav highlight
+  var sections = document.querySelectorAll('section[id]');
+  var navLinks = document.querySelectorAll('.float-nav a');
+  var floatNav = document.getElementById('floatNav');
+
+  window.addEventListener('scroll',function(){
+    var scrollY = window.pageYOffset;
+    // Show/hide floating nav
+    if(scrollY > 350){floatNav.classList.add('show')}else{floatNav.classList.remove('show')}
+    // Highlight active section
+    var current = '';
+    sections.forEach(function(s){
+      if(scrollY >= s.offsetTop - 220) current = s.getAttribute('id');
+    });
+    navLinks.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+
+  // Subtle parallax on hero background
+  var heroBg = document.querySelector('.hero-bg');
+  window.addEventListener('scroll',function(){
+    if(heroBg && window.pageYOffset < window.innerHeight){
+      heroBg.style.transform = 'translateY(' + (window.pageYOffset * 0.25) + 'px)';
+    }
+  });
+})();
+</script>
 <!-- Lead Preview Banner -->
 <style>
   .lp-banner {
@@ -251,286 +462,6 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
   <button class="lp-banner-close" onclick="document.getElementById('lpBanner').classList.add('lp-hidden');document.body.style.paddingTop='0'" aria-label="סגור">&times;</button>
 </div>
 <!-- End Banner -->
-
-
-<!-- Hero -->
-<section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-badge">חוויה קולינרית</div>
-    <h1><span>צנטרו - הבוריק של צ'ונה</span></h1>
-    <p class="hero-sub">טעמים שמספרים סיפור</p>
-    <p class="hero-city">חולון</p>
-    <a href="tel:537300777" class="hero-cta">הזמינו מקום</a>
-  </div>
-  <div class="scroll-hint">
-    <div class="scroll-line"></div>
-    <span>גלגלו למטה</span>
-  </div>
-</section>
-
-<!-- Rating -->
-<section class="rating-strip reveal">
-  <div class="rating-inner">
-    <div class="stars">
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-    </div>
-    <div class="rating-score">4.6</div>
-    <div class="rating-text">192 ביקורות בגוגל</div>
-    <div class="rating-address">שדרות דב הוז 29, חולון, ישראל</div>
-  </div>
-</section>
-
-<!-- About -->
-<section class="section about" id="about">
-  <div class="section-inner">
-    <div class="about-grid">
-      <div class="about-img-wrap reveal">
-        <img src="https://places.googleapis.com/v1/places/ChIJL0eWSlqzAhURGucHSSTGdSQ/photos/AU_ZVEH2IebhhIHt1wzeS5FExLhWi_YmB92T2bdvNuMSAFELm2BPyw3-fMWDGNCfGUoVRLPwk5hL7Afq_ang9psH3fyNElYdJhAvQBEP7jm0xwt9vx37HtiVpXdPava2U1T2991-7kgKgdAaWZ31ySSxDhJXZPpsshbTgsObRiZcp_QU8YND7O3aCZbxI-TK0Np6MN3SeO0OO1I4l0YHIi9zpywo5UbI2Y8WiQuEkuAoDmjV5ViDXzZd07RlnVC1BKDk-Ar4PlHUNj-eqp_jnSMpOusLqDjnRfRfyyKjEdNXXT0b5Q/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="מנה מהמסעדה" loading="lazy">
-        <div class="about-accent"></div>
-      </div>
-      <div class="reveal reveal-delay-1">
-        <div class="section-label">הסיפור שלנו</div>
-        <h2 class="section-title">מקום שבו <span class="underline">הטעם פוגש את הלב</span></h2>
-        <p class="section-desc">בצנטרו - הבוריק של צ'ונה אנחנו מאמינים שאוכל טוב הוא יותר ממרכיבים על צלחת. זו חוויה שמחברת אנשים, מעוררת זיכרונות ויוצרת רגעים חדשים.</p>
-        <p class="about-text" style="font-size:16px;color:var(--text-light);line-height:1.9;margin-top:16px">כל מנה מוכנה באהבה מחומרי גלם טריים ואיכותיים, עם תשומת לב לכל פרט. אנחנו מזמינים אתכם לשבת, להירגע וליהנות.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Menu -->
-<section class="section menu" id="menu">
-  <div class="section-inner">
-    <div class="reveal" style="text-align:center">
-      <div class="section-label">התפריט</div>
-      <h2 class="section-title">המנות <span class="underline">המומלצות שלנו</span></h2>
-    </div>
-    <div class="menu-grid">
-      <div class="menu-card reveal reveal-delay-1">
-        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJL0eWSlqzAhURGucHSSTGdSQ/photos/AU_ZVEFNZvcbkVZ7Sw8_Yuo4FZVJhiwKieM4OccvhVmzmPiaPKjU4bI1XctTtvthlJmxjVsZ1IKnxfmd_BVzjhUZBP6STlWLRZ_baW8gADbnpN2ASTzgPHLMbShvb7pQv_RkAEveNndLtE7Hoy832WCyZ-NKNQ1swGsAKnV5-8Xuw8LU4DACet0AQlgwNgfbcz2VFvJFO2Keg7k2aeeH9WlUYQH8O4NPzdfvzKo1ju64Hog11wAAQJAlsCe1h0JNhpsprs7N8MrPFuJuT8mytSYaqItYAItmOWLoAgppHXfmAxu_ONUD1mebDB2dlKJdmtxNGqs5j8sQ8stxq_jFBzB1ROnZNkMJMQlSq9yZqjJrHg6f3OoFdW2uQv-BtJx3DofadoWcEYQ943Lv-CEiR3xk26W3F58RlkKee-W1yMGZM50x7qfG/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="סטייק אנטריקוט" loading="lazy">
-        <div class="menu-card-body">
-          <div class="menu-card-name">סטייק אנטריקוט</div>
-          <div class="menu-card-desc">צלוי על גחלים לשלמות, מוגש עם ירקות עונה</div>
-          <div class="menu-card-price">139 &#8362;</div>
-        </div>
-      </div>
-      <div class="menu-card reveal reveal-delay-2">
-        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJL0eWSlqzAhURGucHSSTGdSQ/photos/AU_ZVEGDn1W8KAtEmgaSHGW6KWy_HzZc_3XGxeKEUSWydfZvQ_zdzts-yRWLNOFZb3TaxBhRNxhwLS0s4d13kvS3RS2pVvLf7ct4ZuxyaW5PPUka2SSDhwkhvaBy8E0a5Tr03UvEjYtGsmJiO7ZqhRND7TkjLTi1C7D4Zo0QcPU8I2NCUnxXLCaL5-RbRx5R92yhopNhfjKJMhYuzSb4T_q9kX9FCAYIfQXioBFnqCGnAvhxfSpPDvt2tmqROGjHkpCybWxN-Ui-ZK6JMdsRubxqNEYXfWacNT1qfB2hLIW1NSmVkZj5D-hyPgX1IzHVM61s7gL8PkQooyeQW7yAEpxp5rjX3aNQiv0e_31YRLo4LlaG14v-smdr1nrmpXy8BZe-xhrzl_uhRs5FNmO8ScrbRRmyuogzupZt3UKvR8xezNhOxZM/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="סלט השף" loading="lazy">
-        <div class="menu-card-body">
-          <div class="menu-card-name">סלט השף</div>
-          <div class="menu-card-desc">ירוקים טריים, גבינת עיזים, אגוזים וויניגרט הדרים</div>
-          <div class="menu-card-price">62 &#8362;</div>
-        </div>
-      </div>
-      <div class="menu-card reveal reveal-delay-3">
-        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJL0eWSlqzAhURGucHSSTGdSQ/photos/AU_ZVEGwr6-O6FyOO4HY8_xNluWxl9kH4buhsx-tIGm2v7zYktUBBTpTdesYZRKIgE8LctSTzkIH22BOm-9gHfPL1hxv2OpyK3FjwtxZRyhQ06cOcnGUJZ-I0tQQeJ92r_5WgLRKASvbVqvxv2Xglt7Mo-2A3zJhiE3I5Ec0UhCgxMnW072wnYx7XxAjqiZCKsUopmOIMDNc5yNi2KWyI4FsdWoX3mhDfNVznq-JgiiuA2DBPW50vRRXf3YZsqv_lq70ymzPbg1zy-TH0HmPEvr6Vbaz38i5_u4mQFFQMT8U7skvIWn-IAZ42HkBLarOrtSq8TbLwXRoIgqstbw7TJJzvgfUin4gpabno8yoI6aWwcczfoPr9rsWNzG7EZ2SNR98hLgxTKrKliPIjTHBOscYqRsjXxJS0I8CLgGlDXVyUWN9gCnT/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="פסטה טרייה" loading="lazy">
-        <div class="menu-card-body">
-          <div class="menu-card-name">פסטה טרייה</div>
-          <div class="menu-card-desc">פסטה ביתית ברוטב שמנת כמהין ופטריות בר</div>
-          <div class="menu-card-price">78 &#8362;</div>
-        </div>
-      </div>
-      <div class="menu-card reveal reveal-delay-4">
-        <img class="menu-card-img" src="https://places.googleapis.com/v1/places/ChIJL0eWSlqzAhURGucHSSTGdSQ/photos/AU_ZVEGvnXRKz6MN9dG6W_fkv3sd-KHzGw86ZwvQtUTgVQnoN6Bdc4otiRCnY1hMHwI_VAUviNnwaDHtkZ2UPAIRELSZEYmNdQh1OEm2ZLUsNLrPEKwa-2nY_25BkUfoQj6MtTFkPRmKicU9OTUfVRAIlcrVHJawd0lFY4oQOy2buteI5LvcqahSGfeDRcIKzssenC4UBKeScc_2unK6-HqYXbYF2iiRJ324GFjh1Q1JG2ITAdQ6zc1tL4154XG8Hg0fi7ItqxxO_DXVRFBSKIIYZb2RWXFQDBQS4ofs_v0T8BY1jA/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="קינוח השף" loading="lazy">
-        <div class="menu-card-body">
-          <div class="menu-card-name">קינוח השף</div>
-          <div class="menu-card-desc">מוס שוקולד בלגי על בסיס פירות יער טריים</div>
-          <div class="menu-card-price">52 &#8362;</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Gallery -->
-<section class="section gallery" id="gallery">
-  <div class="section-inner">
-    <div class="reveal" style="text-align:center">
-      <div class="section-label">גלריה</div>
-      <h2 class="section-title">רגעים מ<span class="underline">צנטרו - הבוריק של צ'ונה</span></h2>
-    </div>
-    <div class="gallery-grid">
-      <div class="gallery-item reveal reveal-delay-1"><img src="https://places.googleapis.com/v1/places/ChIJL0eWSlqzAhURGucHSSTGdSQ/photos/AU_ZVEGmM6u-j_k4nCqy2EAAU8bRpFRGDeaSW5kMQjQDXSnh7APivSgSmIOyUA0PNt0v4ZyLjR7c1jAhwZC6YB-H7oAXr9QxYNQrdDB18PP9NOtLkzrkzUamJ_4PMWJSatkfuxJHL8mYHDV3LohWaApCCNNReupYgBkC1UzjDumol3LXKSyIcBgAurQ7xsYKi732IaDMzIauJpBxxmAlV6HxHanEU3UIaeEg9oR9OBzouB-6ChHbQiafKFInC2FBvkhQpsyBVLyqiWdHjSds0zt2ftR76zLnNj33p91-TzCy4rw0gw/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-2"><img src="https://places.googleapis.com/v1/places/ChIJL0eWSlqzAhURGucHSSTGdSQ/photos/AU_ZVEH2IebhhIHt1wzeS5FExLhWi_YmB92T2bdvNuMSAFELm2BPyw3-fMWDGNCfGUoVRLPwk5hL7Afq_ang9psH3fyNElYdJhAvQBEP7jm0xwt9vx37HtiVpXdPava2U1T2991-7kgKgdAaWZ31ySSxDhJXZPpsshbTgsObRiZcp_QU8YND7O3aCZbxI-TK0Np6MN3SeO0OO1I4l0YHIi9zpywo5UbI2Y8WiQuEkuAoDmjV5ViDXzZd07RlnVC1BKDk-Ar4PlHUNj-eqp_jnSMpOusLqDjnRfRfyyKjEdNXXT0b5Q/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-3"><img src="https://places.googleapis.com/v1/places/ChIJL0eWSlqzAhURGucHSSTGdSQ/photos/AU_ZVEFNZvcbkVZ7Sw8_Yuo4FZVJhiwKieM4OccvhVmzmPiaPKjU4bI1XctTtvthlJmxjVsZ1IKnxfmd_BVzjhUZBP6STlWLRZ_baW8gADbnpN2ASTzgPHLMbShvb7pQv_RkAEveNndLtE7Hoy832WCyZ-NKNQ1swGsAKnV5-8Xuw8LU4DACet0AQlgwNgfbcz2VFvJFO2Keg7k2aeeH9WlUYQH8O4NPzdfvzKo1ju64Hog11wAAQJAlsCe1h0JNhpsprs7N8MrPFuJuT8mytSYaqItYAItmOWLoAgppHXfmAxu_ONUD1mebDB2dlKJdmtxNGqs5j8sQ8stxq_jFBzB1ROnZNkMJMQlSq9yZqjJrHg6f3OoFdW2uQv-BtJx3DofadoWcEYQ943Lv-CEiR3xk26W3F58RlkKee-W1yMGZM50x7qfG/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-1"><img src="https://places.googleapis.com/v1/places/ChIJL0eWSlqzAhURGucHSSTGdSQ/photos/AU_ZVEGDn1W8KAtEmgaSHGW6KWy_HzZc_3XGxeKEUSWydfZvQ_zdzts-yRWLNOFZb3TaxBhRNxhwLS0s4d13kvS3RS2pVvLf7ct4ZuxyaW5PPUka2SSDhwkhvaBy8E0a5Tr03UvEjYtGsmJiO7ZqhRND7TkjLTi1C7D4Zo0QcPU8I2NCUnxXLCaL5-RbRx5R92yhopNhfjKJMhYuzSb4T_q9kX9FCAYIfQXioBFnqCGnAvhxfSpPDvt2tmqROGjHkpCybWxN-Ui-ZK6JMdsRubxqNEYXfWacNT1qfB2hLIW1NSmVkZj5D-hyPgX1IzHVM61s7gL8PkQooyeQW7yAEpxp5rjX3aNQiv0e_31YRLo4LlaG14v-smdr1nrmpXy8BZe-xhrzl_uhRs5FNmO8ScrbRRmyuogzupZt3UKvR8xezNhOxZM/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-2"><img src="https://places.googleapis.com/v1/places/ChIJL0eWSlqzAhURGucHSSTGdSQ/photos/AU_ZVEGmM6u-j_k4nCqy2EAAU8bRpFRGDeaSW5kMQjQDXSnh7APivSgSmIOyUA0PNt0v4ZyLjR7c1jAhwZC6YB-H7oAXr9QxYNQrdDB18PP9NOtLkzrkzUamJ_4PMWJSatkfuxJHL8mYHDV3LohWaApCCNNReupYgBkC1UzjDumol3LXKSyIcBgAurQ7xsYKi732IaDMzIauJpBxxmAlV6HxHanEU3UIaeEg9oR9OBzouB-6ChHbQiafKFInC2FBvkhQpsyBVLyqiWdHjSds0zt2ftR76zLnNj33p91-TzCy4rw0gw/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
-      <div class="gallery-item reveal reveal-delay-3"><img src="https://places.googleapis.com/v1/places/ChIJL0eWSlqzAhURGucHSSTGdSQ/photos/AU_ZVEH2IebhhIHt1wzeS5FExLhWi_YmB92T2bdvNuMSAFELm2BPyw3-fMWDGNCfGUoVRLPwk5hL7Afq_ang9psH3fyNElYdJhAvQBEP7jm0xwt9vx37HtiVpXdPava2U1T2991-7kgKgdAaWZ31ySSxDhJXZPpsshbTgsObRiZcp_QU8YND7O3aCZbxI-TK0Np6MN3SeO0OO1I4l0YHIi9zpywo5UbI2Y8WiQuEkuAoDmjV5ViDXzZd07RlnVC1BKDk-Ar4PlHUNj-eqp_jnSMpOusLqDjnRfRfyyKjEdNXXT0b5Q/media?maxWidthPx=800&key=AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ" alt="גלריה" loading="lazy"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Hours -->
-<section class="section hours" id="hours">
-  <div class="section-inner">
-    <div class="reveal" style="text-align:center">
-      <div class="section-label">שעות פתיחה</div>
-      <h2 class="section-title">מתי <span class="underline">אפשר לבוא</span></h2>
-    </div>
-    <div class="hours-card reveal reveal-delay-1">
-      <div class="hours-row"><span class="hours-day">ראשון - חמישי</span><span class="hours-time">12:00 - 23:00</span></div>
-      <div class="hours-row"><span class="hours-day">שישי</span><span class="hours-time">12:00 - 15:00</span></div>
-      <div class="hours-row"><span class="hours-day">מוצאי שבת</span><span class="hours-time">20:00 - 23:30</span></div>
-    </div>
-    <p class="hours-address reveal reveal-delay-2">שדרות דב הוז 29, חולון, ישראל, חולון</p>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-  <h2 class="reveal">מוכנים לחוויה קולינרית?</h2>
-  <p class="reveal reveal-delay-1">הזמינו מקום ותנו לנו לפנק אתכם</p>
-  <a href="tel:537300777" class="cta-btn reveal reveal-delay-2">התקשרו עכשיו</a>
-</section>
-
-<!-- Contact -->
-<section class="section contact" id="contact">
-  <div class="section-inner">
-    <div class="reveal" style="text-align:center">
-      <div class="section-label">צרו קשר</div>
-      <h2 class="section-title">נשמח <span class="underline">לשמוע מכם</span></h2>
-    </div>
-    <div class="contact-card reveal reveal-delay-1">
-      <div class="contact-name">צנטרו - הבוריק של צ'ונה</div>
-      <div class="contact-city">שדרות דב הוז 29, חולון, ישראל, חולון</div>
-      <div class="contact-buttons">
-        <a href="https://wa.me/972537300777" class="contact-btn btn-whatsapp">WhatsApp</a>
-        <a href="tel:537300777" class="contact-btn btn-phone">053-730-0777</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Real Google Reviews -->
-<section style="padding:60px 24px;background:#FAFAF8">
-  <div style="max-width:1100px;margin:0 auto">
-    <h2 style="text-align:center;font-size:1.8rem;font-weight:700;color:#1a1a1a;margin-bottom:8px">מה הלקוחות אומרים</h2>
-    <p style="text-align:center;color:#888;margin-bottom:40px;font-size:15px">ביקורות אמיתיות מגוגל</p>
-    <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center">
-      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
-          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">g</div>
-          <div>
-            <div style="font-weight:600;font-size:15px;color:#1a1a1a">gilad bushari</div>
-            <div style="font-size:12px;color:#999">לפני 4 שנים</div>
-          </div>
-        </div>
-        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#ddd">&#9733;</span></div>
-        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"ניתן לאכול במקום או לקחת פיתה/בגט/ צלחת.
-יש מבחר לא רע של דברים: אנטריקוט, קבב, חזה עוף, מעורב ועוד.
-שירות מהיר. טעים מאוד ביחס למחיר שלא יקר.
-מאתגר קצת למצוא חניה בשעות העומס כי זה על רחוב דוב הוז. א..."</p>
-      </div>
-      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
-          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">ע</div>
-          <div>
-            <div style="font-weight:600;font-size:15px;color:#1a1a1a">עמנואל בן פורת</div>
-            <div style="font-size:12px;color:#999">לפני 5 חודשים</div>
-          </div>
-        </div>
-        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#ddd">&#9733;</span></div>
-        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"למקום כבר מזמן לא קוראים צ'נטרו הבוריק אלא מדינה בשרים. העובדים אדיבים ליגה עולמית. הם לא פתוחים בימי שישי. הם עובדים לפי קונספט של חמישה ימים בשבוע. יש להם גם שירות משלוחים וניתן לשלם בכרטיסי אשראי."</p>
-      </div>
-      <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);flex:1;min-width:280px">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
-          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">ב</div>
-          <div>
-            <div style="font-weight:600;font-size:15px;color:#1a1a1a">בנימין כהן</div>
-            <div style="font-size:12px;color:#999">לפני 4 חודשים</div>
-          </div>
-        </div>
-        <div style="margin-bottom:8px;font-size:16px"><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span><span style="color:#F5A623">&#9733;</span></div>
-        <p style="color:#555;font-size:14px;line-height:1.7;margin:0">"אולם יפיפה במיקום מבודד מרעש, יש חניה גדולה והבעלים מותק של בנאדם."</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Map -->
-<section style="padding:0">
-  <div style="max-width:1100px;margin:0 auto;padding:0 24px 60px">
-    <div style="border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.06)">
-      <iframe
-        width="100%"
-        height="350"
-        style="border:0;display:block"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        src="https://maps.google.com/maps?q=%D7%A6%D7%A0%D7%98%D7%A8%D7%95%20-%20%D7%94%D7%91%D7%95%D7%A8%D7%99%D7%A7%20%D7%A9%D7%9C%20%D7%A6%27%D7%95%D7%A0%D7%94%20%D7%97%D7%95%D7%9C%D7%95%D7%9F+ישראל&output=embed&hl=he&z=16">
-      </iframe>
-      <div style="padding:20px;background:#fff;text-align:center">
-        <p style="color:#3D3D3D;font-size:1rem;margin-bottom:12px">שדרות דב הוז 29, חולון, ישראל</p>
-        <a href="https://www.google.com/maps/search/?api=1&query=%D7%A6%D7%A0%D7%98%D7%A8%D7%95%20-%20%D7%94%D7%91%D7%95%D7%A8%D7%99%D7%A7%20%D7%A9%D7%9C%20%D7%A6%27%D7%95%D7%A0%D7%94%20%D7%97%D7%95%D7%9C%D7%95%D7%9F" target="_blank" style="color:#4285f4;text-decoration:none;font-weight:600;font-size:14px">פתח בגוגל מפות</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div style="background:#f5f5f5;border-top:1px solid #ddd;padding:16px 20px;text-align:center;font-family:Heebo,Arial,sans-serif;direction:rtl;font-size:12px;color:#999;line-height:1.6;">אתר לדוגמא בלבד — נבנה על ידי <a href="https://alon-dev.vercel.app" style="color:#0f3460;">alon dev</a> כהצעה עסקית. אינו מייצג את העסק באופן רשמי. המידע נאסף ממקורות ציבוריים (Google Maps). <a href="https://output-seven-black.vercel.app/terms/" style="color:#0f3460;">תנאי שימוש</a><br>לבקשת הסרה מיידית: <a href="https://wa.me/972559173249?text=בקשת%20הסרה%20-%20צנטרו%20-%20הבוריק%20של%20צ'ונה" style="color:#25D366;">055-917-3249</a></div>
-
-<!-- Footer -->
-<footer class="site-footer">
-  <p>צנטרו - הבוריק של צ'ונה | חולון</p>
-</footer>
-
-<!-- Floating Nav -->
-<nav class="float-nav" id="floatNav">
-  <a href="#home">ראשי</a>
-  <a href="#menu">תפריט</a>
-  <a href="#gallery">גלריה</a>
-  <a href="#hours">שעות</a>
-  <a href="#contact">קשר</a>
-</nav>
-
-<script>
-(function(){
-  // Scroll reveal with IntersectionObserver
-  var reveals = document.querySelectorAll('.reveal');
-  var observer = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}
-    });
-  },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
-  reveals.forEach(function(el){observer.observe(el)});
-
-  // Active nav highlight
-  var sections = document.querySelectorAll('section[id]');
-  var navLinks = document.querySelectorAll('.float-nav a');
-  var floatNav = document.getElementById('floatNav');
-
-  window.addEventListener('scroll',function(){
-    var scrollY = window.pageYOffset;
-    // Show/hide floating nav
-    if(scrollY > 350){floatNav.classList.add('show')}else{floatNav.classList.remove('show')}
-    // Highlight active section
-    var current = '';
-    sections.forEach(function(s){
-      if(scrollY >= s.offsetTop - 220) current = s.getAttribute('id');
-    });
-    navLinks.forEach(function(a){
-      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-    });
-  });
-
-  // Subtle parallax on hero background
-  var heroBg = document.querySelector('.hero-bg');
-  window.addEventListener('scroll',function(){
-    if(heroBg && window.pageYOffset < window.innerHeight){
-      heroBg.style.transform = 'translateY(' + (window.pageYOffset * 0.25) + 'px)';
-    }
-  });
-})();
-</script>
-<script>(function(){var p="537300777",n=encodeURIComponent("צנטרו - הבוריק של צ'ונה");var img=new Image();img.src="https://output-seven-black.vercel.app/api/track?phone="+p+"&name="+n+"&t="+Date.now();})()</script>
 
 </body>
 </html>
