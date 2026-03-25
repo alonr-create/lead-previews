@@ -506,6 +506,27 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
       heroBg.style.transform = 'translateY(' + (window.pageYOffset * 0.25) + 'px)';
     }
   });
+  // Click event tracking
+  function trackClick(action, label){
+    var img = new Image();
+    img.src = 'https://output-seven-black.vercel.app/api/track?event=' + action + '&label=' + encodeURIComponent(label) + '&page=' + encodeURIComponent(document.title) + '&t=' + Date.now();
+    if(typeof gtag === 'function') gtag('event', action, {event_category: 'engagement', event_label: label});
+    if(typeof fbq === 'function') fbq('trackCustom', action, {label: label});
+  }
+  document.querySelectorAll('a[href*="wa.me"], .float-wa, .btn-whatsapp').forEach(function(el){
+    el.addEventListener('click', function(){ trackClick('whatsapp_click', el.textContent.trim() || 'floating_button') });
+  });
+  document.querySelectorAll('a[href^="tel:"], .btn-phone').forEach(function(el){
+    el.addEventListener('click', function(){ trackClick('phone_click', el.textContent.trim()) });
+  });
+  document.querySelectorAll('.hero-cta, .cta-btn').forEach(function(el){
+    el.addEventListener('click', function(){ trackClick('cta_click', el.textContent.trim()) });
+  });
+  var depths = [25,50,75,100], fired = {};
+  window.addEventListener('scroll', function(){
+    var pct = Math.round(100 * (window.pageYOffset + window.innerHeight) / document.body.scrollHeight);
+    depths.forEach(function(d){ if(pct >= d && !fired[d]){ fired[d]=true; trackClick('scroll_depth', d+'%') }});
+  });
 })();
 </script>
 <script>(function(){var p="584441474",n=encodeURIComponent("חשמלאי ברמת גן שי");var img=new Image();img.src="https://output-seven-black.vercel.app/api/track?phone="+p+"&name="+n+"&t="+Date.now();})()</script>

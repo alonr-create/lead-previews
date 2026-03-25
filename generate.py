@@ -32,6 +32,16 @@ OUTPUT_DIR = os.path.join(BASE_DIR, 'output')
 CSV_PATH = '/Users/oakhome/קלוד עבודות/leads_final.csv'
 CACHE_PATH = os.path.join(BASE_DIR, 'places_cache.json')
 
+# Load .env from lead-outreach (for FB_PIXEL_ID, GA4_MEASUREMENT_ID)
+_env_path = os.path.join(os.path.dirname(BASE_DIR), 'lead-outreach', '.env')
+if os.path.exists(_env_path):
+    with open(_env_path) as _f:
+        for _line in _f:
+            _line = _line.strip()
+            if _line and not _line.startswith('#') and '=' in _line:
+                _k, _v = _line.split('=', 1)
+                os.environ.setdefault(_k.strip(), _v.strip())
+
 GOOGLE_PLACES_API_KEY = os.environ.get('GOOGLE_PLACES_API_KEY', 'AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ')
 
 CATEGORY_MAP = {
@@ -552,6 +562,47 @@ UNSPLASH_FALLBACKS = {
         'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800',
         'https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800',
     ],
+    'קוסמטיקאית': [
+        'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800',
+        'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800',
+        'https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=800',
+        'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800',
+    ],
+    'דיגיי': [
+        'https://images.unsplash.com/photo-1571266028243-e4733b0f0bb0?w=800',
+        'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800',
+        'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800',
+    ],
+    'בית קפה': [
+        'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800',
+        'https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=800',
+        'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800',
+    ],
+    'סושי': [
+        'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=800',
+        'https://images.unsplash.com/photo-1553621042-f6e147245754?w=800',
+        'https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=800',
+    ],
+    'הפקת אירועים': [
+        'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800',
+        'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800',
+        'https://images.unsplash.com/photo-1478146059778-26028b07395a?w=800',
+    ],
+    'אולם אירועים': [
+        'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800',
+        'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800',
+        'https://images.unsplash.com/photo-1478146059778-26028b07395a?w=800',
+    ],
+    'פילאטיס': [
+        'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800',
+        'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800',
+        'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=800',
+    ],
+    'ספא': [
+        'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800',
+        'https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=800',
+        'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=800',
+    ],
     'DEFAULT': [
         'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800',
         'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800',
@@ -658,6 +709,32 @@ def generate_page(template_html, banner_html, lead, enrichment=None):
     }
     html = html.replace('{{HOURS_JSON}}', json.dumps(hours_data, ensure_ascii=False))
 
+    # Opening hours card
+    weekday_text = enrichment.get('hours_weekday_text', [])
+    if weekday_text:
+        day_names_he = {'Sunday': 'ראשון', 'Monday': 'שני', 'Tuesday': 'שלישי',
+                        'Wednesday': 'רביעי', 'Thursday': 'חמישי', 'Friday': 'שישי', 'Saturday': 'שבת'}
+        import datetime as _dt
+        today_idx = _dt.datetime.now().weekday()  # 0=Mon
+        # Google returns Sun-first (0=Sun), Python weekday 0=Mon
+        today_google = (today_idx + 1) % 7  # convert to Sun=0
+        hours_rows = []
+        for i, line in enumerate(weekday_text):
+            cls = ' today' if i == today_google else ''
+            parts = line.split(': ', 1)
+            day = day_names_he.get(parts[0], parts[0]) if len(parts) > 1 else parts[0]
+            time_str = parts[1] if len(parts) > 1 else ''
+            hours_rows.append(f'<div class="hours-row{cls}"><span>{day}</span><span>{time_str}</span></div>')
+        hours_html = (
+            '<div class="hours-card">'
+            '<div class="hours-title">🕐 שעות פתיחה</div>'
+            + '\n'.join(hours_rows) +
+            '</div>'
+        )
+    else:
+        hours_html = ''
+    html = html.replace('{{HOURS_SECTION}}', hours_html)
+
     # Reviews — build real reviews HTML section
     reviews = enrichment.get('reviews', [])
     if reviews:
@@ -677,8 +754,8 @@ def generate_page(template_html, banner_html, lead, enrichment=None):
         'המידע נאסף ממקורות ציבוריים (Google Maps). '
         '<a href="https://output-seven-black.vercel.app/terms/" style="color:#0f3460;">תנאי שימוש</a>'
         '<br>לבקשת הסרה מיידית: '
-        '<a href="https://wa.me/972559173249?text=בקשת%20הסרה%20-%20' + short_name.replace(' ', '%20') + '" style="color:#25D366;">'
-        '055-917-3249</a>'
+        '<a href="https://wa.me/972559566148?text=בקשת%20הסרה%20-%20' + short_name.replace(' ', '%20') + '" style="color:#25D366;">'
+        '055-956-6148</a>'
         '</div>'
     )
 
@@ -695,6 +772,27 @@ def generate_page(template_html, banner_html, lead, enrichment=None):
         f'}})()'
         f'</script>'
     )
+
+    # Google Analytics 4 (GA4)
+    ga4_id = os.environ.get('GA4_MEASUREMENT_ID', '')
+    ga4_code = ''
+    if ga4_id:
+        ga4_code = (
+            f'<!-- Google Analytics 4 -->'
+            f'<script async src="https://www.googletagmanager.com/gtag/js?id={ga4_id}"></script>'
+            f'<script>'
+            f'window.dataLayer=window.dataLayer||[];'
+            f'function gtag(){{dataLayer.push(arguments)}}'
+            f"gtag('js',new Date());"
+            f"gtag('config','{ga4_id}',{{"
+            f"page_title:'{short_name}',"
+            f"custom_map:{{'dimension1':'business_phone','dimension2':'business_category'}},"
+            f"business_phone:'{phone_clean}',"
+            f"business_category:'{lead.get('category', '')}'"
+            f"}});"
+            f'</script>'
+            f'<!-- End GA4 -->'
+        )
 
     # Facebook Pixel for retargeting
     fb_pixel_id = os.environ.get('FB_PIXEL_ID', '')
@@ -717,6 +815,7 @@ def generate_page(template_html, banner_html, lead, enrichment=None):
             f"<!-- End Facebook Pixel -->"
         )
 
+    html = html.replace('</head>', f'{ga4_code}\n</head>')
     html = html.replace('</body>', f'{tracking_pixel}\n{fb_pixel}\n</body>')
 
     return html
