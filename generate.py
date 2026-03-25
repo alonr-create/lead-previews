@@ -29,7 +29,7 @@ except ImportError:
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 OUTPUT_DIR = os.path.join(BASE_DIR, 'output')
-CSV_PATH = '/Users/oakhome/קלוד עבודות/leads_alon_dev.csv'
+CSV_PATH = '/Users/oakhome/קלוד עבודות/leads_final.csv'
 CACHE_PATH = os.path.join(BASE_DIR, 'places_cache.json')
 
 GOOGLE_PLACES_API_KEY = os.environ.get('GOOGLE_PLACES_API_KEY', 'AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ')
@@ -47,6 +47,10 @@ CATEGORY_MAP = {
     'בית דפוס': 'universal', 'צילום': 'universal', 'מכון כושר': 'universal',
     'וטרינר': 'universal', 'חנות בגדים': 'universal', 'אינסטלטור': 'universal',
     'רהיטים': 'universal', 'עיצוב גרפי': 'universal',
+    'קוסמטיקאית': 'beauty', 'בית קפה': 'restaurant', 'דיגיי': 'universal',
+    'פילאטיס': 'universal', 'אולם אירועים': 'universal', 'סושי': 'restaurant',
+    'הפקת אירועים': 'universal', 'חנות רהיטים': 'universal', 'סטודיו יוגה': 'universal',
+    'שווארמה': 'restaurant', 'ספא': 'beauty',
 }
 
 CATEGORY_CONFIG = {
@@ -76,6 +80,17 @@ CATEGORY_CONFIG = {
     'חנות בגדים': {'badge': 'אופנה וסטייל', 'cta': 'בואו לבקר', 'subtitle': 'סטייל שמדבר', 'about_title': 'החנות שלנו', 'about_desc': 'חנות אופנה', 'services_label': 'הקולקציות שלנו'},
     'רהיטים': {'badge': 'ריהוט ועיצוב', 'cta': 'בואו לבקר', 'subtitle': 'הבית שלך, הסגנון שלך', 'about_title': 'החנות שלנו', 'about_desc': 'חנות רהיטים', 'services_label': 'המוצרים שלנו'},
     'עיצוב גרפי': {'badge': 'עיצוב גרפי', 'cta': 'צרו קשר', 'subtitle': 'עיצוב שמדבר', 'about_title': 'מי אנחנו', 'about_desc': 'סטודיו עיצוב גרפי', 'services_label': 'השירותים שלנו'},
+    'קוסמטיקאית': {'badge': 'טיפוח ויופי', 'cta': 'קבעו תור', 'subtitle': 'יופי שמרגישים', 'about_title': 'הסיפור שלנו', 'about_desc': 'קוסמטיקאית מקצועית', 'services_label': 'הטיפולים שלנו'},
+    'בית קפה': {'badge': 'קפה ואווירה', 'cta': 'בואו לבקר', 'subtitle': 'הפסקה שמגיעה לך', 'about_title': 'הסיפור שלנו', 'about_desc': 'בית קפה עם אופי', 'services_label': 'התפריט שלנו'},
+    'דיגיי': {'badge': 'DJ ומוזיקה', 'cta': 'בקשו הצעת מחיר', 'subtitle': 'המוזיקה שתזכרו', 'about_title': 'מי אנחנו', 'about_desc': 'DJ מקצועי לכל אירוע', 'services_label': 'השירותים שלנו'},
+    'פילאטיס': {'badge': 'פילאטיס', 'cta': 'הצטרפו עכשיו', 'subtitle': 'גוף חזק, נפש רגועה', 'about_title': 'הסטודיו שלנו', 'about_desc': 'סטודיו פילאטיס מקצועי', 'services_label': 'השיעורים שלנו'},
+    'אולם אירועים': {'badge': 'אירועים ושמחות', 'cta': 'בקשו הצעת מחיר', 'subtitle': 'האירוע המושלם שלך', 'about_title': 'האולם שלנו', 'about_desc': 'אולם אירועים מפואר', 'services_label': 'סוגי אירועים'},
+    'סושי': {'badge': 'סושי ומטבח יפני', 'cta': 'הזמינו עכשיו', 'subtitle': 'טעם של יפן', 'about_title': 'הסיפור שלנו', 'about_desc': 'סושי בר מקצועי', 'services_label': 'התפריט שלנו'},
+    'הפקת אירועים': {'badge': 'הפקת אירועים', 'cta': 'בקשו הצעת מחיר', 'subtitle': 'הפקה שלמה מא עד ת', 'about_title': 'מי אנחנו', 'about_desc': 'חברת הפקת אירועים מקצועית', 'services_label': 'השירותים שלנו'},
+    'חנות רהיטים': {'badge': 'ריהוט ועיצוב', 'cta': 'בואו לבקר', 'subtitle': 'הבית שלך, הסגנון שלך', 'about_title': 'החנות שלנו', 'about_desc': 'חנות רהיטים איכותיים', 'services_label': 'המוצרים שלנו'},
+    'סטודיו יוגה': {'badge': 'יוגה ומדיטציה', 'cta': 'הצטרפו עכשיו', 'subtitle': 'שקט פנימי, כוח חיצוני', 'about_title': 'הסטודיו שלנו', 'about_desc': 'סטודיו יוגה עם מדריכים מוסמכים', 'services_label': 'השיעורים שלנו'},
+    'שווארמה': {'badge': 'אוכל רחוב', 'cta': 'הזמינו עכשיו', 'subtitle': 'טעם שלא שוכחים', 'about_title': 'הסיפור שלנו', 'about_desc': 'שווארמה מקצועית', 'services_label': 'התפריט שלנו'},
+    'ספא': {'badge': 'ספא ורוגע', 'cta': 'קבעו טיפול', 'subtitle': 'פינוק שמגיע לך', 'about_title': 'הספא שלנו', 'about_desc': 'ספא מפנק עם טיפולים מקצועיים', 'services_label': 'הטיפולים שלנו'},
 }
 
 DEFAULT_CATEGORY_CONFIG = {'badge': 'שירותים מקצועיים', 'cta': 'צרו קשר', 'subtitle': 'מקצועיות ואיכות', 'about_title': 'מי אנחנו', 'about_desc': 'עסק מקצועי ואמין', 'services_label': 'השירותים שלנו'}
@@ -849,8 +864,12 @@ def main():
         reader = csv.DictReader(f)
         leads = list(reader)
 
-    # Filter: no website only
-    no_website = [r for r in leads if r.get('has_website', '').strip().lower() == 'no']
+    # Filter: no website only (leads_final.csv already pre-filtered — all are no-website)
+    has_website_col = any(r.get('has_website', '') for r in leads)
+    if has_website_col:
+        no_website = [r for r in leads if r.get('has_website', '').strip().lower() == 'no']
+    else:
+        no_website = leads  # Already filtered by enrichment pipeline
 
     # Group by category
     leads_by_category = {}
