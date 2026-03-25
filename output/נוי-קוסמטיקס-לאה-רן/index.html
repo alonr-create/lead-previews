@@ -145,12 +145,48 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
   .float-nav a{padding:8px 14px;font-size:12px}
   .section{padding:64px 20px}
 }
+/* --- Floating WhatsApp Button --- */
+.float-wa{position:fixed;bottom:90px;left:20px;z-index:99;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);text-decoration:none;transition:all 0.3s;animation:waPulse 2s ease-in-out infinite}
+.float-wa:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,0.5)}
+.float-wa svg{width:32px;height:32px;fill:#fff}
+@keyframes waPulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.4)}50%{box-shadow:0 4px 20px rgba(37,211,102,0.4),0 0 0 12px rgba(37,211,102,0.1)}}
+
+/* --- Stats Counter --- */
+.stats-strip{background:var(--white);padding:48px 24px;border-top:1px solid rgba(196,114,126,0.06);border-bottom:1px solid rgba(196,114,126,0.06)}
+.stats-grid{display:flex;justify-content:center;gap:48px;max-width:600px;margin:0 auto;flex-wrap:wrap}
+.stat-item{text-align:center}
+.stat-num{font-size:2.4rem;font-weight:800;color:var(--rose);line-height:1}
+.stat-label{font-size:13px;color:var(--text-light);margin-top:4px}
+
+/* --- Hours Card --- */
+.hours-card{max-width:380px;margin:32px auto 0;background:rgba(253,245,243,0.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(196,114,126,0.06);border-radius:18px;padding:28px 32px}
+.hours-title{font-size:15px;font-weight:600;color:var(--text);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.hours-row{display:flex;justify-content:space-between;padding:6px 0;font-size:14px;color:var(--text-light);border-bottom:1px solid rgba(0,0,0,0.03)}
+.hours-row:last-child{border:none}
+.hours-row.today{color:var(--rose);font-weight:600}
+
+/* --- Improved CTA glow --- */
+.hero-cta{position:relative;overflow:hidden}
+.hero-cta::after{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(45deg,transparent 40%,rgba(255,255,255,0.15) 50%,transparent 60%);animation:ctaShine 3s ease-in-out infinite}
+@keyframes ctaShine{0%,100%{transform:translateX(-100%)}50%{transform:translateX(100%)}}
+
+/* --- Badge shine --- */
+.hero-badge{position:relative;overflow:hidden}
+
+@media(max-width:768px){
+  .stats-grid{gap:32px}
+  .stat-num{font-size:2rem}
+  .float-wa{bottom:80px;left:14px;width:52px;height:52px}
+  .float-wa svg{width:28px;height:28px}
+}
 @media(max-width:480px){
   .contact-buttons{flex-direction:column}
   .contact-btn{justify-content:center}
   .hero h1{font-size:2.2rem}
+  .stats-grid{gap:24px}
 }
 </style>
+
 </head>
 <body>
 <!-- Lead Preview Banner -->
@@ -239,7 +275,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
   <span class="lp-banner-text">
     זה האתר שבנינו בשבילכם 🎉 הקמה 990 ₪ + 149 ₪/חודש — כולל דומיין, אחסון ותחזוקה
   </span>
-  <a class="lp-banner-cta" href="https://wa.me/972559173249?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%91%D7%A0%D7%99%D7%AA%D7%9D%20%D7%9C%D7%99%20-%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A2%D7%9C%D7%95%D7%AA%20%D7%9C%D7%90%D7%95%D7%95%D7%99%D7%A8!" target="_blank">
+  <a class="lp-banner-cta" href="https://wa.me/972559566148?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%91%D7%A0%D7%99%D7%AA%D7%9D%20%D7%9C%D7%99%20-%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A2%D7%9C%D7%95%D7%AA%20%D7%9C%D7%90%D7%95%D7%95%D7%99%D7%A8!" target="_blank">
     רוצה לעלות לאוויר!
   </a>
   <button class="lp-banner-close" onclick="document.getElementById('lpBanner').classList.add('lp-hidden');document.body.style.paddingTop='0'" aria-label="סגור">&times;</button>
@@ -269,6 +305,11 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
   </div>
 </section>
 
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/972508188844?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20-%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D" class="float-wa" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
 <!-- Rating -->
 <section class="rating-strip reveal">
   <div class="rating-inner">
@@ -279,9 +320,27 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
       <div class="star"></div>
       <div class="star"></div>
     </div>
-    <div class="rating-score">4.7</div>
+    <div class="rating-score" data-count="4.7">4.7</div>
     <div class="rating-text">32 ביקורות בגוגל</div>
     <div class="rating-address">שיינקין 27, גבעתיים, ישראל</div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="stats-strip reveal">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-num" data-target="32">0</div>
+      <div class="stat-label">ביקורות</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" data-target="4.7">0</div>
+      <div class="stat-label">דירוג ממוצע</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" data-target="100">0</div>
+      <div class="stat-label">% שביעות רצון</div>
+    </div>
   </div>
 </section>
 
@@ -347,73 +406,6 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
   </div>
 </section>
 
-<!-- Testimonials -->
-<section class="section testimonials" id="reviews">
-  <div class="section-inner">
-    <div class="reveal" style="text-align:center">
-      <div class="section-label">מה אומרות עלינו</div>
-      <h2 class="section-title">לקוחות <span class="underline">מרוצות</span></h2>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card reveal reveal-delay-1">
-        <div class="testimonial-stars">
-          <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
-        </div>
-        <p class="testimonial-text">"המקום הכי מקצועי שהייתי בו. יצאתי מרגישה כמו מלכה. ממליצה בחום!"</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">מ</div>
-          <div class="testimonial-name">מירב כ.</div>
-        </div>
-      </div>
-      <div class="testimonial-card reveal reveal-delay-2">
-        <div class="testimonial-stars">
-          <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
-        </div>
-        <p class="testimonial-text">"שירות ברמה אחרת. תשומת לב מדהימה לפרטים, אווירה נהדרת ותוצאות מושלמות."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">ש</div>
-          <div class="testimonial-name">שירה א.</div>
-        </div>
-      </div>
-      <div class="testimonial-card reveal reveal-delay-3">
-        <div class="testimonial-stars">
-          <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
-        </div>
-        <p class="testimonial-text">"כבר שנתיים שאני מגיעה לכאן ולא מוכנה להחליף. פשוט הכי טוב שיש באזור."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">נ</div>
-          <div class="testimonial-name">נועה ד.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-  <h2 class="reveal">הגיע הזמן לפנק את עצמך</h2>
-  <p class="reveal reveal-delay-1">קבעו תור ותנו לנו לדאוג לשאר</p>
-  <a href="tel:508188844" class="cta-btn reveal reveal-delay-2">קבעו תור עכשיו</a>
-</section>
-
-<!-- Contact -->
-<section class="section contact" id="contact">
-  <div class="section-inner">
-    <div class="reveal" style="text-align:center">
-      <div class="section-label">צרו קשר</div>
-      <h2 class="section-title">נשמח <span class="underline">לשמוע מכן</span></h2>
-    </div>
-    <div class="contact-card reveal reveal-delay-1">
-      <div class="contact-name">נוי קוסמטיקס לאה רן</div>
-      <div class="contact-city">שיינקין 27, גבעתיים, ישראל, גבעתיים</div>
-      <div class="contact-buttons">
-        <a href="https://wa.me/972508188844" class="contact-btn btn-whatsapp">WhatsApp</a>
-        <a href="tel:508188844" class="contact-btn btn-phone">050-8188844</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <!-- Real Google Reviews -->
 <section style="padding:60px 24px;background:#FAFAF8">
@@ -462,6 +454,38 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
   </div>
 </section>
 
+<!-- CTA -->
+<section class="cta-section">
+  <h2 class="reveal">הגיע הזמן לפנק את עצמך</h2>
+  <p class="reveal reveal-delay-1">קבעו תור ותנו לנו לדאוג לשאר</p>
+  <a href="tel:508188844" class="cta-btn reveal reveal-delay-2">קבעו תור עכשיו</a>
+</section>
+
+<!-- Contact -->
+<section class="section contact" id="contact">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label">צרו קשר</div>
+      <h2 class="section-title">נשמח <span class="underline">לשמוע מכן</span></h2>
+    </div>
+    <div class="contact-card reveal reveal-delay-1">
+      <div class="contact-name">נוי קוסמטיקס לאה רן</div>
+      <div class="contact-city">שיינקין 27, גבעתיים, ישראל, גבעתיים</div>
+      <div class="contact-buttons">
+        <a href="https://wa.me/972508188844?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20-%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D" class="contact-btn btn-whatsapp">💬 WhatsApp</a>
+        <a href="tel:508188844" class="contact-btn btn-phone">📞 050-8188844</a>
+      </div>
+      <div class="hours-card"><div class="hours-title">🕐 שעות פתיחה</div><div class="hours-row"><span>יום ראשון</span><span>8:30–19:00</span></div>
+<div class="hours-row"><span>יום שני</span><span>8:30–19:00</span></div>
+<div class="hours-row"><span>יום שלישי</span><span>8:30–19:00</span></div>
+<div class="hours-row today"><span>יום רביעי</span><span>8:30–19:00</span></div>
+<div class="hours-row"><span>יום חמישי</span><span>8:30–19:00</span></div>
+<div class="hours-row"><span>יום שישי</span><span>8:30–19:00</span></div>
+<div class="hours-row"><span>יום שבת</span><span>סגור</span></div></div>
+    </div>
+  </div>
+</section>
+
 
 <!-- Map -->
 <section style="padding:0">
@@ -483,7 +507,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
   </div>
 </section>
 
-<div style="background:#f5f5f5;border-top:1px solid #ddd;padding:16px 20px;text-align:center;font-family:Heebo,Arial,sans-serif;direction:rtl;font-size:12px;color:#999;line-height:1.6;">אתר לדוגמא בלבד — נבנה על ידי <a href="https://alon-dev.vercel.app" style="color:#0f3460;">alon dev</a> כהצעה עסקית. אינו מייצג את העסק באופן רשמי. המידע נאסף ממקורות ציבוריים (Google Maps). <a href="https://output-seven-black.vercel.app/terms/" style="color:#0f3460;">תנאי שימוש</a><br>לבקשת הסרה מיידית: <a href="https://wa.me/972559173249?text=בקשת%20הסרה%20-%20נוי%20קוסמטיקס%20לאה%20רן" style="color:#25D366;">055-917-3249</a></div>
+<div style="background:#f5f5f5;border-top:1px solid #ddd;padding:16px 20px;text-align:center;font-family:Heebo,Arial,sans-serif;direction:rtl;font-size:12px;color:#999;line-height:1.6;">אתר לדוגמא בלבד — נבנה על ידי <a href="https://alon-dev.vercel.app" style="color:#0f3460;">alon dev</a> כהצעה עסקית. אינו מייצג את העסק באופן רשמי. המידע נאסף ממקורות ציבוריים (Google Maps). <a href="https://output-seven-black.vercel.app/terms/" style="color:#0f3460;">תנאי שימוש</a><br>לבקשת הסרה מיידית: <a href="https://wa.me/972559566148?text=בקשת%20הסרה%20-%20נוי%20קוסמטיקס%20לאה%20רן" style="color:#25D366;">055-956-6148</a></div>
 
 <!-- Footer -->
 <footer class="site-footer">
@@ -536,9 +560,66 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-
       heroBg.style.transform = 'translateY(' + (window.pageYOffset * 0.25) + 'px)';
     }
   });
+
+  // Animated counters
+  var counters = document.querySelectorAll('.stat-num[data-target]');
+  var counterObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var el = e.target;
+        var target = parseFloat(el.getAttribute('data-target'));
+        var isFloat = target % 1 !== 0;
+        var duration = 1800;
+        var start = performance.now();
+        function animate(now){
+          var progress = Math.min((now - start) / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3);
+          var current = eased * target;
+          el.textContent = isFloat ? current.toFixed(1) : Math.round(current);
+          if(progress < 1) requestAnimationFrame(animate);
+        }
+        requestAnimationFrame(animate);
+        counterObs.unobserve(el);
+      }
+    });
+  },{threshold:0.5});
+  counters.forEach(function(c){counterObs.observe(c)});
+
+  // Click event tracking
+  function trackClick(action, label){
+    // Custom tracking pixel
+    var img = new Image();
+    img.src = 'https://output-seven-black.vercel.app/api/track?event=' + action + '&label=' + encodeURIComponent(label) + '&page=' + encodeURIComponent(document.title) + '&t=' + Date.now();
+    // GA4 event (if loaded)
+    if(typeof gtag === 'function') gtag('event', action, {event_category: 'engagement', event_label: label});
+    // FB Pixel event (if loaded)
+    if(typeof fbq === 'function') fbq('trackCustom', action, {label: label});
+  }
+
+  // Track WhatsApp clicks
+  document.querySelectorAll('a[href*="wa.me"], .float-wa, .btn-whatsapp').forEach(function(el){
+    el.addEventListener('click', function(){ trackClick('whatsapp_click', el.textContent.trim() || 'floating_button') });
+  });
+
+  // Track phone clicks
+  document.querySelectorAll('a[href^="tel:"], .btn-phone').forEach(function(el){
+    el.addEventListener('click', function(){ trackClick('phone_click', el.textContent.trim()) });
+  });
+
+  // Track CTA clicks
+  document.querySelectorAll('.hero-cta, .cta-btn').forEach(function(el){
+    el.addEventListener('click', function(){ trackClick('cta_click', el.textContent.trim()) });
+  });
+
+  // Track scroll depth
+  var depths = [25,50,75,100], fired = {};
+  window.addEventListener('scroll', function(){
+    var pct = Math.round(100 * (window.pageYOffset + window.innerHeight) / document.body.scrollHeight);
+    depths.forEach(function(d){ if(pct >= d && !fired[d]){ fired[d]=true; trackClick('scroll_depth', d+'%') }});
+  });
 })();
 </script>
 <script>(function(){var p="508188844",n=encodeURIComponent("נוי קוסמטיקס לאה רן");var img=new Image();img.src="https://output-seven-black.vercel.app/api/track?phone="+p+"&name="+n+"&t="+Date.now();})()</script>
-
+<!-- Facebook Pixel --><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','817862224144226');fbq('track','PageView');fbq('track','ViewContent',{content_name:'נוי קוסמטיקס לאה רן',content_category:'מכון יופי'});</script><noscript><img height='1' width='1' style='display:none' src='https://www.facebook.com/tr?id=817862224144226&ev=PageView&noscript=1'/></noscript><!-- End Facebook Pixel -->
 </body>
 </html>
