@@ -8,11 +8,11 @@
  */
 
 const MONDAY_API_TOKEN = process.env.MONDAY_API_TOKEN || '';
-const MONDAY_BOARD_ID = '5093635431';
+const MONDAY_BOARD_ID = '5092777389';  // לידים אלון (Alondev workspace)
 
-// Column IDs
-const COL_OPENED = 'color_mm1rpq5k';    // פתח אתר?
-const COL_VISITS = 'numeric_mm1r9dgs';   // כניסות לאתר
+// Column IDs — board 5092777389
+const COL_OPENED = 'color_mm1sg2gr';    // פתח אתר
+const COL_VISITS = 'numeric_mm1sdjj8';   // כניסות לאתר
 
 // 1x1 transparent GIF
 const PIXEL = Buffer.from('R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7', 'base64');
