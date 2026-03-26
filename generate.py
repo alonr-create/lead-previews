@@ -1154,13 +1154,19 @@ def generate_page(template_html, banner_html, lead, enrichment=None):
     # Inject map before footer
     html = html.replace('<!-- Footer -->', f'{map_html}\n\n{disclaimer_html}\n\n<!-- Footer -->')
 
-    # Tracking pixel — fires when someone opens the page
+    # Tracking pixel — fires when someone opens the page + time on site
     tracking_pixel = (
         f'<script>'
         f'(function(){{'
-        f'var p="{phone_clean}",n=encodeURIComponent("{short_name}");'
+        f'var p="{phone_clean}",n=encodeURIComponent("{short_name}"),base="https://output-seven-black.vercel.app/api/track";'
         f'var img=new Image();'
-        f'img.src="https://output-seven-black.vercel.app/api/track?phone="+p+"&name="+n+"&t="+Date.now();'
+        f'img.src=base+"?phone="+p+"&name="+n+"&t="+Date.now();'
+        f'var start=Date.now();'
+        f'setInterval(function(){{'
+        f'var s=Math.round((Date.now()-start)/1000);'
+        f'var ping=new Image();'
+        f'ping.src=base+"?phone="+p+"&name="+n+"&event=time_on_site&seconds="+s+"&t="+Date.now();'
+        f'}},10000);'
         f'}})()'
         f'</script>'
     )
