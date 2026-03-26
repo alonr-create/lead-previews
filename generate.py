@@ -29,7 +29,7 @@ except ImportError:
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 OUTPUT_DIR = os.path.join(BASE_DIR, 'output')
-CSV_PATH = '/Users/oakhome/קלוד עבודות/leads_final.csv'
+CSV_PATH = '/Users/oakhome/קלוד עבודות/leads_enriched_v2.csv'
 CACHE_PATH = os.path.join(BASE_DIR, 'places_cache.json')
 
 # Load .env from lead-outreach (for FB_PIXEL_ID, GA4_MEASUREMENT_ID)
@@ -45,11 +45,9 @@ if os.path.exists(_env_path):
 GOOGLE_PLACES_API_KEY = os.environ.get('GOOGLE_PLACES_API_KEY', 'AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ')
 
 CATEGORY_MAP = {
-    # Food
+    # Hebrew categories — all use universal template for variable-driven content
     'מסעדה': 'restaurant', 'קונדיטוריה': 'restaurant', 'מאפייה': 'restaurant',
-    # Beauty
-    'מכון יופי': 'beauty', 'מספרה': 'beauty', 'סטודיו': 'beauty',
-    # All others → universal
+    'מכון יופי': 'universal', 'מספרה': 'universal', 'סטודיו': 'universal',
     'מוסך': 'universal', 'שיפוצים': 'universal', 'רופא שיניים': 'universal',
     'רואה חשבון': 'universal', 'עורך דין': 'universal', 'צלם': 'universal',
     'חנות חיות': 'universal', 'גן אירועים': 'universal', 'הובלות': 'universal',
@@ -57,10 +55,30 @@ CATEGORY_MAP = {
     'בית דפוס': 'universal', 'צילום': 'universal', 'מכון כושר': 'universal',
     'וטרינר': 'universal', 'חנות בגדים': 'universal', 'אינסטלטור': 'universal',
     'רהיטים': 'universal', 'עיצוב גרפי': 'universal',
-    'קוסמטיקאית': 'beauty', 'בית קפה': 'restaurant', 'דיגיי': 'universal',
+    'קוסמטיקאית': 'universal', 'בית קפה': 'restaurant', 'דיגיי': 'universal',
     'פילאטיס': 'universal', 'אולם אירועים': 'universal', 'סושי': 'restaurant',
     'הפקת אירועים': 'universal', 'חנות רהיטים': 'universal', 'סטודיו יוגה': 'universal',
-    'שווארמה': 'restaurant', 'ספא': 'beauty',
+    'שווארמה': 'restaurant', 'ספא': 'universal', 'חשמלאי': 'universal', 'פיצריה': 'restaurant',
+    'יוגה': 'universal',
+    # English categories (from mobile_leads.csv)
+    'personal trainer': 'universal', 'barbershop': 'universal', 'air conditioning repair': 'universal',
+    'laser hair removal': 'universal', 'photography studio': 'universal', 'motorcycle repair': 'universal',
+    'reflexology': 'universal', 'carpentry': 'universal', 'beauty salon': 'universal',
+    'catering': 'restaurant', 'moving company': 'universal', 'bridal salon': 'universal',
+    'locksmith': 'universal', 'massage': 'universal', 'tire shop': 'universal',
+    'nail bar': 'universal', 'auto parts': 'universal', 'cleaning service': 'universal',
+    'tattoo parlor': 'universal', 'insurance agent': 'universal', 'architect': 'universal',
+    'gardening': 'universal', 'dance studio': 'universal', 'hair salon': 'universal',
+    'interior design': 'universal', 'glass repair': 'universal', 'accountant': 'universal',
+    'upholstery': 'universal', 'ice cream shop': 'restaurant', 'gift shop': 'universal',
+    'jewelry store': 'universal', 'bakery': 'restaurant', 'butcher shop': 'restaurant',
+    'fish market': 'restaurant', 'physiotherapy': 'universal', 'spa': 'universal',
+    'juice bar': 'restaurant', 'car appraiser': 'universal', 'mortgage advisor': 'universal',
+    'dental lab': 'universal', 'toy store': 'universal', 'dietitian': 'universal',
+    'blinds shutters': 'universal', 'traffic lawyer': 'universal', 'flooring tiles': 'universal',
+    'welding': 'universal', 'graphic design': 'universal', 'landscaping': 'universal',
+    'divorce lawyer': 'universal', 'glazier': 'universal', 'dermatology clinic': 'universal',
+    'grocery store': 'universal', 'chiropractor': 'universal', 'pension advisor': 'universal',
 }
 
 CATEGORY_CONFIG = {
@@ -104,6 +122,64 @@ CATEGORY_CONFIG = {
 }
 
 DEFAULT_CATEGORY_CONFIG = {'badge': 'שירותים מקצועיים', 'cta': 'צרו קשר', 'subtitle': 'מקצועיות ואיכות', 'about_title': 'מי אנחנו', 'about_desc': 'עסק מקצועי ואמין', 'services_label': 'השירותים שלנו'}
+
+# English category configs — Hebrew UI text for English category names
+CATEGORY_CONFIG.update({
+    'personal trainer': {'badge': 'כושר ואימון אישי', 'cta': 'קבעו אימון ניסיון', 'subtitle': 'הגוף שלך, המטרה שלנו', 'about_title': 'מי אנחנו', 'about_desc': 'מאמן כושר אישי מוסמך ומנוסה', 'services_label': 'תוכניות אימון'},
+    'barbershop': {'badge': 'מספרת גברים', 'cta': 'קבעו תור', 'subtitle': 'סטייל שמדבר', 'about_title': 'הסיפור שלנו', 'about_desc': 'ברבר מקצועי עם ניסיון', 'services_label': 'השירותים שלנו'},
+    'air conditioning repair': {'badge': 'מיזוג אוויר', 'cta': 'התקשרו עכשיו', 'subtitle': 'פתרון מהיר ומקצועי', 'about_title': 'מי אנחנו', 'about_desc': 'טכנאי מיזוג מוסמך', 'services_label': 'השירותים שלנו'},
+    'laser hair removal': {'badge': 'הסרת שיער בלייזר', 'cta': 'קבעו טיפול ניסיון', 'subtitle': 'עור חלק לתמיד', 'about_title': 'המכון שלנו', 'about_desc': 'מכון לייזר מתקדם עם טכנולוגיה חדישה', 'services_label': 'הטיפולים שלנו'},
+    'photography studio': {'badge': 'צילום מקצועי', 'cta': 'בקשו הצעת מחיר', 'subtitle': 'רגעים שנשארים לנצח', 'about_title': 'הסטודיו שלנו', 'about_desc': 'סטודיו צילום מקצועי', 'services_label': 'סוגי צילום'},
+    'motorcycle repair': {'badge': 'מוסך אופנועים', 'cta': 'קבעו תור', 'subtitle': 'האופנוע שלך בידיים טובות', 'about_title': 'המוסך שלנו', 'about_desc': 'מוסך אופנועים מורשה ומקצועי', 'services_label': 'השירותים שלנו'},
+    'reflexology': {'badge': 'רפלקסולוגיה', 'cta': 'קבעו טיפול', 'subtitle': 'איזון גוף ונפש', 'about_title': 'המטפלת שלנו', 'about_desc': 'מטפלת רפלקסולוגיה מוסמכת', 'services_label': 'הטיפולים שלנו'},
+    'carpentry': {'badge': 'נגרות ועץ', 'cta': 'בקשו הצעת מחיר', 'subtitle': 'עבודת עץ מקצועית', 'about_title': 'מי אנחנו', 'about_desc': 'נגר מקצועי עם ניסיון רב', 'services_label': 'השירותים שלנו'},
+    'beauty salon': {'badge': 'יופי וטיפוח', 'cta': 'קבעו תור', 'subtitle': 'יופי שמרגישים', 'about_title': 'הסלון שלנו', 'about_desc': 'סלון יופי מקצועי עם טיפולים מתקדמים', 'services_label': 'הטיפולים שלנו'},
+    'catering': {'badge': 'קייטרינג ואירועים', 'cta': 'בקשו תפריט', 'subtitle': 'טעמים שמספרים סיפור', 'about_title': 'הסיפור שלנו', 'about_desc': 'שירותי קייטרינג מקצועיים לכל אירוע', 'services_label': 'התפריט שלנו'},
+    'moving company': {'badge': 'הובלות ושינוע', 'cta': 'בקשו הצעת מחיר', 'subtitle': 'הובלה בטוחה ומקצועית', 'about_title': 'מי אנחנו', 'about_desc': 'חברת הובלות מקצועית ואמינה', 'services_label': 'השירותים שלנו'},
+    'bridal salon': {'badge': 'שמלות כלה', 'cta': 'קבעו מדידה', 'subtitle': 'השמלה המושלמת ליום המושלם', 'about_title': 'הסלון שלנו', 'about_desc': 'סלון שמלות כלה עם מגוון עשיר', 'services_label': 'הקולקציות שלנו'},
+    'locksmith': {'badge': 'מנעולן', 'cta': 'התקשרו עכשיו', 'subtitle': 'פתרון מהיר 24/7', 'about_title': 'מי אנחנו', 'about_desc': 'מנעולן מוסמך עם שירות מהיר', 'services_label': 'השירותים שלנו'},
+    'massage': {'badge': 'עיסוי מקצועי', 'cta': 'קבעו טיפול', 'subtitle': 'פינוק שמגיע לך', 'about_title': 'המטפל שלנו', 'about_desc': 'מעסה מוסמך עם ניסיון רב', 'services_label': 'סוגי עיסוי'},
+    'tire shop': {'badge': 'צמיגים ופנצ\'ריות', 'cta': 'התקשרו עכשיו', 'subtitle': 'נסיעה בטוחה מתחילה בצמיגים', 'about_title': 'מי אנחנו', 'about_desc': 'חנות צמיגים מקצועית', 'services_label': 'השירותים שלנו'},
+    'nail bar': {'badge': 'ציפורניים', 'cta': 'קבעו תור', 'subtitle': 'ציפורניים מושלמות', 'about_title': 'הסטודיו שלנו', 'about_desc': 'סטודיו ציפורניים מקצועי', 'services_label': 'הטיפולים שלנו'},
+    'auto parts': {'badge': 'חלקי חילוף לרכב', 'cta': 'התקשרו לבדיקה', 'subtitle': 'החלפים שאתה צריך', 'about_title': 'החנות שלנו', 'about_desc': 'חנות חלפי חילוף מקצועית', 'services_label': 'המוצרים שלנו'},
+    'cleaning service': {'badge': 'ניקיון מקצועי', 'cta': 'בקשו הצעת מחיר', 'subtitle': 'נקי כמו חדש', 'about_title': 'מי אנחנו', 'about_desc': 'שירותי ניקיון מקצועיים', 'services_label': 'השירותים שלנו'},
+    'tattoo parlor': {'badge': 'קעקועים ופירסינג', 'cta': 'קבעו ייעוץ', 'subtitle': 'אמנות על הגוף', 'about_title': 'הסטודיו שלנו', 'about_desc': 'סטודיו קעקועים מקצועי', 'services_label': 'סוגי עבודות'},
+    'insurance agent': {'badge': 'ביטוח', 'cta': 'קבעו פגישת ייעוץ', 'subtitle': 'הגנה שמותאמת לך', 'about_title': 'המשרד שלנו', 'about_desc': 'סוכן ביטוח עם ניסיון וליווי אישי', 'services_label': 'תחומי ביטוח'},
+    'architect': {'badge': 'אדריכלות ועיצוב', 'cta': 'קבעו פגישה', 'subtitle': 'החזון שלך, התכנון שלנו', 'about_title': 'המשרד שלנו', 'about_desc': 'משרד אדריכלות מקצועי', 'services_label': 'תחומי התמחות'},
+    'gardening': {'badge': 'גינון ונוף', 'cta': 'בקשו הצעת מחיר', 'subtitle': 'הגינה שחלמת עליה', 'about_title': 'מי אנחנו', 'about_desc': 'גנן מקצועי עם ניסיון רב', 'services_label': 'השירותים שלנו'},
+    'dance studio': {'badge': 'סטודיו למחול', 'cta': 'הצטרפו לשיעור ניסיון', 'subtitle': 'ריקוד הוא חופש', 'about_title': 'הסטודיו שלנו', 'about_desc': 'סטודיו מחול מקצועי', 'services_label': 'סוגי ריקוד'},
+    'hair salon': {'badge': 'עיצוב שיער', 'cta': 'קבעו תור', 'subtitle': 'סטייל שמדבר', 'about_title': 'הסלון שלנו', 'about_desc': 'מספרה מקצועית עם מעצבים מנוסים', 'services_label': 'השירותים שלנו'},
+    'interior design': {'badge': 'עיצוב פנים', 'cta': 'קבעו פגישת ייעוץ', 'subtitle': 'הבית שלך, הסגנון שלך', 'about_title': 'הסטודיו שלנו', 'about_desc': 'סטודיו עיצוב פנים מקצועי', 'services_label': 'תחומי התמחות'},
+    'glass repair': {'badge': 'זגגות', 'cta': 'בקשו הצעת מחיר', 'subtitle': 'פתרונות זכוכית מקצועיים', 'about_title': 'מי אנחנו', 'about_desc': 'זגג מקצועי עם ניסיון', 'services_label': 'השירותים שלנו'},
+    'accountant': {'badge': 'ראיית חשבון', 'cta': 'קבעו פגישה', 'subtitle': 'המספרים שלך בידיים טובות', 'about_title': 'המשרד שלנו', 'about_desc': 'רואה חשבון מקצועי', 'services_label': 'השירותים שלנו'},
+    'upholstery': {'badge': 'ריפוד', 'cta': 'בקשו הצעת מחיר', 'subtitle': 'ריפוד חדש, חיים חדשים', 'about_title': 'מי אנחנו', 'about_desc': 'מרפד מקצועי', 'services_label': 'השירותים שלנו'},
+    'ice cream shop': {'badge': 'גלידה', 'cta': 'בואו לטעום', 'subtitle': 'טעמים שמשמחים', 'about_title': 'הסיפור שלנו', 'about_desc': 'גלידריה עם טעמים ייחודיים', 'services_label': 'הטעמים שלנו'},
+    'gift shop': {'badge': 'מתנות', 'cta': 'בואו לבקר', 'subtitle': 'המתנה המושלמת', 'about_title': 'החנות שלנו', 'about_desc': 'חנות מתנות עם מגוון עשיר', 'services_label': 'המוצרים שלנו'},
+    'jewelry store': {'badge': 'תכשיטים', 'cta': 'בואו לבקר', 'subtitle': 'יופי שנשאר', 'about_title': 'החנות שלנו', 'about_desc': 'חנות תכשיטים איכותית', 'services_label': 'הקולקציות שלנו'},
+    'bakery': {'badge': 'מאפים טריים', 'cta': 'בואו לטעום', 'subtitle': 'טריים מהתנור', 'about_title': 'הסיפור שלנו', 'about_desc': 'מאפייה עם מאפים טריים כל יום', 'services_label': 'המוצרים שלנו'},
+    'butcher shop': {'badge': 'קצבייה', 'cta': 'בואו לבקר', 'subtitle': 'בשר איכותי ומקצועי', 'about_title': 'החנות שלנו', 'about_desc': 'קצבייה מקצועית', 'services_label': 'המוצרים שלנו'},
+    'fish market': {'badge': 'דגים טריים', 'cta': 'בואו לבקר', 'subtitle': 'טריות שמרגישים', 'about_title': 'החנות שלנו', 'about_desc': 'חנות דגים טריים ואיכותיים', 'services_label': 'המוצרים שלנו'},
+    'physiotherapy': {'badge': 'פיזיותרפיה', 'cta': 'קבעו טיפול', 'subtitle': 'חזרה לתנועה חופשית', 'about_title': 'המרפאה שלנו', 'about_desc': 'מרפאת פיזיותרפיה מקצועית', 'services_label': 'הטיפולים שלנו'},
+    'spa': {'badge': 'ספא ורוגע', 'cta': 'קבעו טיפול', 'subtitle': 'פינוק שמגיע לך', 'about_title': 'הספא שלנו', 'about_desc': 'ספא מפנק עם טיפולים מקצועיים', 'services_label': 'הטיפולים שלנו'},
+    'juice bar': {'badge': 'מיצים טבעיים', 'cta': 'בואו לטעום', 'subtitle': 'טרי וטבעי', 'about_title': 'הסיפור שלנו', 'about_desc': 'בר מיצים טבעיים', 'services_label': 'התפריט שלנו'},
+    'car appraiser': {'badge': 'שמאות רכב', 'cta': 'קבעו בדיקה', 'subtitle': 'הערכה מקצועית ואמינה', 'about_title': 'מי אנחנו', 'about_desc': 'שמאי רכב מוסמך', 'services_label': 'השירותים שלנו'},
+    'mortgage advisor': {'badge': 'ייעוץ משכנתאות', 'cta': 'קבעו פגישת ייעוץ', 'subtitle': 'המשכנתא שמתאימה לך', 'about_title': 'מי אנחנו', 'about_desc': 'יועץ משכנתאות מקצועי', 'services_label': 'השירותים שלנו'},
+    'dental lab': {'badge': 'מעבדת שיניים', 'cta': 'צרו קשר', 'subtitle': 'מקצועיות ודיוק', 'about_title': 'המעבדה שלנו', 'about_desc': 'מעבדת שיניים מתקדמת', 'services_label': 'השירותים שלנו'},
+    'toy store': {'badge': 'צעצועים ומשחקים', 'cta': 'בואו לבקר', 'subtitle': 'עולם של כיף', 'about_title': 'החנות שלנו', 'about_desc': 'חנות צעצועים עם מגוון רחב', 'services_label': 'המוצרים שלנו'},
+    'dietitian': {'badge': 'תזונה ודיאטה', 'cta': 'קבעו פגישה', 'subtitle': 'תזונה שמתאימה לך', 'about_title': 'מי אנחנו', 'about_desc': 'דיאטנית קלינית מוסמכת', 'services_label': 'השירותים שלנו'},
+    'blinds shutters': {'badge': 'תריסים וסככות', 'cta': 'בקשו הצעת מחיר', 'subtitle': 'הגנה ועיצוב לבית', 'about_title': 'מי אנחנו', 'about_desc': 'מתקין תריסים מקצועי', 'services_label': 'השירותים שלנו'},
+    'traffic lawyer': {'badge': 'עורך דין תעבורה', 'cta': 'קבעו ייעוץ', 'subtitle': 'ליווי משפטי מקצועי', 'about_title': 'המשרד שלנו', 'about_desc': 'עורך דין תעבורה מנוסה', 'services_label': 'תחומי התמחות'},
+    'flooring tiles': {'badge': 'ריצוף ואריחים', 'cta': 'בקשו הצעת מחיר', 'subtitle': 'הרצפה המושלמת', 'about_title': 'מי אנחנו', 'about_desc': 'רצף מקצועי', 'services_label': 'השירותים שלנו'},
+    'welding': {'badge': 'ריתוך ומסגרות', 'cta': 'בקשו הצעת מחיר', 'subtitle': 'ריתוך מקצועי', 'about_title': 'מי אנחנו', 'about_desc': 'רתך מוסמך ומנוסה', 'services_label': 'השירותים שלנו'},
+    'graphic design': {'badge': 'עיצוב גרפי', 'cta': 'צרו קשר', 'subtitle': 'עיצוב שמדבר', 'about_title': 'הסטודיו שלנו', 'about_desc': 'סטודיו עיצוב גרפי מקצועי', 'services_label': 'השירותים שלנו'},
+    'landscaping': {'badge': 'גינון ונוף', 'cta': 'בקשו הצעת מחיר', 'subtitle': 'עיצוב גינות מקצועי', 'about_title': 'מי אנחנו', 'about_desc': 'מעצב נוף מקצועי', 'services_label': 'השירותים שלנו'},
+    'divorce lawyer': {'badge': 'עורך דין גירושין', 'cta': 'קבעו ייעוץ', 'subtitle': 'ליווי משפטי אישי', 'about_title': 'המשרד שלנו', 'about_desc': 'עורך דין דיני משפחה', 'services_label': 'תחומי התמחות'},
+    'glazier': {'badge': 'זגגות', 'cta': 'בקשו הצעת מחיר', 'subtitle': 'עבודות זכוכית מקצועיות', 'about_title': 'מי אנחנו', 'about_desc': 'זגג מומחה', 'services_label': 'השירותים שלנו'},
+    'dermatology clinic': {'badge': 'רפואת עור', 'cta': 'קבעו תור', 'subtitle': 'עור בריא ומטופח', 'about_title': 'המרפאה שלנו', 'about_desc': 'מרפאת עור מתקדמת', 'services_label': 'הטיפולים שלנו'},
+    'grocery store': {'badge': 'מכולת', 'cta': 'בואו לבקר', 'subtitle': 'הכל תחת קורת גג אחת', 'about_title': 'החנות שלנו', 'about_desc': 'מכולת שכונתית עם מגוון עשיר', 'services_label': 'המוצרים שלנו'},
+    'chiropractor': {'badge': 'כירופרקטיקה', 'cta': 'קבעו טיפול', 'subtitle': 'גב ישר, חיים טובים', 'about_title': 'המרפאה שלנו', 'about_desc': 'כירופרקט מוסמך', 'services_label': 'הטיפולים שלנו'},
+    'pension advisor': {'badge': 'ייעוץ פנסיוני', 'cta': 'קבעו פגישת ייעוץ', 'subtitle': 'העתיד הפיננסי שלך', 'about_title': 'מי אנחנו', 'about_desc': 'יועץ פנסיוני מוסמך', 'services_label': 'השירותים שלנו'},
+})
 
 # Rate limiting delay between API calls (seconds)
 API_DELAY = 0.5
@@ -287,8 +363,16 @@ def enrich_lead(lead, cache):
 # Existing helpers
 # ---------------------------------------------------------------------------
 
+HEBREW_TRANSLIT = {
+    'א': 'a', 'ב': 'b', 'ג': 'g', 'ד': 'd', 'ה': 'h', 'ו': 'v',
+    'ז': 'z', 'ח': 'ch', 'ט': 't', 'י': 'y', 'כ': 'k', 'ך': 'k',
+    'ל': 'l', 'מ': 'm', 'ם': 'm', 'נ': 'n', 'ן': 'n', 'ס': 's',
+    'ע': 'a', 'פ': 'p', 'ף': 'f', 'צ': 'ts', 'ץ': 'ts', 'ק': 'k',
+    'ר': 'r', 'ש': 'sh', 'ת': 't',
+}
+
 def slugify(text):
-    """Create a URL-safe slug from Hebrew or English text.
+    """Create an ASCII-safe URL slug from Hebrew or English text.
     Uses only the short business name (before | or •), max 40 chars."""
     text = text.strip()
     # Take only the first part before | or • (the actual business name)
@@ -296,8 +380,18 @@ def slugify(text):
     # Limit length to 40 chars (cut at word boundary)
     if len(text) > 40:
         text = text[:40].rsplit(' ', 1)[0]
+    # Transliterate Hebrew characters to ASCII
+    result = []
+    for ch in text:
+        if ch in HEBREW_TRANSLIT:
+            result.append(HEBREW_TRANSLIT[ch])
+        else:
+            result.append(ch)
+    text = ''.join(result)
     # Replace spaces and special chars with hyphens
     text = re.sub(r'[\s/\\:;,!?@#$%^&*()+=\[\]{}|<>\'\"•·]+', '-', text)
+    # Remove any remaining non-ASCII, non-alphanumeric chars (except hyphens)
+    text = re.sub(r'[^a-zA-Z0-9\-]', '', text)
     # Remove leading/trailing hyphens
     text = text.strip('-')
     # Collapse multiple hyphens
@@ -603,12 +697,295 @@ UNSPLASH_FALLBACKS = {
         'https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=800',
         'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=800',
     ],
+    # English categories — category-specific Unsplash images
+    'personal trainer': [
+        'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800',
+        'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800',
+        'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800',
+        'https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=800',
+    ],
+    'barbershop': [
+        'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800',
+        'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800',
+        'https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800',
+        'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800',
+    ],
+    'air conditioning repair': [
+        'https://images.unsplash.com/photo-1585338107529-13afc5f02586?w=800',
+        'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800',
+        'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800',
+    ],
+    'laser hair removal': [
+        'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800',
+        'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800',
+        'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800',
+        'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800',
+    ],
+    'photography studio': [
+        'https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=800',
+        'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800',
+        'https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=800',
+        'https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=800',
+    ],
+    'motorcycle repair': [
+        'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800',
+        'https://images.unsplash.com/photo-1558980394-4c7c9299fe96?w=800',
+        'https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?w=800',
+    ],
+    'reflexology': [
+        'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800',
+        'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800',
+        'https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=800',
+    ],
+    'carpentry': [
+        'https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800',
+        'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800',
+        'https://images.unsplash.com/photo-1416339306562-f3d12fefd36f?w=800',
+    ],
+    'beauty salon': [
+        'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800',
+        'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800',
+        'https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=800',
+        'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800',
+    ],
+    'catering': [
+        'https://images.unsplash.com/photo-1555244162-803834f70033?w=800',
+        'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800',
+        'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800',
+        'https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800',
+    ],
+    'moving company': [
+        'https://images.unsplash.com/photo-1600518464441-9154a4dea21b?w=800',
+        'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800',
+        'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800',
+    ],
+    'bridal salon': [
+        'https://images.unsplash.com/photo-1519741497674-611481863552?w=800',
+        'https://images.unsplash.com/photo-1522413452208-996ff3f3e740?w=800',
+        'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800',
+        'https://images.unsplash.com/photo-1594552072238-b8a33785b261?w=800',
+    ],
+    'locksmith': [
+        'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800',
+        'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800',
+        'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800',
+    ],
+    'massage': [
+        'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800',
+        'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800',
+        'https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=800',
+        'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800',
+    ],
+    'tire shop': [
+        'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=800',
+        'https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=800',
+        'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800',
+    ],
+    'nail bar': [
+        'https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800',
+        'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800',
+        'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800',
+    ],
+    'auto parts': [
+        'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=800',
+        'https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=800',
+        'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800',
+    ],
+    'cleaning service': [
+        'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800',
+        'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800',
+        'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800',
+    ],
+    'tattoo parlor': [
+        'https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=800',
+        'https://images.unsplash.com/photo-1590246814883-57c511c8c42c?w=800',
+        'https://images.unsplash.com/photo-1598371839696-5c5bb1c12015?w=800',
+    ],
+    'insurance agent': [
+        'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800',
+        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
+        'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800',
+    ],
+    'architect': [
+        'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800',
+        'https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?w=800',
+        'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800',
+    ],
+    'gardening': [
+        'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800',
+        'https://images.unsplash.com/photo-1558904541-efa843a96f01?w=800',
+        'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800',
+    ],
+    'dance studio': [
+        'https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=800',
+        'https://images.unsplash.com/photo-1547153760-18fc86324498?w=800',
+        'https://images.unsplash.com/photo-1518834107812-67b0b7c58434?w=800',
+    ],
+    'hair salon': [
+        'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800',
+        'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800',
+        'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=800',
+        'https://images.unsplash.com/photo-1559599101-f09722fb4948?w=800',
+    ],
+    'interior design': [
+        'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800',
+        'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800',
+        'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800',
+    ],
+    'glass repair': [
+        'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800',
+        'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800',
+        'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800',
+    ],
+    'accountant': [
+        'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800',
+        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
+        'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800',
+    ],
+    'physiotherapy': [
+        'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800',
+        'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800',
+        'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800',
+    ],
+    'spa': [
+        'https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=800',
+        'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800',
+        'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=800',
+    ],
+    'ice cream shop': [
+        'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=800',
+        'https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=800',
+        'https://images.unsplash.com/photo-1517093728432-a0440f8d45af?w=800',
+    ],
+    'bakery': [
+        'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800',
+        'https://images.unsplash.com/photo-1517433367423-f7e136d2c4e0?w=800',
+        'https://images.unsplash.com/photo-1555507036-ab1f4038024a?w=800',
+    ],
+    'juice bar': [
+        'https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=800',
+        'https://images.unsplash.com/photo-1589733955941-5eeaf752f6dd?w=800',
+        'https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=800',
+    ],
+    'jewelry store': [
+        'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800',
+        'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=800',
+        'https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=800',
+    ],
+    'dermatology clinic': [
+        'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800',
+        'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800',
+        'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800',
+    ],
+    'chiropractor': [
+        'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800',
+        'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800',
+        'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800',
+    ],
     'DEFAULT': [
         'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800',
         'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800',
         'https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800',
     ],
 }
+
+
+# Category-specific Hebrew testimonials — 3 per category group
+TESTIMONIALS_BY_GROUP = {
+    'beauty': [
+        ('דנה ל.', 'ד', '"הגעתי בפעם הראשונה ומיד הרגשתי בבית. מקצועיות ברמה אחרת, תוצאות מדהימות. ממליצה בחום!"'),
+        ('שירה כ.', 'ש', '"כבר שנה שאני מטופלת כאן ולא מוכנה להחליף. יחס אישי, ניקיון ותוצאות שמדברות בעד עצמן."'),
+        ('מיכל א.', 'מ', '"השירות הכי טוב שקיבלתי. מקשיבים, מבינים בדיוק מה צריך, ותמיד יוצאת מרוצה. תודה!"'),
+    ],
+    'food': [
+        ('אלון מ.', 'א', '"אוכל מעולה, מנות טריות ושירות חם. אחד המקומות האהובים עלינו באזור!"'),
+        ('רוני ש.', 'ר', '"הזמנו קייטרינג לאירוע משפחתי — כולם שאלו מאיפה האוכל. פשוט מושלם."'),
+        ('יעל ד.', 'י', '"ביקרנו כבר כמה פעמים וכל פעם מחדש מופתעים מהאיכות. מקום שחייבים לנסות."'),
+    ],
+    'health': [
+        ('דוד כ.', 'ד', '"אחרי טיפול אחד כבר הרגשתי שיפור משמעותי. ידיים מקצועיות ויחס אישי."'),
+        ('נעמי ר.', 'נ', '"המטפל מקצועי ברמה גבוהה מאוד. מקשיב, מסביר, ובאמת עוזר. ממליצה!"'),
+        ('אורי ת.', 'א', '"כבר חצי שנה שאני מטופל ורואה תוצאות מדהימות. שינה לי את החיים."'),
+    ],
+    'home': [
+        ('משה ב.', 'מ', '"עבודה מקצועית, מדויקת ובזמן. הגיע, העריך, ביצע — הכל כמו שהובטח."'),
+        ('רחל ס.', 'ר', '"שירות אמין ומהיר. הגיע תוך שעה ופתר את הבעיה. מומלץ בחום!"'),
+        ('יוסי ל.', 'י', '"עבודה נקייה ומקצועית. מחיר הוגן ותוצאה מצוינת. נשתמש שוב בוודאות."'),
+    ],
+    'professional': [
+        ('שרון מ.', 'ש', '"ליווי מקצועי מהרגע הראשון. מסביר בסבלנות, זמין תמיד, ותוצאות מעולות."'),
+        ('גיל ע.', 'ג', '"משרד מקצועי ואמין. טיפלו בעניין שלי ביעילות ובמסירות. ממליץ!"'),
+        ('תמר ח.', 'ת', '"שירות ברמה גבוהה, יחס אישי ותוצאות. בדיוק מה שחיפשנו."'),
+    ],
+    'fitness': [
+        ('עמית ר.', 'ע', '"מאמן מעולה! מתאים את התוכנית בדיוק בשבילי. רואה תוצאות כבר אחרי חודש."'),
+        ('ליאת כ.', 'ל', '"אווירה נהדרת, מקצועיות ויחס אישי. המקום האהוב עליי לאימון."'),
+        ('נדב ש.', 'נ', '"הגעתי אחרי פציעה וחזרתי לכושר מלא. מקצוען אמיתי. תודה!"'),
+    ],
+    'creative': [
+        ('יונתן ב.', 'י', '"עבודה מרשימה ויצירתית. הבינו בדיוק מה רציתי והתוצאה עלתה על הציפיות."'),
+        ('מיה ד.', 'מ', '"מקצועיות, יצירתיות ותשומת לב לכל פרט. פשוט אומנות."'),
+        ('אופיר א.', 'א', '"עבודה ברמה גבוהה מאוד. שירות אישי ותוצאות שמדברות בעד עצמן."'),
+    ],
+    'default': [
+        ('אבי כ.', 'א', '"שירות מעולה ומקצועי. ממליץ בחום לכל מי שמחפש איכות ואמינות."'),
+        ('מיכל ש.', 'מ', '"תשומת לב לפרטים, מקצועיות ברמה גבוהה ויחס אישי. הכי טוב שיש באזור."'),
+        ('רונית ד.', 'ר', '"כבר שנים שאנחנו לקוחות קבועים ולא מוכנים להחליף. מקום אמין ומומלץ."'),
+    ],
+}
+
+# Map categories to testimonial groups
+CATEGORY_TESTIMONIAL_GROUP = {
+    'beauty salon': 'beauty', 'hair salon': 'beauty', 'barbershop': 'beauty',
+    'nail bar': 'beauty', 'laser hair removal': 'beauty', 'bridal salon': 'beauty',
+    'מכון יופי': 'beauty', 'מספרה': 'beauty', 'קוסמטיקאית': 'beauty', 'ספא': 'beauty', 'spa': 'beauty',
+    'tattoo parlor': 'beauty',
+    'מסעדה': 'food', 'קונדיטוריה': 'food', 'מאפייה': 'food', 'בית קפה': 'food',
+    'שווארמה': 'food', 'סושי': 'food', 'פיצריה': 'food',
+    'catering': 'food', 'bakery': 'food', 'butcher shop': 'food', 'fish market': 'food',
+    'ice cream shop': 'food', 'juice bar': 'food', 'grocery store': 'food',
+    'massage': 'health', 'reflexology': 'health', 'physiotherapy': 'health',
+    'chiropractor': 'health', 'dermatology clinic': 'health', 'dietitian': 'health',
+    'רופא שיניים': 'health', 'dental lab': 'health',
+    'חשמלאי': 'home', 'אינסטלטור': 'home', 'שיפוצים': 'home',
+    'air conditioning repair': 'home', 'locksmith': 'home', 'cleaning service': 'home',
+    'carpentry': 'home', 'gardening': 'home', 'landscaping': 'home',
+    'glass repair': 'home', 'glazier': 'home', 'blinds shutters': 'home',
+    'flooring tiles': 'home', 'welding': 'home', 'upholstery': 'home',
+    'moving company': 'home', 'הובלות': 'home',
+    'רואה חשבון': 'professional', 'עורך דין': 'professional',
+    'accountant': 'professional', 'insurance agent': 'professional',
+    'mortgage advisor': 'professional', 'pension advisor': 'professional',
+    'traffic lawyer': 'professional', 'divorce lawyer': 'professional',
+    'architect': 'professional', 'interior design': 'professional',
+    'personal trainer': 'fitness', 'מכון כושר': 'fitness',
+    'פילאטיס': 'fitness', 'יוגה': 'fitness', 'dance studio': 'fitness',
+    'צלם': 'creative', 'צילום': 'creative', 'photography studio': 'creative',
+    'graphic design': 'creative', 'עיצוב גרפי': 'creative',
+    'מוסך': 'home', 'motorcycle repair': 'home', 'tire shop': 'home',
+    'auto parts': 'home', 'car appraiser': 'home',
+}
+
+
+def build_testimonials_html(category):
+    """Generate 3 category-specific testimonial cards."""
+    group = CATEGORY_TESTIMONIAL_GROUP.get(category, 'default')
+    testimonials = TESTIMONIALS_BY_GROUP.get(group, TESTIMONIALS_BY_GROUP['default'])
+    cards = ''
+    for i, (name, initial, text) in enumerate(testimonials):
+        delay = i + 1
+        cards += f'''      <div class="testimonial-card reveal reveal-delay-{delay}">
+        <div class="testimonial-stars">
+          <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+        </div>
+        <p class="testimonial-text">{text}</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">{initial}</div>
+          <div class="testimonial-name">{name}</div>
+        </div>
+      </div>
+'''
+    return cards
 
 
 def build_reviews_section(reviews):
@@ -675,10 +1052,12 @@ def generate_page(template_html, banner_html, lead, enrichment=None):
     # New enrichment variables
     html = html.replace('{{ADDRESS}}', address)
 
-    rating = enrichment.get('rating', '')
+    # Rating: prefer enrichment, fallback to CSV
+    rating = enrichment.get('rating', '') or lead.get('rating', '')
     html = html.replace('{{RATING}}', str(rating) if rating else '')
 
-    reviews_count = enrichment.get('reviews_count', '')
+    # Reviews count: prefer enrichment, fallback to CSV
+    reviews_count = enrichment.get('reviews_count', '') or lead.get('reviews', '')
     html = html.replace('{{REVIEWS_COUNT}}', str(reviews_count) if reviews_count else '')
 
     # Category-specific text placeholders (for universal template)
@@ -689,6 +1068,15 @@ def generate_page(template_html, banner_html, lead, enrichment=None):
     html = html.replace('{{ABOUT_TITLE}}', config['about_title'])
     html = html.replace('{{ABOUT_DESC}}', config['about_desc'])
     html = html.replace('{{SERVICES_LABEL}}', config['services_label'])
+
+    # OG meta tags for WhatsApp link previews
+    og_desc = f"{config['badge']} — {short_name} ב{lead['city']}. {config['subtitle']}"
+    html = html.replace('{{OG_DESCRIPTION}}', og_desc)
+    # Use first photo as OG image (Google Places or fallback)
+    photo_urls_for_og = enrichment.get('photo_urls', [])
+    og_fallbacks = UNSPLASH_FALLBACKS.get(category, UNSPLASH_FALLBACKS.get('DEFAULT', []))
+    og_image = photo_urls_for_og[0] if photo_urls_for_og else (og_fallbacks[0] if og_fallbacks else '')
+    html = html.replace('{{OG_IMAGE}}', og_image)
 
     # Photos: use Google Places if available, otherwise Unsplash fallbacks
     photo_urls = enrichment.get('photo_urls', [])
@@ -743,13 +1131,17 @@ def generate_page(template_html, banner_html, lead, enrichment=None):
         reviews_html = ''
     html = html.replace('{{REVIEWS_SECTION}}', reviews_html)
 
+    # Category-specific testimonials
+    testimonials_html = build_testimonials_html(category)
+    html = html.replace('{{TESTIMONIALS_HTML}}', testimonials_html)
+
     # Legal disclaimer — protection against impersonation claims
     disclaimer_html = (
         '<div style="background:#f5f5f5;border-top:1px solid #ddd;padding:16px 20px;'
         'text-align:center;font-family:Heebo,Arial,sans-serif;direction:rtl;'
         'font-size:12px;color:#999;line-height:1.6;">'
         'אתר לדוגמא בלבד — נבנה על ידי '
-        '<a href="https://alon-dev.vercel.app" style="color:#0f3460;">alon dev</a>'
+        '<a href="https://alondev.site" style="color:#0f3460;">alon dev</a>'
         ' כהצעה עסקית. אינו מייצג את העסק באופן רשמי. '
         'המידע נאסף ממקורות ציבוריים (Google Maps). '
         '<a href="https://output-seven-black.vercel.app/terms/" style="color:#0f3460;">תנאי שימוש</a>'
@@ -1019,7 +1411,8 @@ def main():
     # Generate pages
     total = 0
     for cat_heb, cat_leads in leads_by_category.items():
-        template_html = templates[cat_heb]
+        cat_en = CATEGORY_MAP.get(cat_heb, 'universal')
+        template_html = templates.get(cat_heb) or load_template(cat_en)
         for lead in cat_leads:
             slug = slugify(lead['name'])
             page_dir = os.path.join(OUTPUT_DIR, slug)
