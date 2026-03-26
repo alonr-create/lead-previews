@@ -1,4 +1,4 @@
-<!-- Lead Preview Banner -->
+<!-- Lead Preview Banner — Urgency + Timer -->
 <style>
   .lp-banner {
     position: fixed;
@@ -8,11 +8,11 @@
     z-index: 99999;
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
     color: #fff;
-    padding: 14px 20px;
+    padding: 12px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 14px;
     flex-wrap: wrap;
     font-family: 'Heebo', sans-serif;
     direction: rtl;
@@ -23,10 +23,26 @@
     transform: translateY(-100%);
   }
   .lp-banner-text {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.02em;
   }
+  .lp-banner-timer {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(239,68,68,0.2);
+    border: 1px solid rgba(239,68,68,0.4);
+    border-radius: 8px;
+    padding: 4px 12px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fca5a5;
+    font-variant-numeric: tabular-nums;
+    direction: ltr;
+  }
+  .lp-banner-timer .fire { animation: pulse-fire 1s infinite; }
+  @keyframes pulse-fire { 0%,100%{opacity:1} 50%{opacity:0.5} }
   .lp-banner-cta {
     display: inline-flex;
     align-items: center;
@@ -40,6 +56,10 @@
     font-weight: 700;
     transition: background 0.2s, transform 0.2s;
     white-space: nowrap;
+    animation: cta-glow 2s ease-in-out infinite;
+  }
+  @keyframes cta-glow {
+    0%,100%{box-shadow:0 0 8px rgba(37,211,102,0.3)} 50%{box-shadow:0 0 20px rgba(37,211,102,0.6)}
   }
   .lp-banner-cta:hover {
     background: #1ebe5d;
@@ -68,12 +88,13 @@
   @media (max-width: 600px) {
     .lp-banner {
       padding: 10px 14px;
-      gap: 10px;
+      gap: 8px;
     }
     .lp-banner-text {
-      font-size: 13px;
+      font-size: 12px;
       text-align: center;
     }
+    .lp-banner-timer { font-size: 12px; padding: 3px 8px; }
     .lp-banner-cta {
       font-size: 13px;
       padding: 7px 18px;
@@ -82,11 +103,47 @@
 </style>
 <div class="lp-banner" id="lpBanner">
   <span class="lp-banner-text">
-    זה האתר שבנינו בשבילכם 🎉 הקמה 990 ₪ + 149 ₪/חודש — כולל דומיין, אחסון ותחזוקה
+    🎉 מבצע השקה — הקמת אתר ב-<strong style="text-decoration:line-through;color:#fca5a5">1,990 ₪</strong> <strong style="color:#4ade80">990 ₪</strong> בלבד!
   </span>
-  <a class="lp-banner-cta" href="https://wa.me/972559566148?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%91%D7%A0%D7%99%D7%AA%D7%9D%20%D7%9C%D7%99%20-%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A2%D7%9C%D7%95%D7%AA%20%D7%9C%D7%90%D7%95%D7%95%D7%99%D7%A8!" target="_blank">
-    רוצה לעלות לאוויר!
+  <span class="lp-banner-timer">
+    <span class="fire">🔥</span>
+    <span id="bannerTimer">23:59:59</span>
+  </span>
+  <a class="lp-banner-cta" href="#pricing" onclick="trackClick&&trackClick('banner_cta','pricing')">
+    רוצה להתחיל →
   </a>
   <button class="lp-banner-close" onclick="document.getElementById('lpBanner').classList.add('lp-hidden');document.body.style.paddingTop='0'" aria-label="סגור">&times;</button>
 </div>
+<script>
+(function(){
+  // Countdown timer — resets daily at midnight, creates urgency
+  var key = 'lp_timer_' + location.pathname;
+  var stored = localStorage.getItem(key);
+  var deadline;
+  if (stored && parseInt(stored) > Date.now()) {
+    deadline = parseInt(stored);
+  } else {
+    // Set deadline to end of today (midnight)
+    var now = new Date();
+    deadline = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1).getTime();
+    localStorage.setItem(key, deadline);
+  }
+  function updateTimer() {
+    var diff = deadline - Date.now();
+    if (diff <= 0) {
+      // Reset for another 24h
+      deadline = Date.now() + 86400000;
+      localStorage.setItem(key, deadline);
+      diff = deadline - Date.now();
+    }
+    var h = Math.floor(diff / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    var s = Math.floor((diff % 60000) / 1000);
+    var el = document.getElementById('bannerTimer');
+    if (el) el.textContent = (h<10?'0':'') + h + ':' + (m<10?'0':'') + m + ':' + (s<10?'0':'') + s;
+  }
+  updateTimer();
+  setInterval(updateTimer, 1000);
+})();
+</script>
 <!-- End Banner -->
