@@ -15,8 +15,10 @@ import csv
 import json
 import os
 import re
+import ssl
 import time
 import unicodedata
+import urllib.request
 from urllib.parse import quote
 
 try:
@@ -280,6 +282,23 @@ def build_photo_url(photo_name, max_width=800):
         f"https://places.googleapis.com/v1/{photo_name}/media"
         f"?maxWidthPx={max_width}&key={GOOGLE_PLACES_API_KEY}"
     )
+
+
+def download_photo_local(url, dest_path):
+    """Download a photo from Google Places API to a local file.
+    Returns True if successful, False otherwise."""
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        ctx = ssl.create_default_context()
+        with urllib.request.urlopen(req, timeout=15, context=ctx) as resp:
+            data = resp.read()
+            if len(data) < 1000:
+                return False
+            with open(dest_path, "wb") as f:
+                f.write(data)
+            return True
+    except Exception:
+        return False
 
 
 def enrich_lead(lead, cache):
@@ -1426,6 +1445,24 @@ def main():
 
             lead_key = f"{lead['name']}|{lead['city']}"
             enrichment = enrichments.get(lead_key, {})
+
+            # Download Google Places photos locally (prevents API key expiry issues)
+            photo_urls = enrichment.get('photo_urls', [])
+            if photo_urls:
+                local_photos = []
+                for pi, purl in enumerate(photo_urls):
+                    local_name = f"photo_{pi+1}.jpg"
+                    local_path = os.path.join(page_dir, local_name)
+                    if os.path.exists(local_path) and os.path.getsize(local_path) > 1000:
+                        local_photos.append(local_name)
+                    elif download_photo_local(purl, local_path):
+                        local_photos.append(local_name)
+                        print(f"    Downloaded {local_name}")
+                    else:
+                        local_photos.append(purl)  # keep API URL as fallback
+                enrichment = dict(enrichment)  # don't mutate cache
+                enrichment['photo_urls'] = local_photos
+
             html = generate_page(template_html, banner_html, lead, enrichment)
             page_path = os.path.join(page_dir, 'index.html')
             with open(page_path, 'w', encoding='utf-8') as f:

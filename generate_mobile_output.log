@@ -1,0 +1,14 @@
+/Users/oakhome/קלוד עבודות/.venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Generating 3346 sites...
+[1/3346] Julie Karn Bridal -> Julie-Karn-Bridal
+[2/3346] LÉONIE BRIDAL - ליאוני שמלות כלה -> LÉONIE-BRIDAL-ליאוני-שמלות-כלה
+[3/3346] Michal Taylor Wedding Dresses -> Michal-Taylor-Wedding-Dresses
+[500/3346] סלון סוהיר הסרת שיער בלייזר ופדיקור בזרזיר -> סלון-סוהיר-הסרת-שיער-בלייזר-ופדיקור
+[1000/3346] מאקי מוטורס -> מאקי-מוטורס
+[1500/3346] טכנאי מזגנים בעפולה רונן רוח צפונית בע"מ -> טכנאי-מזגנים-בעפולה-רונן-רוח-צפונית-בע-מ
+[2000/3346] Колонтай Богдан - аудитор, бухгалтер, консультант по налогам. -> Колонтай-Богдан-аудитор-бухгалтер
+[2500/3346] Nico tattoo by Maico - tattoos and piercing studio -> Nico-tattoo-by-Maico-tattoos-and
+[3000/3346] קוסמטיקאית פרא רפואית מירי אוחיון mo beauty -> קוסמטיקאית-פרא-רפואית-מירי-אוחיון-mo
+
+Done! Generated: 3346, Errors: 0

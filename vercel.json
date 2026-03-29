@@ -1,12 +1,129 @@
 {
   "outputDirectory": "output",
+  "trailingSlash": true,
   "rewrites": [
-    { "source": "/api/track", "destination": "/api/track" }
+    {
+      "source": "/api/track",
+      "destination": "/api/track"
+    }
   ],
   "functions": {
     "api/track.js": {
       "memory": 128,
       "maxDuration": 10
     }
-  }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/%D7%A6%D7%A0%D7%98%D7%A8%D7%95-%D7%94%D7%91%D7%95%D7%A8%D7%99%D7%A7-%D7%A9%D7%9C-%D7%A6-%D7%95%D7%A0%D7%94/:path*",
+      "destination": "/tsntrv-hbvryk-shl-ts-vnh/",
+      "statusCode": 301
+    },
+    {
+      "source": "/%D7%94%D7%A4%D7%9C%D7%90%D7%A4%D7%9C-%D7%97%D7%95%D7%9C%D7%95%D7%9F/:path*",
+      "destination": "/hplapl/",
+      "statusCode": 301
+    },
+    {
+      "source": "/%D7%A1%D7%98%D7%95%D7%93%D7%99%D7%95-%D7%A7%D7%90%D7%A8%D7%99%D7%9F-%D7%9E%D7%9B%D7%95%D7%9F-%D7%99%D7%95%D7%A4%D7%99/:path*",
+      "destination": "/stvdyv-karyn-mkvn-yvpy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/Paroa-Hair-Salon-Haifa-%D7%A4%D7%A8%D7%95%D7%A2/:path*",
+      "destination": "/hair/",
+      "statusCode": 301
+    },
+    {
+      "source": "/CULT-%D7%A1%D7%98%D7%95%D7%93%D7%99%D7%95-%D7%9C%D7%99%D7%95%D7%A4%D7%99-%D7%95%D7%94%D7%9B%D7%A9%D7%A8%D7%94-%D7%9E%D7%A0%D7%99%D7%A7%D7%95%D7%A8-%E2%80%A2-%D7%A4%D7%93%D7%99%D7%A7%D7%95%D7%A8-%E2%80%A2-%D7%A8%D7%99%D7%A1%D7%99%D7%9D-%E2%80%A2-%D7%92%D7%91%D7%95%D7%AA-%E2%80%A2-%D7%94%D7%A1%D7%A8%D7%AA-%D7%A9%D7%99%D7%A2%D7%A8-%D7%97%D7%99%D7%A4%D7%94/:path*",
+      "destination": "/cult/",
+      "statusCode": 301
+    },
+    {
+      "source": "/%D7%A1%D7%9C%D7%95%D7%9F-%D7%A0%D7%95%D7%A8%D7%99%D7%AA/:path*",
+      "destination": "/slvn-nvryt-2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/%D7%A1%D7%98%D7%95%D7%93%D7%99%D7%95-%D7%9C%D7%90%D7%A1%D7%AA%D7%98%D7%99%D7%A7%D7%94-VG/:path*",
+      "destination": "/stvdyv-lasttykh-vg/",
+      "statusCode": 301
+    },
+    {
+      "source": "/%D7%97%D7%9F-%D7%94%D7%90%D7%99%D7%A0%D7%A1%D7%98%D7%9C%D7%98%D7%95%D7%A8/:path*",
+      "destination": "/aynstltvr-bashdvd/",
+      "statusCode": 301
+    },
+    {
+      "source": "/%D7%99%D7%A2%D7%A7%D7%91%D7%99-%D7%A9%D7%99%D7%A4%D7%95%D7%A6%D7%99%D7%9D/:path*",
+      "destination": "/shypvtsym-bshrvn/",
+      "statusCode": 301
+    },
+    {
+      "source": "/%D7%90%D7%99%D7%A6%D7%99%D7%A7-%D7%A9%D7%99%D7%A4%D7%95%D7%A6%D7%99%D7%9D/:path*",
+      "destination": "/shypvtsym-bshrvn/",
+      "statusCode": 301
+    },
+    {
+      "source": "/%D7%9E.%D7%91-%D7%A9%D7%99%D7%A4%D7%95%D7%A6%D7%99%D7%9D-%D7%95%D7%90%D7%99%D7%A0%D7%A1%D7%98%D7%9C%D7%A6%D7%99%D7%94/:path*",
+      "destination": "/shypvtsym-bshrvn/",
+      "statusCode": 301
+    },
+    {
+      "source": "/%D7%93%D7%95%D7%A8%D7%A4%D7%9E%D7%9F-%D7%A9%D7%99%D7%A4%D7%95%D7%A6%D7%99%D7%9D/:path*",
+      "destination": "/shypvtsym-bshrvn/",
+      "statusCode": 301
+    },
+    {
+      "source": "/%D7%A9%D7%99%D7%A4%D7%95%D7%A6%D7%99-%D7%94%D7%93%D7%A8%D7%95%D7%9D/:path*",
+      "destination": "/maximum-mksymvm-shypvtsym-vachzkt-mybnym/",
+      "statusCode": 301
+    },
+    {
+      "source": "/%D7%90.%D7%99-%D7%A9%D7%99%D7%A4%D7%95%D7%A6%D7%99%D7%9D/:path*",
+      "destination": "/shypvtsym-bshrvn/",
+      "statusCode": 301
+    },
+    {
+      "source": "/%D7%9E%D7%9B%D7%91%D7%A1%D7%AA-%D7%A1%D7%95%D7%A4%D7%A8-%D7%95%D7%95%D7%A9/:path*",
+      "destination": "/mkbst-svpr-klyn/",
+      "statusCode": 301
+    },
+    {
+      "source": "/%D7%94%D7%A7%D7%95%D7%A1%D7%9D/:path*",
+      "destination": "/vlry-hkvsm/",
+      "statusCode": 301
+    },
+    {
+      "source": "/%D7%A1%D7%98%D7%95%D7%93%D7%99%D7%95-%D7%A7%D7%90%D7%A8%D7%99%D7%9F-%D7%9E%D7%9B%D7%95%D7%9F-%D7%99%D7%95%D7%A4%D7%99/:path*",
+      "destination": "/stvdyv-karyn-mkvn-yvpy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/%D7%A1%D7%98%D7%95%D7%93%D7%99%D7%95-%D7%9C%D7%90%D7%A1%D7%AA%D7%98%D7%99%D7%A7%D7%94-VG/:path*",
+      "destination": "/stvdyv-lasttykh-vg/",
+      "statusCode": 301
+    },
+    {
+      "source": "/%D7%9E%D7%A1%D7%A4%D7%A8%D7%AA-%D7%A9%D7%9E%D7%A4%D7%95/:path*",
+      "destination": "/msprt-shy-nchvm/",
+      "statusCode": 301
+    },
+    {
+      "source": "/%D7%9E%D7%99%D7%9E%D7%93-%D7%9E%D7%A8%D7%9B%D7%96-%D7%A9%D7%99%D7%A8%D7%95%D7%AA/:path*",
+      "destination": "/mrkz-shyrvt-havgn-ntnyh-mvrshh-mazdh-pvrd/",
+      "statusCode": 301
+    }
+  ]
 }
