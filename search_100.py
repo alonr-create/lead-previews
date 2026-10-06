@@ -8,7 +8,7 @@ import time
 import urllib.request
 from pathlib import Path
 
-API_KEY = "AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ"
+API_KEY = os.environ.get("GOOGLE_PLACES_API_KEY", "")  # 06/10/2026: key moved out of source
 OUTPUT_DIR = Path(__file__).parent / "output"
 CACHE_PATH = Path(__file__).parent / "places_cache.json"
 ctx = ssl.create_default_context()

@@ -4,12 +4,13 @@ Move leads to Monday.com groups based on photo count.
 Groups: 4+ photos, 3, 2, 1 photo.
 """
 import json
+import os
 import re
 import time
 import urllib.request
 from pathlib import Path
 
-API_KEY = "eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjYzMDU1OTI2MywiYWFpIjoxMSwidWlkIjozNjk2NjE5OSwiaWFkIjoiMjAyNi0wMy0wOVQxMjozOToyMy4wMDBaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6MTQzMTIzOTMsInJnbiI6ImV1YzEifQ.AjRtzOrFukZ_uS_jxn6e4Gd2NS-m-7evgkZAni4AtCc"
+API_KEY = os.environ.get("MONDAY_API_TOKEN", "")  # 06/10/2026: token moved out of source
 BOARD_ID = 5092777389
 API_URL = "https://api.monday.com/v2"
 

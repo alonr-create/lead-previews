@@ -13,7 +13,7 @@ from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 OUTPUT_DIR = Path(__file__).parent / "output"
-API_KEY = "AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ"
+API_KEY = os.environ.get("GOOGLE_PLACES_API_KEY", "")  # 06/10/2026: key moved out of source
 PHOTO_URL_PATTERN = re.compile(r'https://places\.googleapis\.com/v1/places/[^"\')\s]+')
 
 # SSL context for downloads

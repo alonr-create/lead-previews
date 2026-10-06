@@ -44,7 +44,7 @@ if os.path.exists(_env_path):
                 _k, _v = _line.split('=', 1)
                 os.environ.setdefault(_k.strip(), _v.strip())
 
-GOOGLE_PLACES_API_KEY = os.environ.get('GOOGLE_PLACES_API_KEY', 'AIzaSyBHEODU6QPeJmKpy1oZg2vfjUXrvHXgWBQ')
+GOOGLE_PLACES_API_KEY = os.environ.get('GOOGLE_PLACES_API_KEY', '')
 
 CATEGORY_MAP = {
     # Hebrew categories — all use universal template for variable-driven content
@@ -509,7 +509,7 @@ def build_logo_html(name, theme='beauty', enrichment=None):
 def build_map_embed(name, city):
     """Build Google Maps embed URL (free, no API key needed)."""
     query = quote(f"{name} {city} ישראל")
-    return f'https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q={query}&language=he'
+    return f'https://www.google.com/maps/embed/v1/place?key={os.environ.get("GOOGLE_MAPS_EMBED_KEY", "")}&q={query}&language=he'
 
 
 def build_map_section(name, city, address):
